@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test : MonoBehaviour{
+public class s_99_01_objPosiHenka : MonoBehaviour{
     //2つのcubeを並び替えるプログラム。
 
     //k0014_1 :プレハブ（画面のobjでもOK）を使う objにはりつけ

@@ -224,10 +224,14 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     //k0013_1_1;オブジェに当てはめる；
     page = this.gameObject.GetComponent<Transform>();
     
-    //k0013_1_1_1 オブジェ移動；
-    page.position = new Vector3((float)-2.8, -5, 0);
+    //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
+    page.position = new Vector3((float)-2.8, -5, page.position.z);
+
+    //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
+    page.localScale = new Vector3((float)-2.8, -5, page.position.z);
+
     ----------------------------------------------------------------------
-    //k0014_1 :プレハブを使う objにはりつけ
+    //k0014_1 :プレハブ（画面のobjでもOK）を使う objにはりつけ
     public GameObject page;
     
     //k0014_1_1 :プレハブを使う
@@ -235,6 +239,7 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     
     //k0014_1_2 :プレハブを使う 角度　位置を設定
     
+
     //配置する回転角を設定
     ////？
     Quaternion q = new Quaternion();

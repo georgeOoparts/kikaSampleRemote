@@ -255,7 +255,19 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     ////?
     obj.GetComponent<TextMesh>().text ="wowwow";
     ----------------------------------------------------------------------
-   
+    //k0015_99_1 :線を引くline回り　オブジェにラインをくっつける
+     LineRenderer renderer = gameObject.GetComponent<LineRenderer>();
+    
+    //k0015_99_1_1 :線の幅
+    renderer.SetWidth(0.1f, 0.1f);
+    
+    //k0015_99_1_2 :頂点の数（この場合２つ）
+    renderer.SetVertexCount(2);
+    
+    //k0015_99_1_3 :頂点を設定（どこからどこまで線を伸ばすか）
+    renderer.SetPosition(0, Vector3.zero);
+    renderer.SetPosition(1, new Vector3(1f, 1f, 0f));
+    ----------------------------------------------------------------------
      
      
      

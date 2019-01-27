@@ -12,7 +12,7 @@ public class s_99_01_objPosiHenka : MonoBehaviour{
     Transform cube1tr;
     Transform cube2tr;
     //？？
-    public float yoyuu = 0.0f;
+    public float yoyuu = 0.5f;
 
     float tugiPosition = 0.0f;
 

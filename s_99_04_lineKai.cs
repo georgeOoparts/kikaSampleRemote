@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test : MonoBehaviour{
+public class s_99_04_lineKai : MonoBehaviour{
     //線を引くプログラム。空のオブジェにアタッチ
     //プレハブの空のオブジェを呼び出し線を引く
     //cube1からcube2に線を引く

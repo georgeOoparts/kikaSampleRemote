@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class s_99_01_objPosiHenka : MonoBehaviour{
     //2つのcubeを並び替えるプログラム。
+    //それぞれのcubeの位置を変化させる。
 
     //k0014_1 :プレハブ（画面のobjでもOK）を使う objにはりつけ
     public GameObject cube1;
@@ -16,10 +17,15 @@ public class s_99_01_objPosiHenka : MonoBehaviour{
 
     float tugiPosition = 0.0f;
 
+    public tukaimawasi tuka;
+
     void Start(){
         //k0013_1_1;オブジェに当てはめる；
         cube1tr = cube1.GetComponent<Transform>();
         cube2tr = cube2.GetComponent<Transform>();
+
+        //cube1tr = tuka.c1.GetComponent<Transform>();
+        //int tama2 = tuka.tama;
     }
     void Update(){
         //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；

@@ -8,6 +8,8 @@ public class tukaimawasi : MonoBehaviour
     //ヒエでアタッチ
     public GameObject cube1;
     public GameObject cube2;
+    public GameObject cube3;
+    public GameObject cube4;
 
     public int tama = 5;
 

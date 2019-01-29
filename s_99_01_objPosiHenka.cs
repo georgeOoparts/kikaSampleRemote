@@ -24,9 +24,6 @@ public class s_99_01_objPosiHenka : MonoBehaviour{
         //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
         cube1tr = tuka.cube1.GetComponent<Transform>();
         cube2tr = tuka.cube2.GetComponent<Transform>();
-
-        //cube1tr = tuka.c1.GetComponent<Transform>();
-        //int tama2 = tuka.tama;
     }
     void Update(){
         //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；

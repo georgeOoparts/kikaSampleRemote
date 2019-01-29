@@ -157,6 +157,19 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     public static int plus(int A, int B) {
         return (A * B);
     }
+
+    //k5_3_1: gameobject(メソッド、変数)を外部から呼び出す。
+    //ヒエでアタッチ
+    yomareruScript{
+        public Gameobject cube1;//ヒエでセットする
+    }
+    yobidasiScript{
+        //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
+        //このスクリプトをアタッチしたオブジェクトにいちいちこのオブジェクトをアタッチ
+        public yomareruScript yos;
+        //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
+    　　yosu.cube1で普通に使える
+    }
 //-------------------------------------------------------------------------------------
     //k6_stopwatch:
     

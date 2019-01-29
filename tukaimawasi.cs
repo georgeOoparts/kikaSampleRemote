@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class tukaimawasi : MonoBehaviour
 {
-    public GameObject c1;
+    //k5_3_1: gameobject(メソッド、変数)を外部から呼び出す。
+    //ヒエでアタッチ
+    public GameObject cube1;
+    public GameObject cube2;
 
     public int tama = 5;
 

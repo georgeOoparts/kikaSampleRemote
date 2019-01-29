@@ -6,23 +6,24 @@ public class s_99_01_objPosiHenka : MonoBehaviour{
     //2つのcubeを並び替えるプログラム。
     //それぞれのcubeの位置を変化させる。
 
-    //k0014_1 :プレハブ（画面のobjでもOK）を使う objにはりつけ
-    public GameObject cube1;
-    public GameObject cube2;
+    public tukaimawasi tuka;
+
     //k0013_1: 宣言 
     Transform cube1tr;
     Transform cube2tr;
     //？？
     public float yoyuu = 0.5f;
-
+    //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
+    //このスクリプトをアタッチしたオブジェクトにいちいちこのオブジェクトをアタッチ
     float tugiPosition = 0.0f;
 
-    public tukaimawasi tuka;
+   
 
     void Start(){
         //k0013_1_1;オブジェに当てはめる；
-        cube1tr = cube1.GetComponent<Transform>();
-        cube2tr = cube2.GetComponent<Transform>();
+        //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
+        cube1tr = tuka.cube1.GetComponent<Transform>();
+        cube2tr = tuka.cube2.GetComponent<Transform>();
 
         //cube1tr = tuka.c1.GetComponent<Transform>();
         //int tama2 = tuka.tama;

@@ -69,14 +69,16 @@ public class s_99_04_lineKai : MonoBehaviour{
         rn1.material = m;
         rn2.material = m;
         rn3.material = m;
+
+        
     }
     void Update() {
         //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
         //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
-        lr1.SetPosition(0, new Vector3(cube1tr.position.x, 
-            cube1tr.position.y-cube1tr.localScale.y/2, 0.0f));
+        lr1.SetPosition(0, new Vector3(cube1tr.position.x,
+            cube1tr.position.y - cube1tr.localScale.y / 2, 0.0f));
 
-        lr1.SetPosition(1, new Vector3(cube2tr.position.x, 
+        lr1.SetPosition(1, new Vector3(cube2tr.position.x,
             cube2tr.position.y + cube2tr.localScale.y / 2, 0.0f));
 
         lr2.SetPosition(0, new Vector3(cube2tr.position.x,

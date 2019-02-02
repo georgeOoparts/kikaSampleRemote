@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class s_99_05_oyaCubeMove : MonoBehaviour
 {
-    public GameObject oyaCube;
+    //cube全体の親オブジェに貼り付けるプログラム
+    //cube全体を移動させるプログラム
+    //public GameObject oyaCube;
     //k0013_1: 宣言 
     Transform oyaCubeTr;
 
@@ -14,7 +16,7 @@ public class s_99_05_oyaCubeMove : MonoBehaviour
     void Start()
     {
         //k0013_1_1;オブジェに当てはめる；
-        oyaCubeTr = oyaCube.GetComponent<Transform>();
+        oyaCubeTr = this.gameObject.GetComponent<Transform>();
         
     }
 

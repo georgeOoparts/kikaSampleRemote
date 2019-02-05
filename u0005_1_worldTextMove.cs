@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class U0005_1_Lt2WorldPositionSlide: MonoBehaviour {
+public class u0005_1_worldTextMove : MonoBehaviour{
+    //
     //まだ新公理にあわせず
     //左上、上から2番目のテキストに貼り付けるプログラム
-    
+    //canvas>render mode>rendercamera>main camera>main camera指定
+    //planedistance調整忘れなく（文字が見えなくなる可能性あり）
+    //ファイルの始まりの文字を大文字にしないと、ファイルがオブジェクトに
+    //アタッチできないバグ有る。
+
+
+
+
     //k4_a:どこかに書いてあるRectTransformの変数を作る
     RectTransform rt;
     //leftTopのテキストをインスペで当てはめる

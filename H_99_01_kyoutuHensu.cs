@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class H_99_01_kyoutuHensu : MonoBehaviour
 {
-    // Start is called before the first frame update
+　　//共通で使い呼び出されるオブジェ、変数はここでかんりするぜ。
+    //k5_3_1: gameobject(メソッド、変数)を外部から呼び出す。
+    //ヒエでアタッチ
     void Start()
     {
         

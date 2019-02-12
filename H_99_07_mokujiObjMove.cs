@@ -18,6 +18,9 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     Transform trP5;
     Transform trP6;
 
+    //start でpanel1～６の始まるｙ軸の値。
+    float startPanel = 0;
+
     void Start()
     {
         //k0013_1_1;オブジェに当てはめる；
@@ -32,10 +35,20 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         trP6 = kyotu.p1_6.GetComponent<Transform>();
 
         //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
-        trP1.position = new Vector3(trP1.position.x, 0, trP1.position.z);
+        //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
+        //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
+        //まずstartでパネルを一列に並べる
+        trP1.position = new Vector3(trP1.position.x, startPanel, trP1.position.z);
+        trP2.position = new Vector3(trP1.position.x, startPanel, trP1.position.z);
+        trP3.position = new Vector3(trP1.position.x, startPanel, trP1.position.z);
+        trP4.position = new Vector3(trP1.position.x, startPanel, trP1.position.z);
+        trP5.position = new Vector3(trP1.position.x, startPanel, trP1.position.z);
+        trP6.position = new Vector3(trP1.position.x, startPanel, trP1.position.z);
     }
     void Update()
     {
+        //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
+        //updateで並んだパネルを一気に動かす
         trMokuji.position = new Vector3(trMokuji.position.x, trMokuji.position.y, 
                                         trMokuji.position.z);
     }

@@ -21,6 +21,9 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     //start でpanel1～６の始まるｙ軸の値。
     float startPanel = 0;
 
+    //panelの間の幅
+    public float spacePanel = 0.5f;
+
     void Start()
     {
         //k0013_1_1;オブジェに当てはめる；
@@ -39,10 +42,20 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
         //まずstartでパネルを一列に並べる
         trP1.position = new Vector3(trP1.position.x, startPanel, trP1.position.z);
+        startPanel -=trP1.localScale.y/2+ trP2.localScale.y / 2+ spacePanel;
+
         trP2.position = new Vector3(trP1.position.x, startPanel, trP1.position.z);
+        startPanel -= trP2.localScale.y / 2 + trP3.localScale.y / 2 + spacePanel;
+
         trP3.position = new Vector3(trP1.position.x, startPanel, trP1.position.z);
+        startPanel -= trP3.localScale.y / 2 + trP4.localScale.y / 2 + spacePanel;
+
         trP4.position = new Vector3(trP1.position.x, startPanel, trP1.position.z);
+        startPanel -= trP4.localScale.y / 2 + trP5.localScale.y / 2 + spacePanel;
+
         trP5.position = new Vector3(trP1.position.x, startPanel, trP1.position.z);
+        startPanel -= trP5.localScale.y / 2 + trP6.localScale.y / 2 + spacePanel;
+
         trP6.position = new Vector3(trP1.position.x, startPanel, trP1.position.z);
     }
     void Update()

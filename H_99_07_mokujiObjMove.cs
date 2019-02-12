@@ -24,6 +24,9 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     //panelの間の幅
     public float spacePanel = 0.5f;
 
+    //目次ｐ１のスタート位置
+    public float startP1 = 3.7f;
+
     void Start()
     {
         //k0013_1_1;オブジェに当てはめる；
@@ -62,7 +65,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     {
         //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
         //updateで並んだパネルを一気に動かす
-        trMokuji.position = new Vector3(trMokuji.position.x, trMokuji.position.y, 
+        trMokuji.position = new Vector3(trMokuji.position.x,startP1 , 
                                         trMokuji.position.z);
     }
 }

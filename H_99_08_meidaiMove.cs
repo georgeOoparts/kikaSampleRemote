@@ -9,7 +9,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
     public H_99_01_kyoutuHensu kyotu;
 
     //k0013_1: 宣言
-    Transform trMeidai1_1;
+    Transform trMeidai;
 
     Transform trP1_1_1;
     Transform trP1_1_2;
@@ -31,7 +31,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
         //k0013_1_1;オブジェに当てはめる；
         //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
 
-        trMeidai1_1 = kyotu.meidai1_1.GetComponent<Transform>();
+        trMeidai = kyotu.meidai.GetComponent<Transform>();
 
         trP1_1_1 = kyotu.p1_1_1.GetComponent<Transform>();
         trP1_1_2 = kyotu.p1_1_2.GetComponent<Transform>();
@@ -71,7 +71,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
     {
         //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
         //updateで並んだパネルを一気に動かす
-        trMeidai1_1.position = new Vector3(trMeidai1_1.position.x, startP1,
-                                        trMeidai1_1.position.z);
+        trMeidai.position = new Vector3(trMeidai.position.x, startP1,
+                                        trMeidai.position.z);
     }
 }

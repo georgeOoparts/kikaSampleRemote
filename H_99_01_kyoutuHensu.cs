@@ -29,6 +29,17 @@ public class H_99_01_kyoutuHensu : MonoBehaviour
     public GameObject p1_1_5;
     public GameObject p1_1_6;
 
+    //マズ　ライン2のフラグ2のオブジェを定める
+    public GameObject p1_2_1;
+    public GameObject p1_2_2;
+    public GameObject p1_2_3;
+    public GameObject p1_2_4;
+    public GameObject p1_2_5;
+    public GameObject p1_2_6;
+    public GameObject p1_2_7;
+    public GameObject p1_2_8;
+    public GameObject p1_2_9;
+
     void Start()
     {
         

@@ -47,10 +47,10 @@ public class H_99_08_meidaiMove : MonoBehaviour
     //panelの間の幅
     public float spacePanel = 0.5f;
 
-    //目次ｐ１のスタート位置
-    public float startP1 =0 ;
+    //目次panel並べ替え時のそれぞれのスタート位置
+    float startNarabekae =0 ;
 
-    //目次全体を動かす変数
+    //目次全体を動かす変数 
     float mokujiP = 0;
 
     void Start()
@@ -114,22 +114,28 @@ public class H_99_08_meidaiMove : MonoBehaviour
         if (kyotu.meidaiHensu == 1) {
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
             
-            trP1_1_1.position = new Vector3(trP1_1_1.position.x, startP1, trP1_1_1.position.z);
+            trP1_1_1.position = 
+                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
 
-            startP1 -= trP1_1_1.localScale.y / 2 + trP1_1_2.localScale.y / 2 + spacePanel;
-            trP1_1_2.position = new Vector3(trP1_1_1.position.x, startP1, trP1_1_1.position.z);
+            startNarabekae -= trP1_1_1.localScale.y / 2 + trP1_1_2.localScale.y / 2 + spacePanel;
+            trP1_1_2.position = 
+                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
 
-            startP1 -= trP1_1_2.localScale.y / 2 + trP1_1_3.localScale.y / 2 + spacePanel;
-            trP1_1_3.position = new Vector3(trP1_1_1.position.x, startP1, trP1_1_1.position.z);
+            startNarabekae -= trP1_1_2.localScale.y / 2 + trP1_1_3.localScale.y / 2 + spacePanel;
+            trP1_1_3.position = 
+                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
 
-            startP1 -= trP1_1_3.localScale.y / 2 + trP1_1_4.localScale.y / 2 + spacePanel;
-            trP1_1_4.position = new Vector3(trP1_1_1.position.x, startP1, trP1_1_1.position.z);
+            startNarabekae -= trP1_1_3.localScale.y / 2 + trP1_1_4.localScale.y / 2 + spacePanel;
+            trP1_1_4.position = 
+                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
 
-            startP1 -= trP1_1_4.localScale.y / 2 + trP1_1_5.localScale.y / 2 + spacePanel;
-            trP1_1_5.position = new Vector3(trP1_1_1.position.x, startP1, trP1_1_1.position.z);
+            startNarabekae -= trP1_1_4.localScale.y / 2 + trP1_1_5.localScale.y / 2 + spacePanel;
+            trP1_1_5.position = 
+                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
 
-            startP1 -= trP1_1_5.localScale.y / 2 + trP1_1_6.localScale.y / 2 + spacePanel;
-            trP1_1_6.position = new Vector3(trP1_1_1.position.x, startP1, trP1_1_1.position.z);
+            startNarabekae -= trP1_1_5.localScale.y / 2 + trP1_1_6.localScale.y / 2 + spacePanel;
+            trP1_1_6.position = 
+                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
 
             //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
             //start位置調整

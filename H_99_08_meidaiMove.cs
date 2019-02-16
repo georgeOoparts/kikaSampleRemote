@@ -117,6 +117,6 @@ public class H_99_08_meidaiMove : MonoBehaviour
         //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
         //updateで並んだパネルを一気に動かす
         trMeidai.position = new Vector3(trMeidai.position.x, startP1,
-                                        //trMeidai.position.z);
+                                        trMeidai.position.z);
     }
 }

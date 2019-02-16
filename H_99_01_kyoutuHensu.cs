@@ -10,6 +10,10 @@ public class H_99_01_kyoutuHensu : MonoBehaviour
 
     //meidaiの何がライン2（フラッグ図）にくるか決める変数
     public int meidaiHensu = 1;
+
+    public float cameraTakasaY = 5;
+    public float upSpace = 0.5f;
+    
     
     //マズ　ライン１の目次のオブジェを定める
     public GameObject mokuji;

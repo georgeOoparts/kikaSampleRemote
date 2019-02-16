@@ -8,6 +8,9 @@ public class H_99_01_kyoutuHensu : MonoBehaviour
     //k5_3_1: gameobject(メソッド、変数)を外部から呼び出す。
     //ヒエでアタッチ
 
+    //meidaiの何がライン2（フラッグ図）にくるか決める変数
+    public int meidaiHensu = 1;
+    
     //マズ　ライン１の目次のオブジェを定める
     public GameObject mokuji;
 

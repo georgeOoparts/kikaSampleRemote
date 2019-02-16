@@ -15,6 +15,11 @@ public class H_99_08_meidaiMove : MonoBehaviour
     Transform trMeidai;
 
     Transform trMeidai1_1;
+    Transform trMeidai1_2;
+    Transform trMeidai1_3;
+    Transform trMeidai1_4;
+    Transform trMeidai1_5;
+    Transform trMeidai1_6;
 
     Transform trP1_1_1;
     Transform trP1_1_2;
@@ -52,6 +57,11 @@ public class H_99_08_meidaiMove : MonoBehaviour
         trMeidai = kyotu.meidai.GetComponent<Transform>();
 
         trMeidai1_1 =kyotu.meidai1_1.GetComponent<Transform>();
+        trMeidai1_2 = kyotu.meidai1_2.GetComponent<Transform>();
+        trMeidai1_3 = kyotu.meidai1_3.GetComponent<Transform>();
+        trMeidai1_4 = kyotu.meidai1_4.GetComponent<Transform>();
+        trMeidai1_5 = kyotu.meidai1_5.GetComponent<Transform>();
+        trMeidai1_6 = kyotu.meidai1_6.GetComponent<Transform>();
 
         trP1_1_1 = kyotu.p1_1_1.GetComponent<Transform>();
         trP1_1_2 = kyotu.p1_1_2.GetComponent<Transform>();
@@ -75,8 +85,21 @@ public class H_99_08_meidaiMove : MonoBehaviour
         //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
         //まずstartでパネルを一列に並べる
 
-        //まずmeidai1_1をパネル２の場所（5.6、0）までもって行く
-        trMeidai1_1.position = new Vector3(meidaiX, startPanel, trMeidai1_1.position.z);
+        //共通のmeidaiHensuのあたいによってパネル２に並べられる変数を決める。
+        if (kyotu.meidaiHensu==1) {
+            //まずmeidai1_1をパネル２の場所（5.6、0）までもって行く
+            trMeidai1_1.position = new Vector3(meidaiX, startPanel, trMeidai1_1.position.z);
+        }else if (kyotu.meidaiHensu == 2) {
+            trMeidai1_2.position = new Vector3(meidaiX, startPanel, trMeidai1_2.position.z);
+        } else if (kyotu.meidaiHensu == 3) {
+            trMeidai1_3.position = new Vector3(meidaiX, startPanel, trMeidai1_3.position.z);
+        } else if (kyotu.meidaiHensu == 4) {
+            trMeidai1_4.position = new Vector3(meidaiX, startPanel, trMeidai1_4.position.z);
+        } else if (kyotu.meidaiHensu == 5) {
+            trMeidai1_5.position = new Vector3(meidaiX, startPanel, trMeidai1_5.position.z);
+        } else if (kyotu.meidaiHensu == 6) {
+            trMeidai1_6.position = new Vector3(meidaiX, startPanel, trMeidai1_6.position.z);
+        }
 
         //まずｐ１＿１＿１～ｐ１＿１＿６まで
         //trP1_1_1.position = new Vector3(meidaiX, startPanel, trP1_1_1.position.z);
@@ -116,7 +139,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
         //trP1_2_6.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
 
 
-        //Debug.Log("move?"+kyotu.p1_1_1.name);
+        Debug.Log("move?");
     }
 
     void Update()

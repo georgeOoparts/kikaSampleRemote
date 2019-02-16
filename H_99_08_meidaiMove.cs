@@ -42,15 +42,18 @@ public class H_99_08_meidaiMove : MonoBehaviour
     public float meidaiX = 5.6f;
     public float meidaiY = 0;
     //start でpanel1～6の始まるｙ軸の値。
-    //float startPanel = 0;
+    float startPanel =0;
 
     //panelの間の幅
     public float spacePanel = 0.5f;
 
     //目次ｐ１のスタート位置
-    public float startP1 = 3.7f;
+    public float startP1 =0 ;
     void Start()
     {
+        
+
+
         //k0013_1_1;オブジェに当てはめる；
         //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
 
@@ -80,9 +83,11 @@ public class H_99_08_meidaiMove : MonoBehaviour
         //trP1_2_8 = kyotu.p1_2_8.GetComponent<Transform>();
         //trP1_2_9 = kyotu.p1_2_9.GetComponent<Transform>();
 
+        
+        
+        
+        
         //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
-        //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
-        //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
         //まずstartでパネルを一列に並べる
 
         //共通のmeidaiHensuのあたいによってパネル２に並べられる変数を決める。
@@ -103,7 +108,10 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
         //まずｐ１＿１＿１～ｐ１＿１＿６まで
         if (kyotu.meidaiHensu == 1) {
-            
+            //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
+            //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
+            //start位置調整
+            startP1 = kyotu.cameraTakasaY - kyotu.upSpace - trP1_1_1.localScale.y / 2;
 
             trP1_1_1.position = new Vector3(trP1_1_1.position.x, startP1, trP1_1_1.position.z);
 

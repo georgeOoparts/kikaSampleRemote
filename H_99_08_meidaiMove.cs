@@ -124,13 +124,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             trP1_1_6.position =
                 new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
 
-            //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
-            //start位置調整
-            mokujiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_1_1.localScale.y / 2;
-
-            //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
-            trMeidai1_1.position =
-                new Vector3(trMeidai1_1.position.x, mokujiP, trMeidai1_1.position.z);
+            
 
 
         } else if (kyotu.meidaiHensu == 2) {
@@ -163,13 +157,22 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
         //startPanel -= trP1_2_5.localScale.y / 2 + trP1_2_6.localScale.y / 2 + spacePanel;
         //trP1_2_6.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
-
-
         Debug.Log("move?");
+
+
     }
 
     void Update()
     {
+        //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
+        //start位置調整
+        mokujiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_1_1.localScale.y / 2;
+
+        //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
+        trMeidai1_1.position =
+            new Vector3(trMeidai1_1.position.x, mokujiP, trMeidai1_1.position.z);
+        
+        
         //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
         //updateで並んだパネルを一気に動かす
         //trMeidai.position = new Vector3(trMeidai.position.x, startP1,

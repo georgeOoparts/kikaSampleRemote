@@ -98,7 +98,42 @@ public class H_99_08_meidaiMove : MonoBehaviour
         if (kyotu.meidaiHensu==1) {
             //まずmeidai1_1をパネル２の場所（5.6、0）までもって行く
             trMeidai1_1.position = new Vector3(meidaiX, meidaiY, trMeidai1_1.position.z);
-        }else if (kyotu.meidaiHensu == 2) {
+
+            //ｐ１＿１＿１～ｐ１＿１＿６までパネルを並べる
+            //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
+            trP1_1_1.position =
+               new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
+
+            startNarabekae -= trP1_1_1.localScale.y / 2 + trP1_1_2.localScale.y / 2 + spacePanel;
+            trP1_1_2.position =
+                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
+
+            startNarabekae -= trP1_1_2.localScale.y / 2 + trP1_1_3.localScale.y / 2 + spacePanel;
+            trP1_1_3.position =
+                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
+
+            startNarabekae -= trP1_1_3.localScale.y / 2 + trP1_1_4.localScale.y / 2 + spacePanel;
+            trP1_1_4.position =
+                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
+
+            startNarabekae -= trP1_1_4.localScale.y / 2 + trP1_1_5.localScale.y / 2 + spacePanel;
+            trP1_1_5.position =
+                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
+
+            startNarabekae -= trP1_1_5.localScale.y / 2 + trP1_1_6.localScale.y / 2 + spacePanel;
+            trP1_1_6.position =
+                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
+
+            //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
+            //start位置調整
+            mokujiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_1_1.localScale.y / 2;
+
+            //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
+            trMeidai1_1.position =
+                new Vector3(trMeidai1_1.position.x, mokujiP, trMeidai1_1.position.z);
+
+
+        } else if (kyotu.meidaiHensu == 2) {
             trMeidai1_2.position = new Vector3(meidaiX, meidaiY, trMeidai1_2.position.z);
         } else if (kyotu.meidaiHensu == 3) {
             trMeidai1_3.position = new Vector3(meidaiX, meidaiY, trMeidai1_3.position.z);
@@ -110,42 +145,6 @@ public class H_99_08_meidaiMove : MonoBehaviour
             trMeidai1_6.position = new Vector3(meidaiX, meidaiY, trMeidai1_6.position.z);
         }
 
-        //まずｐ１＿１＿１～ｐ１＿１＿６までパネルを並べる
-        if (kyotu.meidaiHensu == 1) {
-            //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
-            
-            trP1_1_1.position = 
-                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
-
-            startNarabekae -= trP1_1_1.localScale.y / 2 + trP1_1_2.localScale.y / 2 + spacePanel;
-            trP1_1_2.position = 
-                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
-
-            startNarabekae -= trP1_1_2.localScale.y / 2 + trP1_1_3.localScale.y / 2 + spacePanel;
-            trP1_1_3.position = 
-                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
-
-            startNarabekae -= trP1_1_3.localScale.y / 2 + trP1_1_4.localScale.y / 2 + spacePanel;
-            trP1_1_4.position = 
-                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
-
-            startNarabekae -= trP1_1_4.localScale.y / 2 + trP1_1_5.localScale.y / 2 + spacePanel;
-            trP1_1_5.position = 
-                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
-
-            startNarabekae -= trP1_1_5.localScale.y / 2 + trP1_1_6.localScale.y / 2 + spacePanel;
-            trP1_1_6.position = 
-                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
-
-            //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
-            //start位置調整
-            mokujiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_1_1.localScale.y / 2;
-
-            //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
-            trMeidai1_1.position = 
-                new Vector3(trMeidai1_1.position.x,mokujiP,trMeidai1_1.position.z);
-
-        }
         ////まずｐ１＿2＿１～ｐ１＿2＿9まで
         //startPanel -= trP1_1_6.localScale.y / 2 + trP1_2_1.localScale.y / 2 + spacePanel;
         //trP1_2_1.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);

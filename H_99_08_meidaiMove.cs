@@ -49,6 +49,10 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
     //目次ｐ１のスタート位置
     public float startP1 =0 ;
+
+    //目次全体を動かす変数
+    float mokujiP = 0;
+
     void Start()
     {
         
@@ -106,13 +110,10 @@ public class H_99_08_meidaiMove : MonoBehaviour
             trMeidai1_6.position = new Vector3(meidaiX, meidaiY, trMeidai1_6.position.z);
         }
 
-        //まずｐ１＿１＿１～ｐ１＿１＿６まで
+        //まずｐ１＿１＿１～ｐ１＿１＿６までパネルを並べる
         if (kyotu.meidaiHensu == 1) {
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
-            //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
-            //start位置調整
-            startP1 = kyotu.cameraTakasaY - kyotu.upSpace - trP1_1_1.localScale.y / 2;
-
+            
             trP1_1_1.position = new Vector3(trP1_1_1.position.x, startP1, trP1_1_1.position.z);
 
             startP1 -= trP1_1_1.localScale.y / 2 + trP1_1_2.localScale.y / 2 + spacePanel;
@@ -129,28 +130,37 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
             startP1 -= trP1_1_5.localScale.y / 2 + trP1_1_6.localScale.y / 2 + spacePanel;
             trP1_1_6.position = new Vector3(trP1_1_1.position.x, startP1, trP1_1_1.position.z);
+
+            //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
+            //start位置調整
+            mokujiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_1_1.localScale.y / 2;
+
+            //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
+            trMeidai1_1.position = 
+                new Vector3(trMeidai1_1.position.x,mokujiP,trMeidai1_1.position.z);
+
         }
-            ////まずｐ１＿2＿１～ｐ１＿2＿9まで
-            //startPanel -= trP1_1_6.localScale.y / 2 + trP1_2_1.localScale.y / 2 + spacePanel;
-            //trP1_2_1.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
+        ////まずｐ１＿2＿１～ｐ１＿2＿9まで
+        //startPanel -= trP1_1_6.localScale.y / 2 + trP1_2_1.localScale.y / 2 + spacePanel;
+        //trP1_2_1.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
 
-            //startPanel -= trP1_2_1.localScale.y / 2 + trP1_2_2.localScale.y / 2 + spacePanel;
-            //trP1_2_2.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
+        //startPanel -= trP1_2_1.localScale.y / 2 + trP1_2_2.localScale.y / 2 + spacePanel;
+        //trP1_2_2.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
 
-            //startPanel -= trP1_2_2.localScale.y / 2 + trP1_2_3.localScale.y / 2 + spacePanel;
-            //trP1_2_3.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
+        //startPanel -= trP1_2_2.localScale.y / 2 + trP1_2_3.localScale.y / 2 + spacePanel;
+        //trP1_2_3.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
 
-            //startPanel -= trP1_2_3.localScale.y / 2 + trP1_2_4.localScale.y / 2 + spacePanel;
-            //trP1_2_4.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
+        //startPanel -= trP1_2_3.localScale.y / 2 + trP1_2_4.localScale.y / 2 + spacePanel;
+        //trP1_2_4.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
 
-            //startPanel -= trP1_2_4.localScale.y / 2 + trP1_2_5.localScale.y / 2 + spacePanel;
-            //trP1_2_5.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
+        //startPanel -= trP1_2_4.localScale.y / 2 + trP1_2_5.localScale.y / 2 + spacePanel;
+        //trP1_2_5.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
 
-            //startPanel -= trP1_2_5.localScale.y / 2 + trP1_2_6.localScale.y / 2 + spacePanel;
-            //trP1_2_6.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
+        //startPanel -= trP1_2_5.localScale.y / 2 + trP1_2_6.localScale.y / 2 + spacePanel;
+        //trP1_2_6.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
 
 
-            Debug.Log("move?");
+        Debug.Log("move?");
     }
 
     void Update()

@@ -40,7 +40,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
     //meidai全部のｘ軸の値
     public float meidaiX = 5.6f;
-
+    public float meidaiY = 0;
     //start でpanel1～6の始まるｙ軸の値。
     float startPanel = 0;
 
@@ -88,17 +88,17 @@ public class H_99_08_meidaiMove : MonoBehaviour
         //共通のmeidaiHensuのあたいによってパネル２に並べられる変数を決める。
         if (kyotu.meidaiHensu==1) {
             //まずmeidai1_1をパネル２の場所（5.6、0）までもって行く
-            trMeidai1_1.position = new Vector3(meidaiX, startPanel, trMeidai1_1.position.z);
+            trMeidai1_1.position = new Vector3(meidaiX, meidaiY, trMeidai1_1.position.z);
         }else if (kyotu.meidaiHensu == 2) {
-            trMeidai1_2.position = new Vector3(meidaiX, startPanel, trMeidai1_2.position.z);
+            trMeidai1_2.position = new Vector3(meidaiX, meidaiY, trMeidai1_2.position.z);
         } else if (kyotu.meidaiHensu == 3) {
-            trMeidai1_3.position = new Vector3(meidaiX, startPanel, trMeidai1_3.position.z);
+            trMeidai1_3.position = new Vector3(meidaiX, meidaiY, trMeidai1_3.position.z);
         } else if (kyotu.meidaiHensu == 4) {
-            trMeidai1_4.position = new Vector3(meidaiX, startPanel, trMeidai1_4.position.z);
+            trMeidai1_4.position = new Vector3(meidaiX, meidaiY, trMeidai1_4.position.z);
         } else if (kyotu.meidaiHensu == 5) {
-            trMeidai1_5.position = new Vector3(meidaiX, startPanel, trMeidai1_5.position.z);
+            trMeidai1_5.position = new Vector3(meidaiX, meidaiY, trMeidai1_5.position.z);
         } else if (kyotu.meidaiHensu == 6) {
-            trMeidai1_6.position = new Vector3(meidaiX, startPanel, trMeidai1_6.position.z);
+            trMeidai1_6.position = new Vector3(meidaiX, meidaiY, trMeidai1_6.position.z);
         }
 
         //まずｐ１＿１＿１～ｐ１＿１＿６まで

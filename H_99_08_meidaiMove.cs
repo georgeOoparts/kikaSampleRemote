@@ -14,6 +14,8 @@ public class H_99_08_meidaiMove : MonoBehaviour
     //k0013_1: 宣言
     Transform trMeidai;
 
+    Transform trMeidai1_1;
+
     Transform trP1_1_1;
     Transform trP1_1_2;
     Transform trP1_1_3;
@@ -49,6 +51,8 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
         trMeidai = kyotu.meidai.GetComponent<Transform>();
 
+        trMeidai1_1 =kyotu.meidai1_1.GetComponent<Transform>();
+
         trP1_1_1 = kyotu.p1_1_1.GetComponent<Transform>();
         trP1_1_2 = kyotu.p1_1_2.GetComponent<Transform>();
         trP1_1_3 = kyotu.p1_1_3.GetComponent<Transform>();
@@ -71,23 +75,26 @@ public class H_99_08_meidaiMove : MonoBehaviour
         //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
         //まずstartでパネルを一列に並べる
 
+        //まずmeidai1_1をパネル２の場所（5.6、0）までもって行く
+        trMeidai1_1.position = new Vector3(meidaiX, startPanel, trMeidai1_1.position.z);
+
         //まずｐ１＿１＿１～ｐ１＿１＿６まで
-        trP1_1_1.position = new Vector3(meidaiX, startPanel, trP1_1_1.position.z);
+        //trP1_1_1.position = new Vector3(meidaiX, startPanel, trP1_1_1.position.z);
 
-        startPanel -= trP1_1_1.localScale.y / 2 + trP1_1_2.localScale.y / 2 + spacePanel;
-        trP1_1_2.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
+        //startPanel -= trP1_1_1.localScale.y / 2 + trP1_1_2.localScale.y / 2 + spacePanel;
+        //trP1_1_2.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
 
-        startPanel -= trP1_1_2.localScale.y / 2 + trP1_1_3.localScale.y / 2 + spacePanel;
-        trP1_1_3.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
+        //startPanel -= trP1_1_2.localScale.y / 2 + trP1_1_3.localScale.y / 2 + spacePanel;
+        //trP1_1_3.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
 
-        startPanel -= trP1_1_3.localScale.y / 2 + trP1_1_4.localScale.y / 2 + spacePanel;
-        trP1_1_4.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
+        //startPanel -= trP1_1_3.localScale.y / 2 + trP1_1_4.localScale.y / 2 + spacePanel;
+        //trP1_1_4.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
 
-        startPanel -= trP1_1_4.localScale.y / 2 + trP1_1_5.localScale.y / 2 + spacePanel;
-        trP1_1_5.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
+        //startPanel -= trP1_1_4.localScale.y / 2 + trP1_1_5.localScale.y / 2 + spacePanel;
+        //trP1_1_5.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
 
-        startPanel -= trP1_1_5.localScale.y / 2 + trP1_1_6.localScale.y / 2 + spacePanel;
-        trP1_1_6.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
+        //startPanel -= trP1_1_5.localScale.y / 2 + trP1_1_6.localScale.y / 2 + spacePanel;
+        //trP1_1_6.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
 
         ////まずｐ１＿2＿１～ｐ１＿2＿9まで
         //startPanel -= trP1_1_6.localScale.y / 2 + trP1_2_1.localScale.y / 2 + spacePanel;
@@ -116,7 +123,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
     {
         //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
         //updateで並んだパネルを一気に動かす
-        trMeidai.position = new Vector3(trMeidai.position.x, startP1,
-                                        trMeidai.position.z);
+        //trMeidai.position = new Vector3(trMeidai.position.x, startP1,
+        //                                trMeidai.position.z);
     }
 }

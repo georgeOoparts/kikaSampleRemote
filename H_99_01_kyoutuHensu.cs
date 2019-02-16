@@ -20,7 +20,15 @@ public class H_99_01_kyoutuHensu : MonoBehaviour
 
     //マズ　ライン2のmeidaiのオブジェを定める
     public GameObject meidai;
-    
+
+    //マズ　ライン2のmeidai1_1～meidai1_6のオブジェを定める
+    public GameObject meidai1_1;
+    public GameObject meidai1_2;
+    public GameObject meidai1_3;
+    public GameObject meidai1_4;
+    public GameObject meidai1_5;
+    public GameObject meidai1_6;
+
     //マズ　ライン2のフラグ１のオブジェを定める
     public GameObject p1_1_1;
     public GameObject p1_1_2;

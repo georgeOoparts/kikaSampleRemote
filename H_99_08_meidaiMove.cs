@@ -101,7 +101,8 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
             //meidai1_1のｐ１＿１＿１～ｐ１＿１＿６までパネルを並べる
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
-            //startNarabekaeの値は最初０にセットしてある
+            //startNarabekaeの値は最初０にリセットする
+            startNarabekae = 0;
             trP1_1_1.position =
                new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
 
@@ -231,23 +232,18 @@ public class H_99_08_meidaiMove : MonoBehaviour
             trP1_1_1.position =
                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
-            startNarabekae -= trP1_1_1.localScale.y / 2 + trP1_1_2.localScale.y / 2 + spacePanel;
             trP1_1_2.position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
-            startNarabekae -= trP1_1_2.localScale.y / 2 + trP1_1_3.localScale.y / 2 + spacePanel;
             trP1_1_3.position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
-            startNarabekae -= trP1_1_3.localScale.y / 2 + trP1_1_4.localScale.y / 2 + spacePanel;
             trP1_1_4.position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
-            startNarabekae -= trP1_1_4.localScale.y / 2 + trP1_1_5.localScale.y / 2 + spacePanel;
             trP1_1_5.position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
-            startNarabekae -= trP1_1_5.localScale.y / 2 + trP1_1_6.localScale.y / 2 + spacePanel;
             trP1_1_6.position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 

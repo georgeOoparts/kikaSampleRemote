@@ -195,7 +195,9 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
         //startPanel -= trP1_2_5.localScale.y / 2 + trP1_2_6.localScale.y / 2 + spacePanel;
         //trP1_2_6.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
-       
+
+        Debug.Log("move?");
+
 
 
     }
@@ -206,7 +208,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
     void Update()
     {
-        mobeNarabe();
+      
         if (kyotu.meidaiHensu == 1) {
             //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
             //start位置調整
@@ -252,12 +254,9 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //まずmeidai1_1を元の場所（5.6、0）までもって行く
             trMeidai1_2.position = new Vector3(meidaiX, meidaiY, trMeidai1_2.position.z);
 
-            //Debug.Log("move?");
             
 
         }
     }
-    void mobeNarabe() {
-        Debug.Log("mobenaraBEEEEE");
-    }
+    
 }

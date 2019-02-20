@@ -90,14 +90,8 @@ public class H_99_08_meidaiMove : MonoBehaviour
         Debug.Log("move?");
     }
 
-    //void panelNarabe() {
-
-    //}
-
-    void Update()
-    {
-      
-        if (kyotu.meidaiHensu == 1) {
+    void panelNarabe(int MH) {
+        if (MH==1) {
             //選ばれなかった命題をまずリセット----------------------
             //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
@@ -164,20 +158,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             startNarabekae -= trP1_1_5.localScale.y / 2 + trP1_1_6.localScale.y / 2 + spacePanel;
             trP1_1_6.position =
                 new Vector3(trP1_1_1.position.x, startNarabekae, trP1_1_1.position.z);
-
-            //最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整---------------------------
-            //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
-            //cameraTakasaY：カメラの真ん中から上半分のyジクの距離
-            //upSpace：カメラの上から一番上のオブジェまでの距離
-            //mokujiP：目次全体を動かす変数
-            mokujiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_1_1.localScale.y / 2;
-
-            //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
-            //page.position = new Vector3((float)-2.8, -5, page.position.z);
-            trMeidai1_1.position =
-                new Vector3(trMeidai1_1.position.x, mokujiP, trMeidai1_1.position.z);
-
-        } else if (kyotu.meidaiHensu == 2) {
+        }else if (MH == 2) {
             //選ばれなかった命題をまずリセット----------------------
             //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
@@ -198,7 +179,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
             trP1_1_4.position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
-            
+
             trP1_1_5.position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
@@ -214,7 +195,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             startNarabekae = 0;
             trP1_2_1.position =
                new Vector3(trP1_2_1.position.x, startNarabekae, trP1_2_1.position.z);
-            
+
             startNarabekae -= trP1_2_1.localScale.y / 2 + trP1_2_2.localScale.y / 2 + spacePanel;
             trP1_2_2.position =
                 new Vector3(trP1_2_1.position.x, startNarabekae, trP1_2_1.position.z);
@@ -246,7 +227,27 @@ public class H_99_08_meidaiMove : MonoBehaviour
             startNarabekae -= trP1_2_8.localScale.y / 2 + trP1_2_9.localScale.y / 2 + spacePanel;
             trP1_2_9.position =
                 new Vector3(trP1_2_1.position.x, startNarabekae, trP1_2_1.position.z);
+        }
+    }
 
+    void Update()
+    {
+
+        panelNarabe(kyotu.meidaiHensu);
+        if (kyotu.meidaiHensu == 1) {
+            //最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整---------------------------
+            //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
+            //cameraTakasaY：カメラの真ん中から上半分のyジクの距離
+            //upSpace：カメラの上から一番上のオブジェまでの距離
+            //mokujiP：目次全体を動かす変数
+            mokujiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_1_1.localScale.y / 2;
+
+            //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
+            //page.position = new Vector3((float)-2.8, -5, page.position.z);
+            trMeidai1_1.position =
+                new Vector3(trMeidai1_1.position.x, mokujiP, trMeidai1_1.position.z);
+
+        } else if (kyotu.meidaiHensu == 2) {
             ////最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整---------------------------
             ////page.localScale = new Vector3((float)-2.8, -5, page.position.z);
             ////cameraTakasaY：カメラの真ん中から上半分のyジクの距離

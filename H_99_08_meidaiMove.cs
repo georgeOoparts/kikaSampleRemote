@@ -43,7 +43,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
     public float meidaiY = 0;
 
     //start でpanel1～6の始まるｙ軸の値。
-    float startPanel =0;
+    //float startPanel =0;
 
     //panelの間の幅
     public float spacePanel = 0.5f;
@@ -195,7 +195,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
         //startPanel -= trP1_2_5.localScale.y / 2 + trP1_2_6.localScale.y / 2 + spacePanel;
         //trP1_2_6.position = new Vector3(trP1_1_1.position.x, startPanel, trP1_1_1.position.z);
-        Debug.Log("move?");
+       
 
 
     }
@@ -206,6 +206,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
     void Update()
     {
+        mobeNarabe();
         if (kyotu.meidaiHensu == 1) {
             //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
             //start位置調整
@@ -227,6 +228,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             trMeidai1_1.position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
+            //選ばれなかったｐ１＿１＿１～ｐ１＿１＿６までパネルをリセット
             //ｐ１＿１＿１～ｐ１＿１＿６までパネルを並べる
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
             trP1_1_1.position =
@@ -240,7 +242,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
             trP1_1_4.position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
-
+            
             trP1_1_5.position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
@@ -250,12 +252,12 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //まずmeidai1_1を元の場所（5.6、0）までもって行く
             trMeidai1_2.position = new Vector3(meidaiX, meidaiY, trMeidai1_2.position.z);
 
-
+            //Debug.Log("move?");
+            
 
         }
-
-
-
-
+    }
+    void mobeNarabe() {
+        Debug.Log("mobenaraBEEEEE");
     }
 }

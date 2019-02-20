@@ -11,7 +11,9 @@ public class H_99_01_kyoutuHensu : MonoBehaviour
     //meidaiの何がライン2（フラッグ図）にくるか決める変数
     public int meidaiHensu = 1;
 
+    //cameraTakasaY：カメラの真ん中から上半分のyジクの距離
     public float cameraTakasaY = 5;
+    //upSpace：カメラの上から一番上のオブジェまでの距離
     public float upSpace = 0.5f;
     
     

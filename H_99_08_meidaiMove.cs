@@ -28,15 +28,15 @@ public class H_99_08_meidaiMove : MonoBehaviour
     Transform trP1_1_5;
     Transform trP1_1_6;
 
-    //Transform trP1_2_1;
-    //Transform trP1_2_2;
-    //Transform trP1_2_3;
-    //Transform trP1_2_4;
-    //Transform trP1_2_5;
-    //Transform trP1_2_6;
-    //Transform trP1_2_7;
-    //Transform trP1_2_8;
-    //Transform trP1_2_9;
+    Transform trP1_2_1;
+    Transform trP1_2_2;
+    Transform trP1_2_3;
+    Transform trP1_2_4;
+    Transform trP1_2_5;
+    Transform trP1_2_6;
+    Transform trP1_2_7;
+    Transform trP1_2_8;
+    Transform trP1_2_9;
 
     //meidai全部のｘ軸の値
     public float meidaiX = 5.6f;
@@ -77,15 +77,15 @@ public class H_99_08_meidaiMove : MonoBehaviour
         trP1_1_5 = kyotu.p1_1_5.GetComponent<Transform>();
         trP1_1_6 = kyotu.p1_1_6.GetComponent<Transform>();
 
-        //trP1_2_1 = kyotu.p1_2_1.GetComponent<Transform>();
-        //trP1_2_2 = kyotu.p1_2_2.GetComponent<Transform>();
-        //trP1_2_3 = kyotu.p1_2_3.GetComponent<Transform>();
-        //trP1_2_4 = kyotu.p1_2_4.GetComponent<Transform>();
-        //trP1_2_5 = kyotu.p1_2_5.GetComponent<Transform>();
-        //trP1_2_6 = kyotu.p1_2_6.GetComponent<Transform>();
-        //trP1_2_7 = kyotu.p1_2_7.GetComponent<Transform>();
-        //trP1_2_8 = kyotu.p1_2_8.GetComponent<Transform>();
-        //trP1_2_9 = kyotu.p1_2_9.GetComponent<Transform>();
+        trP1_2_1 = kyotu.p1_2_1.GetComponent<Transform>();
+        trP1_2_2 = kyotu.p1_2_2.GetComponent<Transform>();
+        trP1_2_3 = kyotu.p1_2_3.GetComponent<Transform>();
+        trP1_2_4 = kyotu.p1_2_4.GetComponent<Transform>();
+        trP1_2_5 = kyotu.p1_2_5.GetComponent<Transform>();
+        trP1_2_6 = kyotu.p1_2_6.GetComponent<Transform>();
+        trP1_2_7 = kyotu.p1_2_7.GetComponent<Transform>();
+        trP1_2_8 = kyotu.p1_2_8.GetComponent<Transform>();
+        trP1_2_9 = kyotu.p1_2_9.GetComponent<Transform>();
 
         
         
@@ -253,9 +253,6 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
             //まずmeidai1_1を元の場所（5.6、0）までもって行く
             trMeidai1_2.position = new Vector3(meidaiX, meidaiY, trMeidai1_2.position.z);
-
-            
-
         }
     }
     

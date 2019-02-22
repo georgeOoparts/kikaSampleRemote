@@ -299,7 +299,10 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     //myList.RemoveAt(0); 
 
     ///k0016_99_1_1_4　：Listすべての要素を削除
-    //myList.Clear(); 
+    //myList.Clear();
+    
+     ///k0016_99_1_1_5　：Listの要素数を得る
+    //myList.Count;
 
     ーーーーーーーーーーー－－－－－－－－－－－－－－－－－－
     //k0017_99_1：配列使い方

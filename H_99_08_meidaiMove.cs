@@ -11,30 +11,32 @@ public class H_99_08_meidaiMove : MonoBehaviour
     //このスクリプトをアタッチしたオブジェクトにいちいちこのオブジェクトをアタッチ
     public H_99_01_kyoutuHensu kyotu;
 
-    //k0013_1: 宣言
+    //k0013_1: 宣言----------------------------------------------------------
+    //Transformの宣言
     Transform trMeidai;
+
+    //k0016_99_1_1：listの宣言
+    //private List<Transform> trMeidai1 = new List<Transform>();
 
     private List<Transform> trMeidai1 = new List<Transform>();
 
     private List<Transform> trP1_1 = new List<Transform>();
-
     private List<Transform> trP1_2 = new List<Transform>();
+    private List<Transform> trP1_3 = new List<Transform>();
 
-    
-
-    //meidai全部のｘ軸の値
+    //meidai全部のｘ軸の値------------------------------
     public float meidaiX = 5.6f;
     public float meidaiY = 0;
 
-   //panelの間の幅
+   //panelの間の幅-----------------------------------------
     public float spacePanel = 0.5f;
 
-    //目次panel並べ替え時のそれぞれのスタート位置
+    //目次panel並べ替え時のそれぞれのスタート位置-----------
     float startNarabekae =0 ;
 
-    //mokujiP：目次全体を動かす変数 
+    //mokujiP：目次全体を動かす変数 ---------------------------
     float mokujiP = 0;
-    //現在ででなく、1つ前のmeidai変数を入れる変数。panelZenkaiResetメソッドに使う。
+    //現在ででなく、1つ前のmeidai変数を入れる変数。panelZenkaiResetメソッドに使う。---
     int maeMeidaiHensu = 0; 
 
     void Start()
@@ -53,8 +55,11 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
         trMeidai1.Add(kyotu.meidai1_1.GetComponent<Transform>());
         trMeidai1.Add(kyotu.meidai1_2.GetComponent<Transform>());
+        trMeidai1.Add(kyotu.meidai1_3.GetComponent<Transform>());
 
         //meidai1_1のパネルのtransformを取得-----------------------------------------------------
+        //k0016_99_1_1_1：list新しい値を入れる
+        //trMeidai1.Add(kyotu.meidai1_1.GetComponent<Transform>());
 
         trP1_1.Add(kyotu.p1_1_1.GetComponent<Transform>());
         trP1_1.Add(kyotu.p1_1_2.GetComponent<Transform>());
@@ -63,7 +68,10 @@ public class H_99_08_meidaiMove : MonoBehaviour
         trP1_1.Add(kyotu.p1_1_5.GetComponent<Transform>());
         trP1_1.Add(kyotu.p1_1_6.GetComponent<Transform>());
 
-        //------------------------------------------
+        //meidai1_2のパネルのtransformを取得-----------------------------------------------------
+        //k0016_99_1_1_1：list新しい値を入れる
+        //trMeidai1.Add(kyotu.meidai1_1.GetComponent<Transform>());
+
         trP1_2.Add(kyotu.p1_2_1.GetComponent<Transform>());
         trP1_2.Add(kyotu.p1_2_2.GetComponent<Transform>());
         trP1_2.Add(kyotu.p1_2_3.GetComponent<Transform>());
@@ -74,6 +82,17 @@ public class H_99_08_meidaiMove : MonoBehaviour
         trP1_2.Add(kyotu.p1_2_8.GetComponent<Transform>());
         trP1_2.Add(kyotu.p1_2_9.GetComponent<Transform>());
 
+        //meidai1_3のパネルのtransformを取得-----------------------------------------------------
+        //k0016_99_1_1_1：list新しい値を入れる
+        //trMeidai1.Add(kyotu.meidai1_1.GetComponent<Transform>());
+        trP1_3.Add(kyotu.p1_3_1.GetComponent<Transform>());
+        trP1_3.Add(kyotu.p1_3_2.GetComponent<Transform>());
+        trP1_3.Add(kyotu.p1_3_3.GetComponent<Transform>());
+        trP1_3.Add(kyotu.p1_3_4.GetComponent<Transform>());
+        trP1_3.Add(kyotu.p1_3_5.GetComponent<Transform>());
+        trP1_3.Add(kyotu.p1_3_6.GetComponent<Transform>());
+
+
         Debug.Log("move?");
     }
     
@@ -83,13 +102,14 @@ public class H_99_08_meidaiMove : MonoBehaviour
         //maeMeidaiHensu = kyotu.meidaiHensu;
         panelZenkaiReset(maeMeidaiHensu);
         panelNarabe(kyotu.meidaiHensu);
+        //最後にmeidai1全体ををリアルタイムで動かす。start位置調整---------------------------
         if (kyotu.meidaiHensu == 1) {
             //最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整---------------------------
             //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
 
             //cameraTakasaY：カメラの真ん中から上半分のyジクの距離
             //upSpace：カメラの上から一番上のオブジェまでの距離
-            //mokujiP：目次全体を動かす変数
+            //mokujiP：目次全体を動かす変数y軸に入れる
 
             mokujiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_1[0].localScale.y / 2;
 
@@ -104,7 +124,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
             ////cameraTakasaY：カメラの真ん中から上半分のyジクの距離
             ////upSpace：カメラの上から一番上のオブジェまでの距離
-            ////mokujiP：目次全体を動かす変数
+            ////mokujiP：目次全体を動かす変数y軸に入れる
 
             mokujiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_2[0].localScale.y / 2;
 

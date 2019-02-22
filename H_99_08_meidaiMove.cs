@@ -140,32 +140,11 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //選ばれなかったｐ１＿2＿１～ｐ１＿2＿9までパネルをリセット------------
             //ｐ１＿2＿１～ｐ１＿2＿9までパネルを並べる
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
-            trP1_2[0].position =
+
+            foreach (Transform t in trP1_2) {
+                t.position =
                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
-
-            trP1_2[1].position =
-                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
-
-            trP1_2[2].position =
-                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
-
-            trP1_2[3].position =
-                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
-
-            trP1_2[4].position =
-                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
-
-            trP1_2[5].position =
-                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
-
-            trP1_2[6].position =
-                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
-
-            trP1_2[7].position =
-                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
-
-            trP1_2[8].position =
-                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
+            }
         }
     }
     //パネルをまず（meidaiX, meidaiY）から並べる変数

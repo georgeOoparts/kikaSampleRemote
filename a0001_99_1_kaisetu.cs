@@ -282,8 +282,27 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     renderer.SetPosition(0, Vector3.zero);
     renderer.SetPosition(1, new Vector3(1f, 1f, 0f));
     ----------------------------------------------------------------------
+    //k0016_99_1 :listを使う
+    //using System.Collections.Generic;が入ってなきゃ駄目
+
+    //k0016_99_1_1：listの宣言
+    //private List<Transform> trMeidai1 = new List<Transform>();
      
+    //k0016_99_1_1_1：list新しい値を入れる
+    //trMeidai1.Add(kyotu.meidai1_1.GetComponent<Transform>());
      
-     
-     
+    //k0016_99_1_1_2：Listの要素を使用、変数に代入、配列と同じように使用出来る
+    //trMeidai1[0].position =
+    //            new Vector3(trMeidai1[0].position.x, mokujiP, trMeidai1[0].position.z);
+    
+    ///k0016_99_1_1_3　：Listの0番目の要素を消す
+    //myList.RemoveAt(0); 
+
+    ///k0016_99_1_1_4　：Listすべての要素を削除
+    //myList.Clear(); 
+
+    ーーーーーーーーーーー－－－－－－－－－－－－－－－－－－
+    //k0017_99_1：配列使い方
+    //Transform[] trMeidai1=new Transform[6];
+
      */

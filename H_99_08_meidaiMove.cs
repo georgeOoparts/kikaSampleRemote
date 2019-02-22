@@ -14,18 +14,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
     //k0013_1: 宣言
     Transform trMeidai;
 
-    //Transform[] trMeidai1=new Transform[6];
-
     private List<Transform> trMeidai1 = new List<Transform>();
-
-    //int[] jiyuu = new int[5];
-
-    //Transform trMeidai1_1;
-    //Transform trMeidai1_2;
-    Transform trMeidai1_3;
-    Transform trMeidai1_4;
-    Transform trMeidai1_5;
-    Transform trMeidai1_6;
 
     Transform trP1_1_1;
     Transform trP1_1_2;

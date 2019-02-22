@@ -14,7 +14,9 @@ public class H_99_08_meidaiMove : MonoBehaviour
     //k0013_1: 宣言
     Transform trMeidai;
 
-    Transform[] trMeidai1=new Transform[6];
+    //Transform[] trMeidai1=new Transform[6];
+
+    private List<Transform> trMeidai1 = new List<Transform>();
 
     //int[] jiyuu = new int[5];
 
@@ -68,8 +70,12 @@ public class H_99_08_meidaiMove : MonoBehaviour
         trMeidai = kyotu.meidai.GetComponent<Transform>();
 
 
-        trMeidai1[1] = kyotu.meidai1_1.GetComponent<Transform>();
-        trMeidai1[2] = kyotu.meidai1_2.GetComponent<Transform>();
+        //trMeidai1[1] = kyotu.meidai1_1.GetComponent<Transform>();
+        //trMeidai1[2] = kyotu.meidai1_2.GetComponent<Transform>();
+
+        trMeidai1.Add(kyotu.meidai1_1.GetComponent<Transform>());
+        trMeidai1.Add(kyotu.meidai1_2.GetComponent<Transform>());
+
         //trMeidai1_3 = kyotu.meidai1_3.GetComponent<Transform>();
         //trMeidai1_4 = kyotu.meidai1_4.GetComponent<Transform>();
         //trMeidai1_5 = kyotu.meidai1_5.GetComponent<Transform>();
@@ -111,8 +117,8 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
             //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
-            trMeidai1[1].position =
-                new Vector3(trMeidai1[1].position.x, mokujiP, trMeidai1[1].position.z);
+            trMeidai1[0].position =
+                new Vector3(trMeidai1[0].position.x, mokujiP, trMeidai1[0].position.z);
 
         } else if (kyotu.meidaiHensu == 2) {
             ////最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整---------------------------
@@ -124,8 +130,8 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
             ////k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
-            trMeidai1[2].position =
-                new Vector3(trMeidai1[2].position.x, mokujiP, trMeidai1[2].position.z);
+            trMeidai1[1].position =
+                new Vector3(trMeidai1[1].position.x, mokujiP, trMeidai1[1].position.z);
         }
     }
     //前回並べてあったパネルを元の場所に戻すメソッド
@@ -134,7 +140,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //選ばれなかった命題をまずリセット----------------------
             //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
-            trMeidai1[1].position =
+            trMeidai1[0].position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
             //選ばれなかったｐ１＿1＿１～ｐ１＿1＿6までパネルをリセット------------
@@ -162,7 +168,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //選ばれなかった命題をまずリセット----------------------
             //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
-            trMeidai1[2].position =
+            trMeidai1[1].position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
             //選ばれなかったｐ１＿2＿１～ｐ１＿2＿9までパネルをリセット------------
@@ -200,7 +206,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
     void panelNarabe(int MH) {
         if (MH == 1) {
             //まずmeidai1_1をパネル２の場所（5.6、0）までもって行く------------------------
-            trMeidai1[1].position = new Vector3(meidaiX, meidaiY, trMeidai1[1].position.z);
+            trMeidai1[0].position = new Vector3(meidaiX, meidaiY, trMeidai1[0].position.z);
 
             //meidai1_1のｐ１＿１＿１～ｐ１＿１＿６までパネルを並べる----------------------
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
@@ -235,7 +241,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             maeMeidaiHensu = kyotu.meidaiHensu;
         } else if (MH == 2) {
             //まずmeidai1_2を元の場所（5.6、0）までもって行く-----------------------------
-            trMeidai1[2].position = new Vector3(meidaiX, meidaiY, trMeidai1[2].position.z);
+            trMeidai1[1].position = new Vector3(meidaiX, meidaiY, trMeidai1[1].position.z);
 
             //ｐ１＿１＿１～ｐ１＿１＿６までパネルを並べる--------------------------------
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；

@@ -179,6 +179,48 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
             trMeidai1[2].position =
                 new Vector3(trMeidai1[2].position.x, mokujiP, trMeidai1[2].position.z);
+        } else if (kyotu.meidaiHensu == 4) {
+            ////最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整---------------------------
+            ////page.localScale = new Vector3((float)-2.8, -5, page.position.z);
+
+            ////cameraTakasaY：カメラの真ん中から上半分のyジクの距離
+            ////upSpace：カメラの上から一番上のオブジェまでの距離
+            ////mokujiP：目次全体を動かす変数y軸に入れる
+
+            mokujiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_4[0].localScale.y / 2;
+
+            ////k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
+            //page.position = new Vector3((float)-2.8, -5, page.position.z);
+            trMeidai1[3].position =
+                new Vector3(trMeidai1[3].position.x, mokujiP, trMeidai1[3].position.z);
+        } else if (kyotu.meidaiHensu == 5) {
+            ////最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整---------------------------
+            ////page.localScale = new Vector3((float)-2.8, -5, page.position.z);
+
+            ////cameraTakasaY：カメラの真ん中から上半分のyジクの距離
+            ////upSpace：カメラの上から一番上のオブジェまでの距離
+            ////mokujiP：目次全体を動かす変数y軸に入れる
+
+            mokujiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_5[0].localScale.y / 2;
+
+            ////k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
+            //page.position = new Vector3((float)-2.8, -5, page.position.z);
+            trMeidai1[4].position =
+                new Vector3(trMeidai1[4].position.x, mokujiP, trMeidai1[4].position.z);
+        } else if (kyotu.meidaiHensu == 6) {
+            ////最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整---------------------------
+            ////page.localScale = new Vector3((float)-2.8, -5, page.position.z);
+
+            ////cameraTakasaY：カメラの真ん中から上半分のyジクの距離
+            ////upSpace：カメラの上から一番上のオブジェまでの距離
+            ////mokujiP：目次全体を動かす変数y軸に入れる
+
+            mokujiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_6[0].localScale.y / 2;
+
+            ////k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
+            //page.position = new Vector3((float)-2.8, -5, page.position.z);
+            trMeidai1[5].position =
+                new Vector3(trMeidai1[5].position.x, mokujiP, trMeidai1[5].position.z);
         }
     }
     //前回並べてあったパネルを元の場所に戻すメソッド
@@ -224,6 +266,51 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
 
             foreach (Transform t in trP1_3) {
+                t.position =
+               new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
+            }
+        } else if (MH == 4) {
+            //選ばれなかった命題をまずリセット----------------------
+            //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
+            //page.position = new Vector3((float)-2.8, -5, page.position.z);
+            trMeidai1[3].position =
+                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
+
+            //選ばれなかったｐ１＿3＿１～ｐ１＿3＿6までパネルをリセット------------
+            //ｐ１＿3＿１～ｐ１＿3＿6までパネルを並べる
+            //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
+
+            foreach (Transform t in trP1_4) {
+                t.position =
+               new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
+            }
+        } else if (MH == 5) {
+            //選ばれなかった命題をまずリセット----------------------
+            //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
+            //page.position = new Vector3((float)-2.8, -5, page.position.z);
+            trMeidai1[4].position =
+                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
+
+            //選ばれなかったｐ１＿3＿１～ｐ１＿3＿6までパネルをリセット------------
+            //ｐ１＿3＿１～ｐ１＿3＿6までパネルを並べる
+            //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
+
+            foreach (Transform t in trP1_5) {
+                t.position =
+               new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
+            }
+        } else if (MH == 6) {
+            //選ばれなかった命題をまずリセット----------------------
+            //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
+            //page.position = new Vector3((float)-2.8, -5, page.position.z);
+            trMeidai1[5].position =
+                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
+
+            //選ばれなかったｐ１＿3＿１～ｐ１＿3＿6までパネルをリセット------------
+            //ｐ１＿3＿１～ｐ１＿3＿6までパネルを並べる
+            //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
+
+            foreach (Transform t in trP1_6) {
                 t.position =
                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
             }
@@ -302,6 +389,31 @@ public class H_99_08_meidaiMove : MonoBehaviour
                         trP1_3[i - 1].localScale.y / 2 + trP1_3[i].localScale.y / 2 + spacePanel;
                     trP1_3[i].position =
                         new Vector3(trP1_3[0].position.x, startNarabekae, trP1_3[0].position.z);
+                }
+            }
+            //現在ででなく、1つ前のmeidai変数を入れる変数。panelZenkaiResetメソッドに使う。
+            maeMeidaiHensu = kyotu.meidaiHensu;
+        } else if (MH == 4) {
+            //まずmeidai1_2を元の場所（5.6、0）までもって行く-----------------------------
+            trMeidai1[3].position = new Vector3(meidaiX, meidaiY, trMeidai1[3].position.z);
+
+            //ｐ１＿１＿１～ｐ１＿１＿６までパネルを並べる--------------------------------
+            //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
+            //startNarabekaeの値は最初０にリセットする
+
+            for (int i = 0; i < trP1_4.Count; i++) {
+                if (i == 0) {
+                    startNarabekae = 0;
+                    trP1_4[i].position =
+                       new Vector3(trP1_4[0].position.x, startNarabekae, trP1_4[0].position.z);
+                } else {
+                    //startNarabekaeを次のオブジェの開始位置に合わせる、
+                    //前のオブジェのy軸幅の半分、次のオブジェのy軸幅の半分、
+                    //オブジェ間のスペースを引く
+                    startNarabekae -=
+                        trP1_4[i - 1].localScale.y / 2 + trP1_4[i].localScale.y / 2 + spacePanel;
+                    trP1_4[i].position =
+                        new Vector3(trP1_4[0].position.x, startNarabekae, trP1_4[0].position.z);
                 }
             }
             //現在ででなく、1つ前のmeidai変数を入れる変数。panelZenkaiResetメソッドに使う。

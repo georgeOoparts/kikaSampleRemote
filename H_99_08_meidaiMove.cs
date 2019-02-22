@@ -23,6 +23,9 @@ public class H_99_08_meidaiMove : MonoBehaviour
     private List<Transform> trP1_1 = new List<Transform>();
     private List<Transform> trP1_2 = new List<Transform>();
     private List<Transform> trP1_3 = new List<Transform>();
+    private List<Transform> trP1_4 = new List<Transform>();
+    private List<Transform> trP1_5 = new List<Transform>();
+    private List<Transform> trP1_6 = new List<Transform>();
 
     //meidai全部のｘ軸の値------------------------------
     public float meidaiX = 5.6f;
@@ -56,6 +59,9 @@ public class H_99_08_meidaiMove : MonoBehaviour
         trMeidai1.Add(kyotu.meidai1_1.GetComponent<Transform>());
         trMeidai1.Add(kyotu.meidai1_2.GetComponent<Transform>());
         trMeidai1.Add(kyotu.meidai1_3.GetComponent<Transform>());
+        trMeidai1.Add(kyotu.meidai1_4.GetComponent<Transform>());
+        trMeidai1.Add(kyotu.meidai1_5.GetComponent<Transform>());
+        trMeidai1.Add(kyotu.meidai1_6.GetComponent<Transform>());
 
         //meidai1_1のパネルのtransformを取得-----------------------------------------------------
         //k0016_99_1_1_1：list新しい値を入れる
@@ -92,6 +98,34 @@ public class H_99_08_meidaiMove : MonoBehaviour
         trP1_3.Add(kyotu.p1_3_5.GetComponent<Transform>());
         trP1_3.Add(kyotu.p1_3_6.GetComponent<Transform>());
 
+        //meidai1_4のパネルのtransformを取得-----------------------------------------------------
+        //k0016_99_1_1_1：list新しい値を入れる
+        //trMeidai1.Add(kyotu.meidai1_1.GetComponent<Transform>());
+        trP1_4.Add(kyotu.p1_4_1.GetComponent<Transform>());
+        trP1_4.Add(kyotu.p1_4_2.GetComponent<Transform>());
+        trP1_4.Add(kyotu.p1_4_3.GetComponent<Transform>());
+        trP1_4.Add(kyotu.p1_4_4.GetComponent<Transform>());
+        
+        //meidai1_5のパネルのtransformを取得-----------------------------------------------------
+        //k0016_99_1_1_1：list新しい値を入れる
+        //trMeidai1.Add(kyotu.meidai1_1.GetComponent<Transform>());
+        trP1_5.Add(kyotu.p1_5_1.GetComponent<Transform>());
+        trP1_5.Add(kyotu.p1_5_2.GetComponent<Transform>());
+        trP1_5.Add(kyotu.p1_5_3.GetComponent<Transform>());
+        trP1_5.Add(kyotu.p1_5_4.GetComponent<Transform>());
+        trP1_5.Add(kyotu.p1_5_5.GetComponent<Transform>());
+        trP1_5.Add(kyotu.p1_5_6.GetComponent<Transform>());
+        trP1_5.Add(kyotu.p1_5_7.GetComponent<Transform>());
+
+        //meidai1_4のパネルのtransformを取得-----------------------------------------------------
+        //k0016_99_1_1_1：list新しい値を入れる
+        //trMeidai1.Add(kyotu.meidai1_1.GetComponent<Transform>());
+        trP1_6.Add(kyotu.p1_6_1.GetComponent<Transform>());
+        trP1_6.Add(kyotu.p1_6_2.GetComponent<Transform>());
+        trP1_6.Add(kyotu.p1_6_3.GetComponent<Transform>());
+        trP1_6.Add(kyotu.p1_6_4.GetComponent<Transform>());
+        trP1_6.Add(kyotu.p1_6_5.GetComponent<Transform>());
+        trP1_6.Add(kyotu.p1_6_6.GetComponent<Transform>());
 
         Debug.Log("move?");
     }

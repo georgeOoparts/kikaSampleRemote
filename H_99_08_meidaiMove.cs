@@ -18,15 +18,9 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
     private List<Transform> trP1_1 = new List<Transform>();
 
-    Transform trP1_2_1;
-    Transform trP1_2_2;
-    Transform trP1_2_3;
-    Transform trP1_2_4;
-    Transform trP1_2_5;
-    Transform trP1_2_6;
-    Transform trP1_2_7;
-    Transform trP1_2_8;
-    Transform trP1_2_9;
+    private List<Transform> trP1_2 = new List<Transform>();
+
+    
 
     //meidai全部のｘ軸の値
     public float meidaiX = 5.6f;
@@ -73,15 +67,15 @@ public class H_99_08_meidaiMove : MonoBehaviour
         trP1_1.Add(kyotu.p1_1_6.GetComponent<Transform>());
 
         //------------------------------------------
-        trP1_2_1 = kyotu.p1_2_1.GetComponent<Transform>();
-        trP1_2_2 = kyotu.p1_2_2.GetComponent<Transform>();
-        trP1_2_3 = kyotu.p1_2_3.GetComponent<Transform>();
-        trP1_2_4 = kyotu.p1_2_4.GetComponent<Transform>();
-        trP1_2_5 = kyotu.p1_2_5.GetComponent<Transform>();
-        trP1_2_6 = kyotu.p1_2_6.GetComponent<Transform>();
-        trP1_2_7 = kyotu.p1_2_7.GetComponent<Transform>();
-        trP1_2_8 = kyotu.p1_2_8.GetComponent<Transform>();
-        trP1_2_9 = kyotu.p1_2_9.GetComponent<Transform>();
+        trP1_2.Add(kyotu.p1_2_1.GetComponent<Transform>());
+        trP1_2.Add(kyotu.p1_2_2.GetComponent<Transform>());
+        trP1_2.Add(kyotu.p1_2_3.GetComponent<Transform>());
+        trP1_2.Add(kyotu.p1_2_4.GetComponent<Transform>());
+        trP1_2.Add(kyotu.p1_2_5.GetComponent<Transform>());
+        trP1_2.Add(kyotu.p1_2_6.GetComponent<Transform>());
+        trP1_2.Add(kyotu.p1_2_7.GetComponent<Transform>());
+        trP1_2.Add(kyotu.p1_2_8.GetComponent<Transform>());
+        trP1_2.Add(kyotu.p1_2_9.GetComponent<Transform>());
 
         Debug.Log("move?");
     }
@@ -115,7 +109,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             ////upSpace：カメラの上から一番上のオブジェまでの距離
             ////mokujiP：目次全体を動かす変数
 
-            mokujiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_2_1.localScale.y / 2;
+            mokujiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_2[0].localScale.y / 2;
 
             ////k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
@@ -163,31 +157,31 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //選ばれなかったｐ１＿2＿１～ｐ１＿2＿9までパネルをリセット------------
             //ｐ１＿2＿１～ｐ１＿2＿9までパネルを並べる
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
-            trP1_2_1.position =
+            trP1_2[0].position =
                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
-            trP1_2_2.position =
+            trP1_2[1].position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
-            trP1_2_3.position =
+            trP1_2[2].position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
-            trP1_2_4.position =
+            trP1_2[3].position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
-            trP1_2_5.position =
+            trP1_2[4].position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
-            trP1_2_6.position =
+            trP1_2[5].position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
-            trP1_2_7.position =
+            trP1_2[6].position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
-            trP1_2_8.position =
+            trP1_2[7].position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
-            trP1_2_9.position =
+            trP1_2[8].position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
         }
     }
@@ -236,40 +230,40 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
             //startNarabekaeの値は最初０にリセットする
             startNarabekae = 0;
-            trP1_2_1.position =
-               new Vector3(trP1_2_1.position.x, startNarabekae, trP1_2_1.position.z);
+            trP1_2[0].position =
+               new Vector3(trP1_2[0].position.x, startNarabekae, trP1_2[0].position.z);
 
-            startNarabekae -= trP1_2_1.localScale.y / 2 + trP1_2_2.localScale.y / 2 + spacePanel;
-            trP1_2_2.position =
-                new Vector3(trP1_2_1.position.x, startNarabekae, trP1_2_1.position.z);
+            startNarabekae -= trP1_2[0].localScale.y / 2 + trP1_2[1].localScale.y / 2 + spacePanel;
+            trP1_2[1].position =
+                new Vector3(trP1_2[0].position.x, startNarabekae, trP1_2[0].position.z);
 
-            startNarabekae -= trP1_2_2.localScale.y / 2 + trP1_2_3.localScale.y / 2 + spacePanel;
-            trP1_2_3.position =
-                new Vector3(trP1_2_1.position.x, startNarabekae, trP1_2_1.position.z);
+            startNarabekae -= trP1_2[1].localScale.y / 2 + trP1_2[2].localScale.y / 2 + spacePanel;
+            trP1_2[2].position =
+                new Vector3(trP1_2[0].position.x, startNarabekae, trP1_2[0].position.z);
 
-            startNarabekae -= trP1_2_3.localScale.y / 2 + trP1_2_4.localScale.y / 2 + spacePanel;
-            trP1_2_4.position =
-                new Vector3(trP1_2_1.position.x, startNarabekae, trP1_2_1.position.z);
+            startNarabekae -= trP1_2[2].localScale.y / 2 + trP1_2[3].localScale.y / 2 + spacePanel;
+            trP1_2[3].position =
+                new Vector3(trP1_2[0].position.x, startNarabekae, trP1_2[0].position.z);
 
-            startNarabekae -= trP1_2_4.localScale.y / 2 + trP1_2_5.localScale.y / 2 + spacePanel;
-            trP1_2_5.position =
-                new Vector3(trP1_2_1.position.x, startNarabekae, trP1_2_1.position.z);
+            startNarabekae -= trP1_2[3].localScale.y / 2 + trP1_2[4].localScale.y / 2 + spacePanel;
+            trP1_2[4].position =
+                new Vector3(trP1_2[0].position.x, startNarabekae, trP1_2[0].position.z);
 
-            startNarabekae -= trP1_2_5.localScale.y / 2 + trP1_2_6.localScale.y / 2 + spacePanel;
-            trP1_2_6.position =
-                new Vector3(trP1_2_1.position.x, startNarabekae, trP1_2_1.position.z);
+            startNarabekae -= trP1_2[4].localScale.y / 2 + trP1_2[5].localScale.y / 2 + spacePanel;
+            trP1_2[5].position =
+                new Vector3(trP1_2[0].position.x, startNarabekae, trP1_2[0].position.z);
 
-            startNarabekae -= trP1_2_6.localScale.y / 2 + trP1_2_7.localScale.y / 2 + spacePanel;
-            trP1_2_7.position =
-                new Vector3(trP1_2_1.position.x, startNarabekae, trP1_2_1.position.z);
+            startNarabekae -= trP1_2[5].localScale.y / 2 + trP1_2[6].localScale.y / 2 + spacePanel;
+            trP1_2[6].position =
+                new Vector3(trP1_2[0].position.x, startNarabekae, trP1_2[0].position.z);
 
-            startNarabekae -= trP1_2_7.localScale.y / 2 + trP1_2_8.localScale.y / 2 + spacePanel;
-            trP1_2_8.position =
-                new Vector3(trP1_2_1.position.x, startNarabekae, trP1_2_1.position.z);
+            startNarabekae -= trP1_2[6].localScale.y / 2 + trP1_2[7].localScale.y / 2 + spacePanel;
+            trP1_2[7].position =
+                new Vector3(trP1_2[0].position.x, startNarabekae, trP1_2[0].position.z);
 
-            startNarabekae -= trP1_2_8.localScale.y / 2 + trP1_2_9.localScale.y / 2 + spacePanel;
-            trP1_2_9.position =
-                new Vector3(trP1_2_1.position.x, startNarabekae, trP1_2_1.position.z);
+            startNarabekae -= trP1_2[7].localScale.y / 2 + trP1_2[8].localScale.y / 2 + spacePanel;
+            trP1_2[8].position =
+                new Vector3(trP1_2[0].position.x, startNarabekae, trP1_2[0].position.z);
 
             //現在ででなく、1つ前のmeidai変数を入れる変数。panelZenkaiResetメソッドに使う。
             maeMeidaiHensu = kyotu.meidaiHensu;

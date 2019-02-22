@@ -26,10 +26,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
     public float meidaiX = 5.6f;
     public float meidaiY = 0;
 
-    //start でpanel1～6の始まるｙ軸の値。
-    //float startPanel =0;
-
-    //panelの間の幅
+   //panelの間の幅
     public float spacePanel = 0.5f;
 
     //目次panel並べ替え時のそれぞれのスタート位置
@@ -128,25 +125,11 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
             //選ばれなかったｐ１＿1＿１～ｐ１＿1＿6までパネルをリセット------------
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
-            trP1_1[0].position =
+
+            foreach (Transform t in trP1_1) {
+                t.position =
                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
-
-            trP1_1[1].position =
-                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
-
-            trP1_1[2].position =
-                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
-
-            trP1_1[3].position =
-                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
-
-            trP1_1[4].position =
-                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
-
-            trP1_1[5].position =
-                new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
-
-            
+            }
         } else if (MH == 2) {
             //選ばれなかった命題をまずリセット----------------------
             //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る

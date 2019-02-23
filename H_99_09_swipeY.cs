@@ -54,7 +54,12 @@ public class H_99_09_swipeY : MonoBehaviour
                 diffSwipe.x = 0.0f;
                 diffSwipe.z = 0.0f;
                 //カメラの位置にマウスの位置の差異を足す。
-                this.transform.position = objectPos + diffSwipe;
+                //this.transform.position = objectPos + diffSwipe;
+                trMokuji.transform.position = objectPos + diffSwipe;
+                //trMokuji.transform.position = //trMokuji.transform.position + diffSwipe;
+                //    new Vector3(trMokuji.transform.position.x, 
+                //    trMokuji.transform.position.y+ diffSwipe.y,
+                //    trMokuji.transform.position.z);
                 //初めのマウスの位置を最新のマウスの位置に更新　
                 FCfirstPos
                     = Camera.main.ScreenToWorldPoint(Input.mousePosition);

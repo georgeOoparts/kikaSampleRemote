@@ -97,9 +97,9 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
                 //Camera.main.ScreenToWorldPoint(diff);
                 diffSwipe.x = 0.0f;
                 diffSwipe.z = 0.0f;
-                //カメラの位置にマウスの位置の差異を足す。
+                //カメラの位置にマウスの位置の差異を足す。(スマホ対応引く)
                 
-                trMokuji.transform.position = objectPos + diffSwipe;
+                trMokuji.transform.position = objectPos - diffSwipe;
                 
                 //初めのマウスの位置を最新のマウスの位置に更新　
                 FCfirstPos

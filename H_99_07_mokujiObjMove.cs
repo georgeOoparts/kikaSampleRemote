@@ -69,6 +69,9 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         //updateで並んだパネルを一気に動かす
         trMokuji.position = new Vector3(trMokuji.position.x, startP1,
                                         trMokuji.position.z);
+
+        //k6_ac:何秒たったかを変数elapseに入れる
+        elapse = (float)stopwatch.Elapsed.TotalSeconds;
     }
     void Update()
     {
@@ -86,6 +89,10 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) {
             //最初のマウスの位置
             FCfirstPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            //k6_aa:ストップウォッチスタート
+            stopwatch.Start();
+            
         }
         //マウスを押してる最中
         if (Input.GetMouseButton(0)) {

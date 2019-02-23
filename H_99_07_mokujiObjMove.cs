@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class H_99_07_mokujiObjMove : MonoBehaviour
 {
+    //目次の動きを制御するプログラムmokujiにアタッチ
+    //単純上下スワイプ追加
+    //フリック追加中
+    
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     //このスクリプトをアタッチしたオブジェクトにいちいちこのオブジェクトをアタッチ
     public H_99_01_kyoutuHensu kyotu;
@@ -98,13 +102,22 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
                 diffSwipe.x = 0.0f;
                 diffSwipe.z = 0.0f;
                 //カメラの位置にマウスの位置の差異を足す。(スマホ対応引く)
-                
+
                 trMokuji.transform.position = objectPos - diffSwipe;
-                
+
                 //初めのマウスの位置を最新のマウスの位置に更新　
                 FCfirstPos
                     = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
         }
     }
+    //k6_a:ストップウォッチ関数を使う時のおまじない。
+        private System.Diagnostics.Stopwatch stopwatch
+            = new System.Diagnostics.Stopwatch();
+
+    // 何秒たったかを変数elapseに入れる。ストップウォッチ
+    private float elapse;
+    //時間判定の何秒以内かを決める変数。hanteiSorScrollS()で使う
+    public float hanteiSorSS = 0.45f;
+
 }

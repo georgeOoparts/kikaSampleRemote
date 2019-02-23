@@ -127,7 +127,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
         trP1_6.Add(kyotu.p1_6_5.GetComponent<Transform>());
         trP1_6.Add(kyotu.p1_6_6.GetComponent<Transform>());
 
-        Debug.Log("move?");
+        //Debug.Log("move?");
     }
 
     void Update() {

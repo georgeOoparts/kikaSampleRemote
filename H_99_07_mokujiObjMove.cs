@@ -102,18 +102,31 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     float flickElapse;
     bool flickFirst = true;
     float fjikan = 4f;
+    float ftimeOut = 2.0f;
+    float tamaruTime = 0.0f;
+    float saishoYposition = 0.0f;
+    public float chousei = 10.0f;
     //flick()に関するメソッド
     void flick() {
         if (flickFirst==true && Input.GetMouseButtonUp(0)) {
             //k6_aa:ストップウォッチスタート
             Fstopwatch.Start();
             flickFirst=false;
+            saishoYposition = trMokuji.position.y;
         }
         if (fjikan>=flickElapse) {
-            if(flickFirst == false)Debug.Log(flickElapse);
+            if (flickFirst == false) {
+                //tamaruTimeに時間が溜まっていく
+                //tamaruTime += Time.deltaTime;
+                //この中に時間内にしたい処理を書く。------
+                //diffがプラスかマイナスかによって上下の方向が決まる
+                trMokuji.position +=new Vector3(0, -chousei * Time.deltaTime, 0);
+                //-----------------------------------------
+            }
         } else {
-            flickElapse = 4.0f;
-            Debug.Log(flickElapse);
+            //trMokuji.position += new Vector3(0, -chousei * Time.deltaTime, 0);
+            //flickElapse = 4.0f;
+            //Debug.Log(flickElapse);
             //k6_ab:ストップウォッチの時間をリセット
             Fstopwatch.Reset();
             flickFirst = true;

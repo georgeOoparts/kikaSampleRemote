@@ -86,24 +86,24 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         upDownClickPosition();
 
 
-        if (Input.GetMouseButtonDown(0)) {
+        //if (Input.GetMouseButtonDown(0)) {
             //k6_aa:ストップウォッチスタート
             //stopwatch.Start();
            
-        }
+        //}
         //マウスボタンを離したとき
-        if (Input.GetMouseButtonUp(0)) {
+        //if (Input.GetMouseButtonUp(0)) {
             //hanteiSorF()
             //Debug.Log(hanteiSorF());
             //flick();
             //k6_ab:ストップウォッチの時間をリセット
             //stopwatch.Reset();
-        }
-        //if (hanteiSorF()) {
-        //    // タップ時間によるフリック判定のフラグ
-        //    flickTupTimeHantei = true;
         //}
-        //flick();
+        if (hanteiSorF()) {
+            // タップ時間によるフリック判定のフラグ
+            flickTupTimeHantei = true;
+        }
+        flick();
         swipeControl();
         if (trMokuji.position.y <= startP1) {
             trMokuji.position = new Vector3(trMokuji.position.x, startP1, trMokuji.position.z);
@@ -162,7 +162,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
                 float diff = saishoClick.y - atoClick.y;
                 //ワールド座標の絶対値が１．５以上の時のみフリックをする。
                 if (!(diff<=1.5 && diff>=-1.5)) {
-                    trMokuji.position += new Vector3(0, chousei * diff * Time.deltaTime, 0);
+                    trMokuji.position += new Vector3(0, -chousei * diff * Time.deltaTime, 0);
                 }
                 
                 //-----------------------------------------

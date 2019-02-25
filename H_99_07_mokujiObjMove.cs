@@ -32,12 +32,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     //目次ｐ１のスタート位置
     public float startP1 = 3.7f;
 
-    //k6_a:ストップウォッチ関数を使う時のおまじない。
-    private System.Diagnostics.Stopwatch stopwatch
-        = new System.Diagnostics.Stopwatch();
-
-    // 何秒たったかを変数elapseに入れる。ストップウォッチ
-    private float elapse;
+    
 
     void Start()
     {
@@ -80,8 +75,8 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
 
         
     }
-    void Update()
-    {
+
+    void Update(){
         //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>stopwatchに使う。
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
         //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>flick()に使う。
@@ -100,8 +95,11 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             //k6_ab:ストップウォッチの時間をリセット
             //stopwatch.Reset();
         }
-        flick();
+        
+        //Debug.Log(hanteiSorF());
+        //flick();
     }
+    //flick()に関するメソッド----------------------------------------------------------------
     //k6_a:ストップウォッチ関数を使う時のおまじない。
     private System.Diagnostics.Stopwatch Fstopwatch
         = new System.Diagnostics.Stopwatch();
@@ -134,16 +132,35 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         
 
     }
-    
+    // hanteiSorF():　判定SorF S(スワイプ)ならfalse、F（フリック）ならtrueを返すメソッド-----------------------------
+    //k6_a:ストップウォッチ関数を使う時のおまじない。
+    private System.Diagnostics.Stopwatch stopwatch
+        = new System.Diagnostics.Stopwatch();
+
+    // 何秒たったかを変数elapseに入れる。ストップウォッチ
+    private float elapse;
+
     //時間判定の何秒以内かを決める変数。hanteiSorF()で使うswipeなら0,flickなら１を返す
     public float hanteiSorFjikan = 0.45f;
-    //判定SorSS Sなら1、SSなら2を返す。
+    
+    //判定SorF S(スワイプ)ならfalse、F（フリック）ならtrueを返す。
     bool hanteiSorF() {
-        //経過時間elapseが判定時間 hanteiSorFjikan以下ならば
-        if (elapse <= hanteiSorFjikan) return (true);
-        //経過時間elapseが判定時間 hanteiSorFjikanより大きいならば
-        else return (false);
+        if (Input.GetMouseButtonDown(0)) {
+            stopwatch.Start();
+            return (false);
+        }
+        else if (Input.GetMouseButtonUp(0)) {
+            //経過時間elapseが判定時間 hanteiSorFjikan以下ならば
+            if (elapse <= hanteiSorFjikan) {
+                stopwatch.Reset();
+                return (true);
+            } else {
+                stopwatch.Reset();
+                return (false);
+            } 
+        }else return (false);
     }
+    //スワイプをするメソッド：swipeControl()------------------------------------------------------
     //スワイプコントロールだけのための変数
     Vector3 objectPos;
     Vector3 FCfirstPos;

@@ -32,6 +32,13 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     //目次ｐ１のスタート位置
     public float startP1 = 3.7f;
 
+    //k6_a:ストップウォッチ関数を使う時のおまじない。
+    private System.Diagnostics.Stopwatch stopwatch
+        = new System.Diagnostics.Stopwatch();
+
+    // 何秒たったかを変数elapseに入れる。ストップウォッチ
+    private float elapse;
+
     void Start()
     {
         //k0013_1_1;オブジェに当てはめる；
@@ -101,10 +108,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     //flick処理の時間を入れる変数ストップウォッチをつかう
     float flickElapse;
     bool flickFirst = true;
-    float fjikan = 4f;
-    float ftimeOut = 2.0f;
-    float tamaruTime = 0.0f;
-    float saishoYposition = 0.0f;
+    public float fjikan = 1f;
     public float chousei = 10.0f;
     //flick()に関するメソッド
     void flick() {
@@ -112,21 +116,17 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             //k6_aa:ストップウォッチスタート
             Fstopwatch.Start();
             flickFirst=false;
-            saishoYposition = trMokuji.position.y;
         }
         if (fjikan>=flickElapse) {
             if (flickFirst == false) {
-                //tamaruTimeに時間が溜まっていく
-                //tamaruTime += Time.deltaTime;
+                
                 //この中に時間内にしたい処理を書く。------
                 //diffがプラスかマイナスかによって上下の方向が決まる
                 trMokuji.position +=new Vector3(0, -chousei * Time.deltaTime, 0);
                 //-----------------------------------------
             }
         } else {
-            //trMokuji.position += new Vector3(0, -chousei * Time.deltaTime, 0);
-            //flickElapse = 4.0f;
-            //Debug.Log(flickElapse);
+            
             //k6_ab:ストップウォッチの時間をリセット
             Fstopwatch.Reset();
             flickFirst = true;
@@ -135,13 +135,13 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
 
     }
     
-    //時間判定の何秒以内かを決める変数。hanteiSorF()で使うswipeなら０flickなら１を返す
+    //時間判定の何秒以内かを決める変数。hanteiSorF()で使うswipeなら0,flickなら１を返す
     public float hanteiSorFjikan = 0.45f;
     //判定SorSS Sなら1、SSなら2を返す。
     bool hanteiSorF() {
-        //経過時間elapseが判定時間hanteiSorSS以下ならば
+        //経過時間elapseが判定時間 hanteiSorFjikan以下ならば
         if (elapse <= hanteiSorFjikan) return (true);
-        //経過時間elapseが判定時間hanteiSorSSより大きいならば
+        //経過時間elapseが判定時間 hanteiSorFjikanより大きいならば
         else return (false);
     }
     //スワイプコントロールだけのための変数
@@ -184,12 +184,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             }
         }
     }
-    //k6_a:ストップウォッチ関数を使う時のおまじない。
-        private System.Diagnostics.Stopwatch stopwatch
-            = new System.Diagnostics.Stopwatch();
-
-    // 何秒たったかを変数elapseに入れる。ストップウォッチ
-    private float elapse;
+    
    
 
 }

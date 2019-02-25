@@ -70,18 +70,19 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         trMokuji.position = new Vector3(trMokuji.position.x, startP1,
                                         trMokuji.position.z);
 
-        //k6_ac:何秒たったかを変数elapseに入れる
+        //k6_ac:何秒たったかを変数elapseに入れる>stopwatchに使う。
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
     }
     void Update()
     {
         
-        flickControl();
+        swipeControl();
     }
+    //スワイプコントロールだけのための変数
     Vector3 objectPos;
     Vector3 FCfirstPos;
 
-    private void flickControl() {
+    private void swipeControl() {
         //フリックをするメソッド
         //k3_a:Input.mousePosition.ToString()でマウスのスクリーンポイント表示
         //k3_zz2_a:スクリーン座標＞ワールド座標
@@ -92,7 +93,6 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
 
             //k6_aa:ストップウォッチスタート
             stopwatch.Start();
-            
         }
         //マウスを押してる最中
         if (Input.GetMouseButton(0)) {

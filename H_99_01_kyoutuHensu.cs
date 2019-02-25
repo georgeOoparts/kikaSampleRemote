@@ -17,6 +17,10 @@ public class H_99_01_kyoutuHensu : MonoBehaviour
     public float upSpace = 0.5f;
     
     
+    
+    
+    
+    
     //マズ　ライン１の目次のオブジェを定める
     public GameObject mokuji;
 

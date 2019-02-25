@@ -80,7 +80,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>SF判定に使う。
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
         //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>flick()に使う。
-        flickElapse= (float)Fstopwatch.Elapsed.TotalSeconds; ;
+        flickElapse= (float)Fstopwatch.Elapsed.TotalSeconds; 
 
         //クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド
         upDownClickPosition();

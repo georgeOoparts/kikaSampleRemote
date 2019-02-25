@@ -75,6 +75,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
 
         
     }
+    bool flickTupTimeHantei=false;
     void Update(){
         //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>SF判定に使う。
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
@@ -98,8 +99,9 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             //k6_ab:ストップウォッチの時間をリセット
             //stopwatch.Reset();
         }
-        //if (hanteiSorF()) {
-        //}
+        if (hanteiSorF()) {
+            flickTupTimeHantei = true;
+        }
         flick();
 
         Debug.Log(saishoClick+"::"+atoClick);
@@ -133,7 +135,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     public float chousei = 4.0f;
     //flick()に関するメソッド
     void flick() {
-        if (flickFirst==true && Input.GetMouseButtonUp(0)) {
+        if (flickFirst==true && Input.GetMouseButtonUp(0)&& flickTupTimeHantei) {
             //k6_aa:ストップウォッチスタート
             Fstopwatch.Start();
             flickFirst=false;
@@ -160,6 +162,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             //k6_ab:ストップウォッチの時間をリセット
             Fstopwatch.Reset();
             flickFirst = true;
+            flickTupTimeHantei = false;
         }
         
 

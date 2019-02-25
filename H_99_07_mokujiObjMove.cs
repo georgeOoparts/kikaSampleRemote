@@ -111,7 +111,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             trMokuji.position = new Vector3(trMokuji.position.x, mokujiUe, trMokuji.position.z);
         }
 
-        Debug.Log(saishoClick+"::"+atoClick);
+        //Debug.Log(saishoClick+"::"+atoClick);
         //Debug.Log(hanteiSorF());
         //flick();
     }

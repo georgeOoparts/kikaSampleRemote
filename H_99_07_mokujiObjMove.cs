@@ -99,11 +99,15 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             //k6_ab:ストップウォッチの時間をリセット
             //stopwatch.Reset();
         }
-        if (hanteiSorF()) {
-            // タップ時間によるフリック判定のフラグ
-            flickTupTimeHantei = true;
+        //if (hanteiSorF()) {
+        //    // タップ時間によるフリック判定のフラグ
+        //    flickTupTimeHantei = true;
+        //}
+        //flick();
+        swipeControl();
+        if (trMokuji.position.y <= startP1) {
+            trMokuji.position = new Vector3(trMokuji.position.x, startP1, trMokuji.position.z);
         }
-        flick();
 
         Debug.Log(saishoClick+"::"+atoClick);
         //Debug.Log(hanteiSorF());

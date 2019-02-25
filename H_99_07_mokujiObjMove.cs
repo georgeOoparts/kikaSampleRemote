@@ -94,8 +94,6 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             //stopwatch.Reset();
         }
         flick();
-
-
     }
     //k6_a:ストップウォッチ関数を使う時のおまじない。
     private System.Diagnostics.Stopwatch Fstopwatch
@@ -112,8 +110,9 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             flickFirst=false;
         }
         if (fjikan>=flickElapse) {
-            Debug.Log(flickElapse);
+            if(flickFirst == false)Debug.Log(flickElapse);
         } else {
+            flickElapse = 4.0f;
             Debug.Log(flickElapse);
             //k6_ab:ストップウォッチの時間をリセット
             Fstopwatch.Reset();

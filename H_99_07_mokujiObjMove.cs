@@ -80,7 +80,11 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
         //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>flick()に使う。
         flickElapse= (float)Fstopwatch.Elapsed.TotalSeconds; ;
-        //swipeControl();
+
+        //クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド
+        upDownClickPosition();
+
+
         if (Input.GetMouseButtonDown(0)) {
             //k6_aa:ストップウォッチスタート
             //stopwatch.Start();
@@ -94,9 +98,10 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             //k6_ab:ストップウォッチの時間をリセット
             //stopwatch.Reset();
         }
-        if (hanteiSorF()) {
-        }
-        upDownClickPosition();
+        //if (hanteiSorF()) {
+        //}
+        flick();
+
         Debug.Log(saishoClick+"::"+atoClick);
         //Debug.Log(hanteiSorF());
         //flick();
@@ -108,9 +113,13 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     void upDownClickPosition() {
         if (Input.GetMouseButtonDown(0)) {
             saishoClick = Input.mousePosition;
+            //k0003_6:スクリーン座標＞ワールド座標
+            saishoClick = Camera.main.ScreenToWorldPoint(saishoClick);
         } 
         else if(Input.GetMouseButtonUp(0)) {
             atoClick= Input.mousePosition;
+            //k0003_6:スクリーン座標＞ワールド座標
+            atoClick = Camera.main.ScreenToWorldPoint(atoClick);
         }
     }
     //flick()に関するメソッド----------------------------------------------------------------
@@ -121,7 +130,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     float flickElapse;
     bool flickFirst = true;
     public float fjikan = 1f;
-    public float chousei = 10.0f;
+    public float chousei = 4.0f;
     //flick()に関するメソッド
     void flick() {
         if (flickFirst==true && Input.GetMouseButtonUp(0)) {
@@ -131,10 +140,14 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         }
         if (fjikan>=flickElapse) {
             if (flickFirst == false) {
-                
+
                 //この中に時間内にしたい処理を書く。------
                 //diffがプラスかマイナスかによって上下の方向が決まる
-                trMokuji.position +=new Vector3(0, -chousei * Time.deltaTime, 0);
+                float diff = saishoClick.y - atoClick.y;
+                if (!(diff<=1.5 && diff>=-1.5)) {
+                    trMokuji.position += new Vector3(0, chousei * diff * Time.deltaTime, 0);
+                }
+                
                 //-----------------------------------------
             }
         } else {

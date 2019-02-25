@@ -6,6 +6,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
 {
     //目次の動きを制御するプログラムmokujiにアタッチ
     //単純上下スワイプ追加
+    //スワイプ　フリック判定　追加
     //フリック追加中
     
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
@@ -94,18 +95,14 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         
     }
 
-    //時間判定の何秒以内かを決める変数。hanteiSorF()で使う
+    //時間判定の何秒以内かを決める変数。hanteiSorF()で使うswipeなら０flickなら１を返す
     public float hanteiSorFjikan = 0.45f;
     //判定SorSS Sなら1、SSなら2を返す。
-    int hanteiSorF() {
+    bool hanteiSorF() {
         //経過時間elapseが判定時間hanteiSorSS以下ならば
-        if (elapse <= hanteiSorFjikan) {
-            //Debug.Log("S::" + elapse);
-            return (1);
-        } else {//経過時間elapseが判定時間hanteiSorSSより大きいならば
-            //Debug.Log("notS this is SS::" + elapse);
-            return (2);
-        }
+        if (elapse <= hanteiSorFjikan) return (true);
+        //経過時間elapseが判定時間hanteiSorSSより大きいならば
+        else return (false);
     }
     //スワイプコントロールだけのための変数
     Vector3 objectPos;

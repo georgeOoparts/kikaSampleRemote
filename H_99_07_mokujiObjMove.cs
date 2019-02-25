@@ -138,12 +138,17 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             Fstopwatch.Start();
             flickFirst=false;
         }
-        if (fjikan>=flickElapse) {
+        //flick中にタップがあったらflickを止める
+        if (Input.GetMouseButtonDown(0)) {
+            flickElapse = fjikan;
+        }
+        if (fjikan>flickElapse) {
             if (flickFirst == false) {
 
                 //この中に時間内にしたい処理を書く。------
                 //diffがプラスかマイナスかによって上下の方向が決まる
                 float diff = saishoClick.y - atoClick.y;
+                //ワールド座標の絶対値が１．５以上の時のみフリックをする。
                 if (!(diff<=1.5 && diff>=-1.5)) {
                     trMokuji.position += new Vector3(0, chousei * diff * Time.deltaTime, 0);
                 }

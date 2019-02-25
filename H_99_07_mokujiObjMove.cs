@@ -77,24 +77,52 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     {
         //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>stopwatchに使う。
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
-
-        swipeControl();
+        //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>flick()に使う。
+        flickElapse= (float)Fstopwatch.Elapsed.TotalSeconds; ;
+        //swipeControl();
         if (Input.GetMouseButtonDown(0)) {
             //k6_aa:ストップウォッチスタート
-            stopwatch.Start();
+            //stopwatch.Start();
            
         }
         //マウスボタンを離したとき
         if (Input.GetMouseButtonUp(0)) {
-            //hanteiSorScrollS()
-            
+            //hanteiSorF()
+            //Debug.Log(hanteiSorF());
+            //flick();
             //k6_ab:ストップウォッチの時間をリセット
-            stopwatch.Reset();
-            Debug.Log(hanteiSorF());
+            //stopwatch.Reset();
+        }
+        flick();
+
+
+    }
+    //k6_a:ストップウォッチ関数を使う時のおまじない。
+    private System.Diagnostics.Stopwatch Fstopwatch
+        = new System.Diagnostics.Stopwatch();
+    //flick処理の時間を入れる変数ストップウォッチをつかう
+    float flickElapse;
+    bool flickFirst = true;
+    float fjikan = 4f;
+    //flick()に関するメソッド
+    void flick() {
+        if (flickFirst==true && Input.GetMouseButtonUp(0)) {
+            //k6_aa:ストップウォッチスタート
+            Fstopwatch.Start();
+            flickFirst=false;
+        }
+        if (fjikan>=flickElapse) {
+            Debug.Log(flickElapse);
+        } else {
+            Debug.Log(flickElapse);
+            //k6_ab:ストップウォッチの時間をリセット
+            Fstopwatch.Reset();
+            flickFirst = true;
         }
         
-    }
 
+    }
+    
     //時間判定の何秒以内かを決める変数。hanteiSorF()で使うswipeなら０flickなら１を返す
     public float hanteiSorFjikan = 0.45f;
     //判定SorSS Sなら1、SSなら2を返す。

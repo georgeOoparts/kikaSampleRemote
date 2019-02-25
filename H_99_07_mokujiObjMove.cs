@@ -70,13 +70,20 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         trMokuji.position = new Vector3(trMokuji.position.x, startP1,
                                         trMokuji.position.z);
 
-        //k6_ac:何秒たったかを変数elapseに入れる>stopwatchに使う。
-        elapse = (float)stopwatch.Elapsed.TotalSeconds;
+        
     }
     void Update()
     {
-        
+        //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>stopwatchに使う。
+        elapse = (float)stopwatch.Elapsed.TotalSeconds;
+
         swipeControl();
+        if (Input.GetMouseButtonDown(0)) {
+            //k6_aa:ストップウォッチスタート
+            stopwatch.Start();
+           
+        }
+        Debug.Log(elapse);
     }
     //スワイプコントロールだけのための変数
     Vector3 objectPos;

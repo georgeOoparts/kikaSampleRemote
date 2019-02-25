@@ -177,7 +177,7 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     private System.Diagnostics.Stopwatch stopwatch
         = new System.Diagnostics.Stopwatch();
     
-    //k6_1_1:何秒たったかを変数elapseに入れる-------
+    //k6_1_1:何秒たったかを変数elapseに入れる：update内に入れる-------
     ////?
     private float elapse;
     

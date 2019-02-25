@@ -75,9 +75,8 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
 
         
     }
-
     void Update(){
-        //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>stopwatchに使う。
+        //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>SF判定に使う。
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
         //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>flick()に使う。
         flickElapse= (float)Fstopwatch.Elapsed.TotalSeconds; ;
@@ -95,9 +94,24 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             //k6_ab:ストップウォッチの時間をリセット
             //stopwatch.Reset();
         }
-        
+        if (hanteiSorF()) {
+        }
+        upDownClickPosition();
+        Debug.Log(saishoClick+"::"+atoClick);
         //Debug.Log(hanteiSorF());
         //flick();
+    }
+    //upDownClickPosition()：クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド---
+    Vector3 saishoClick = new Vector3(0,0,0);
+    Vector3 atoClick = new Vector3(0, 0, 0);
+
+    void upDownClickPosition() {
+        if (Input.GetMouseButtonDown(0)) {
+            saishoClick = Input.mousePosition;
+        } 
+        else if(Input.GetMouseButtonUp(0)) {
+            atoClick= Input.mousePosition;
+        }
     }
     //flick()に関するメソッド----------------------------------------------------------------
     //k6_a:ストップウォッチ関数を使う時のおまじない。
@@ -166,7 +180,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     Vector3 FCfirstPos;
 
     private void swipeControl() {
-        //フリックをするメソッド
+        //スワイプをするメソッド
         //k3_a:Input.mousePosition.ToString()でマウスのスクリーンポイント表示
         //k3_zz2_a:スクリーン座標＞ワールド座標
         //マウスを押したら

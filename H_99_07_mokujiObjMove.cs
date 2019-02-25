@@ -29,10 +29,10 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     //panelの間の幅
     public float spacePanel = 0.5f;
 
-    //目次ｐ１のスタート位置
+    //目次ｐ１のスタート位置 mokujiの一番下のｙ座標
     public float startP1 = 3.7f;
-
-    
+    //mokujiの一番上のｙ座標
+    public float mokujiUe = 9.7f;
 
     void Start()
     {
@@ -107,6 +107,8 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         swipeControl();
         if (trMokuji.position.y <= startP1) {
             trMokuji.position = new Vector3(trMokuji.position.x, startP1, trMokuji.position.z);
+        }else if (trMokuji.position.y >= mokujiUe) {
+            trMokuji.position = new Vector3(trMokuji.position.x, mokujiUe, trMokuji.position.z);
         }
 
         Debug.Log(saishoClick+"::"+atoClick);

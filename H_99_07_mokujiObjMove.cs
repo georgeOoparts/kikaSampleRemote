@@ -83,7 +83,29 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             stopwatch.Start();
            
         }
-        Debug.Log(elapse);
+        //マウスボタンを離したとき
+        if (Input.GetMouseButtonUp(0)) {
+            //hanteiSorScrollS()
+            
+            //k6_ab:ストップウォッチの時間をリセット
+            stopwatch.Reset();
+            Debug.Log(hanteiSorF());
+        }
+        
+    }
+
+    //時間判定の何秒以内かを決める変数。hanteiSorF()で使う
+    public float hanteiSorFjikan = 0.45f;
+    //判定SorSS Sなら1、SSなら2を返す。
+    int hanteiSorF() {
+        //経過時間elapseが判定時間hanteiSorSS以下ならば
+        if (elapse <= hanteiSorFjikan) {
+            //Debug.Log("S::" + elapse);
+            return (1);
+        } else {//経過時間elapseが判定時間hanteiSorSSより大きいならば
+            //Debug.Log("notS this is SS::" + elapse);
+            return (2);
+        }
     }
     //スワイプコントロールだけのための変数
     Vector3 objectPos;
@@ -131,7 +153,6 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
 
     // 何秒たったかを変数elapseに入れる。ストップウォッチ
     private float elapse;
-    //時間判定の何秒以内かを決める変数。hanteiSorScrollS()で使う
-    public float hanteiSorSS = 0.45f;
+   
 
 }

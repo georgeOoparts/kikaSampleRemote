@@ -75,7 +75,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
 
         
     }
-    bool flickTupTimeHantei=false;
+    
     void Update(){
         //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>SF判定に使う。
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
@@ -100,6 +100,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             //stopwatch.Reset();
         }
         if (hanteiSorF()) {
+            // タップ時間によるフリック判定のフラグ
             flickTupTimeHantei = true;
         }
         flick();
@@ -133,8 +134,11 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     bool flickFirst = true;
     public float fjikan = 1f;
     public float chousei = 4.0f;
+    // タップ時間によるフリック判定のフラグ
+    bool flickTupTimeHantei = false;
     //flick()に関するメソッド
     void flick() {
+        //update対策flickFirstがtrue、マウスボタンを上げた時、フリック判定時間OKなら
         if (flickFirst==true && Input.GetMouseButtonUp(0)&& flickTupTimeHantei) {
             //k6_aa:ストップウォッチスタート
             Fstopwatch.Start();
@@ -164,8 +168,6 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             flickFirst = true;
             flickTupTimeHantei = false;
         }
-        
-
     }
     // hanteiSorF():　判定SorF S(スワイプ)ならfalse、F（フリック）ならtrueを返すメソッド-----------------------------
     //k6_a:ストップウォッチ関数を使う時のおまじない。

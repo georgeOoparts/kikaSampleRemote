@@ -104,13 +104,11 @@ public class H_99_09_camYokoMove : MonoBehaviour
 
     void upDownClickPosition() {
         if (Input.GetMouseButtonDown(0)) {
-            saishoClick = Input.mousePosition;
             //k0003_6:スクリーン座標＞ワールド座標
-            saishoClick = Camera.main.ScreenToWorldPoint(saishoClick);
+            saishoClick = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         } else if (Input.GetMouseButtonUp(0)) {
-            atoClick = Input.mousePosition;
             //k0003_6:スクリーン座標＞ワールド座標
-            atoClick = Camera.main.ScreenToWorldPoint(atoClick);
+            atoClick = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
     }
 }

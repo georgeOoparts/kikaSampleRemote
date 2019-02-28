@@ -85,7 +85,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         //クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド
         upDownClickPosition();
 
-        //flick();
+        flick();
 
         swipeControl();
 
@@ -123,7 +123,9 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     bool flickMove = false;
     public float fjikan = 1f;
     public float chousei = 4.0f;
-    
+    //float tateRitu = 0.0f;
+
+
     //flick()に関するメソッド
     void flick() {
         //フリック判定時間OKなら
@@ -190,8 +192,8 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     //スワイプコントロールだけのための変数
     Vector3 objectPos;
     Vector3 FCfirstPos;
-
-    float tateRitu = 0.0f;
+    //ｙ成分がｘ成分の2倍以上たったらtrue、他はfalse
+    bool tateRitu = false;
 
     private void swipeControl() {
         //スワイプをするメソッド
@@ -203,7 +205,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             FCfirstPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             //k6_aa:ストップウォッチスタート
-            stopwatch.Start();
+            //stopwatch.Start();
         }
         //マウスを押してる最中
         if (Input.GetMouseButton(0)) {
@@ -214,11 +216,12 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             Vector3 diffSwipe =
                 FCfirstPos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            //初めのマウスの位置と今のマウスの位置の差異が0じゃなければ
-            if (diffSwipe != Vector3.zero) {
-                //diffSwipe.xが0じゃなければ
-                if (diffSwipe.x !=0) {
-                    if ((diffSwipe.y / diffSwipe.x)>=2|| (diffSwipe.y / diffSwipe.x) <= -2) {
+            if ((diffSwipe.y / diffSwipe.x) >= 2 || (diffSwipe.y / diffSwipe.x) <= -2) {
+                tateRitu = true;
+                //初めのマウスの位置と今のマウスの位置の差異が0じゃなければ
+                if (diffSwipe != Vector3.zero) {
+                    //diffSwipe.xが0じゃなければ
+                    if (diffSwipe.x != 0) {
                         //Camera.main.ScreenToWorldPoint(diff);
                         diffSwipe.x = 0.0f;
                         diffSwipe.z = 0.0f;
@@ -232,12 +235,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
 
                     }
                 }
-                
-                
-            }
+            } else tateRitu = false;
         }
     }
-    
-   
-
 }

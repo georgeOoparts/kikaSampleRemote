@@ -85,20 +85,6 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         //クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド
         upDownClickPosition();
 
-
-        //if (Input.GetMouseButtonDown(0)) {
-            //k6_aa:ストップウォッチスタート
-            //stopwatch.Start();
-           
-        //}
-        //マウスボタンを離したとき
-        //if (Input.GetMouseButtonUp(0)) {
-            //hanteiSorF()
-            //Debug.Log(hanteiSorF());
-            //flick();
-            //k6_ab:ストップウォッチの時間をリセット
-            //stopwatch.Reset();
-        //}
         if (hanteiSorF()) {
             // タップ時間によるフリック判定のフラグ
             flickTupTimeHantei = true;
@@ -111,9 +97,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             trMokuji.position = new Vector3(trMokuji.position.x, mokujiUe, trMokuji.position.z);
         }
 
-        //Debug.Log(saishoClick+"::"+atoClick);
-        //Debug.Log(hanteiSorF());
-        //flick();
+        
     }
     //upDownClickPosition()：クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド---
     Vector3 saishoClick = new Vector3(0,0,0);

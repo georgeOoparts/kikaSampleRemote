@@ -75,17 +75,37 @@ public class H_99_09_camYokoMove : MonoBehaviour
                                         this.gameObject.transform.position.y,
                                         this.gameObject.transform.position.z
                                         );
+                                kyotu.mainCameraPosi = 2;
                                 //スワイプ終了処理
                                 // k6_ab:ストップウォッチの時間をリセット
                                 Fstopwatch.Reset();
                                 flickMove = false;
-                              
+                                
                             } 
                         }
+                    }else if (kyotu.mainCameraPosi == 2) {
+                        //diffがプラスなら、つまり左移動判定のみ
+                        if (diff >= 0) {
+                            //mainCameraのｘ位置が５．６以下ならば
+                            if (this.gameObject.transform.position.x >= 0) {
+                                this.gameObject.transform.position +=
+                                new Vector3(-chousei * diff * Time.deltaTime, 0, 0);
+                            } else {
+                                //最終的に行く位置
+                                this.gameObject.transform.position =
+                                    new Vector3(0,
+                                        this.gameObject.transform.position.y,
+                                        this.gameObject.transform.position.z
+                                        );
+                                kyotu.mainCameraPosi = 1;
+                                //スワイプ終了処理
+                                // k6_ab:ストップウォッチの時間をリセット
+                                Fstopwatch.Reset();
+                                flickMove = false;
 
-                    } //else if (kyotu.mainCameraPosi == 2) {
-
-                    //}
+                            }
+                        }
+                    }
                 }
                 //-----------------------------------------
             } else {

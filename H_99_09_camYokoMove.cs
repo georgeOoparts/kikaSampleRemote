@@ -17,10 +17,10 @@ public class H_99_09_camYokoMove : MonoBehaviour
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
         //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>flick()に使う。
         flickElapse = (float)Fstopwatch.Elapsed.TotalSeconds;
-
+        
+        //flick()の中で使う。マウスボタンの押した位置、離した位置を得るメソッド
         upDownClickPosition();
 
-        
         flick();
     }
     //flick()に関するメソッド----------------------------------------------------------------
@@ -40,16 +40,13 @@ public class H_99_09_camYokoMove : MonoBehaviour
         //フリック判定時間OKなら
         //注意：if (hanteiSorF() == true)は何故か別のifで囲まないと働かない
         if (hanteiSorF() == true) {
-            //update対策flickFirstがtrue、マウスボタンを上げた時、
+            //flickMoveがtrue、マウスボタンを上げた時、
             if ((flickMove == false) && (Input.GetMouseButtonUp(0))) {
                 //k6_aa:ストップウォッチスタート
                 Fstopwatch.Start();
                 flickMove = true;
-                //i++;
-                //Debug.Log(i);
             }
         }
-
         //flickMoveがtrueなら
         if (flickMove==true) {
             //flick中にタップがあったらflickを止める
@@ -57,7 +54,6 @@ public class H_99_09_camYokoMove : MonoBehaviour
                 flickElapse = fjikan;
             }
             if (fjikan > flickElapse) {
-                //if (flickFirst == false) {
 
                 //この中に時間内にしたい処理を書く。------
                 //diffがプラスかマイナスかによって上下の方向が決まる
@@ -67,11 +63,8 @@ public class H_99_09_camYokoMove : MonoBehaviour
                     this.gameObject.transform.position +=
                         new Vector3(chousei * diff * Time.deltaTime, 0, 0);
                 }
-
                 //-----------------------------------------
-                //}
             } else {
-
                 //k6_ab:ストップウォッチの時間をリセット
                 Fstopwatch.Reset();
                 flickMove = false;

@@ -137,13 +137,12 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             }
         }
         //flickMoveがtrueなら
-        //if (flickMove==true) {
-        //flick中にタップがあったらflickを止める
-        if (Input.GetMouseButtonDown(0)) {
-            flickElapse = fjikan;
-        }
-        if (fjikan > flickElapse) {
-            if(flickMove == true) {
+        if (flickMove == true) {
+            //flick中にタップがあったらflickを止める
+            if (Input.GetMouseButtonDown(0)) {
+                flickElapse = fjikan;
+            }
+            if (fjikan > flickElapse) {
                 //この中に時間内にしたい処理を書く。------
                 //diffがプラスかマイナスかによって上下の方向が決まる
                 float diff = saishoClick.y - atoClick.y;
@@ -152,11 +151,11 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
                     trMokuji.position += new Vector3(0, -chousei * diff * Time.deltaTime, 0);
                 }
                 //-----------------------------------------
+            } else {
+                //k6_ab:ストップウォッチの時間をリセット
+                Fstopwatch.Reset();
+                flickMove = false;
             }
-        } else {
-            //k6_ab:ストップウォッチの時間をリセット
-            Fstopwatch.Reset();
-            flickMove = false;
         }
     }
     // hanteiSorF():　判定SorF S(スワイプ)ならfalse、F（フリック）ならtrueを返すメソッド-----------------------------

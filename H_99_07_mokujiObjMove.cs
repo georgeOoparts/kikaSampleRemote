@@ -85,10 +85,6 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         //クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド
         upDownClickPosition();
 
-        if (hanteiSorF()) {
-            // タップ時間によるフリック判定のフラグ
-            flickTupTimeHantei = true;
-        }
         flick();
 
         //swipeControl();
@@ -127,39 +123,38 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     bool flickFirst = true;
     public float fjikan = 1f;
     public float chousei = 4.0f;
-    // タップ時間によるフリック判定のフラグ
-    bool flickTupTimeHantei = false;
+    
     //flick()に関するメソッド
     void flick() {
-        //update対策flickFirstがtrue、マウスボタンを上げた時、フリック判定時間OKなら
-        if (flickFirst==true && Input.GetMouseButtonUp(0)&& flickTupTimeHantei) {
-            //k6_aa:ストップウォッチスタート
-            Fstopwatch.Start();
-            flickFirst=false;
+        //フリック判定時間OKなら
+        //注意：if (hanteiSorF() == true)は何故か別のifで囲まないと働かない
+        if (hanteiSorF() == true) {
+            //update対策flickFirstがtrue、マウスボタンを上げた時、フリック判定時間OKなら
+            if (flickFirst == true && Input.GetMouseButtonUp(0)) {
+                //k6_aa:ストップウォッチスタート
+                Fstopwatch.Start();
+                flickFirst = false;
+            }
         }
         //flick中にタップがあったらflickを止める
         if (Input.GetMouseButtonDown(0)) {
             flickElapse = fjikan;
         }
-        if (fjikan>flickElapse) {
+        if (fjikan > flickElapse) {
             if (flickFirst == false) {
-
                 //この中に時間内にしたい処理を書く。------
                 //diffがプラスかマイナスかによって上下の方向が決まる
                 float diff = saishoClick.y - atoClick.y;
                 //ワールド座標の絶対値が１．５以上の時のみフリックをする。
-                if (!(diff<=1.5 && diff>=-1.5)) {
+                if (!(diff <= 1.5 && diff >= -1.5)) {
                     trMokuji.position += new Vector3(0, -chousei * diff * Time.deltaTime, 0);
                 }
-                
                 //-----------------------------------------
             }
         } else {
-            
             //k6_ab:ストップウォッチの時間をリセット
             Fstopwatch.Reset();
             flickFirst = true;
-            flickTupTimeHantei = false;
         }
     }
     // hanteiSorF():　判定SorF S(スワイプ)ならfalse、F（フリック）ならtrueを返すメソッド-----------------------------

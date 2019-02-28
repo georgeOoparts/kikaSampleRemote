@@ -55,7 +55,7 @@ public class H_99_09_camYokoMove : MonoBehaviour
                 //ワールド座標の絶対値が１．５以上の時のみフリックをする。
                 if (!(diff <= 1.5 && diff >= -1.5)) {
                     this.gameObject.transform.position += 
-                        new Vector3(-chousei * diff * Time.deltaTime, 0,0);
+                        new Vector3(chousei * diff * Time.deltaTime, 0,0);
                 }
 
                 //-----------------------------------------

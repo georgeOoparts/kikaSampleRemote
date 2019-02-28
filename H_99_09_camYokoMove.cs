@@ -34,14 +34,22 @@ public class H_99_09_camYokoMove : MonoBehaviour
     public float chousei = 4.0f;
     // タップ時間によるフリック判定のフラグ
     bool flickTupTimeHantei = false;
+    int i = 0;
     //flick()に関するメソッド
     void flick() {
-        //update対策flickFirstがtrue、マウスボタンを上げた時、フリック判定時間OKなら
-        if (flickFirst == true && Input.GetMouseButtonUp(0) && hanteiSorF()) {
-            //k6_aa:ストップウォッチスタート
-            Fstopwatch.Start();
-            flickFirst = false;
+        //フリック判定時間OKなら
+        //注意：if (hanteiSorF() == true)は何故か別のifで囲まないと働かない
+        if (hanteiSorF() == true) {
+            //update対策flickFirstがtrue、マウスボタンを上げた時、
+            if ((flickFirst == true) && (Input.GetMouseButtonUp(0))) {
+                //k6_aa:ストップウォッチスタート
+                Fstopwatch.Start();
+                flickFirst = false;
+                //i++;
+                //Debug.Log(i);
+            }
         }
+        
         //flick中にタップがあったらflickを止める
         if (Input.GetMouseButtonDown(0)) {
             flickElapse = fjikan;

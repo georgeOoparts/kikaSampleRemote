@@ -85,9 +85,9 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         //クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド
         upDownClickPosition();
 
-        flick();
+        //flick();
 
-        //swipeControl();
+        swipeControl();
 
         //目次がある値以上の場所へ行かない処理
         if (trMokuji.position.y <= startP1) {
@@ -191,6 +191,8 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     Vector3 objectPos;
     Vector3 FCfirstPos;
 
+    float tateRitu = 0.0f;
+
     private void swipeControl() {
         //スワイプをするメソッド
         //k3_a:Input.mousePosition.ToString()でマウスのスクリーンポイント表示
@@ -214,16 +216,24 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
 
             //初めのマウスの位置と今のマウスの位置の差異が0じゃなければ
             if (diffSwipe != Vector3.zero) {
-                //Camera.main.ScreenToWorldPoint(diff);
-                diffSwipe.x = 0.0f;
-                diffSwipe.z = 0.0f;
-                //カメラの位置にマウスの位置の差異を足す。(スマホ対応引く)
+                //diffSwipe.xが0じゃなければ
+                if (diffSwipe.x !=0) {
+                    if ((diffSwipe.y / diffSwipe.x)>=2|| (diffSwipe.y / diffSwipe.x) <= -2) {
+                        //Camera.main.ScreenToWorldPoint(diff);
+                        diffSwipe.x = 0.0f;
+                        diffSwipe.z = 0.0f;
+                        //カメラの位置にマウスの位置の差異を足す。(スマホ対応引く)
+                        trMokuji.transform.position = objectPos - diffSwipe;
 
-                trMokuji.transform.position = objectPos - diffSwipe;
+                        //初めのマウスの位置を最新のマウスの位置に更新　
+                        FCfirstPos
+                            = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-                //初めのマウスの位置を最新のマウスの位置に更新　
-                FCfirstPos
-                    = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+                    }
+                }
+                
+                
             }
         }
     }

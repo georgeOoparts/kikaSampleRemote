@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class H_99_09_camYokoMove : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Debug.Log("weeeeee");
-    }
+    //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
+    //このスクリプトをアタッチしたオブジェクトにいちいちこのオブジェクトをアタッチ
+    public H_99_01_kyoutuHensu kyotu;
 
-    // Update is called once per frame
+    void Start(){}
+    //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
+    //yosu.cube1で普通に使える
+
     void Update()
     {
         //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>SF判定に使う。
@@ -57,14 +58,39 @@ public class H_99_09_camYokoMove : MonoBehaviour
 
                 //この中に時間内にしたい処理を書く。------
                 //diffがプラスかマイナスかによって上下の方向が決まる
-                float diff = saishoClick.x - atoClick.x;
+                float diff = atoClick.x - saishoClick.x;
                 //ワールド座標の絶対値が１．５以上の時のみフリックをする。
                 if (!(diff <= 1.5 && diff >= -1.5)) {
-                    this.gameObject.transform.position +=
-                        new Vector3(chousei * diff * Time.deltaTime, 0, 0);
+                    //mainCameraPosi=1つまり目次なら
+                    if (kyotu.mainCameraPosi == 1) {
+                        //diffがマイナスなら、つまり→移動判定のみ
+                        if (diff<=0) {
+                            //mainCameraのｘ位置が５．６以下ならば
+                            if (this.gameObject.transform.position.x <= 5.6) {
+                                this.gameObject.transform.position +=
+                                new Vector3(-chousei * diff * Time.deltaTime, 0, 0);
+                            } else {
+                                //最終的に行く位置
+                                this.gameObject.transform.position =
+                                    new Vector3(5.6f,
+                                        this.gameObject.transform.position.y,
+                                        this.gameObject.transform.position.z
+                                        );
+                                //スワイプ終了処理
+                                // k6_ab:ストップウォッチの時間をリセット
+                                Fstopwatch.Reset();
+                                flickMove = false;
+                                flickTupTimeHantei = false;
+                            } 
+                        }
+
+                    } //else if (kyotu.mainCameraPosi == 2) {
+
+                    //}
                 }
                 //-----------------------------------------
             } else {
+                //スワイプ終了処理
                 //k6_ab:ストップウォッチの時間をリセット
                 Fstopwatch.Reset();
                 flickMove = false;

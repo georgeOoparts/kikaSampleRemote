@@ -120,7 +120,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         = new System.Diagnostics.Stopwatch();
     //flick処理の時間を入れる変数ストップウォッチをつかう
     float flickElapse;
-    bool flickFirst = true;
+    bool flickMove = false;
     public float fjikan = 1f;
     public float chousei = 4.0f;
     
@@ -130,18 +130,20 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         //注意：if (hanteiSorF() == true)は何故か別のifで囲まないと働かない
         if (hanteiSorF() == true) {
             //update対策flickFirstがtrue、マウスボタンを上げた時、フリック判定時間OKなら
-            if (flickFirst == true && Input.GetMouseButtonUp(0)) {
+            if (flickMove == false && Input.GetMouseButtonUp(0)) {
                 //k6_aa:ストップウォッチスタート
                 Fstopwatch.Start();
-                flickFirst = false;
+                flickMove = true;
             }
         }
+        //flickMoveがtrueなら
+        //if (flickMove==true) {
         //flick中にタップがあったらflickを止める
         if (Input.GetMouseButtonDown(0)) {
             flickElapse = fjikan;
         }
         if (fjikan > flickElapse) {
-            if (flickFirst == false) {
+            if(flickMove == true) {
                 //この中に時間内にしたい処理を書く。------
                 //diffがプラスかマイナスかによって上下の方向が決まる
                 float diff = saishoClick.y - atoClick.y;
@@ -154,7 +156,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         } else {
             //k6_ab:ストップウォッチの時間をリセット
             Fstopwatch.Reset();
-            flickFirst = true;
+            flickMove = false;
         }
     }
     // hanteiSorF():　判定SorF S(スワイプ)ならfalse、F（フリック）ならtrueを返すメソッド-----------------------------

@@ -90,14 +90,17 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             flickTupTimeHantei = true;
         }
         flick();
-        swipeControl();
+
+        //swipeControl();
+
+        //目次がある値以上の場所へ行かない処理
         if (trMokuji.position.y <= startP1) {
             trMokuji.position = new Vector3(trMokuji.position.x, startP1, trMokuji.position.z);
-        }else if (trMokuji.position.y >= mokujiUe) {
+        } else if (trMokuji.position.y >= mokujiUe) {
             trMokuji.position = new Vector3(trMokuji.position.x, mokujiUe, trMokuji.position.z);
         }
 
-        
+
     }
     //upDownClickPosition()：クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド---
     Vector3 saishoClick = new Vector3(0,0,0);

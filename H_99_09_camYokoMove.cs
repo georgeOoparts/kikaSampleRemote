@@ -33,8 +33,7 @@ public class H_99_09_camYokoMove : MonoBehaviour
     bool flickMove = true;
     public float fjikan = 1f;
     public float chousei = 4.0f;
-    // タップ時間によるフリック判定のフラグ
-    bool flickTupTimeHantei = false;
+   
     int i = 0;
     //flick()に関するメソッド
     void flick() {
@@ -80,7 +79,7 @@ public class H_99_09_camYokoMove : MonoBehaviour
                                 // k6_ab:ストップウォッチの時間をリセット
                                 Fstopwatch.Reset();
                                 flickMove = false;
-                                flickTupTimeHantei = false;
+                              
                             } 
                         }
 
@@ -94,7 +93,6 @@ public class H_99_09_camYokoMove : MonoBehaviour
                 //k6_ab:ストップウォッチの時間をリセット
                 Fstopwatch.Reset();
                 flickMove = false;
-                flickTupTimeHantei = false;
             }
         }
         

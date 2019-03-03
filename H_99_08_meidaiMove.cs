@@ -152,38 +152,34 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
             //meidai変数がかわってから最初の一回だけ呼び出すメソッド
             firstRead = false;
-            swipeControl();
-
         } else if (kyotu.meidaiHensu == 2) {
             //最後にmeidai1_1全体ををリアルタイムで動かす。---------------------------
 
             //meidai変数がかわってから最初の一回だけ呼び出すメソッド
             firstRead = false;
-            swipeControl();
-
         } else if (kyotu.meidaiHensu == 3) {
             //最後にmeidai1_1全体ををリアルタイムで動かす。---------------------------
 
             //meidai変数がかわってから最初の一回だけ呼び出すメソッド
             firstRead = false;
-            swipeControl();
         } else if (kyotu.meidaiHensu == 4) {
             //最後にmeidai1_1全体ををリアルタイムで動かす。---------------------------
 
             //meidai変数がかわってから最初の一回だけ呼び出すメソッド
             firstRead = false;
-            swipeControl();
         } else if (kyotu.meidaiHensu == 5) {
             //最後にmeidai1_1全体ををリアルタイムで動かす。---------------------------
 
             //meidai変数がかわってから最初の一回だけ呼び出すメソッド
             firstRead = false;
-            swipeControl();
         } else if (kyotu.meidaiHensu == 6) {
             //最後にmeidai1_1全体ををリアルタイムで動かす。---------------------------
 
             //meidai変数がかわってから最初の一回だけ呼び出すメソッド
             firstRead = false;
+        }
+        //メインカメラが目次の時にのみ
+        if (kyotu.mainCameraPosi == 2) {
             swipeControl();
         }
     }

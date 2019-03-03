@@ -132,14 +132,16 @@ public class H_99_08_meidaiMove : MonoBehaviour
     //meidai変数がかわってから最初の一回だけ呼び出すメソッドに利用する変数
     bool firstRead = true;
     void Update() {
-        //現在ででなく、1つ前のmeidai変数を入れる変数。panelZenkaiResetメソッドに使う。
-        //maeMeidaiHensuは最初0にセットされており、なにも panelZenkaiReset(maeMeidaiHensu)で
-        //処理されない。
-        panelZenkaiReset(maeMeidaiHensu);
-        
-        //現在のメソッドをまず最初に並べる。最後にmaeMeidaiHensu＝kyotu.meidaiHensuの処理をする。
-        panelNarabe(kyotu.meidaiHensu);
-        
+        //meidai変数がかわってから最初の一回だけ呼び出すメソッド
+        if (firstRead == true) {
+            //現在ででなく、1つ前のmeidai変数を入れる変数。panelZenkaiResetメソッドに使う。
+            //maeMeidaiHensuは最初0にセットされており、なにも panelZenkaiReset(maeMeidaiHensu)で
+            //処理されない。
+            panelZenkaiReset(maeMeidaiHensu);
+
+            //現在のメソッドをまず最初に並べる。最後にmaeMeidaiHensu＝kyotu.meidaiHensuの処理をする。
+            panelNarabe(kyotu.meidaiHensu);
+        }
         //最後にmeidai1全体ををリアルタイムで動かす。start位置調整---------------------------
         if (kyotu.meidaiHensu == 1) {
             //最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整---------------------------
@@ -403,11 +405,10 @@ public class H_99_08_meidaiMove : MonoBehaviour
             meidaiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_1[0].localScale.y / 2;
 
             //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
-            //page.position = new Vector3((float)-2.8, -5, page.position.z);
             trMeidai1[0].position =
                 new Vector3(trMeidai1[0].position.x, meidaiP, trMeidai1[0].position.z);
+            
             //現在ででなく、1つ前のmeidai変数を入れる変数。panelZenkaiResetメソッドに使う。
-
             maeMeidaiHensu = kyotu.meidaiHensu;
         } else if (KH == 2) {
             //まずmeidai1_2を元の場所（5.6、0）までもって行く-----------------------------

@@ -277,11 +277,13 @@ public class H_99_08_meidaiMove : MonoBehaviour
         //フリック判定時間OKなら
         //注意：if (hanteiSorF() == true)は何故か別のifで囲まないと働かない
         if (hanteiSorF() == true) {
-            //update対策flickFirstがtrue、マウスボタンを上げた時、フリック判定時間OKなら
-            if (flickMove == false && Input.GetMouseButtonUp(0)) {
-                //k6_aa:ストップウォッチスタート
-                Fstopwatch.Start();
-                flickMove = true;
+            if (tateRitu == 2) {
+                //update対策flickFirstがtrue、マウスボタンを上げた時、フリック判定時間OKなら
+                if (flickMove == false && Input.GetMouseButtonUp(0)) {
+                    //k6_aa:ストップウォッチスタート
+                    Fstopwatch.Start();
+                    flickMove = true;
+                }
             }
         }
         //flickMoveがtrueなら
@@ -310,8 +312,8 @@ public class H_99_08_meidaiMove : MonoBehaviour
     //スワイプコントロールだけのための変数
     Vector3 objectPos;
     Vector3 FCfirstPos;
-    //ｙ成分がｘ成分の2倍以上たったらtrue、他はfalse
-    bool tateRitu = false;
+    //tateRitu：swipecontrolで変化する変数を使い、横フリックの場合は縦フリックをしないようにする
+    int tateRitu = 0;
 
     private void swipeControl() {
         //スワイプをするメソッド
@@ -336,7 +338,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
                 FCfirstPos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             if ((diffSwipe.y / diffSwipe.x) >= 2 || (diffSwipe.y / diffSwipe.x) <= -2) {
-                tateRitu = true;
+                tateRitu = 1;
                 //初めのマウスの位置と今のマウスの位置の差異が0じゃなければ
                 if (diffSwipe != Vector3.zero) {
                     //diffSwipe.yが0じゃなければ
@@ -351,7 +353,10 @@ public class H_99_08_meidaiMove : MonoBehaviour
                         FCfirstPos= Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     }
                 }
-            } else tateRitu = false;
+            }else if ((diffSwipe.x / diffSwipe.y) >= 2 || (diffSwipe.x / diffSwipe.y) <= -2) {
+                tateRitu = 2;
+            } 
+            else tateRitu = 0;
         } 
     }
     //前回並べてあったパネルを元の場所に戻すメソッド-------------------------------------------

@@ -39,6 +39,11 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
     //mokujiP：目次全体を動かす変数 ---------------------------
     float meidaiP = 0;
+    //目次ｐ１のスタート位置 mokujiの一番下のｙ座標
+    public float meidaiSita = 3.7f;
+    //mokujiの一番上のｙ座標
+    public float meidaiUe = 9.7f;
+
     //現在ででなく、1つ前のmeidai変数を入れる変数。panelZenkaiResetメソッドに使う。---
     int maeMeidaiHensu = 0; 
 
@@ -181,6 +186,16 @@ public class H_99_08_meidaiMove : MonoBehaviour
         //メインカメラが目次の時にのみ
         if (kyotu.mainCameraPosi == 2) {
             swipeControl();
+        }
+        //目次がある値以上の場所へ行かない処理
+        if (trMeidaiKodomo[kyotu.meidaiHensu-1].position.y <= meidaiSita) {
+            trMeidaiKodomo[kyotu.meidaiHensu - 1].position = 
+                new Vector3(trMeidaiKodomo[kyotu.meidaiHensu - 1].position.x, 
+                meidaiSita, trMeidaiKodomo[kyotu.meidaiHensu - 1].position.z);
+        } else if (trMeidaiKodomo[kyotu.meidaiHensu - 1].position.y >= meidaiUe) {
+            trMeidaiKodomo[kyotu.meidaiHensu - 1].position = 
+                new Vector3(trMeidaiKodomo[kyotu.meidaiHensu - 1].position.x, 
+                meidaiUe, trMeidaiKodomo[kyotu.meidaiHensu - 1].position.z);
         }
     }
     //スワイプをするメソッド：swipeControl()------------------------------------------------------

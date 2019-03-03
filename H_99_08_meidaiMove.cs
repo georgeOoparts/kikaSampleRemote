@@ -207,8 +207,9 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //stopwatch.Start();
         }
         //マウスを押してる最中
-        //動かされるmeidai1～6の現在の位置
-        //if (kyotu.meidaiHensu == 1) {
+        if (Input.GetMouseButton(0)) {
+            //動かされるmeidai1～6の現在の位置
+            //if (kyotu.meidaiHensu == 1) {
             objectPos = trMeidaiKodomo[kyotu.meidaiHensu-1].position;
             //フリックの感覚にする。下にフリックすると上へ移動
             //初めのマウスの位置と今のマウスの位置の差異
@@ -232,7 +233,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
                     }
                 }
             } else tateRitu = false;
-        //} 
+        } 
     }
     //前回並べてあったパネルを元の場所に戻すメソッド-------------------------------------------
     void panelZenkaiReset(int MH) {

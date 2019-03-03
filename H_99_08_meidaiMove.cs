@@ -239,60 +239,32 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //stopwatch.Start();
         }
         //マウスを押してる最中
-        if (Input.GetMouseButton(0)) {
-            //動かされるmeidai1～6の現在の位置
-            if (kyotu.meidaiHensu == 1) {
-                objectPos = trMeidaiKodomo[0].position;
-                //フリックの感覚にする。下にフリックすると上へ移動
-                //初めのマウスの位置と今のマウスの位置の差異
-                Vector3 diffSwipe =
-                    FCfirstPos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //動かされるmeidai1～6の現在の位置
+        //if (kyotu.meidaiHensu == 1) {
+            objectPos = trMeidaiKodomo[kyotu.meidaiHensu-1].position;
+            //フリックの感覚にする。下にフリックすると上へ移動
+            //初めのマウスの位置と今のマウスの位置の差異
+            Vector3 diffSwipe =
+                FCfirstPos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-                if ((diffSwipe.y / diffSwipe.x) >= 2 || (diffSwipe.y / diffSwipe.x) <= -2) {
-                    tateRitu = true;
-                    //初めのマウスの位置と今のマウスの位置の差異が0じゃなければ
-                    if (diffSwipe != Vector3.zero) {
-                        //diffSwipe.yが0じゃなければ
-                        if (diffSwipe.y != 0) {
-                            //Camera.main.ScreenToWorldPoint(diff);
-                            diffSwipe.x = 0.0f;
-                            diffSwipe.z = 0.0f;
-                            //カメラの位置にマウスの位置の差異を足す。(スマホ対応引く)
-                            trMeidaiKodomo[0].position = objectPos - diffSwipe;
+            if ((diffSwipe.y / diffSwipe.x) >= 2 || (diffSwipe.y / diffSwipe.x) <= -2) {
+                tateRitu = true;
+                //初めのマウスの位置と今のマウスの位置の差異が0じゃなければ
+                if (diffSwipe != Vector3.zero) {
+                    //diffSwipe.yが0じゃなければ
+                    if (diffSwipe.y != 0) {
+                        //Camera.main.ScreenToWorldPoint(diff);
+                        diffSwipe.x = 0.0f;
+                        diffSwipe.z = 0.0f;
+                        //カメラの位置にマウスの位置の差異を足す。(スマホ対応引く)
+                        trMeidaiKodomo[kyotu.meidaiHensu - 1].position = objectPos - diffSwipe;
 
-                            //初めのマウスの位置を最新のマウスの位置に更新　
-                            FCfirstPos
-                                = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                        }
+                        //初めのマウスの位置を最新のマウスの位置に更新　
+                        FCfirstPos= Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     }
-                } else tateRitu = false;
-            } else if (kyotu.meidaiHensu == 2) {
-                objectPos = trMeidaiKodomo[0].position;
-                //フリックの感覚にする。下にフリックすると上へ移動
-                //初めのマウスの位置と今のマウスの位置の差異
-                Vector3 diffSwipe =
-                    FCfirstPos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-                if ((diffSwipe.y / diffSwipe.x) >= 2 || (diffSwipe.y / diffSwipe.x) <= -2) {
-                    tateRitu = true;
-                    //初めのマウスの位置と今のマウスの位置の差異が0じゃなければ
-                    if (diffSwipe != Vector3.zero) {
-                        //diffSwipe.yが0じゃなければ
-                        if (diffSwipe.y != 0) {
-                            //Camera.main.ScreenToWorldPoint(diff);
-                            diffSwipe.x = 0.0f;
-                            diffSwipe.z = 0.0f;
-                            //カメラの位置にマウスの位置の差異を足す。(スマホ対応引く)
-                            trMeidaiKodomo[0].position = objectPos - diffSwipe;
-
-                            //初めのマウスの位置を最新のマウスの位置に更新　
-                            FCfirstPos
-                                = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                        }
-                    }
-                } else tateRitu = false;
-            }
-        }
+                }
+            } else tateRitu = false;
+        //} 
     }
     //前回並べてあったパネルを元の場所に戻すメソッド-------------------------------------------
     void panelZenkaiReset(int MH) {

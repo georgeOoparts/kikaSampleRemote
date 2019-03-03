@@ -89,7 +89,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         if (kyotu.mainCameraPosi==1) {
             flick();
 
-            swipeControl();
+            //swipeControl();
         }
 
         

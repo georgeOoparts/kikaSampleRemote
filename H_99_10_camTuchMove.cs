@@ -6,6 +6,9 @@ using UnityEngine.EventSystems;
 
 public class H_99_10_camTuchMove : MonoBehaviour
 {
+    //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
+    //このスクリプトをアタッチしたオブジェクトにいちいちこのオブジェクトをアタッチ
+    public H_99_01_kyoutuHensu kyotu;
     //メインカメラにアタッチ
     void Start()
     {
@@ -15,7 +18,9 @@ public class H_99_10_camTuchMove : MonoBehaviour
     void Update()
     {
         if (tuchObjName()=="panel1_1") {
-            
+            //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
+            kyotu.mainCameraPosi = 2;
+            kyotu.meidaiHensu = 1;
             this.gameObject.transform.position = new Vector3(5.6f,0,-10);
             Debug.Log(tuchObjName());
         }
@@ -33,6 +38,7 @@ public class H_99_10_camTuchMove : MonoBehaviour
             RaycastHit hit = new RaycastHit();
             // オブジェクトにrayが当たった時
             if (Physics.Raycast(ray, out hit, distance)) {
+                
                 // rayが当たったオブジェクトの名前を取得
                 objectName = hit.collider.gameObject.name;
                 return (objectName);

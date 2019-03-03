@@ -37,13 +37,20 @@ public class H_99_08_meidaiMove : MonoBehaviour
     //目次panel並べ替え時のそれぞれのスタート位置-----------
     float startNarabekae =0 ;
 
-    //mokujiP：目次全体を動かす変数 ---------------------------
+    //meidai：目次全体を動かす変数 ---------------------------
+    //上下移動の最初の位置、上下移動制限にも使う
     float meidaiP = 0;
+    //上下移動制限に使う
+    float meidaiPsita = 0;
+
     //目次ｐ１のスタート位置 mokujiの一番下のｙ座標
-    //public float meidaiSita = 3.7f;
     //mokujiの一番上のｙ座標
     public float meidaiUe = 9.7f;
 
+    //mokujiの一番上のｙ座標
+    ///k0016_99_1_1_6　：List 直接値をいれて定義する。
+    private List<float> meidaiSita = new List<float> { 8.05f, 15.2f,8.9f,4.9f,12.3f,10.0f };
+    
     //現在ででなく、1つ前のmeidai変数を入れる変数。panelZenkaiResetメソッドに使う。---
     int maeMeidaiHensu = 0; 
 
@@ -188,14 +195,14 @@ public class H_99_08_meidaiMove : MonoBehaviour
             swipeControl();
         }
         //目次がある値以上の場所へ行かない処理
-        if (trMeidaiKodomo[kyotu.meidaiHensu-1].position.y <= meidaiP) {
-            trMeidaiKodomo[kyotu.meidaiHensu - 1].position = 
-                new Vector3(trMeidaiKodomo[kyotu.meidaiHensu - 1].position.x, 
+        if (trMeidaiKodomo[kyotu.meidaiHensu - 1].position.y <= meidaiP) {
+            trMeidaiKodomo[kyotu.meidaiHensu - 1].position =
+                new Vector3(trMeidaiKodomo[kyotu.meidaiHensu - 1].position.x,
                 meidaiP, trMeidaiKodomo[kyotu.meidaiHensu - 1].position.z);
-        } else if (trMeidaiKodomo[kyotu.meidaiHensu - 1].position.y >= meidaiUe) {
-            trMeidaiKodomo[kyotu.meidaiHensu - 1].position = 
-                new Vector3(trMeidaiKodomo[kyotu.meidaiHensu - 1].position.x, 
-                meidaiUe, trMeidaiKodomo[kyotu.meidaiHensu - 1].position.z);
+        } else if (trMeidaiKodomo[kyotu.meidaiHensu - 1].position.y >= meidaiSita[kyotu.meidaiHensu - 1]) {
+            trMeidaiKodomo[kyotu.meidaiHensu - 1].position =
+                new Vector3(trMeidaiKodomo[kyotu.meidaiHensu - 1].position.x,
+                meidaiSita[kyotu.meidaiHensu - 1], trMeidaiKodomo[kyotu.meidaiHensu - 1].position.z);
         }
     }
     //スワイプをするメソッド：swipeControl()------------------------------------------------------
@@ -563,6 +570,9 @@ public class H_99_08_meidaiMove : MonoBehaviour
             ////mokujiP：目次全体を動かす変数y軸に入れる
 
             meidaiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_6[0].localScale.y / 2;
+
+            //ついでに上移動制限の値も作る
+            //meidaiPsita= -kyotu.cameraTakasaY+ kyotu.upSpace + trP1_6[0].localScale.y / 2;
 
             ////k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);

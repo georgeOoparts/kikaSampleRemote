@@ -304,6 +304,9 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
      ///k0016_99_1_1_5　：Listの要素数を得る
     //myList.Count;
 
+    ///k0016_99_1_1_6　：List 直接値をいれて定義する。
+    //private List<float> meidaiSita = new List<float> { 8.05f, 15.2f,8.9f,4.9f,12.3f,10.0f };
+
     ーーーーーーーーーーー－－－－－－－－－－－－－－－－－－
     //k0017_99_1：配列使い方
     //Transform[] trMeidai1=new Transform[6];

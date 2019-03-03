@@ -87,9 +87,10 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
 
         //メインカメラが目次の時にのみ
         if (kyotu.mainCameraPosi==1) {
-            flick();
+            
 
-            //swipeControl();
+            swipeControl();
+            flick();
         }
 
         

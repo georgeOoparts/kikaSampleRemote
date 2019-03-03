@@ -132,6 +132,8 @@ public class H_99_08_meidaiMove : MonoBehaviour
     //meidai変数がかわってから最初の一回だけ呼び出すメソッドに利用する変数
     bool firstRead = true;
     void Update() {
+        //今のmeidaihensuと前のmaeMeidaiHensuが違ったら、（一番最初か、meidaihensuが更新されたら）
+        if (maeMeidaiHensu != kyotu.meidaiHensu) firstRead = true;
         //meidai変数がかわってから最初の一回だけ呼び出すメソッド
         if (firstRead == true) {
             //現在ででなく、1つ前のmeidai変数を入れる変数。panelZenkaiResetメソッドに使う。
@@ -142,19 +144,12 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //現在のメソッドをまず最初に並べる。最後にmaeMeidaiHensu＝kyotu.meidaiHensuの処理をする。
             panelNarabe(kyotu.meidaiHensu);
         }
-        //最後にmeidai1全体ををリアルタイムで動かす。start位置調整---------------------------
+        //最後にmeidai1全体ををリアルタイムで動かす。---------------------------
         if (kyotu.meidaiHensu == 1) {
-            //最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整---------------------------
+            //最後にmeidai1_1全体ををリアルタイムで動かす。---------------------------
 
             //meidai変数がかわってから最初の一回だけ呼び出すメソッド
-            //if (firstRead==true) {
-                //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
-
-                
-
-                firstRead = false;
-            //}
-
+            firstRead = false;
             swipeControl();
 
         } else if (kyotu.meidaiHensu == 2) {
@@ -398,6 +393,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
                         new Vector3(trP1_1[0].position.x, startNarabekae, trP1_1[0].position.z);
                 }
             }
+            //最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整
             //cameraTakasaY：カメラの真ん中から上半分のyジクの距離
             //upSpace：カメラの上から一番上のオブジェまでの距離
             //mokujiP：目次全体を動かす変数y軸に入れる

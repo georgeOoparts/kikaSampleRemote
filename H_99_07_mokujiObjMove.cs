@@ -85,9 +85,14 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         //クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド
         upDownClickPosition();
 
-        flick();
+        //メインカメラが目次の時にのみ
+        if (kyotu.mainCameraPosi==1) {
+            flick();
 
-        swipeControl();
+            swipeControl();
+        }
+
+        
 
         //目次がある値以上の場所へ行かない処理
         if (trMokuji.position.y <= startP1) {

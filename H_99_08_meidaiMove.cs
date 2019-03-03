@@ -18,7 +18,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
     //k0016_99_1_1：listの宣言
     //private List<Transform> trMeidai1 = new List<Transform>();
 
-    private List<Transform> trMeidai1 = new List<Transform>();
+    private List<Transform> trMeidaiKodomo = new List<Transform>();
 
     private List<Transform> trP1_1 = new List<Transform>();
     private List<Transform> trP1_2 = new List<Transform>();
@@ -50,18 +50,18 @@ public class H_99_08_meidaiMove : MonoBehaviour
         //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
 
         trMeidai = kyotu.meidai.GetComponent<Transform>();
-        
+
         //meidai1～6のオブジェのtransformを取得----------------------------------
 
         //k0016_99_1_1_1：list新しい値を入れる
-        //trMeidai1.Add(kyotu.meidai1_1.GetComponent<Transform>());
+        //trMeidaiKodomo.Add(kyotu.meidai1_1.GetComponent<Transform>());
 
-        trMeidai1.Add(kyotu.meidai1_1.GetComponent<Transform>());
-        trMeidai1.Add(kyotu.meidai1_2.GetComponent<Transform>());
-        trMeidai1.Add(kyotu.meidai1_3.GetComponent<Transform>());
-        trMeidai1.Add(kyotu.meidai1_4.GetComponent<Transform>());
-        trMeidai1.Add(kyotu.meidai1_5.GetComponent<Transform>());
-        trMeidai1.Add(kyotu.meidai1_6.GetComponent<Transform>());
+        trMeidaiKodomo.Add(kyotu.meidai1_1.GetComponent<Transform>());
+        trMeidaiKodomo.Add(kyotu.meidai1_2.GetComponent<Transform>());
+        trMeidaiKodomo.Add(kyotu.meidai1_3.GetComponent<Transform>());
+        trMeidaiKodomo.Add(kyotu.meidai1_4.GetComponent<Transform>());
+        trMeidaiKodomo.Add(kyotu.meidai1_5.GetComponent<Transform>());
+        trMeidaiKodomo.Add(kyotu.meidai1_6.GetComponent<Transform>());
 
         //meidai1_1のパネルのtransformを取得-----------------------------------------------------
         //k0016_99_1_1_1：list新しい値を入れる
@@ -134,6 +134,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
     void Update() {
         //今のmeidaihensuと前のmaeMeidaiHensuが違ったら、（一番最初か、meidaihensuが更新されたら）
         if (maeMeidaiHensu != kyotu.meidaiHensu) firstRead = true;
+        
         //meidai変数がかわってから最初の一回だけ呼び出すメソッド
         if (firstRead == true) {
             //現在ででなく、1つ前のmeidai変数を入れる変数。panelZenkaiResetメソッドに使う。
@@ -144,6 +145,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //現在のメソッドをまず最初に並べる。最後にmaeMeidaiHensu＝kyotu.meidaiHensuの処理をする。
             panelNarabe(kyotu.meidaiHensu);
         }
+        
         //最後にmeidai1全体ををリアルタイムで動かす。---------------------------
         if (kyotu.meidaiHensu == 1) {
             //最後にmeidai1_1全体ををリアルタイムで動かす。---------------------------
@@ -153,19 +155,12 @@ public class H_99_08_meidaiMove : MonoBehaviour
             swipeControl();
 
         } else if (kyotu.meidaiHensu == 2) {
-            ////最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整---------------------------
-            ////page.localScale = new Vector3((float)-2.8, -5, page.position.z);
+            //最後にmeidai1_1全体ををリアルタイムで動かす。---------------------------
 
-            ////cameraTakasaY：カメラの真ん中から上半分のyジクの距離
-            ////upSpace：カメラの上から一番上のオブジェまでの距離
-            ////mokujiP：目次全体を動かす変数y軸に入れる
+            //meidai変数がかわってから最初の一回だけ呼び出すメソッド
+            firstRead = false;
+            swipeControl();
 
-            meidaiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_2[0].localScale.y / 2;
-
-            ////k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
-            //page.position = new Vector3((float)-2.8, -5, page.position.z);
-            trMeidai1[1].position =
-                new Vector3(trMeidai1[1].position.x, meidaiP, trMeidai1[1].position.z);
         } else if (kyotu.meidaiHensu == 3) {
             ////最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整---------------------------
             ////page.localScale = new Vector3((float)-2.8, -5, page.position.z);
@@ -178,8 +173,8 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
             ////k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
-            trMeidai1[2].position =
-                new Vector3(trMeidai1[2].position.x, meidaiP, trMeidai1[2].position.z);
+            trMeidaiKodomo[2].position =
+                new Vector3(trMeidaiKodomo[2].position.x, meidaiP, trMeidaiKodomo[2].position.z);
         } else if (kyotu.meidaiHensu == 4) {
             ////最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整---------------------------
             ////page.localScale = new Vector3((float)-2.8, -5, page.position.z);
@@ -192,8 +187,8 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
             ////k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
-            trMeidai1[3].position =
-                new Vector3(trMeidai1[3].position.x, meidaiP, trMeidai1[3].position.z);
+            trMeidaiKodomo[3].position =
+                new Vector3(trMeidaiKodomo[3].position.x, meidaiP, trMeidaiKodomo[3].position.z);
         } else if (kyotu.meidaiHensu == 5) {
             ////最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整---------------------------
             ////page.localScale = new Vector3((float)-2.8, -5, page.position.z);
@@ -206,8 +201,8 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
             ////k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
-            trMeidai1[4].position =
-                new Vector3(trMeidai1[4].position.x, meidaiP, trMeidai1[4].position.z);
+            trMeidaiKodomo[4].position =
+                new Vector3(trMeidaiKodomo[4].position.x, meidaiP, trMeidaiKodomo[4].position.z);
         } else if (kyotu.meidaiHensu == 6) {
             ////最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整---------------------------
             ////page.localScale = new Vector3((float)-2.8, -5, page.position.z);
@@ -220,8 +215,8 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
             ////k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
-            trMeidai1[5].position =
-                new Vector3(trMeidai1[5].position.x, meidaiP, trMeidai1[5].position.z);
+            trMeidaiKodomo[5].position =
+                new Vector3(trMeidaiKodomo[5].position.x, meidaiP, trMeidaiKodomo[5].position.z);
         }
     }
     //スワイプをするメソッド：swipeControl()------------------------------------------------------
@@ -245,33 +240,58 @@ public class H_99_08_meidaiMove : MonoBehaviour
         }
         //マウスを押してる最中
         if (Input.GetMouseButton(0)) {
-            //動かされるカメラの現在の位置
-            objectPos = trMeidai1[0].position;
-            //フリックの感覚にする。下にフリックすると上へ移動
-            //初めのマウスの位置と今のマウスの位置の差異
-            Vector3 diffSwipe =
-                FCfirstPos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //動かされるmeidai1～6の現在の位置
+            if (kyotu.meidaiHensu == 1) {
+                objectPos = trMeidaiKodomo[0].position;
+                //フリックの感覚にする。下にフリックすると上へ移動
+                //初めのマウスの位置と今のマウスの位置の差異
+                Vector3 diffSwipe =
+                    FCfirstPos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            if ((diffSwipe.y / diffSwipe.x) >= 2 || (diffSwipe.y / diffSwipe.x) <= -2) {
-                tateRitu = true;
-                //初めのマウスの位置と今のマウスの位置の差異が0じゃなければ
-                if (diffSwipe != Vector3.zero) {
-                    //diffSwipe.yが0じゃなければ
-                    if (diffSwipe.y != 0) {
-                        //Camera.main.ScreenToWorldPoint(diff);
-                        diffSwipe.x = 0.0f;
-                        diffSwipe.z = 0.0f;
-                        //カメラの位置にマウスの位置の差異を足す。(スマホ対応引く)
-                        trMeidai1[0].position = objectPos - diffSwipe;
+                if ((diffSwipe.y / diffSwipe.x) >= 2 || (diffSwipe.y / diffSwipe.x) <= -2) {
+                    tateRitu = true;
+                    //初めのマウスの位置と今のマウスの位置の差異が0じゃなければ
+                    if (diffSwipe != Vector3.zero) {
+                        //diffSwipe.yが0じゃなければ
+                        if (diffSwipe.y != 0) {
+                            //Camera.main.ScreenToWorldPoint(diff);
+                            diffSwipe.x = 0.0f;
+                            diffSwipe.z = 0.0f;
+                            //カメラの位置にマウスの位置の差異を足す。(スマホ対応引く)
+                            trMeidaiKodomo[0].position = objectPos - diffSwipe;
 
-                        //初めのマウスの位置を最新のマウスの位置に更新　
-                        FCfirstPos
-                            = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-
+                            //初めのマウスの位置を最新のマウスの位置に更新　
+                            FCfirstPos
+                                = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                        }
                     }
-                }
-            } else tateRitu = false;
+                } else tateRitu = false;
+            } else if (kyotu.meidaiHensu == 2) {
+                objectPos = trMeidaiKodomo[0].position;
+                //フリックの感覚にする。下にフリックすると上へ移動
+                //初めのマウスの位置と今のマウスの位置の差異
+                Vector3 diffSwipe =
+                    FCfirstPos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+                if ((diffSwipe.y / diffSwipe.x) >= 2 || (diffSwipe.y / diffSwipe.x) <= -2) {
+                    tateRitu = true;
+                    //初めのマウスの位置と今のマウスの位置の差異が0じゃなければ
+                    if (diffSwipe != Vector3.zero) {
+                        //diffSwipe.yが0じゃなければ
+                        if (diffSwipe.y != 0) {
+                            //Camera.main.ScreenToWorldPoint(diff);
+                            diffSwipe.x = 0.0f;
+                            diffSwipe.z = 0.0f;
+                            //カメラの位置にマウスの位置の差異を足す。(スマホ対応引く)
+                            trMeidaiKodomo[0].position = objectPos - diffSwipe;
+
+                            //初めのマウスの位置を最新のマウスの位置に更新　
+                            FCfirstPos
+                                = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                        }
+                    }
+                } else tateRitu = false;
+            }
         }
     }
     //前回並べてあったパネルを元の場所に戻すメソッド-------------------------------------------
@@ -280,7 +300,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //選ばれなかった命題をまずリセット----------------------
             //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
-            trMeidai1[0].position =
+            trMeidaiKodomo[0].position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
             //選ばれなかったｐ１＿1＿１～ｐ１＿1＿6までパネルをリセット------------
@@ -294,7 +314,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //選ばれなかった命題をまずリセット----------------------
             //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
-            trMeidai1[1].position =
+            trMeidaiKodomo[1].position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
             //選ばれなかったｐ１＿2＿１～ｐ１＿2＿9までパネルをリセット------------
@@ -309,7 +329,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //選ばれなかった命題をまずリセット----------------------
             //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
-            trMeidai1[2].position =
+            trMeidaiKodomo[2].position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
             //選ばれなかったｐ１＿3＿１～ｐ１＿3＿6までパネルをリセット------------
@@ -324,7 +344,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //選ばれなかった命題をまずリセット----------------------
             //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
-            trMeidai1[3].position =
+            trMeidaiKodomo[3].position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
             //選ばれなかったｐ１＿3＿１～ｐ１＿3＿6までパネルをリセット------------
@@ -339,7 +359,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //選ばれなかった命題をまずリセット----------------------
             //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
-            trMeidai1[4].position =
+            trMeidaiKodomo[4].position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
             //選ばれなかったｐ１＿3＿１～ｐ１＿3＿6までパネルをリセット------------
@@ -354,7 +374,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //選ばれなかった命題をまずリセット----------------------
             //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
             //page.position = new Vector3((float)-2.8, -5, page.position.z);
-            trMeidai1[5].position =
+            trMeidaiKodomo[5].position =
                 new Vector3(trMeidai.position.x, trMeidai.position.y, trMeidai.position.z);
 
             //選ばれなかったｐ１＿3＿１～ｐ１＿3＿6までパネルをリセット------------
@@ -372,7 +392,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
     void panelNarabe(int KH) {
         if (KH == 1) {
             //まずmeidai1_1をパネル２の場所（5.6、0）までもって行く------------------------
-            trMeidai1[0].position = new Vector3(meidaiX, meidaiY, trMeidai1[0].position.z);
+            trMeidaiKodomo[0].position = new Vector3(meidaiX, meidaiY, trMeidaiKodomo[0].position.z);
 
             //meidai1_1のｐ１＿１＿１～ｐ１＿１＿６までパネルを並べる----------------------
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
@@ -401,14 +421,14 @@ public class H_99_08_meidaiMove : MonoBehaviour
             meidaiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_1[0].localScale.y / 2;
 
             //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
-            trMeidai1[0].position =
-                new Vector3(trMeidai1[0].position.x, meidaiP, trMeidai1[0].position.z);
+            trMeidaiKodomo[0].position =
+                new Vector3(trMeidaiKodomo[0].position.x, meidaiP, trMeidaiKodomo[0].position.z);
             
             //現在ででなく、1つ前のmeidai変数を入れる変数。panelZenkaiResetメソッドに使う。
             maeMeidaiHensu = kyotu.meidaiHensu;
         } else if (KH == 2) {
             //まずmeidai1_2を元の場所（5.6、0）までもって行く-----------------------------
-            trMeidai1[1].position = new Vector3(meidaiX, meidaiY, trMeidai1[1].position.z);
+            trMeidaiKodomo[1].position = new Vector3(meidaiX, meidaiY, trMeidaiKodomo[1].position.z);
 
             //ｐ１＿１＿１～ｐ１＿１＿６までパネルを並べる--------------------------------
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
@@ -429,11 +449,23 @@ public class H_99_08_meidaiMove : MonoBehaviour
                         new Vector3(trP1_2[0].position.x, startNarabekae, trP1_2[0].position.z);
                 }
             }
+            ////最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整---------------------------
+
+            ////cameraTakasaY：カメラの真ん中から上半分のyジクの距離
+            ////upSpace：カメラの上から一番上のオブジェまでの距離
+            ////mokujiP：目次全体を動かす変数y軸に入れる
+
+            meidaiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_2[0].localScale.y / 2;
+
+            ////k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
+            trMeidaiKodomo[1].position =
+                new Vector3(trMeidaiKodomo[1].position.x, meidaiP, trMeidaiKodomo[1].position.z);
+            
             //現在ででなく、1つ前のmeidai変数を入れる変数。panelZenkaiResetメソッドに使う。
             maeMeidaiHensu = kyotu.meidaiHensu;
         } else if (KH == 3) {
             //まずmeidai1_2を元の場所（5.6、0）までもって行く-----------------------------
-            trMeidai1[2].position = new Vector3(meidaiX, meidaiY, trMeidai1[2].position.z);
+            trMeidaiKodomo[2].position = new Vector3(meidaiX, meidaiY, trMeidaiKodomo[2].position.z);
 
             //ｐ１＿１＿１～ｐ１＿１＿６までパネルを並べる--------------------------------
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
@@ -458,7 +490,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             maeMeidaiHensu = kyotu.meidaiHensu;
         } else if (KH == 4) {
             //まずmeidai1_2を元の場所（5.6、0）までもって行く-----------------------------
-            trMeidai1[3].position = new Vector3(meidaiX, meidaiY, trMeidai1[3].position.z);
+            trMeidaiKodomo[3].position = new Vector3(meidaiX, meidaiY, trMeidaiKodomo[3].position.z);
 
             //ｐ１＿１＿１～ｐ１＿１＿６までパネルを並べる--------------------------------
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
@@ -483,7 +515,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             maeMeidaiHensu = kyotu.meidaiHensu;
         } else if (KH == 5) {
             //まずmeidai1_2を元の場所（5.6、0）までもって行く-----------------------------
-            trMeidai1[4].position = new Vector3(meidaiX, meidaiY, trMeidai1[4].position.z);
+            trMeidaiKodomo[4].position = new Vector3(meidaiX, meidaiY, trMeidaiKodomo[4].position.z);
 
             //ｐ１＿１＿１～ｐ１＿１＿６までパネルを並べる--------------------------------
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
@@ -508,7 +540,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             maeMeidaiHensu = kyotu.meidaiHensu;
         } else if (KH == 6) {
             //まずmeidai1_2を元の場所（5.6、0）までもって行く-----------------------------
-            trMeidai1[5].position = new Vector3(meidaiX, meidaiY, trMeidai1[5].position.z);
+            trMeidaiKodomo[5].position = new Vector3(meidaiX, meidaiY, trMeidaiKodomo[5].position.z);
 
             //ｐ１＿１＿１～ｐ１＿１＿６までパネルを並べる--------------------------------
             //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；

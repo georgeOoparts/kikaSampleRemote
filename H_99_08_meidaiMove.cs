@@ -277,7 +277,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
         //フリック判定時間OKなら
         //注意：if (hanteiSorF() == true)は何故か別のifで囲まないと働かない
         if (hanteiSorF() == true) {
-            if (tateRitu == 2) {
+            if (tateRitu == 1) {
                 //update対策flickFirstがtrue、マウスボタンを上げた時、フリック判定時間OKなら
                 if (flickMove == false && Input.GetMouseButtonUp(0)) {
                     //k6_aa:ストップウォッチスタート

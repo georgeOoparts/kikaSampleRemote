@@ -23,21 +23,26 @@ public class H_99_10_camTuchMove : MonoBehaviour
    
     void Update()
     {
+        //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>SF判定に使う。
+        elapse = (float)stopwatch.Elapsed.TotalSeconds;
+
         upDownClickPosition();
-        if (tuchObjName()=="panel1_1") { //&& hanteiSorF()==false) {
-            //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
-            kyotu.mainCameraPosi = 2;
-            kyotu.meidaiHensu = 1;
-            kyotu.bottomMove = true;
-            this.gameObject.transform.position = new Vector3(5.6f,0,-10);
-            //Debug.Log(tuchObjName());
-        }else if (tuchObjName() == "panel1_2") {//&& hanteiSorF() == false) {
-            //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
-            kyotu.mainCameraPosi = 2;
-            kyotu.meidaiHensu = 2;
-            kyotu.bottomMove = true;
-            this.gameObject.transform.position = new Vector3(5.6f, 0, -10);
-            //Debug.Log(tuchObjName());
+        if (hanteiSorF() == true) {
+            if (tuchObjName() == "panel1_1" && hanteiSorF() == true) { //&& hanteiSorF()==false) {
+                                                                       //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
+                kyotu.mainCameraPosi = 2;
+                kyotu.meidaiHensu = 1;
+                kyotu.bottomMove = true;
+                this.gameObject.transform.position = new Vector3(5.6f, 0, -10);
+                //Debug.Log(tuchObjName());
+            } else if (tuchObjName() == "panel1_2" && hanteiSorF() == true) {//&& hanteiSorF() == false) {
+                                                                             //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
+                kyotu.mainCameraPosi = 2;
+                kyotu.meidaiHensu = 2;
+                kyotu.bottomMove = true;
+                this.gameObject.transform.position = new Vector3(5.6f, 0, -10);
+                //Debug.Log(tuchObjName());
+            }
         }
         kyotu.bottomMove = false;
         Debug.Log("sai"+ saishoClick + "ato"+ atoClick);

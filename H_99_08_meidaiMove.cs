@@ -142,7 +142,9 @@ public class H_99_08_meidaiMove : MonoBehaviour
         //Debug.Log("move?");
     }
     //meidai変数がかわってから最初の一回だけ呼び出すメソッドに利用する変数
-    bool firstRead = true;
+    //meidaiHensuとmaeMeidaiHensuが違った時、一回だけupdateの中で
+    //panelZenkaiReset、panelNarabeを実行するために使う。
+    bool AfterChangefirstRead = true;
     void Update() {
         //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>SF判定に使う。
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
@@ -152,10 +154,10 @@ public class H_99_08_meidaiMove : MonoBehaviour
         
 
         //今のmeidaihensuと前のmaeMeidaiHensuが違ったら、（一番最初か、meidaihensuが更新されたら）
-        if (maeMeidaiHensu != kyotu.meidaiHensu) firstRead = true;
+        if (maeMeidaiHensu != kyotu.meidaiHensu) AfterChangefirstRead = true;
         
         //meidai変数がかわってから最初の一回だけ呼び出すメソッド
-        if (firstRead == true) {
+        if (AfterChangefirstRead == true) {
             //現在ででなく、1つ前のmeidai変数を入れる変数。panelZenkaiResetメソッドに使う。
             //maeMeidaiHensuは最初0にセットされており、なにも panelZenkaiReset(maeMeidaiHensu)で
             //処理されない。
@@ -164,39 +166,11 @@ public class H_99_08_meidaiMove : MonoBehaviour
             //現在のメソッドをまず最初に並べる。最後にmaeMeidaiHensu＝kyotu.meidaiHensuの処理をする。
             panelNarabe(kyotu.meidaiHensu);
         }
+
+        //meidaiHensuとmaeMeidaiHensuが違った時trueになる変数をfalseにする。
+        AfterChangefirstRead = false;
         
         //最後にmeidai1全体ををリアルタイムで動かす。---------------------------
-        if (kyotu.meidaiHensu == 1) {
-            //最後にmeidai1_1全体ををリアルタイムで動かす。---------------------------
-
-            //meidai変数がかわってから最初の一回だけ呼び出すメソッド
-            firstRead = false;
-        } else if (kyotu.meidaiHensu == 2) {
-            //最後にmeidai1_1全体ををリアルタイムで動かす。---------------------------
-
-            //meidai変数がかわってから最初の一回だけ呼び出すメソッド
-            firstRead = false;
-        } else if (kyotu.meidaiHensu == 3) {
-            //最後にmeidai1_1全体ををリアルタイムで動かす。---------------------------
-
-            //meidai変数がかわってから最初の一回だけ呼び出すメソッド
-            firstRead = false;
-        } else if (kyotu.meidaiHensu == 4) {
-            //最後にmeidai1_1全体ををリアルタイムで動かす。---------------------------
-
-            //meidai変数がかわってから最初の一回だけ呼び出すメソッド
-            firstRead = false;
-        } else if (kyotu.meidaiHensu == 5) {
-            //最後にmeidai1_1全体ををリアルタイムで動かす。---------------------------
-
-            //meidai変数がかわってから最初の一回だけ呼び出すメソッド
-            firstRead = false;
-        } else if (kyotu.meidaiHensu == 6) {
-            //最後にmeidai1_1全体ををリアルタイムで動かす。---------------------------
-
-            //meidai変数がかわってから最初の一回だけ呼び出すメソッド
-            firstRead = false;
-        }
         //メインカメラが目次の時にのみ
         if (kyotu.mainCameraPosi == 2) {
             swipeControl();

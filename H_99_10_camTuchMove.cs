@@ -6,6 +6,12 @@ using UnityEngine.EventSystems;
 
 public class H_99_10_camTuchMove : MonoBehaviour
 {
+    //u1 呼び込まれるプログラムの順番　１上側＞edit>projectseting>scriptexecutionOrder  
+    //u1>数字が低いほうから読み込まれる。
+    /// このプログラムは共通変数であるkyotu.bottomMoveをどのオブジェクトのプログラムより
+    /// updateの最後にfalseにセットしたいため、camyokomoveのプログラムより、後に読み込まれ
+    /// るように設定する。そうしないとボタン移動した後、勝手に←横スワイプが働いてしまう。
+    
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     //このスクリプトをアタッチしたオブジェクトにいちいちこのオブジェクトをアタッチ
     public H_99_01_kyoutuHensu kyotu;
@@ -18,21 +24,26 @@ public class H_99_10_camTuchMove : MonoBehaviour
     void Update()
     {
         upDownClickPosition();
-        if (tuchObjName()=="panel1_1") {
+        if (tuchObjName()=="panel1_1") { //&& hanteiSorF()==false) {
             //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
             kyotu.mainCameraPosi = 2;
             kyotu.meidaiHensu = 1;
+            kyotu.bottomMove = true;
             this.gameObject.transform.position = new Vector3(5.6f,0,-10);
             //Debug.Log(tuchObjName());
-        }else if (tuchObjName() == "panel1_2") {
+        }else if (tuchObjName() == "panel1_2") {//&& hanteiSorF() == false) {
             //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
             kyotu.mainCameraPosi = 2;
             kyotu.meidaiHensu = 2;
+            kyotu.bottomMove = true;
             this.gameObject.transform.position = new Vector3(5.6f, 0, -10);
             //Debug.Log(tuchObjName());
         }
+        kyotu.bottomMove = false;
         Debug.Log("sai"+ saishoClick + "ato"+ atoClick);
     }
+
+
     //upDownClickPosition()：クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド---
     Vector3 saishoClick = new Vector3(0, 0, 0);
     Vector3 atoClick = new Vector3(0, 0, 0);
@@ -48,13 +59,40 @@ public class H_99_10_camTuchMove : MonoBehaviour
             atoClick = Camera.main.ScreenToWorldPoint(atoClick);
         }
     }
+    // hanteiSorF():　判定SorF S(スワイプ)ならfalse、F（フリック）ならtrueを返すメソッド-----------------------------
+    //k6_a:ストップウォッチ関数を使う時のおまじない。
+    private System.Diagnostics.Stopwatch stopwatch
+        = new System.Diagnostics.Stopwatch();
+
+    // 何秒たったかを変数elapseに入れる。ストップウォッチ
+    private float elapse;
+
+    //時間判定の何秒以内かを決める変数。hanteiSorF()で使うswipeなら0,flickなら１を返す
+    public float hanteiSorFjikan = 0.45f;
+
+    //判定SorF S(スワイプ)ならfalse、F（フリック）ならtrueを返す。
+    bool hanteiSorF() {
+        if (Input.GetMouseButtonDown(0)) {
+            stopwatch.Start();
+            return (false);
+        } else if (Input.GetMouseButtonUp(0)) {
+            //経過時間elapseが判定時間 hanteiSorFjikan以下ならば
+            if (elapse <= hanteiSorFjikan) {
+                stopwatch.Reset();
+                return (true);
+            } else {
+                stopwatch.Reset();
+                return (false);
+            }
+        } else return (false);
+    }
     //タッチしたオブジェの名前を返すメソッド--------------------------------------------------------------------------------------------------
     //タッチした画面のオブジェの名前を得る、その時のオブジェを調べる奥行きの距離
     float distance = 10.0f;
     //タッチしたオブジェの名前を返すメソッド
     string tuchObjName() {
         string objectName = "nothing";
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonUp(0)) {
             // クリックしたスクリーン座標をrayに変換
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             // Rayの当たったオブジェクトの情報を格納する

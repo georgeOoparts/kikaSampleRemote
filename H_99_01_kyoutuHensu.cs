@@ -19,7 +19,8 @@ public class H_99_01_kyoutuHensu : MonoBehaviour
     public float cameraTakasaY = 5;
     //upSpace：カメラの上から一番上のオブジェまでの距離
     public float upSpace = 0.5f;
-    
+
+    public bool bottomMove = false;
     
     //マズ　ライン１の目次のオブジェを定める
     public GameObject mokuji;

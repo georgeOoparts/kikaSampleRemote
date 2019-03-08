@@ -41,7 +41,8 @@ public class H_99_09_camYokoMove : MonoBehaviour
         //注意：if (hanteiSorF() == true)は何故か別のifで囲まないと働かない
         if (hanteiSorF() == true) {
             //flickMoveがtrue、マウスボタンを上げた時、
-            if ((flickMove == false) && (Input.GetMouseButtonUp(0))) {
+            //共通変数のbuttonmoveがfalseならば（←これないと、ボタン移動の時バグる）
+            if ((flickMove == false) && (Input.GetMouseButtonUp(0)&&(kyotu.bottomMove==false))) {
                 //k6_aa:ストップウォッチスタート
                 Fstopwatch.Start();
                 flickMove = true;

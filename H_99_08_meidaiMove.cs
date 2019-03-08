@@ -183,12 +183,18 @@ public class H_99_08_meidaiMove : MonoBehaviour
             flick();
         }
         //meidaiがある値以上の場所へ行かない処理---------------------------------------
+        ///meidaiがある値以上の下へ行かない処理------------------
+        ////mokujiP：目次全体を動かすy軸の値を入れる変数（例：meidai1_1=p1_1_1の絶対座標でのy軸の値）
+        ////mokujiP：panelNarabe(kyotu.meidaiHensu)で値が決まる。
 
         if (trMeidaiKodomo[kyotu.meidaiHensu - 1].position.y <= meidaiP) {
             trMeidaiKodomo[kyotu.meidaiHensu - 1].position =
                 new Vector3(trMeidaiKodomo[kyotu.meidaiHensu - 1].position.x,
                 meidaiP, trMeidaiKodomo[kyotu.meidaiHensu - 1].position.z);
-        } 
+        }
+        ///meidaiがある値以上の上へ行かない処理------------------
+        ////meidaiSita：list変数。trMeidaiがこれ以上上へ行ってはいけない値がそれぞれ入っている。
+        
         else if (trMeidaiKodomo[kyotu.meidaiHensu - 1].position.y >= meidaiSita[kyotu.meidaiHensu - 1]) {
             trMeidaiKodomo[kyotu.meidaiHensu - 1].position =
                 new Vector3(trMeidaiKodomo[kyotu.meidaiHensu - 1].position.x,
@@ -455,10 +461,16 @@ public class H_99_08_meidaiMove : MonoBehaviour
                         new Vector3(trP1_1[0].position.x, startNarabekae, trP1_1[0].position.z);
                 }
             }
-            //最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整
-            //cameraTakasaY：カメラの真ん中から上半分のyジクの距離
-            //upSpace：カメラの上から一番上のオブジェまでの距離
-            //mokujiP：目次全体を動かす変数y軸に入れる
+            //最後にmeidai1_1全体ををリアルタイムで動かす。start位置調整------------------------
+            ///meidai1_1とp1_1_1のy座標の値は常に同じ＞p1_1_1はmeidai1_1の子オブジェクトで
+            ///p1_1_1のy座標は常に0なので。
+            /// trMeidaiKodomo[0].positionをp1_1_1があるべき場所に移動させる事で、
+            /// meidai1_1全体があるべき位置にいどうする。
+            ///
+
+            ////cameraTakasaY：カメラの真ん中から上半分のyジクの距離
+            ////upSpace：カメラの上から一番上のオブジェまでの距離
+            ////mokujiP：目次全体を動かすy軸の値を入れる変数（例：meidai1_1=p1_1_1の絶対座標でのy軸の値）
 
             meidaiP = kyotu.cameraTakasaY - kyotu.upSpace - trP1_1[0].localScale.y / 2;
 

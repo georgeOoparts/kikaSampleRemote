@@ -44,14 +44,14 @@ public class H_99_09_camYokoMove : MonoBehaviour
         if (hanteiSorF() == true) {
             //flickMoveがtrue、マウスボタンを上げた時、
             //共通変数のbuttonmoveがfalseならば（←これないと、ボタン移動の時バグる）
-            if ((flickMove == false) && (Input.GetMouseButtonUp(0)&&(kyotu.bottomMove==false))) {
+            if ((flickMove == false) && (Input.GetMouseButtonUp(0) && (kyotu.bottomMove == false))) {
                 //k6_aa:ストップウォッチスタート
                 Fstopwatch.Start();
                 flickMove = true;
             }
         }
         //flickMoveがtrueなら
-        if (flickMove==true) {
+        if (flickMove == true) {
             //flick中にタップがあったらflickを止める
             if (Input.GetMouseButtonDown(0)) {
                 flickElapse = fjikan;
@@ -66,7 +66,7 @@ public class H_99_09_camYokoMove : MonoBehaviour
                     //mainCameraPosi=1つまり目次なら
                     if (kyotu.mainCameraPosi == 1) {
                         //diffがマイナスなら、つまり→移動判定のみ
-                        if (diff<=0) {
+                        if (diff <= 0) {
                             //mainCameraのｘ位置が５．６以下ならば
                             if (this.gameObject.transform.position.x <= 5.6) {
                                 this.gameObject.transform.position +=
@@ -83,10 +83,11 @@ public class H_99_09_camYokoMove : MonoBehaviour
                                 // k6_ab:ストップウォッチの時間をリセット
                                 Fstopwatch.Reset();
                                 flickMove = false;
-                                
-                            } 
+
+                            }
                         }
-                    }else if (kyotu.mainCameraPosi == 2) {
+                    } else if (kyotu.mainCameraPosi == 2) {
+                        //ポジ２からポジ1への横移動
                         //diffがプラスなら、つまり左移動判定のみ
                         if (diff >= 0) {
                             //mainCameraのｘ位置が５．６以下ならば
@@ -108,6 +109,7 @@ public class H_99_09_camYokoMove : MonoBehaviour
 
                             }
                         }
+                        //ポジ２からポジ３への横移動
                         //diffがマイナスなら、つまり右移動判定のみ
                         else if (diff < 0) {
                             //mainCameraのｘ位置が５．６以下ならば
@@ -129,18 +131,39 @@ public class H_99_09_camYokoMove : MonoBehaviour
 
                             }
                         }
+                    } else if (kyotu.mainCameraPosi == 3) {
+                        //ポジ3からポジ2への横移動
+                        //diffがプラスなら、つまり左移動判定のみ
+                        if (diff >= 0) {
+                            //mainCameraのｘ位置が５．６以下ならば
+                            if (this.gameObject.transform.position.x >= 5.6) {
+                                this.gameObject.transform.position +=
+                                new Vector3(-chousei * diff * Time.deltaTime, 0, 0);
+                            } else {
+                                //最終的に行く位置
+                                this.gameObject.transform.position =
+                                new Vector3(5.6f,
+                                this.gameObject.transform.position.y,
+                                this.gameObject.transform.position.z
+                                );
+                                kyotu.mainCameraPosi = 2;
+                                //スワイプ終了処理
+                                // k6_ab:ストップウォッチの時間をリセット
+                                Fstopwatch.Reset();
+                                flickMove = false;
+                            }
+                        }
                     }
+                } else {
+                    //スワイプ終了処理
+                    //k6_ab:ストップウォッチの時間をリセット
+                    Fstopwatch.Reset();
+                    flickMove = false;
                 }
-                //-----------------------------------------
-            } else {
-                //スワイプ終了処理
-                //k6_ab:ストップウォッチの時間をリセット
-                Fstopwatch.Reset();
-                flickMove = false;
             }
         }
-        
     }
+    
     // hanteiSorF():　判定SorF S(スワイプ)ならfalse、F（フリック）ならtrueを返すメソッド-----------------------------
     //k6_a:ストップウォッチ関数を使う時のおまじない。
     private System.Diagnostics.Stopwatch stopwatch

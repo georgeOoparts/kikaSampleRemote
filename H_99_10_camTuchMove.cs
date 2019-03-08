@@ -23,6 +23,12 @@ public class H_99_10_camTuchMove : MonoBehaviour
             kyotu.meidaiHensu = 1;
             this.gameObject.transform.position = new Vector3(5.6f,0,-10);
             Debug.Log(tuchObjName());
+        }else if (tuchObjName() == "panel1_2") {
+            //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
+            kyotu.mainCameraPosi = 2;
+            kyotu.meidaiHensu = 2;
+            this.gameObject.transform.position = new Vector3(5.6f, 0, -10);
+            Debug.Log(tuchObjName());
         }
     }
     //タッチしたオブジェの名前を返すメソッド--------------------------------------------------------------------------------------------------

@@ -20,8 +20,12 @@ public class H_99_01_kyoutuHensu : MonoBehaviour
     //upSpace：カメラの上から一番上のオブジェまでの距離
     public float upSpace = 0.5f;
 
+    //ボタンタッチ移動と、横スワイプ移動がバグを起こさないため
+    //ボタン移動しているかどうかを表すへんすう。
     public bool bottomMove = false;
+
     
+
     //マズ　ライン１の目次のオブジェを定める
     public GameObject mokuji;
 

@@ -27,28 +27,39 @@ public class H_99_10_camTuchMove : MonoBehaviour
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
 
         upDownClickPosition();
-        if (hanteiSorF() == true) {
-            if (tuchObjName() == "panel1_1" && hanteiSorF() == true) { //&& hanteiSorF()==false) {
-                                                                       //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
-                kyotu.mainCameraPosi = 2;
-                kyotu.meidaiHensu = 1;
-                kyotu.bottomMove = true;
-                this.gameObject.transform.position = new Vector3(5.6f, 0, -10);
-                //Debug.Log(tuchObjName());
-            } else if (tuchObjName() == "panel1_2" && hanteiSorF() == true) {//&& hanteiSorF() == false) {
-                                                                             //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
-                kyotu.mainCameraPosi = 2;
-                kyotu.meidaiHensu = 2;
-                kyotu.bottomMove = true;
-                this.gameObject.transform.position = new Vector3(5.6f, 0, -10);
-                //Debug.Log(tuchObjName());
+        if (hanteiSorF() == true) {//なぜかif文内の&&使えない
+            if (touchDistanceX() == false) {
+                if (tuchObjName() == "panel1_1") {
+                    //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
+                    kyotu.mainCameraPosi = 2;
+                    kyotu.meidaiHensu = 1;
+                    kyotu.bottomMove = true;
+                    this.gameObject.transform.position = new Vector3(5.6f, 0, -10);
+                    //Debug.Log(tuchObjName());
+                } else if (tuchObjName() == "panel1_2") {
+                    //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
+                    kyotu.mainCameraPosi = 2;
+                    kyotu.meidaiHensu = 2;
+                    kyotu.bottomMove = true;
+                    this.gameObject.transform.position = new Vector3(5.6f, 0, -10);
+                    //Debug.Log(tuchObjName());
+                }
             }
         }
         kyotu.bottomMove = false;
         Debug.Log("sai"+ saishoClick + "ato"+ atoClick);
     }
+    //touchDistanceX():saishoClickとatoClickのx軸の距離を返す変数
+    ///upDownClickPosition()の存在が必要
+    bool touchDistanceX() {
+        if (Input.GetMouseButtonUp(0)) {
+            float distance = atoClick.x - saishoClick.x;
 
-
+            if (distance >= 1.5 || distance <= -1.5)
+                return (true);
+            else return (false);
+        } else return (false);
+    }
     //upDownClickPosition()：クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド---
     Vector3 saishoClick = new Vector3(0, 0, 0);
     Vector3 atoClick = new Vector3(0, 0, 0);

@@ -173,20 +173,23 @@ public class H_99_08_meidaiMove : MonoBehaviour
         //最後にmeidai1全体ををリアルタイムで動かす。---------------------------
         //メインカメラが目次の時にのみ
         if (kyotu.mainCameraPosi == 2) {
+            //swipe処理--------------------------------------------
             swipeControl();
 
-            //swipe処理-------------------------------------------------------------------------------------------------------------
+            //flick処理--------------------------------------------
             //クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド
             upDownClickPosition();
 
             flick();
         }
-        //meidaiがある値以上の場所へ行かない処理
+        //meidaiがある値以上の場所へ行かない処理---------------------------------------
+
         if (trMeidaiKodomo[kyotu.meidaiHensu - 1].position.y <= meidaiP) {
             trMeidaiKodomo[kyotu.meidaiHensu - 1].position =
                 new Vector3(trMeidaiKodomo[kyotu.meidaiHensu - 1].position.x,
                 meidaiP, trMeidaiKodomo[kyotu.meidaiHensu - 1].position.z);
-        } else if (trMeidaiKodomo[kyotu.meidaiHensu - 1].position.y >= meidaiSita[kyotu.meidaiHensu - 1]) {
+        } 
+        else if (trMeidaiKodomo[kyotu.meidaiHensu - 1].position.y >= meidaiSita[kyotu.meidaiHensu - 1]) {
             trMeidaiKodomo[kyotu.meidaiHensu - 1].position =
                 new Vector3(trMeidaiKodomo[kyotu.meidaiHensu - 1].position.x,
                 meidaiSita[kyotu.meidaiHensu - 1], trMeidaiKodomo[kyotu.meidaiHensu - 1].position.z);

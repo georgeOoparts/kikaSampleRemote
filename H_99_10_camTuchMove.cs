@@ -17,18 +17,35 @@ public class H_99_10_camTuchMove : MonoBehaviour
    
     void Update()
     {
+        upDownClickPosition();
         if (tuchObjName()=="panel1_1") {
             //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
             kyotu.mainCameraPosi = 2;
             kyotu.meidaiHensu = 1;
             this.gameObject.transform.position = new Vector3(5.6f,0,-10);
-            Debug.Log(tuchObjName());
+            //Debug.Log(tuchObjName());
         }else if (tuchObjName() == "panel1_2") {
             //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
             kyotu.mainCameraPosi = 2;
             kyotu.meidaiHensu = 2;
             this.gameObject.transform.position = new Vector3(5.6f, 0, -10);
-            Debug.Log(tuchObjName());
+            //Debug.Log(tuchObjName());
+        }
+        Debug.Log("sai"+ saishoClick + "ato"+ atoClick);
+    }
+    //upDownClickPosition()：クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド---
+    Vector3 saishoClick = new Vector3(0, 0, 0);
+    Vector3 atoClick = new Vector3(0, 0, 0);
+
+    void upDownClickPosition(){
+        if (Input.GetMouseButtonDown(0)) {
+            saishoClick = Input.mousePosition;
+            //k0003_6:スクリーン座標＞ワールド座標
+            saishoClick = Camera.main.ScreenToWorldPoint(saishoClick);
+        } else if (Input.GetMouseButtonUp(0)) {
+            atoClick = Input.mousePosition;
+            //k0003_6:スクリーン座標＞ワールド座標
+            atoClick = Camera.main.ScreenToWorldPoint(atoClick);
         }
     }
     //タッチしたオブジェの名前を返すメソッド--------------------------------------------------------------------------------------------------

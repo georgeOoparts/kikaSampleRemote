@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class H_99_09_camYokoMove : MonoBehaviour
 {
+    //パネル1,2,3を横移動
+
+
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     //このスクリプトをアタッチしたオブジェクトにいちいちこのオブジェクトをアタッチ
     public H_99_01_kyoutuHensu kyotu;

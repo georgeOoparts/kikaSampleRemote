@@ -11,7 +11,6 @@ public class H_99_09_camYokoMove : MonoBehaviour
     //このスクリプトをアタッチしたオブジェクトにいちいちこのオブジェクトをアタッチ
     public H_99_01_kyoutuHensu kyotu;
 
-    void Start(){}
     //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
     //yosu.cube1で普通に使える
 
@@ -102,6 +101,27 @@ public class H_99_09_camYokoMove : MonoBehaviour
                                         this.gameObject.transform.position.z
                                         );
                                 kyotu.mainCameraPosi = 1;
+                                //スワイプ終了処理
+                                // k6_ab:ストップウォッチの時間をリセット
+                                Fstopwatch.Reset();
+                                flickMove = false;
+
+                            }
+                        }
+                        //diffがマイナスなら、つまり右移動判定のみ
+                        else if (diff < 0) {
+                            //mainCameraのｘ位置が５．６以下ならば
+                            if (this.gameObject.transform.position.x <= 11.2f) {
+                                this.gameObject.transform.position +=
+                                new Vector3(-chousei * diff * Time.deltaTime, 0, 0);
+                            } else {
+                                //最終的に行く位置
+                                this.gameObject.transform.position =
+                                    new Vector3(11.2f,
+                                        this.gameObject.transform.position.y,
+                                        this.gameObject.transform.position.z
+                                        );
+                                kyotu.mainCameraPosi = 3;
                                 //スワイプ終了処理
                                 // k6_ab:ストップウォッチの時間をリセット
                                 Fstopwatch.Reset();

@@ -17,9 +17,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     Transform trMokuji;
 
     //k0016_99_1_1：listの宣言
-    //private List<Transform> trMeidai1 = new List<Transform>();
     private List<Transform> trMokujiChild = new List<Transform>();
-
 
     //start でpanel1～６の始まるｙ軸の値。
     float startPanel = 0;
@@ -27,7 +25,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     //panelの間の幅
     public float spacePanel = 0.5f;
 
-    //目次ｐ１のスタート位置 mokujiの一番下のｙ座標
+    //目次ｐ１のスタート位置 、mokujiの一番下のｙ座標
     public float startP1 = 3.7f;
     //mokujiの一番上のｙ座標
     public float mokujiUe = 9.7f;
@@ -39,8 +37,6 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         trMokuji = kyotu.mokuji.GetComponent<Transform>();
 
         //k0016_99_1_1_1：list新しい値を入れる
-        //trMeidai1.Add(kyotu.meidai1_1.GetComponent<Transform>());
-
         trMokujiChild.Add(kyotu.p1_1.GetComponent<Transform>());
         trMokujiChild.Add(kyotu.p1_2.GetComponent<Transform>());
         trMokujiChild.Add(kyotu.p1_3.GetComponent<Transform>());
@@ -52,7 +48,6 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
 
         //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
         //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
-        //page.localScale = new Vector3((float)-2.8, -5, page.position.z);
         //まずstartでパネルを一列に並べる
         trMokujiChild[0].position = 
             new Vector3(trMokujiChild[0].position.x, startPanel, trMokujiChild[0].position.z);
@@ -107,12 +102,16 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             flick();
         }
 
-        
+
 
         //目次がある値以上の場所へ行かない処理
+        ///全体のmokujiオブジェとpanel1_1のy軸の値は常に等しい
+        ///全体を動かすmokujiオブジェがstartP1より下へ行かないように制御
         if (trMokuji.position.y <= startP1) {
             trMokuji.position = new Vector3(trMokuji.position.x, startP1, trMokuji.position.z);
-        } else if (trMokuji.position.y >= mokujiUe) {
+        }
+        ///全体を動かすmokujiオブジェがmokujiUeより上へ行かないように制御
+        else if (trMokuji.position.y >= mokujiUe) {
             trMokuji.position = new Vector3(trMokuji.position.x, mokujiUe, trMokuji.position.z);
         }
 

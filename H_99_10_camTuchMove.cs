@@ -75,7 +75,7 @@ public class H_99_10_camTuchMove : MonoBehaviour
             }
         }
         kyotu.bottomMove = false;
-        Debug.Log("sai"+ saishoClick + "ato"+ atoClick);
+        //Debug.Log("sai"+ saishoClick + "ato"+ atoClick);
     }
     //touchDistanceX():saishoClickとatoClickのx軸の距離を返す変数
     ///upDownClickPosition()の存在が必要

@@ -16,6 +16,10 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     //k0013_1: 宣言
     Transform trMokuji;
 
+    //k0016_99_1_1：listの宣言
+    //private List<Transform> trMeidai1 = new List<Transform>();
+    private List<Transform> trMokujiChild = new List<Transform>();
+
     Transform trP1;
     Transform trP2;
     Transform trP3;
@@ -39,6 +43,16 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         //k0013_1_1;オブジェに当てはめる；
         //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
         trMokuji = kyotu.mokuji.GetComponent<Transform>();
+
+        //k0016_99_1_1_1：list新しい値を入れる
+        //trMeidai1.Add(kyotu.meidai1_1.GetComponent<Transform>());
+
+        trMokujiChild.Add(kyotu.p1_1.GetComponent<Transform>());
+        trMokujiChild.Add(kyotu.p1_2.GetComponent<Transform>());
+        trMokujiChild.Add(kyotu.p1_3.GetComponent<Transform>());
+        trMokujiChild.Add(kyotu.p1_4.GetComponent<Transform>());
+        trMokujiChild.Add(kyotu.p1_5.GetComponent<Transform>());
+        trMokujiChild.Add(kyotu.p1_6.GetComponent<Transform>());
 
         trP1 = kyotu.p1_1.GetComponent<Transform>();
         trP2 = kyotu.p1_2.GetComponent<Transform>();

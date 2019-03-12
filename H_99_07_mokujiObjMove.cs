@@ -79,28 +79,24 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         //updateで並んだパネルを一気に動かす
         trMokuji.position = new Vector3(trMokuji.position.x, startP1,
                                         trMokuji.position.z);
-
-        
     }
-    
     void Update(){
         //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>SF判定に使う。
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
         //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>flick()に使う。
         flickElapse= (float)Fstopwatch.Elapsed.TotalSeconds; 
 
-        //クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド
-        upDownClickPosition();
+        
 
         //メインカメラが目次の時にのみ
         if (kyotu.mainCameraPosi==1) {
-            
-
             swipeControl();
+            //upDownClickPosition()：
+            //クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド
+            //flick()の前に必要
+            upDownClickPosition();
             flick();
         }
-
-
 
         //目次がある値以上の場所へ行かない処理
         ///全体のmokujiオブジェとpanel1_1のy軸の値は常に等しい
@@ -111,22 +107,6 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         ///全体を動かすmokujiオブジェがmokujiUeより上へ行かないように制御
         else if (trMokuji.position.y >= mokujiUe) {
             trMokuji.position = new Vector3(trMokuji.position.x, mokujiUe, trMokuji.position.z);
-        }
-
-
-    }
-    //upDownClickPosition()：クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド---
-    Vector3 saishoClick = new Vector3(0,0,0);
-    Vector3 atoClick = new Vector3(0, 0, 0);
-
-    void upDownClickPosition() {
-        if (Input.GetMouseButtonDown(0)) {
-            //k0003_6:スクリーン座標＞ワールド座標
-            saishoClick = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        } 
-        else if(Input.GetMouseButtonUp(0)) {
-            //k0003_6:スクリーン座標＞ワールド座標
-            atoClick = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
     }
     //スワイプをするメソッド：swipeControl()------------------------------------------------------
@@ -143,10 +123,7 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         //マウスを押したら
         if (Input.GetMouseButtonDown(0)) {
             //最初のマウスの位置
-            //FCfirstPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             FCfirstPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            //k6_aa:ストップウォッチスタート
-            //stopwatch.Start();
         }
         //マウスを押してる最中
         if (Input.GetMouseButton(0)) {
@@ -182,7 +159,53 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             } else tateRitu = 0;
         }
     }
+    //upDownClickPosition()：クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド--------------------
+    //メソッド　flick()のためだけに必要
+    Vector3 saishoClick = new Vector3(0, 0, 0);
+    Vector3 atoClick = new Vector3(0, 0, 0);
+
+    void upDownClickPosition() {
+        if (Input.GetMouseButtonDown(0)) {
+            //k0003_6:スクリーン座標＞ワールド座標
+            saishoClick = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        } else if (Input.GetMouseButtonUp(0)) {
+            //k0003_6:スクリーン座標＞ワールド座標
+            atoClick = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
+    }
+    
+    // hanteiSorF():　判定SorF S(スワイプ)ならfalse、F（フリック）ならtrueを返すメソッド-----------------------------
+    //k6_a:ストップウォッチ関数を使う時のおまじない。
+    private System.Diagnostics.Stopwatch stopwatch
+        = new System.Diagnostics.Stopwatch();
+
+    // 何秒たったかを変数elapseに入れる。ストップウォッチ
+    private float elapse;
+
+    //時間判定の何秒以内かを決める変数。hanteiSorF()で使うswipeなら0,flickなら１を返す
+    public float hanteiSorFjikan = 0.45f;
+
+    //判定SorF S(スワイプ)ならfalse、F（フリック）ならtrueを返す。
+    //メソッド　flick()のためだけに必要
+    bool hanteiSorF() {
+        if (Input.GetMouseButtonDown(0)) {
+            stopwatch.Start();
+            return (false);
+        }
+        else if (Input.GetMouseButtonUp(0)) {
+            //経過時間elapseが判定時間 hanteiSorFjikan以下ならば
+            if (elapse <= hanteiSorFjikan) {
+                stopwatch.Reset();
+                return (true);
+            } else {
+                stopwatch.Reset();
+                return (false);
+            } 
+        }else return (false);
+    }
     //flick()に関するメソッド----------------------------------------------------------------
+    //メソッド　upDownClickPosition()、hanteiSorF()、swipeControl()が必要
+    //メソッド　upDownClickPosition()をこのメソッドの前にupdateで使う必要がある。
     //k6_a:ストップウォッチ関数を使う時のおまじない。
     private System.Diagnostics.Stopwatch Fstopwatch
         = new System.Diagnostics.Stopwatch();
@@ -229,33 +252,4 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             }
         }
     }
-    // hanteiSorF():　判定SorF S(スワイプ)ならfalse、F（フリック）ならtrueを返すメソッド-----------------------------
-    //k6_a:ストップウォッチ関数を使う時のおまじない。
-    private System.Diagnostics.Stopwatch stopwatch
-        = new System.Diagnostics.Stopwatch();
-
-    // 何秒たったかを変数elapseに入れる。ストップウォッチ
-    private float elapse;
-
-    //時間判定の何秒以内かを決める変数。hanteiSorF()で使うswipeなら0,flickなら１を返す
-    public float hanteiSorFjikan = 0.45f;
-    
-    //判定SorF S(スワイプ)ならfalse、F（フリック）ならtrueを返す。
-    bool hanteiSorF() {
-        if (Input.GetMouseButtonDown(0)) {
-            stopwatch.Start();
-            return (false);
-        }
-        else if (Input.GetMouseButtonUp(0)) {
-            //経過時間elapseが判定時間 hanteiSorFjikan以下ならば
-            if (elapse <= hanteiSorFjikan) {
-                stopwatch.Reset();
-                return (true);
-            } else {
-                stopwatch.Reset();
-                return (false);
-            } 
-        }else return (false);
-    }
-    
 }

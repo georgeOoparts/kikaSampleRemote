@@ -43,14 +43,14 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
     void Update()
     {
         //k0015_99_1_3 :頂点を設定（どこからどこまで線を伸ばすか）
-        LR1.SetPosition(0, new Vector3(9.2f, 0f+upDown, 0f));
-        LR1.SetPosition(1, new Vector3(13.2f, 0f + upDown, 0f));
+        LR1.SetPosition(0, new Vector3(9.2f, 0f+upDown, -3f));
+        LR1.SetPosition(1, new Vector3(13.2f, 0f + upDown, -3f));
 
-        LR2.SetPosition(0, new Vector3(13.2f, 0f + upDown, 0f));
-        LR2.SetPosition(1, new Vector3(11.2f, 3.46f + upDown, 0f));
+        LR2.SetPosition(0, new Vector3(13.2f, 0f + upDown, -3f));
+        LR2.SetPosition(1, new Vector3(11.2f, 3.46f + upDown, -3f));
 
-        LR3.SetPosition(0, new Vector3(11.2f, 3.46f + upDown, 0f));
-        LR3.SetPosition(1, new Vector3(9.2f, 0f + upDown, 0f));
+        LR3.SetPosition(0, new Vector3(11.2f, 3.46f + upDown, -3f));
+        LR3.SetPosition(1, new Vector3(9.2f, 0f + upDown, -3f));
 
     }
 }

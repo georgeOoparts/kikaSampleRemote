@@ -44,8 +44,6 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
         trMokujiChild.Add(kyotu.p1_5.GetComponent<Transform>());
         trMokujiChild.Add(kyotu.p1_6.GetComponent<Transform>());
 
-        
-
         //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
         //k0013_1_1_2 オブジェのx,y,z幅　取得　；変化させる；
         //まずstartでパネルを一列に並べる
@@ -123,14 +121,65 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
 
     void upDownClickPosition() {
         if (Input.GetMouseButtonDown(0)) {
-            saishoClick = Input.mousePosition;
             //k0003_6:スクリーン座標＞ワールド座標
-            saishoClick = Camera.main.ScreenToWorldPoint(saishoClick);
+            saishoClick = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         } 
         else if(Input.GetMouseButtonUp(0)) {
-            atoClick= Input.mousePosition;
             //k0003_6:スクリーン座標＞ワールド座標
-            atoClick = Camera.main.ScreenToWorldPoint(atoClick);
+            atoClick = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
+    }
+    //スワイプをするメソッド：swipeControl()------------------------------------------------------
+    //スワイプコントロールだけのための変数
+    Vector3 objectPos;
+    Vector3 FCfirstPos;
+    //tateRitu：swipecontrolで変化する変数を使い、横フリックの場合は縦フリックをしないようにする
+    int tateRitu = 0;
+
+    private void swipeControl() {
+        //スワイプをするメソッド
+        //k3_a:Input.mousePosition.ToString()でマウスのスクリーンポイント表示
+        //k3_zz2_a:スクリーン座標＞ワールド座標
+        //マウスを押したら
+        if (Input.GetMouseButtonDown(0)) {
+            //最初のマウスの位置
+            //FCfirstPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            FCfirstPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //k6_aa:ストップウォッチスタート
+            //stopwatch.Start();
+        }
+        //マウスを押してる最中
+        if (Input.GetMouseButton(0)) {
+            //動かされるカメラの現在の位置
+            objectPos = this.transform.position;
+            //フリックの感覚にする。下にフリックすると上へ移動
+            //初めのマウスの位置と今のマウスの位置の差異
+            Vector3 diffSwipe =
+                FCfirstPos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            if ((diffSwipe.y / diffSwipe.x) >= 2 || (diffSwipe.y / diffSwipe.x) <= -2) {
+                //tateRitu：swipecontrolで変化する変数を使い、横フリックの場合は縦フリックをしないようにする
+                tateRitu = 1;
+                //初めのマウスの位置と今のマウスの位置の差異が0じゃなければ
+                if (diffSwipe != Vector3.zero) {
+                    //diffSwipe.xが0じゃなければ
+                    if (diffSwipe.x != 0) {
+                        //Camera.main.ScreenToWorldPoint(diff);
+                        diffSwipe.x = 0.0f;
+                        diffSwipe.z = 0.0f;
+                        //カメラの位置にマウスの位置の差異を足す。(スマホ対応引く)
+                        trMokuji.transform.position = objectPos - diffSwipe;
+
+                        //初めのマウスの位置を最新のマウスの位置に更新　
+                        FCfirstPos
+                            = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+
+                    }
+                }
+            } else if ((diffSwipe.x / diffSwipe.y) >= 2 || (diffSwipe.x / diffSwipe.y) <= -2) {
+                tateRitu = 2;
+            } else tateRitu = 0;
         }
     }
     //flick()に関するメソッド----------------------------------------------------------------
@@ -142,8 +191,6 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
     bool flickMove = false;
     public float fjikan = 1f;
     public float chousei = 4.0f;
-    //float tateRitu = 0.0f;
-
 
     //flick()に関するメソッド
     void flick() {
@@ -210,57 +257,5 @@ public class H_99_07_mokujiObjMove : MonoBehaviour
             } 
         }else return (false);
     }
-    //スワイプをするメソッド：swipeControl()------------------------------------------------------
-    //スワイプコントロールだけのための変数
-    Vector3 objectPos;
-    Vector3 FCfirstPos;
-    //tateRitu：swipecontrolで変化する変数を使い、横フリックの場合は縦フリックをしないようにする
-    int tateRitu = 0;
-
-    private void swipeControl() {
-        //スワイプをするメソッド
-        //k3_a:Input.mousePosition.ToString()でマウスのスクリーンポイント表示
-        //k3_zz2_a:スクリーン座標＞ワールド座標
-        //マウスを押したら
-        if (Input.GetMouseButtonDown(0)) {
-            //最初のマウスの位置
-            FCfirstPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            //k6_aa:ストップウォッチスタート
-            //stopwatch.Start();
-        }
-        //マウスを押してる最中
-        if (Input.GetMouseButton(0)) {
-            //動かされるカメラの現在の位置
-            objectPos = this.transform.position;
-            //フリックの感覚にする。下にフリックすると上へ移動
-            //初めのマウスの位置と今のマウスの位置の差異
-            Vector3 diffSwipe =
-                FCfirstPos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            if ((diffSwipe.y / diffSwipe.x) >= 2 || (diffSwipe.y / diffSwipe.x) <= -2) {
-                //tateRitu：swipecontrolで変化する変数を使い、横フリックの場合は縦フリックをしないようにする
-                tateRitu = 1;
-                //初めのマウスの位置と今のマウスの位置の差異が0じゃなければ
-                if (diffSwipe != Vector3.zero) {
-                    //diffSwipe.xが0じゃなければ
-                    if (diffSwipe.x != 0) {
-                        //Camera.main.ScreenToWorldPoint(diff);
-                        diffSwipe.x = 0.0f;
-                        diffSwipe.z = 0.0f;
-                        //カメラの位置にマウスの位置の差異を足す。(スマホ対応引く)
-                        trMokuji.transform.position = objectPos - diffSwipe;
-
-                        //初めのマウスの位置を最新のマウスの位置に更新　
-                        FCfirstPos
-                            = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-
-                    }
-                }
-            } else if ((diffSwipe.x / diffSwipe.y) >= 2 || (diffSwipe.x / diffSwipe.y) <= -2) {
-                tateRitu = 2;
-            } else tateRitu = 0;
-        }
-    }
+    
 }

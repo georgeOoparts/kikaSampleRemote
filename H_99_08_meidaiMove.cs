@@ -16,8 +16,6 @@ public class H_99_08_meidaiMove : MonoBehaviour
     Transform trMeidai;
 
     //k0016_99_1_1：listの宣言
-    //private List<Transform> trMeidai1 = new List<Transform>();
-
     private List<Transform> trMeidaiKodomo = new List<Transform>();
 
     private List<Transform> trP1_1 = new List<Transform>();
@@ -40,8 +38,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
     //meidai：目次全体を動かす変数 ---------------------------
     //上下移動の最初の位置、上下移動制限にも使う
     float meidaiP = 0;
-    //上下移動制限に使う
-    float meidaiPsita = 0;
+    
 
     //目次ｐ１のスタート位置 mokujiの一番下のｙ座標
     //mokujiの一番上のｙ座標

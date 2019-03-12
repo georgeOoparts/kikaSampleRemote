@@ -143,9 +143,8 @@ public class H_99_08_meidaiMove : MonoBehaviour
         //k6_ac:何秒たったかを変数elapseに入れる:update内にいれる。>flick()に使う。
         flickElapse = (float)Fstopwatch.Elapsed.TotalSeconds;
 
-        
-
         //今のmeidaihensuと前のmaeMeidaiHensuが違ったら、（一番最初か、meidaihensuが更新されたら）
+        //maeMeidaiHensuは最初０、meidaihensuは１
         if (maeMeidaiHensu != kyotu.meidaiHensu) AfterChangefirstRead = true;
         
         //meidai変数がかわってから最初の一回だけ呼び出すメソッド
@@ -170,6 +169,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
 
             //flick処理--------------------------------------------
             //クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド
+            //flick()のためだけに必要
             upDownClickPosition();
 
             flick();
@@ -193,6 +193,56 @@ public class H_99_08_meidaiMove : MonoBehaviour
                 meidaiSita[kyotu.meidaiHensu - 1], trMeidaiKodomo[kyotu.meidaiHensu - 1].position.z);
         }
     }
+    //スワイプをするメソッド：swipeControl()------------------------------------------------------
+    //スワイプコントロールだけのための変数
+    Vector3 objectPos;
+    Vector3 FCfirstPos;
+    //tateRitu：swipecontrolで変化する変数を使い、横フリックの場合は縦フリックをしないようにする
+    int tateRitu = 0;
+
+    private void swipeControl() {
+        //スワイプをするメソッド
+        //k3_a:Input.mousePosition.ToString()でマウスのスクリーンポイント表示
+        //k3_zz2_a:スクリーン座標＞ワールド座標
+        //マウスを押したら
+        if (Input.GetMouseButtonDown(0)) {
+            //最初のマウスの位置
+            FCfirstPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            //k6_aa:ストップウォッチスタート
+            //stopwatch.Start();
+        }
+        //マウスを押してる最中
+        if (Input.GetMouseButton(0)) {
+            //動かされるmeidai1～6の現在の位置
+            //if (kyotu.meidaiHensu == 1) {
+            objectPos = trMeidaiKodomo[kyotu.meidaiHensu - 1].position;
+            //フリックの感覚にする。下にフリックすると上へ移動
+            //初めのマウスの位置と今のマウスの位置の差異
+            Vector3 diffSwipe =
+                FCfirstPos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            if ((diffSwipe.y / diffSwipe.x) >= 2 || (diffSwipe.y / diffSwipe.x) <= -2) {
+                tateRitu = 1;
+                //初めのマウスの位置と今のマウスの位置の差異が0じゃなければ
+                if (diffSwipe != Vector3.zero) {
+                    //diffSwipe.yが0じゃなければ
+                    if (diffSwipe.y != 0) {
+                        //Camera.main.ScreenToWorldPoint(diff);
+                        diffSwipe.x = 0.0f;
+                        diffSwipe.z = 0.0f;
+                        //カメラの位置にマウスの位置の差異を足す。(スマホ対応引く)
+                        trMeidaiKodomo[kyotu.meidaiHensu - 1].position = objectPos - diffSwipe;
+
+                        //初めのマウスの位置を最新のマウスの位置に更新　
+                        FCfirstPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    }
+                }
+            } else if ((diffSwipe.x / diffSwipe.y) >= 2 || (diffSwipe.x / diffSwipe.y) <= -2) {
+                tateRitu = 2;
+            } else tateRitu = 0;
+        }
+    }
     // hanteiSorF():　判定SorF S(スワイプ)ならfalse、F（フリック）ならtrueを返すメソッド-----------------------------
     //k6_a:ストップウォッチ関数を使う時のおまじない。
     private System.Diagnostics.Stopwatch stopwatch
@@ -205,6 +255,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
     public float hanteiSorFjikan = 0.45f;
 
     //判定SorF S(スワイプ)ならfalse、F（フリック）ならtrueを返す。
+    //メソッド　flick()のためだけに必要
     bool hanteiSorF() {
         if (Input.GetMouseButtonDown(0)) {
             stopwatch.Start();
@@ -220,7 +271,8 @@ public class H_99_08_meidaiMove : MonoBehaviour
             }
         } else return (false);
     }
-    //upDownClickPosition()：クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド---
+    //upDownClickPosition()：クリックボタンを押した位置とクリックボタンを離した位置を返すメソッド--------
+    //メソッド　flick()のためだけに必要
     Vector3 saishoClick = new Vector3(0, 0, 0);
     Vector3 atoClick = new Vector3(0, 0, 0);
 
@@ -235,8 +287,10 @@ public class H_99_08_meidaiMove : MonoBehaviour
             atoClick = Camera.main.ScreenToWorldPoint(atoClick);
         }
     }
-    //flick()に関するメソッド----------------------------------------------------------------
+    //flick()に関するメソッド--------------------------------------------------------------------------------------
     //k6_a:ストップウォッチ関数を使う時のおまじない。
+    //メソッド　upDownClickPosition()、hanteiSorF()、swipeControl()が必要
+    //メソッド　upDownClickPosition()をこのメソッドの前にupdateで使う必要がある。
     private System.Diagnostics.Stopwatch Fstopwatch
         = new System.Diagnostics.Stopwatch();
     //flick処理の時間を入れる変数ストップウォッチをつかう
@@ -283,57 +337,7 @@ public class H_99_08_meidaiMove : MonoBehaviour
             }
         }
     }
-    //スワイプをするメソッド：swipeControl()------------------------------------------------------
-    //スワイプコントロールだけのための変数
-    Vector3 objectPos;
-    Vector3 FCfirstPos;
-    //tateRitu：swipecontrolで変化する変数を使い、横フリックの場合は縦フリックをしないようにする
-    int tateRitu = 0;
-
-    private void swipeControl() {
-        //スワイプをするメソッド
-        //k3_a:Input.mousePosition.ToString()でマウスのスクリーンポイント表示
-        //k3_zz2_a:スクリーン座標＞ワールド座標
-        //マウスを押したら
-        if (Input.GetMouseButtonDown(0)) {
-            //最初のマウスの位置
-            FCfirstPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            //k6_aa:ストップウォッチスタート
-            //stopwatch.Start();
-        }
-        //マウスを押してる最中
-        if (Input.GetMouseButton(0)) {
-            //動かされるmeidai1～6の現在の位置
-            //if (kyotu.meidaiHensu == 1) {
-            objectPos = trMeidaiKodomo[kyotu.meidaiHensu-1].position;
-            //フリックの感覚にする。下にフリックすると上へ移動
-            //初めのマウスの位置と今のマウスの位置の差異
-            Vector3 diffSwipe =
-                FCfirstPos - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            if ((diffSwipe.y / diffSwipe.x) >= 2 || (diffSwipe.y / diffSwipe.x) <= -2) {
-                tateRitu = 1;
-                //初めのマウスの位置と今のマウスの位置の差異が0じゃなければ
-                if (diffSwipe != Vector3.zero) {
-                    //diffSwipe.yが0じゃなければ
-                    if (diffSwipe.y != 0) {
-                        //Camera.main.ScreenToWorldPoint(diff);
-                        diffSwipe.x = 0.0f;
-                        diffSwipe.z = 0.0f;
-                        //カメラの位置にマウスの位置の差異を足す。(スマホ対応引く)
-                        trMeidaiKodomo[kyotu.meidaiHensu - 1].position = objectPos - diffSwipe;
-
-                        //初めのマウスの位置を最新のマウスの位置に更新　
-                        FCfirstPos= Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    }
-                }
-            }else if ((diffSwipe.x / diffSwipe.y) >= 2 || (diffSwipe.x / diffSwipe.y) <= -2) {
-                tateRitu = 2;
-            } 
-            else tateRitu = 0;
-        } 
-    }
+    
     //前回並べてあったパネルを元の場所に戻すメソッド-------------------------------------------
     void panelZenkaiReset(int MH) {
         if (MH == 1) {

@@ -39,11 +39,6 @@ public class H_99_08_meidaiMove : MonoBehaviour
     //上下移動の最初の位置、上下移動制限にも使う
     float meidaiP = 0;
     
-
-    //目次ｐ１のスタート位置 mokujiの一番下のｙ座標
-    //mokujiの一番上のｙ座標
-    public float meidaiUe = 9.7f;
-
     //mokujiの一番上のｙ座標
     ///k0016_99_1_1_6　：List 直接値をいれて定義する。
     private List<float> meidaiSita = new List<float> { 8.05f, 15.2f,8.9f,4.9f,12.3f,10.0f };

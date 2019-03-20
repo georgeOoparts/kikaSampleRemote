@@ -14,6 +14,12 @@ public class H_99_03_1panelSizeSet : MonoBehaviour
     Text kodomoText;
     //k4_a:どこかに書いてあるRectTransformの変数を作る
     RectTransform Rt;
+
+    RectTransform rtKodomoText;
+
+    bool firstTime=true;
+
+
     public float yohaku = 10;
     // Use this for initialization
     void Start() {
@@ -23,7 +29,8 @@ public class H_99_03_1panelSizeSet : MonoBehaviour
         kodomoText = kodomoObj.GetComponent<Text>();
         //k4_aa:このオブジェクトにＵＩ専門であるRectTransformをアタッチ
         Rt = this.gameObject.GetComponent<RectTransform>();
-        //Debug.Log("t6MMMM");
+        
+        rtKodomoText= kodomoObj.GetComponent<RectTransform>();
     }
     // Update is called once per frame
     void Update() {
@@ -37,6 +44,14 @@ public class H_99_03_1panelSizeSet : MonoBehaviour
             Rt.sizeDelta
                 = new Vector2(kodomoText.preferredWidth + yohaku
                 , kodomoText.preferredHeight + yohaku);
+            if (firstTime == true) 
+            {
+                //k4_1_1_4:uiをスクリーン値で移動（左上にアンカーセット、下方向は-の値)
+                rtKodomoText.anchoredPosition =
+                    new Vector2(rtKodomoText.anchoredPosition.x - kodomoText.preferredWidth / 2,
+                    rtKodomoText.anchoredPosition.y + kodomoText.preferredHeight / 2);
+            }firstTime = false;
+
         } else {//子ＴＥＸＴが空ならば、このＰＡＮＥＬの幅０でＯＫ
             //k4_aab:uiの幅、高さをスクリーン値で変形させる
             //k2_aab2:スクリーン座標のテキスト高さ text.preferredHeight

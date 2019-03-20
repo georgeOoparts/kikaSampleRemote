@@ -8,6 +8,8 @@ public class testPrehubYobi : MonoBehaviour
     public GameObject preTextPanel;
 
     public GameObject canvas;
+
+    RectTransform rtPre;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,9 @@ public class testPrehubYobi : MonoBehaviour
 
         ptp.transform.SetParent(canvas.transform, false);
 
+        rtPre = ptp.gameObject.GetComponent<RectTransform>();
+
+
         //this.gameObject.transform.parent=preTextPanel.transform;
         //messageUI.transform.SetParent(canvas.transform, false);
 
@@ -25,6 +30,6 @@ public class testPrehubYobi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        rtPre.anchoredPosition = new Vector3(200,0);
     }
 }

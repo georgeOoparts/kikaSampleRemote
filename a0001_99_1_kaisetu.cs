@@ -267,6 +267,18 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     ////?
     obj.GetComponent<TextMesh>().text ="wowwow";
     ----------------------------------------------------------------------
+    uitext のプレハブ //canvasはプレハブ化せずにおく、publicにはしておく
+    //k0014_2 :プレハブ（画面のobjでもOK）を使う objにはりつけ
+    public GameObject page;
+
+    //k0014_2_1 :プレハブを使う
+    GameObject ptp = Instantiate(preTextPanel) as GameObject;
+    
+    //k0014_2_1_1 :プレハブをキャンバスの子供にする(canvasはプレハブにせずpublicに当てはめている)
+    ptp.transform.SetParent(canvas.transform, false);
+
+    ----------------------------------------------------------------------
+ 
     //k0015_99_1 :線を引くline回り　オブジェにラインをくっつける
      LineRenderer renderer = gameObject.GetComponent<LineRenderer>();
     

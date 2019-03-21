@@ -274,7 +274,7 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     //k0014_2_1 :プレハブを使う
     GameObject ptp = Instantiate(preTextPanel) as GameObject;
     
-    //k0014_2_1_1 :プレハブをキャンバスの子供にする(canvasはプレハブにせずpublicに当てはめている)
+    //k0014_2_1_1 :プレハブをキャンバスの子供にする()
     ptp.transform.SetParent(canvas.transform, false);
 
     ----------------------------------------------------------------------

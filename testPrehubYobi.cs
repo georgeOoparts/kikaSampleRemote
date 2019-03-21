@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class testPrehubYobi : MonoBehaviour
 {
@@ -10,6 +11,13 @@ public class testPrehubYobi : MonoBehaviour
     public GameObject canvas;
 
     RectTransform rtPre;
+
+    Text KT;
+
+    public float px=0;
+    public float py=0;
+
+    public string coment="korejadamekaaaaaaaaa";
     // Start is called before the first frame update
     void Start()
     {
@@ -21,15 +29,23 @@ public class testPrehubYobi : MonoBehaviour
 
         rtPre = ptp.gameObject.GetComponent<RectTransform>();
 
+        //k8_1:子(孫、ひ孫　無限にＯＫ)になっているＯＢＪを得る。
+        //自分の直下の子供を得る。
+        GameObject kodomeText = ptp.transform.GetChild(0).gameObject;
+
+        KT =kodomeText.GetComponent<Text>();
 
         //this.gameObject.transform.parent=preTextPanel.transform;
         //messageUI.transform.SetParent(canvas.transform, false);
+        Debug.Log("OKKK");
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        rtPre.anchoredPosition = new Vector3(200,0);
+        rtPre.anchoredPosition = new Vector3(px,py);
+
+        KT.text = coment;
     }
 }

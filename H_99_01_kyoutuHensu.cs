@@ -8,6 +8,9 @@ public class H_99_01_kyoutuHensu : MonoBehaviour
     //k5_3_1: gameobject(メソッド、変数)を外部から呼び出す。
     //ヒエでアタッチ
 
+
+        
+
     //maincameraがある位置を1～３で表す。
     public int mainCameraPosi = 1;
         

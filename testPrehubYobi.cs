@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class testPrehubYobi : MonoBehaviour
 {
-    //k0014_1 :プレハブ（画面のobjでもOK）を使う objにはりつけ
+    //k0014_2 :プレハブ（画面のobjでもOK）を使う objにはりつけ
     public GameObject preTextPanel;
 
     public GameObject canvas;
@@ -18,20 +18,27 @@ public class testPrehubYobi : MonoBehaviour
     public float py=0;
 
     public string coment="korejadamekaaaaaaaaa";
+
+    GameObject kodomeText;
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log("eeeeeeeeeeeeeee"); 
-        //k0014_1_1 :プレハブを使う
-        GameObject ptp = Instantiate(preTextPanel) as GameObject;
+        //k0014_2_1 :プレハブを使う
+        GameObject ptp1 = Instantiate(preTextPanel) as GameObject;
 
-        ptp.transform.SetParent(canvas.transform, false);
+        GameObject ptp2 = Instantiate(preTextPanel) as GameObject;
 
-        rtPre = ptp.gameObject.GetComponent<RectTransform>();
+        GameObject ptp3 = Instantiate(preTextPanel) as GameObject;
+        //k0014_2_1_1 :プレハブをキャンバスの子供にする()
+        ptp1.transform.SetParent(canvas.transform, false);
+        ptp2.transform.SetParent(canvas.transform, false);
+        ptp3.transform.SetParent(canvas.transform, false);
+
+        rtPre = ptp1.gameObject.GetComponent<RectTransform>();
 
         //k8_1:子(孫、ひ孫　無限にＯＫ)になっているＯＢＪを得る。
         //自分の直下の子供を得る。
-        GameObject kodomeText = ptp.transform.GetChild(0).gameObject;
+        kodomeText = ptp1.transform.GetChild(0).gameObject;
 
         KT =kodomeText.GetComponent<Text>();
 

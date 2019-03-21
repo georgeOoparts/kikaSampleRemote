@@ -18,13 +18,8 @@ public class H_99_03_1panelSizeSet : MonoBehaviour
 
     RectTransform rtKodomoText;
 
-    //bool firstTime=true;
-
-
     public float yohaku = 10;
 
-    string kakoText = "";
-    // Use this for initialization
     void Start() {
         //k8_a:子(孫、ひ孫　無限にＯＫ)になっているＯＢＪを得る。
         kodomoObj = this.gameObject.transform.GetChild(0).gameObject;

@@ -51,6 +51,12 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     
     //u1 呼び込まれるプログラムの順番　１上側＞edit>projectseting>scriptexecutionOrder  
     //u1>数字が低いほうから読み込まれる。
+    
+    //u2 uguiでcameraの位置と関係なく、UIを置く
+    //u2まずcanvas＞screenspace＞maincameraにして　mainncameraを選択
+    //u2＞カメラをuiを置きたい場所まで持っていく。＞その上でcanvas＞screenspace＞worldspace
+    //u2にする。これで、カメラの位置に関係なくCANVASを固定できる＞この子供にUIを設置
+    
     ------------------------------------------------------------------------------
 
     //k1　デバックログの使い方

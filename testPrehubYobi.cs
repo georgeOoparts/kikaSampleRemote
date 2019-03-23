@@ -51,7 +51,7 @@ public class testPrehubYobi : MonoBehaviour
 
         //this.gameObject.transform.parent=preTextPanel.transform;
         //messageUI.transform.SetParent(canvas.transform, false);
-        Debug.Log("OKKK");
+        //Debug.Log("OKKK");
         ptp[0].name = "ptp0";
         ptp[1].name = "ptp1";
         ptp[2].name = "ptp2";

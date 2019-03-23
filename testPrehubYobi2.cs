@@ -24,6 +24,7 @@ public class testPrehubYobi2 : MonoBehaviour
 
         //k0014_2_1_1: オブジェの名前を変化させる
         ptp.name = "ptp0";
+        ptp.transform.GetChild(0).name = "text0";
         Debug.Log("OKKKKKK");   
     }
 

@@ -47,7 +47,7 @@ public class testPrehubYobi2 : MonoBehaviour
         }
 
 
-        Debug.Log("OKKKKKK");   
+        //Debug.Log("OKKKKKK");   
     }
 
     // Update is called once per frame

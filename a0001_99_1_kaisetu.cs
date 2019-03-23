@@ -273,7 +273,7 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     ////?
     obj.GetComponent<TextMesh>().text ="wowwow";
     ----------------------------------------------------------------------
-    uitext のプレハブ //canvasはプレハブ化せずにおく、publicにはしておく
+    //uitext のプレハブ //canvasはプレハブ化せずにおく、publicにはしておく
     //k0014_2 :プレハブ（画面のobjでもOK）を使う objにはりつけ
     public GameObject page;
 
@@ -282,6 +282,9 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     
     //k0014_2_1_1 :プレハブをキャンバスの子供にする()
     ptp.transform.SetParent(canvas.transform, false);
+
+    //k0014_2_1_1: オブジェの名前を変化させる
+    ptp.name = "ptp0";
 
     ----------------------------------------------------------------------
  

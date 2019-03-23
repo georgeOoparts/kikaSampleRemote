@@ -12,24 +12,26 @@ public class testPrehubYobi2 : MonoBehaviour
     //k0016_99_1_1：listの宣言
     List<GameObject> ptp= new List<GameObject>();
 
-    //k0016_99_1_1：listの宣言
-    //private List<Transform> trMeidai1 = new List<Transform>();
+    
 
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        //プレハブを使う
-        //k0016_99_1_1_1：list新しい値を入れる
-        ptp.Add(Instantiate(premoji) as GameObject);
 
-        //k0014_2_1_1 :プレハブをtextPanelの子供にする()
-        ptp[0].transform.SetParent(this.gameObject.transform, false);
+        for (int i = 0; i < 7; i++) {
+            //プレハブを使う
+            //k0016_99_1_1_1：list新しい値を入れる
+            ptp.Add(Instantiate(premoji) as GameObject);
 
-        //k0014_2_1_1: オブジェの名前を変化させる
-        ptp[0].name = "ptp0";
-        ptp[0].transform.GetChild(0).name = "text0";
+            //k0014_2_1_1 :プレハブをtextPanelの子供にする()
+            ptp[i].transform.SetParent(this.gameObject.transform, false);
+
+            //k0014_2_1_1: オブジェの名前を変化させる
+            ptp[i].name = "ptp"+i;
+            ptp[i].transform.GetChild(0).name = "text"+i;
+        }
+
+
         Debug.Log("OKKKKKK");   
     }
 

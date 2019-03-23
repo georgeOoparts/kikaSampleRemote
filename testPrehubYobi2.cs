@@ -8,23 +8,28 @@ public class testPrehubYobi2 : MonoBehaviour
     //k0014_2 :プレハブ（画面のobjでもOK）を使う objにはりつけ
     public GameObject premoji;
 
-    GameObject ptp;
+    //prehubとして呼び出したmojipanelに当てはめるオブジェ
+    //k0016_99_1_1：listの宣言
+    List<GameObject> ptp= new List<GameObject>();
 
-    //mojiPanelの親オブジェとなるtextPANELをセットする
-    //public GameObject textPanel;
+    //k0016_99_1_1：listの宣言
+    //private List<Transform> trMeidai1 = new List<Transform>();
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        //k0014_2_1 :プレハブを使う
-        ptp = Instantiate(premoji) as GameObject;
+        //プレハブを使う
+        //k0016_99_1_1_1：list新しい値を入れる
+        ptp.Add(Instantiate(premoji) as GameObject);
 
         //k0014_2_1_1 :プレハブをtextPanelの子供にする()
-        ptp.transform.SetParent(this.gameObject.transform, false);
+        ptp[0].transform.SetParent(this.gameObject.transform, false);
 
         //k0014_2_1_1: オブジェの名前を変化させる
-        ptp.name = "ptp0";
-        ptp.transform.GetChild(0).name = "text0";
+        ptp[0].name = "ptp0";
+        ptp[0].transform.GetChild(0).name = "text0";
         Debug.Log("OKKKKKK");   
     }
 

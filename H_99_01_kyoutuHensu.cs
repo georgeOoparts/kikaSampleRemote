@@ -9,8 +9,8 @@ public class H_99_01_kyoutuHensu : MonoBehaviour
     //ヒエでアタッチ
 
 
-        
-
+    //rrの何ターン目かをカウントする共通変数    
+    public int rrCount=0;
     //maincameraがある位置を1～３で表す。
     public int mainCameraPosi = 1;
         

@@ -6,21 +6,24 @@ using UnityEngine.UI;
 public class testPrehubYobi2 : MonoBehaviour
 {
     //uitext のプレハブ //canvasはプレハブ化せずにおく、publicにはしておく
+
+    //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
+    //このスクリプトをアタッチしたオブジェクトにいちいちこのオブジェクトをアタッチ
+    public H_99_01_kyoutuHensu kyotu;
+
     //k0014_2 :プレハブ（画面のobjでもOK）を使う objにはりつけ
     public GameObject premoji;
 
-    //prehubとして呼び出したmojipanelに当てはめるオブジェ
+
     //k0016_99_1_1：listの宣言
+    //prehubとして呼び出したmojipanelに当てはめるオブジェ
     List<GameObject> ptp= new List<GameObject>();
 
-    //mojipanelの子であるtextオブジェに当てはめるオブジェ
-    //k0016_99_1_1：listの宣言
-    //List<GameObject> kodomoObj = new List<GameObject>();
-
-    List<Text> kodomoText = new List<Text>();
+    //mojipanelの子オブジェtextに当てはめるオブジェ
     List<GameObject> kodomoObj = new List<GameObject>();
 
-
+    //textオブジェのコンポTEXTに当てはめるText変数
+    List<Text> kodomoText = new List<Text>();
 
     void Start()
     {
@@ -50,6 +53,51 @@ public class testPrehubYobi2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        for (int i = 0; i < 7; i++) {
+            kodomoText[i].text = content(i, kyotu.rrCount);
+        }
+
+        if (Input.GetMouseButtonDown(0)) kyotu.rrCount++;
     }
+    string content(int textNumber, int count) {
+        string content = "";
+        if (textNumber == 0) {
+            if (count == 0) content = "三角形";
+            else if (count == 1) content = "点";
+            else content = "";
+        } else if (textNumber == 1) {
+            if (count == 0) content = "ABC";
+            else if (count == 2) content = "A";
+            else if (count == 3) content = "垂線";
+            else content = "";
+        } else if (textNumber == 2) {
+            if (count == 0) content = "がある。";
+            else if (count == 1) content = "から辺";
+            else if (count == 2) content = "と辺";
+            else content = "";
+        } else if (textNumber == 3) {
+            if (count == 0) content = "";
+            else if (count == 1) content = "BC";
+            else if (count == 2) content = "BC";
+            else content = "";
+        } else if (textNumber == 4) {
+            if (count == 0) content = "";
+            else if (count == 1) content = "に";
+            else if (count == 2) content = "の交点を";
+            else content = "";
+        } else if (textNumber == 5) {
+            if (count == 0) content = "";
+            else if (count == 1) content = "垂線";
+            else if (count == 2) content = "Ｐ";
+            else content = "";
+        } else if (textNumber == 6) {
+            if (count == 0) content = "";
+            else if (count == 1) content = "を引く";
+            else if (count == 2) content = "と名づける";
+            else content = "";
+        }
+        return (content);
+    }
+
+
 }

@@ -49,13 +49,13 @@ public class testPrehubNarabe : MonoBehaviour
         for (int i = 0; i < 7; i++) {
             //k0016_99_1_1_1：list新しい値を入れる
             ///別プログラムで呼び出されたmojipanelオブジェを当てはめる
-            mojiPanel[i]=GameObject.Find("mojiPanel"+i).gameObject;
+            mojiPanel.Add(GameObject.Find("mojiPanel"+i).gameObject);
             ///premojiの子供オブジェであるtextをlistにする。
-            kodomoTextObj[i]=mojiPanel[i].transform.GetChild(0).gameObject;
+            kodomoTextObj.Add(mojiPanel[i].transform.GetChild(0).gameObject);
             ///premojiの子供オブジェであるtextのコンポートメントであるTextをlistにする。
-            kodomoTextText[i]=kodomoTextObj[i].GetComponent<Text>();
+            kodomoTextText.Add(kodomoTextObj[i].GetComponent<Text>());
             ///mojipanelオブジェのRectTransformを当てはめる
-            trMojiPanel[i] = mojiPanel[i].GetComponent<RectTransform>();
+            trMojiPanel.Add(mojiPanel[i].GetComponent<RectTransform>());
 
 
             //mojipanelのスタート位置を代入---
@@ -68,7 +68,7 @@ public class testPrehubNarabe : MonoBehaviour
             //}
             //------
             //mojipanelを実際に代入----
-            trMojiPanel[i].anchoredPosition = new Vector2(panelStrat[i], 0);
+            //trMojiPanel[i].anchoredPosition = new Vector2(panelStrat[i], 0);
             //------------
         }
         Debug.Log("we areeee");        

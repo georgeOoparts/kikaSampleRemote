@@ -17,13 +17,13 @@ public class testPrehubYobi2 : MonoBehaviour
 
     //k0016_99_1_1：listの宣言
     //prehubとして呼び出したmojipanelに当てはめるオブジェ
-    List<GameObject> ptp= new List<GameObject>();
+    List<GameObject> mojiPanel= new List<GameObject>();
 
     //mojipanelの子オブジェtextに当てはめるオブジェ
-    List<GameObject> kodomoObj = new List<GameObject>();
+    List<GameObject> kodomoTextObj = new List<GameObject>();
 
     //textオブジェのコンポTEXTに当てはめるText変数
-    List<Text> kodomoText = new List<Text>();
+    List<Text> kodomoTextText = new List<Text>();
 
     void Start()
     {
@@ -31,18 +31,18 @@ public class testPrehubYobi2 : MonoBehaviour
         for (int i = 0; i < 7; i++) {
             //プレハブを使う
             //k0016_99_1_1_1：list新しい値を入れる
-            ptp.Add(Instantiate(premoji) as GameObject);
+            mojiPanel.Add(Instantiate(premoji) as GameObject);
             //premojiの子供オブジェであるtextをlistにする。
-            kodomoObj.Add(ptp[i].transform.GetChild(0).gameObject);
+            kodomoTextObj.Add(mojiPanel[i].transform.GetChild(0).gameObject);
             ////premojiの子供オブジェであるtextのコンポートメントであるTextをlistにする。
-            kodomoText.Add(kodomoObj[i].GetComponent<Text>());
-            
+            kodomoTextText.Add(kodomoTextObj[i].GetComponent<Text>());
+
             //k0014_2_1_1 :プレハブをtextPanelの子供にする()
-            ptp[i].transform.SetParent(this.gameObject.transform, false);
+            mojiPanel[i].transform.SetParent(this.gameObject.transform, false);
 
             //k0014_2_1_1: オブジェの名前を変化させる
-            ptp[i].name = "ptp"+i;
-            kodomoObj[i].name = "text"+i;
+            mojiPanel[i].name = "mojiPanel" + i;
+            kodomoTextObj[i].name = "text"+i;
 
         }
 
@@ -54,7 +54,7 @@ public class testPrehubYobi2 : MonoBehaviour
     void Update()
     {
         for (int i = 0; i < 7; i++) {
-            kodomoText[i].text = content(i, kyotu.rrCount);
+            kodomoTextText[i].text = content(i, kyotu.rrCount);
         }
 
         if (Input.GetMouseButtonDown(0)) kyotu.rrCount++;

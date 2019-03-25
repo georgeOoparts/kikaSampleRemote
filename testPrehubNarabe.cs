@@ -14,13 +14,13 @@ public class testPrehubNarabe : MonoBehaviour
 
     //k0016_99_1_1：listの宣言
     //prehubとして呼び出したmojipanelに当てはめるオブジェ
-    List<GameObject> ptp = new List<GameObject>();
+    List<GameObject> mojiPanel = new List<GameObject>();
 
     //mojipanelの子オブジェtextに当てはめるオブジェ
-    List<GameObject> kodomoObj = new List<GameObject>();
+    List<GameObject> kodomoTextObj = new List<GameObject>();
 
     //textオブジェのコンポTEXTに当てはめるText変数
-    List<Text> kodomoText = new List<Text>();
+    List<Text> kodomoTextText = new List<Text>();
 
     //uiTEXT７つをuiPANELの中で並び替え
     void Start()
@@ -29,11 +29,11 @@ public class testPrehubNarabe : MonoBehaviour
         //そっちのプログラムを先に呼び込むように設定する。
         for (int i = 0; i < 7; i++) {
             //k0016_99_1_1_1：list新しい値を入れる
-            ptp.Add(GameObject.Find("ptp"+i).gameObject);
+            mojiPanel.Add(GameObject.Find("mojiPanel"+i).gameObject);
             //premojiの子供オブジェであるtextをlistにする。
-            kodomoObj.Add(ptp[i].transform.GetChild(0).gameObject);
+            kodomoTextObj.Add(mojiPanel[i].transform.GetChild(0).gameObject);
             ////premojiの子供オブジェであるtextのコンポートメントであるTextをlistにする。
-            kodomoText.Add(kodomoObj[i].GetComponent<Text>());
+            kodomoTextText.Add(kodomoTextObj[i].GetComponent<Text>());
         }
         Debug.Log("we areeee");        
     }

@@ -39,7 +39,7 @@ public class testPrehubNarabe : MonoBehaviour
     float p6Start = 0;
     float p7Start = 0;
 
-    List<float> panelStrat = new List<float>();
+    //List<float> panelStrat = new List<float>();
     float startWidth = 0;
 
     void Start()

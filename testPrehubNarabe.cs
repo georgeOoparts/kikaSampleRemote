@@ -32,13 +32,13 @@ public class testPrehubNarabe : MonoBehaviour
     float textLineWidth = 0;
 
     //panel1～7の開始位置
+    float p0Start = 0;
     float p1Start = 0;
     float p2Start = 0;
     float p3Start = 0;
     float p4Start = 0;
     float p5Start = 0;
     float p6Start = 0;
-    float p7Start = 0;
 
     //List<float> panelStrat = new List<float>();
     float startWidth = 0;
@@ -75,16 +75,20 @@ public class testPrehubNarabe : MonoBehaviour
         //trMojiPanel[i].anchoredPosition = new Vector2(panelStrat[i], 0);
         //------------
 
-        //Debug.Log("we::"+mojiPanel[0].name+"width::"+ rtMojiPanel[0].sizeDelta.x);        
+        Debug.Log("we::"+mojiPanel[0].name+"width::"+ rtMojiPanel[0].sizeDelta.x);        
     }
 
     void Update()
     {
-        Debug.Log("we::" + mojiPanel[0].name + "width::" + rtMojiPanel[0].sizeDelta.x);
+        //Debug.Log("we::" + mojiPanel[0].name + "width::" + rtMojiPanel[0].sizeDelta.x);
+        
         //mojipanelのスタート位置を代入---
-        p1Start = 0;
-        rtMojiPanel[0].anchoredPosition = new Vector2(0, 0);
-        startWidth = rtMojiPanel[0].sizeDelta.x;
+        p0Start = 0;
+        rtMojiPanel[0].anchoredPosition = new Vector2(p0Start, 0);
+        //startWidth = rtMojiPanel[0].sizeDelta.x;
+
+        p1Start = rtMojiPanel[0].sizeDelta.x;
+        rtMojiPanel[1].anchoredPosition = new Vector2(p1Start, 0);
 
 
 

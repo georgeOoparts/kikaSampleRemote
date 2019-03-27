@@ -79,7 +79,7 @@ public class testPrehubNarabe : MonoBehaviour
     private int turnCount=0;
     float startWidth = 0;
 
-    void LateUpdate()
+    void Update()
     {
         //Debug.Log("we::" + mojiPanel[0].name + "width::" + rtMojiPanel[0].sizeDelta.x);
         if (turnCount<=1) {

@@ -109,7 +109,7 @@ public class testPrehubNarabe : MonoBehaviour
                 //下方向は-なので、-rtMojiPanel[0].sizeDelta.y*pKaigyou
                 rtMojiPanel[i].anchoredPosition = new Vector2(startWidth, -rtMojiPanel[0].sizeDelta.y*pKaigyou);
                 //mojipanelのスタート位置を代入---
-                if (turnCount == 1) startWidth += rtMojiPanel[i].sizeDelta.x;
+                startWidth += rtMojiPanel[i].sizeDelta.x;
                 
             }
             

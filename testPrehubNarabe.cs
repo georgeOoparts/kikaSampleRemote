@@ -90,7 +90,8 @@ public class testPrehubNarabe : MonoBehaviour
         p1Start = rtMojiPanel[0].sizeDelta.x;
         rtMojiPanel[1].anchoredPosition = new Vector2(p1Start, 0);
 
-
+        p2Start = rtMojiPanel[0].sizeDelta.x+ rtMojiPanel[1].sizeDelta.x;
+        rtMojiPanel[2].anchoredPosition = new Vector2(p2Start, 0);
 
 
         //for (int i = 0; i < 7; i++) {

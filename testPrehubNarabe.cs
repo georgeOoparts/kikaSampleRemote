@@ -39,7 +39,7 @@ public class testPrehubNarabe : MonoBehaviour
 
     //List<float> panelStrat = new List<float>();
     //mojipanelの改行の為の変数
-    List<int> pKaigyou= new List<int>();
+    //List<int> pKaigyou= new List<int>();
 
     void Start()
     {
@@ -57,7 +57,7 @@ public class testPrehubNarabe : MonoBehaviour
             rtMojiPanel.Add(mojiPanel[i].GetComponent<RectTransform>());
 
             //mojipanelの改行の為の変数
-            pKaigyou.Add(i);
+            //pKaigyou.Add(i);
         }
 
         rtTextPanel =this.gameObject.GetComponent<RectTransform>();
@@ -83,6 +83,8 @@ public class testPrehubNarabe : MonoBehaviour
     float startWidth = 0;
     //debuglogの為の変数
     private int k = 0;
+
+    private int pKaigyou = 0;
     
     //このオブジェtextpanelのコンポを入れる変数
     RectTransform rtTextPanel;
@@ -91,17 +93,22 @@ public class testPrehubNarabe : MonoBehaviour
     {
         //turncountが０では駄目。2回updateを読み込む必要がある
         if (turnCount<=1) {
-
-
             //startwizeを０に初期化。
             startWidth = 0;
+            //pKaigyouを初期化
+            pKaigyou = 0;
             for (int i = 0; i<7; i++) 
             {
-
-                //パネルの位置調整
-                rtMojiPanel[i].anchoredPosition = new Vector2(startWidth, 0);
-                //mojipanelのスタート位置を代入---
-                if (turnCount == 1) startWidth += rtMojiPanel[i].sizeDelta.x;
+                if (rtTextPanel.sizeDelta.x < startWidth) 
+                {
+                    pKaigyou++;
+                    startWidth = 0;
+                }
+                    //パネルの位置調整
+                    rtMojiPanel[i].anchoredPosition = new Vector2(startWidth, 0);
+                    //mojipanelのスタート位置を代入---
+                    if (turnCount == 1) startWidth += rtMojiPanel[i].sizeDelta.x;
+                
             }
             turnCount++;
         }

@@ -41,6 +41,8 @@ public class testPrehubNarabe : MonoBehaviour
     float p6Start = 0;
 
     //List<float> panelStrat = new List<float>();
+    //mojipanelの改行の為の変数
+    List<int> pKaigyou= new List<int>();
 
     void Start()
     {
@@ -56,6 +58,9 @@ public class testPrehubNarabe : MonoBehaviour
             kodomoTextText.Add(kodomoTextObj[i].GetComponent<Text>());
             ///mojipanelオブジェのRectTransformを当てはめる
             rtMojiPanel.Add(mojiPanel[i].GetComponent<RectTransform>());
+
+            //mojipanelの改行の為の変数
+            pKaigyou.Add(i);
         }
         
 

@@ -59,7 +59,8 @@ public class testPrehubNarabe : MonoBehaviour
             //mojipanelの改行の為の変数
             pKaigyou.Add(i);
         }
-        
+
+        rtTextPanel =this.gameObject.GetComponent<RectTransform>();
 
 
         //if (i == 0) 
@@ -82,6 +83,10 @@ public class testPrehubNarabe : MonoBehaviour
     float startWidth = 0;
     //debuglogの為の変数
     private int k = 0;
+    
+    //このオブジェtextpanelのコンポを入れる変数
+    RectTransform rtTextPanel;
+
     void Update()
     {
         //turncountが０では駄目。2回updateを読み込む必要がある

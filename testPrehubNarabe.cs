@@ -11,9 +11,6 @@ public class testPrehubNarabe : MonoBehaviour
     //このスクリプトをアタッチしたオブジェクトにいちいちこのオブジェクトをアタッチ
     public H_99_01_kyoutuHensu kyotu;
 
-    //k0014_2 :プレハブ（画面のobjでもOK）を使う objにはりつけ
-    public GameObject premoji;
-
     //k0016_99_1_1：listの宣言
     //prehubとして呼び出したmojipanelに当てはめるオブジェ
     List<GameObject> mojiPanel = new List<GameObject>();
@@ -87,6 +84,7 @@ public class testPrehubNarabe : MonoBehaviour
     private int k = 0;
     void Update()
     {
+        //turncountが０では駄目。2回updateを読み込む必要がある
         if (turnCount<=1) {
 
 
@@ -94,6 +92,7 @@ public class testPrehubNarabe : MonoBehaviour
             startWidth = 0;
             for (int i = 0; i<7; i++) 
             {
+
                 //パネルの位置調整
                 rtMojiPanel[i].anchoredPosition = new Vector2(startWidth, 0);
                 //mojipanelのスタート位置を代入---

@@ -79,7 +79,7 @@ public class testPrehubNarabe : MonoBehaviour
     }
     private int turnCount=0;
     private bool one = true;
-    //float 
+    float kakowide = 0; 
     void LateUpdate()
     {
         //Debug.Log("we::" + mojiPanel[0].name + "width::" + rtMojiPanel[0].sizeDelta.x);
@@ -99,7 +99,7 @@ public class testPrehubNarabe : MonoBehaviour
             turnCount++;
 
         }
-        one = false;
+        if (Input.GetMouseButtonDown(0)) turnCount = 0;
 
         //for (int i = 0; i < 7; i++) {
 

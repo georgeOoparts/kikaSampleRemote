@@ -81,7 +81,6 @@ public class testPrehubNarabe : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log("we::" + mojiPanel[0].name + "width::" + rtMojiPanel[0].sizeDelta.x);
         if (turnCount<=1) {
             //startwizeを０に初期化。
             startWidth = 0;
@@ -94,6 +93,18 @@ public class testPrehubNarabe : MonoBehaviour
 
             rtMojiPanel[2].anchoredPosition = new Vector2(startWidth, 0);
             if (turnCount == 1) startWidth += rtMojiPanel[2].sizeDelta.x;
+
+            rtMojiPanel[3].anchoredPosition = new Vector2(startWidth, 0);
+            if (turnCount == 1) startWidth += rtMojiPanel[3].sizeDelta.x;
+
+            rtMojiPanel[4].anchoredPosition = new Vector2(startWidth, 0);
+            if (turnCount == 1) startWidth += rtMojiPanel[4].sizeDelta.x;
+
+            rtMojiPanel[5].anchoredPosition = new Vector2(startWidth, 0);
+            if (turnCount == 1) startWidth += rtMojiPanel[5].sizeDelta.x;
+
+            rtMojiPanel[6].anchoredPosition = new Vector2(startWidth, 0);
+            //if (turnCount == 1) startWidth += rtMojiPanel[6].sizeDelta.x;
 
             turnCount++;
         }

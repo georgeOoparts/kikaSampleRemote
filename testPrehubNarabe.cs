@@ -88,30 +88,17 @@ public class testPrehubNarabe : MonoBehaviour
     void Update()
     {
         if (turnCount<=1) {
+
+
             //startwizeを０に初期化。
             startWidth = 0;
-            //mojipanelのスタート位置を代入---
-            rtMojiPanel[0].anchoredPosition = new Vector2(startWidth, 0);
-            if(turnCount==1)startWidth += rtMojiPanel[0].sizeDelta.x;
-
-            rtMojiPanel[1].anchoredPosition = new Vector2(startWidth, 0);
-            if (turnCount == 1) startWidth += rtMojiPanel[1].sizeDelta.x;
-
-            rtMojiPanel[2].anchoredPosition = new Vector2(startWidth, 0);
-            if (turnCount == 1) startWidth += rtMojiPanel[2].sizeDelta.x;
-
-            rtMojiPanel[3].anchoredPosition = new Vector2(startWidth, 0);
-            if (turnCount == 1) startWidth += rtMojiPanel[3].sizeDelta.x;
-
-            rtMojiPanel[4].anchoredPosition = new Vector2(startWidth, 0);
-            if (turnCount == 1) startWidth += rtMojiPanel[4].sizeDelta.x;
-
-            rtMojiPanel[5].anchoredPosition = new Vector2(startWidth, 0);
-            if (turnCount == 1) startWidth += rtMojiPanel[5].sizeDelta.x;
-
-            rtMojiPanel[6].anchoredPosition = new Vector2(startWidth, 0);
-            //if (turnCount == 1) startWidth += rtMojiPanel[6].sizeDelta.x;
-
+            for (int i = 0; i<7; i++) 
+            {
+                //パネルの位置調整
+                rtMojiPanel[i].anchoredPosition = new Vector2(startWidth, 0);
+                //mojipanelのスタート位置を代入---
+                if (turnCount == 1) startWidth += rtMojiPanel[i].sizeDelta.x;
+            }
             turnCount++;
         }
         //ボタンクリックで

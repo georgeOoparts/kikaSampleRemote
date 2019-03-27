@@ -41,7 +41,6 @@ public class testPrehubNarabe : MonoBehaviour
     float p6Start = 0;
 
     //List<float> panelStrat = new List<float>();
-    float startWidth = 0;
 
     void Start()
     {
@@ -78,27 +77,27 @@ public class testPrehubNarabe : MonoBehaviour
         //Debug.Log("we::"+mojiPanel[0].name+"width::"+ rtMojiPanel[0].sizeDelta.x);        
     }
     private int turnCount=0;
-    private bool one = true;
-    float kakowide = 0; 
+    float startWidth = 0;
+
     void LateUpdate()
     {
         //Debug.Log("we::" + mojiPanel[0].name + "width::" + rtMojiPanel[0].sizeDelta.x);
         if (turnCount<=1) {
+            //startwizeを０に初期化。
+            startWidth = 0;
             //mojipanelのスタート位置を代入---
-            p0Start = 0;
-            rtMojiPanel[0].anchoredPosition = new Vector2(p0Start, 0);
-            //startWidth = rtMojiPanel[0].sizeDelta.x;
+            rtMojiPanel[0].anchoredPosition = new Vector2(startWidth, 0);
+            if(turnCount==1)startWidth += rtMojiPanel[0].sizeDelta.x;
 
-            p1Start = rtMojiPanel[0].sizeDelta.x;
-            Debug.Log(rtMojiPanel[0].sizeDelta.x);
-            rtMojiPanel[1].anchoredPosition = new Vector2(p1Start, 0);
+            rtMojiPanel[1].anchoredPosition = new Vector2(startWidth, 0);
+            if (turnCount == 1) startWidth += rtMojiPanel[1].sizeDelta.x;
 
-            p2Start = rtMojiPanel[0].sizeDelta.x + rtMojiPanel[1].sizeDelta.x;
-            rtMojiPanel[2].anchoredPosition = new Vector2(p2Start, 0);
+            rtMojiPanel[2].anchoredPosition = new Vector2(startWidth, 0);
+            if (turnCount == 1) startWidth += rtMojiPanel[2].sizeDelta.x;
 
             turnCount++;
-
         }
+        //ボタンクリックで
         if (Input.GetMouseButtonDown(0)) turnCount = 0;
 
         //for (int i = 0; i < 7; i++) {

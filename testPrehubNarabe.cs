@@ -77,22 +77,28 @@ public class testPrehubNarabe : MonoBehaviour
 
         //Debug.Log("we::"+mojiPanel[0].name+"width::"+ rtMojiPanel[0].sizeDelta.x);        
     }
+    private int turnCount=0;
     private bool one = true;
-    void Update()
+    //float 
+    void LateUpdate()
     {
         //Debug.Log("we::" + mojiPanel[0].name + "width::" + rtMojiPanel[0].sizeDelta.x);
-        //if (one == true) {
+        if (turnCount<=1) {
             //mojipanelのスタート位置を代入---
             p0Start = 0;
             rtMojiPanel[0].anchoredPosition = new Vector2(p0Start, 0);
             //startWidth = rtMojiPanel[0].sizeDelta.x;
 
             p1Start = rtMojiPanel[0].sizeDelta.x;
+            Debug.Log(rtMojiPanel[0].sizeDelta.x);
             rtMojiPanel[1].anchoredPosition = new Vector2(p1Start, 0);
 
             p2Start = rtMojiPanel[0].sizeDelta.x + rtMojiPanel[1].sizeDelta.x;
             rtMojiPanel[2].anchoredPosition = new Vector2(p2Start, 0);
-        //}
+
+            turnCount++;
+
+        }
         one = false;
 
         //for (int i = 0; i < 7; i++) {

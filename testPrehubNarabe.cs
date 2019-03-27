@@ -92,7 +92,8 @@ public class testPrehubNarabe : MonoBehaviour
     void Update()
     {
         //turncountが０では駄目。2回updateを読み込む必要がある
-        if (turnCount<=1) {
+        if (turnCount==1) 
+        {
             //startwizeを０に初期化。
             startWidth = 0;
             //pKaigyouを初期化
@@ -104,14 +105,15 @@ public class testPrehubNarabe : MonoBehaviour
                     pKaigyou++;
                     startWidth = 0;
                 }
-                    //パネルの位置調整
-                    rtMojiPanel[i].anchoredPosition = new Vector2(startWidth, 0);
-                    //mojipanelのスタート位置を代入---
-                    if (turnCount == 1) startWidth += rtMojiPanel[i].sizeDelta.x;
+                //パネルの位置調整
+                //下方向は-なので、-rtMojiPanel[0].sizeDelta.y*pKaigyou
+                rtMojiPanel[i].anchoredPosition = new Vector2(startWidth, -rtMojiPanel[0].sizeDelta.y*pKaigyou);
+                //mojipanelのスタート位置を代入---
+                if (turnCount == 1) startWidth += rtMojiPanel[i].sizeDelta.x;
                 
             }
-            turnCount++;
-        }
+            
+        }turnCount++;
         //ボタンクリックで
         if (Input.GetMouseButtonDown(0)) turnCount = 0;
         k++;

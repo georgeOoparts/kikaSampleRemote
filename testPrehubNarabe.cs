@@ -78,7 +78,8 @@ public class testPrehubNarabe : MonoBehaviour
     }
     private int turnCount=0;
     float startWidth = 0;
-
+    //debuglogの為の変数
+    private int k = 0;
     void Update()
     {
         if (turnCount<=1) {
@@ -110,6 +111,8 @@ public class testPrehubNarabe : MonoBehaviour
         }
         //ボタンクリックで
         if (Input.GetMouseButtonDown(0)) turnCount = 0;
+        k++;
+        Debug.Log("OKK::"+k);
 
         //for (int i = 0; i < 7; i++) {
 

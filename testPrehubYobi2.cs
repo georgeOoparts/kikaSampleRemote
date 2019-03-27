@@ -67,8 +67,8 @@ public class testPrehubYobi2 : MonoBehaviour
             else content = "";
         } else if (textNumber == 1) {
             if (count == 0) content = "ABC";
-            else if (count == 2) content = "A";
-            else if (count == 3) content = "垂線";
+            else if (count == 1) content = "A";
+            else if (count == 2) content = "垂線";
             else content = "";
         } else if (textNumber == 2) {
             if (count == 0) content = "がある。";

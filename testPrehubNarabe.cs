@@ -74,7 +74,7 @@ public class testPrehubNarabe : MonoBehaviour
     {
         //turncountが０では駄目。2回updateを読み込む必要がある
         //textpanelの幅が変わったらmojipanelを並び替えるため
-        //最後に、過去と現在のTextPanelの幅が違っていたら、
+        //過去と現在のTextPanelの幅が違っていたら、
         //mojipanelを並び替える
         if (turnCount==1 || kakoTextPanelWidth != rtTextPanel.sizeDelta.x) 
         {
@@ -103,7 +103,6 @@ public class testPrehubNarabe : MonoBehaviour
                     pKaigyou++;
                     startWidth = 0;
                 }
-                
             }
         }turnCount++;
 

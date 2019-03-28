@@ -37,7 +37,6 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         //k0015_99_1_3 :頂点を設定（どこからどこまで線を伸ばすか）

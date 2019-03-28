@@ -14,7 +14,6 @@ public class testPrehubYobi2 : MonoBehaviour
     //k0014_2 :プレハブ（画面のobjでもOK）を使う objにはりつけ
     public GameObject premoji;
 
-
     //k0016_99_1_1：listの宣言
     //prehubとして呼び出したmojipanelに当てはめるオブジェ
     List<GameObject> mojiPanel= new List<GameObject>();
@@ -28,7 +27,8 @@ public class testPrehubYobi2 : MonoBehaviour
     void Start()
     {
 
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 7; i++) 
+        {
             //プレハブを使う
             //k0016_99_1_1_1：list新しい値を入れる
             mojiPanel.Add(Instantiate(premoji) as GameObject);
@@ -47,16 +47,15 @@ public class testPrehubYobi2 : MonoBehaviour
         }
 
 
-        //Debug.Log("OKKKKKK");   
     }
 
-    // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < kodomoTextText.Count; i++) {
+        for (int i = 0; i < kodomoTextText.Count; i++) 
+        {
             kodomoTextText[i].text = content(i, kyotu.rrCount);
         }
-
+        //kyotu.rrCountの数を増やす
         if (Input.GetMouseButtonDown(0)) kyotu.rrCount++;
     }
     string content(int textNumber, int count) {

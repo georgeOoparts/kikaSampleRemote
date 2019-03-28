@@ -79,9 +79,21 @@ public class testPrehubNarabe : MonoBehaviour
 
         //Debug.Log("we::"+mojiPanel[0].name+"width::"+ rtMojiPanel[0].sizeDelta.x);        
     }
+    //startWidth += rtMojiPanel[i].sizeDelta.x;の
+    //startWidthが無限に増えないようにするため。
+    //わかりにくいが、updateを2回、回さないといけない
+    //update1回目ではmojipanelの幅がなぜか全て175になってしまう。
+    //update2週目で初めてtext＋設定した余裕の幅になる。
+    //turnCountはupdate2回目のみで処理を流すための変数
     private int turnCount=0;
+    
+    //mojipanelのスタート位置のための変数
     float startWidth = 0;
+    
+    //kaigyouのため
+    //mojipanelの合計がtextpanelを超えるか判定する変数
     float hanteiWidth = 0;
+    
     //debuglogの為の変数
     private int k = 0;
 

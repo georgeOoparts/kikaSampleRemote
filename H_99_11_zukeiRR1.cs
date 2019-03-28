@@ -22,7 +22,10 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
         {
             //k0014_1_1 :プレハブを使う
             L.Add(Instantiate(line) as GameObject);
-           
+
+            //k0014_2_1_1 :プレハブをキャンバスの子供にする()
+            L[i].transform.SetParent(this.gameObject.transform, false);
+
             //プレハブから呼び出したオブジェに名前をつける
             L[i].name = "line"+i;
            

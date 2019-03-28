@@ -72,10 +72,11 @@ public class testPrehubNarabe : MonoBehaviour
     float kakoTextPanelWidth = 0;
     void Update()
     {
-       
-
         //turncountが０では駄目。2回updateを読み込む必要がある
-        if (turnCount==1) 
+        //textpanelの幅が変わったらmojipanelを並び替えるため
+        //最後に、過去と現在のTextPanelの幅が違っていたら、
+        //mojipanelを並び替える
+        if (turnCount==1 || kakoTextPanelWidth != rtTextPanel.sizeDelta.x) 
         {
             //startwizeを０に初期化。
             startWidth = 0;
@@ -105,11 +106,12 @@ public class testPrehubNarabe : MonoBehaviour
                 
             }
         }turnCount++;
+
         //ボタンクリックで再びmojipanel並びなおし
-        if (Input.GetMouseButtonDown(0) || kakoTextPanelWidth != rtTextPanel.sizeDelta.x) {
+        if (Input.GetMouseButtonDown(0)) {
             turnCount = 0;
         }
-
+        //textpanelの幅が変わったらmojipanelを並び替えるため
         //最後に、kakoTextPanelWidthを代入。
         kakoTextPanelWidth = rtTextPanel.sizeDelta.x;
         //debuglogのためのk++

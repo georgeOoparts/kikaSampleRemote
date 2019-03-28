@@ -100,6 +100,8 @@ public class testPrehubNarabe : MonoBehaviour
                     pKaigyou++;
                     startWidth = 0;
                 }
+                //mojipanelを全部並び終えた後で、kakoTextPanelWidthを代入。
+                kakoTextPanelWidth = rtTextPanel.sizeDelta.x;
             }
         }turnCount++;
         //ボタンクリックで再びmojipanel並びなおし

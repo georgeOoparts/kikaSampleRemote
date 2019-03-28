@@ -25,22 +25,6 @@ public class testPrehubNarabe : MonoBehaviour
     //k4_1:どこかに書いてあるRectTransformの変数を作る
     List<RectTransform> rtMojiPanel = new List<RectTransform>();
 
-    //前のパネルの幅、を入れる変数。
-    float textLineWidth = 0;
-
-    //panel1～7の開始位置
-    float p0Start = 0;
-    float p1Start = 0;
-    float p2Start = 0;
-    float p3Start = 0;
-    float p4Start = 0;
-    float p5Start = 0;
-    float p6Start = 0;
-
-    //List<float> panelStrat = new List<float>();
-    //mojipanelの改行の為の変数
-    //List<int> pKaigyou= new List<int>();
-
     void Start()
     {
         //プレハブの呼び出しはtextPrehubYobiでやっている
@@ -55,29 +39,9 @@ public class testPrehubNarabe : MonoBehaviour
             kodomoTextText.Add(kodomoTextObj[i].GetComponent<Text>());
             ///mojipanelオブジェのRectTransformを当てはめる
             rtMojiPanel.Add(mojiPanel[i].GetComponent<RectTransform>());
-
-            //mojipanelの改行の為の変数
-            //pKaigyou.Add(i);
         }
-
-        rtTextPanel =this.gameObject.GetComponent<RectTransform>();
-
-
-        //if (i == 0) 
-        //{
-        //    p1Start = 0;
-        //    //startWidth += trMojiPanel[i].sizeDelta.x;
-        //} 
-        //else {
-        //    startWidth += trMojiPanel[i - 1].sizeDelta.x;
-        //    panelStrat[i] = startWidth;
-        //}
-        //------
-        //mojipanelを実際に代入----
-        //trMojiPanel[i].anchoredPosition = new Vector2(panelStrat[i], 0);
-        //------------
-
-        //Debug.Log("we::"+mojiPanel[0].name+"width::"+ rtMojiPanel[0].sizeDelta.x);        
+        //textpanelのRectTransformを得る
+        rtTextPanel = this.gameObject.GetComponent<RectTransform>();
     }
     //startWidth += rtMojiPanel[i].sizeDelta.x;の
     //startWidthが無限に増えないようにするため。
@@ -133,46 +97,10 @@ public class testPrehubNarabe : MonoBehaviour
                     startWidth = 0;
                 }
             }
-            
         }turnCount++;
         //ボタンクリックで再びmojipanel並びなおし
         if (Input.GetMouseButtonDown(0)) turnCount = 0;
         //debuglogのためのk++
         k++;
-        //Debug.Log("OKK::"+k);
-
-        //for (int i = 0; i < 7; i++) {
-
-
-        //}
-        ////k4_aac1:uiをスクリーン値で移動（左上にアンカーセット、下方向は-の値)
-        ////ＰＡＮＥＬ１をＴＥＸＴＰＮＥＬの左上へ置く。
-        //mojiPanel[0].anchoredPosition = new Vector2(0, 0);
-
-        ////パネル２の開始位置を決める。ｙ軸は下方向マイナスである事に注意 
-        //rt2.anchoredPosition
-        //    = new Vector2(p2Start, -p2Kaigyou * rt1.sizeDelta.y);
-
-        //rt3.anchoredPosition
-        //    = new Vector2(p3Start, -p3Kaigyou * rt1.sizeDelta.y);
-
-        ////Debug.Log(p4Kaigyou);
-        ////パネル4の開始位置を決める。ｙ軸は下方向マイナスである事に注意
-        //rt4.anchoredPosition
-        //    = new Vector2(p4Start, -p4Kaigyou * rt1.sizeDelta.y);
-
-        ////Debug.Log(p5Kaigyou);
-        ////パネル5の開始位置を決める。ｙ軸は下方向マイナスである事に注意
-        //rt5.anchoredPosition
-        //    = new Vector2(p5Start, -p5Kaigyou * rt1.sizeDelta.y);
-
-        ////パネル6の開始位置を決める。ｙ軸は下方向マイナスである事に注意
-        //rt6.anchoredPosition
-        //    = new Vector2(p6Start, -p6Kaigyou * rt1.sizeDelta.y);
-
-        ////パネル6の開始位置を決める。ｙ軸は下方向マイナスである事に注意
-        //rt7.anchoredPosition
-        //    = new Vector2(p7Start, -p7Kaigyou * rt1.sizeDelta.y);
-
     }
 }

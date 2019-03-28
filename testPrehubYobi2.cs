@@ -81,18 +81,18 @@ public class testPrehubYobi2 : MonoBehaviour
             else content = "";
         } else if (textNumber == 4) {
             if (count == 0) content = "";
-            else if (count == 1) content = "に";
-            else if (count == 2) content = "の交点を";
+            else if (count == 1 || count == 2 || count == 3) content = "に";
+            else if (count == 4 || count == 5 || count == 6) content = "の交点を";
             else content = "";
         } else if (textNumber == 5) {
             if (count == 0) content = "";
-            else if (count == 1) content = "垂線";
-            else if (count == 2) content = "Ｐ";
+            else if (count == 1 || count == 2 || count == 3) content = "垂線";
+            else if (count == 4 || count == 5 || count == 6) content = "P";
             else content = "";
         } else if (textNumber == 6) {
             if (count == 0) content = "";
-            else if (count == 1) content = "を引く";
-            else if (count == 2) content = "と名づける";
+            else if (count == 1 || count == 2 || count == 3) content = "を引く";
+            else if (count == 4 || count == 5 || count == 6) content = "と名づける";
             else content = "";
         }
         return (content);

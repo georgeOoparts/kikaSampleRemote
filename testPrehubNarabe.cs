@@ -72,6 +72,8 @@ public class testPrehubNarabe : MonoBehaviour
     float kakoTextPanelWidth = 0;
     void Update()
     {
+       
+
         //turncountが０では駄目。2回updateを読み込む必要がある
         if (turnCount==1) 
         {
@@ -100,12 +102,16 @@ public class testPrehubNarabe : MonoBehaviour
                     pKaigyou++;
                     startWidth = 0;
                 }
-                //mojipanelを全部並び終えた後で、kakoTextPanelWidthを代入。
-                kakoTextPanelWidth = rtTextPanel.sizeDelta.x;
+                
             }
         }turnCount++;
         //ボタンクリックで再びmojipanel並びなおし
-        if (Input.GetMouseButtonDown(0)) turnCount = 0;
+        if (Input.GetMouseButtonDown(0) || kakoTextPanelWidth != rtTextPanel.sizeDelta.x) {
+            turnCount = 0;
+        }
+
+        //最後に、kakoTextPanelWidthを代入。
+        kakoTextPanelWidth = rtTextPanel.sizeDelta.x;
         //debuglogのためのk++
         k++;
     }

@@ -66,6 +66,10 @@ public class testPrehubNarabe : MonoBehaviour
     //このオブジェtextpanelのコンポを入れる変数
     RectTransform rtTextPanel;
 
+    //再びmojipanelを並び替えるため
+    //textpanelのサイズが変わった時のため
+    //過去のtextpanelの幅を入れる変数
+    float kakoTextPanelWidth = 0;
     void Update()
     {
         //turncountが０では駄目。2回updateを読み込む必要がある
@@ -93,7 +97,7 @@ public class testPrehubNarabe : MonoBehaviour
                 //kaigyouのため判定
                 if (rtTextPanel.sizeDelta.x < hanteiWidth) 
                 {
-                    pKaigyou = pKaigyou + 1;
+                    pKaigyou++;
                     startWidth = 0;
                 }
             }

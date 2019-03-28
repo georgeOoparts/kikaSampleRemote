@@ -81,6 +81,7 @@ public class testPrehubNarabe : MonoBehaviour
     }
     private int turnCount=0;
     float startWidth = 0;
+    float hanteiWidth = 0;
     //debuglogの為の変数
     private int k = 0;
 
@@ -98,26 +99,37 @@ public class testPrehubNarabe : MonoBehaviour
             startWidth = 0;
             //pKaigyouを初期化
             pKaigyou = 0;
+            //hanteiWidthを初期化
+            hanteiWidth = 0;
             for (int i = 0; i<7; i++) 
             {
-                if (rtTextPanel.sizeDelta.x < startWidth) 
-                {
-                    pKaigyou++;
-                    startWidth = 0;
-                }
+                
+                //Debug.Log(pKaigyou);
                 //パネルの位置調整
                 //下方向は-なので、-rtMojiPanel[0].sizeDelta.y*pKaigyou
+                //Debug.Log(rtMojiPanel[0].sizeDelta.y);
                 rtMojiPanel[i].anchoredPosition = new Vector2(startWidth, -rtMojiPanel[0].sizeDelta.y*pKaigyou);
                 //mojipanelのスタート位置を代入---
                 startWidth += rtMojiPanel[i].sizeDelta.x;
-                
+
+                if(i<6)hanteiWidth= startWidth+ rtMojiPanel[i+1].sizeDelta.x;
+
+                //Debug.Log("textpanel::" + rtTextPanel.sizeDelta.x + " startwidth::" + startWidth);
+
+                if (rtTextPanel.sizeDelta.x < hanteiWidth) {
+                    pKaigyou = pKaigyou + 1;
+                    startWidth = 0;
+                    //Debug.Log(rtTextPanel.sizeDelta.x);
+                    Debug.Log(pKaigyou);
+                }
+
             }
             
         }turnCount++;
         //ボタンクリックで
         if (Input.GetMouseButtonDown(0)) turnCount = 0;
         k++;
-        Debug.Log("OKK::"+k);
+        //Debug.Log("OKK::"+k);
 
         //for (int i = 0; i < 7; i++) {
 

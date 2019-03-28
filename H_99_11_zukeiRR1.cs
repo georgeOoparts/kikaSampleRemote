@@ -18,23 +18,21 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
 
     void Start()
     {
-        //k0014_1_1 :プレハブを使う
-        L.Add(Instantiate(line)as GameObject);
-        L.Add(Instantiate(line) as GameObject);
-        L.Add(Instantiate(line) as GameObject);
-       
-
-        //k0015_99_1 :線を引くline回り　オブジェにラインをくっつける
-        LR.Add(L[0].GetComponent<LineRenderer>());
-        LR.Add(L[1].GetComponent<LineRenderer>());
-        LR.Add(L[2].GetComponent<LineRenderer>());
-       
-        //k0015_99_1_2 :頂点の数（この場合２つ）
-        LR[0].positionCount = 2;
-        LR[1].positionCount = 2;
-        LR[2].positionCount = 2;
-
-            }
+        for (int i= 0;i< 3;i++) 
+        {
+            //k0014_1_1 :プレハブを使う
+            L.Add(Instantiate(line) as GameObject);
+           
+            //プレハブから呼び出したオブジェに名前をつける
+            L[i].name = "line"+i;
+           
+            //k0015_99_1 :線を引くline回り　オブジェにラインをくっつける
+            LR.Add(L[i].GetComponent<LineRenderer>());
+           
+            //k0015_99_1_2 :頂点の数（この場合２つ）
+            LR[i].positionCount = 2;
+        }
+    }
 
     // Update is called once per frame
     void Update()

@@ -7,28 +7,27 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
     //k0014_1 :プレハブ（画面のobjでもOK）を使う objにはりつけ
     public GameObject line;
 
+    //プレハブから呼び出したlineを実際に当てはめる変数
+    List<GameObject> L = new List<GameObject>();
+
     //k0015_99_1 :線を引くline回り　オブジェにラインをくっつける
     List<LineRenderer> LR =new List<LineRenderer>();
 
-    
-
     public float upDown = 1;
     //public float rightLeft = 0;
-    
-    // Start is called before the first frame update
+
     void Start()
     {
         //k0014_1_1 :プレハブを使う
-        GameObject line1= Instantiate(line);
-        GameObject line2 = Instantiate(line);
-        GameObject line3 = Instantiate(line);
-        //Instantiate(line2);
-        //Instantiate(line3);
+        L.Add(Instantiate(line)as GameObject);
+        L.Add(Instantiate(line) as GameObject);
+        L.Add(Instantiate(line) as GameObject);
+       
 
         //k0015_99_1 :線を引くline回り　オブジェにラインをくっつける
-        LR.Add(line1.GetComponent<LineRenderer>());
-        LR.Add(line2.GetComponent<LineRenderer>());
-        LR.Add(line3.GetComponent<LineRenderer>());
+        LR.Add(L[0].GetComponent<LineRenderer>());
+        LR.Add(L[1].GetComponent<LineRenderer>());
+        LR.Add(L[2].GetComponent<LineRenderer>());
        
         //k0015_99_1_2 :頂点の数（この場合２つ）
         LR[0].positionCount = 2;

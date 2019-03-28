@@ -62,22 +62,22 @@ public class testPrehubYobi2 : MonoBehaviour
         string content = "";
         if (textNumber == 0) {
             if (count == 0) content = "三角形";
-            else if (count == 1) content = "点";
+            else if (count == 1|| count == 2|| count == 3) content = "点";
             else content = "";
         } else if (textNumber == 1) {
             if (count == 0) content = "ABC";
-            else if (count == 1) content = "A";
-            else if (count == 2) content = "垂線";
+            else if (count == 1|| count == 2|| count == 3) content = "A";
+            else if (count == 4 || count == 5 || count == 6) content = "垂線";
             else content = "";
         } else if (textNumber == 2) {
             if (count == 0) content = "がある。";
-            else if (count == 1) content = "から辺";
-            else if (count == 2) content = "と辺";
+            else if (count == 1 || count == 2 || count == 3) content = "から辺";
+            else if (count == 4 || count == 5 || count == 6) content = "と辺";
             else content = "";
         } else if (textNumber == 3) {
             if (count == 0) content = "";
-            else if (count == 1) content = "BC";
-            else if (count == 2) content = "BC";
+            else if (count == 1 || count == 2 || count == 3) content = "BC";
+            else if (count == 4 || count == 5 || count == 6) content = "BC";
             else content = "";
         } else if (textNumber == 4) {
             if (count == 0) content = "";

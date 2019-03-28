@@ -113,10 +113,8 @@ public class testPrehubNarabe : MonoBehaviour
             pKaigyou = 0;
             //hanteiWidthを初期化
             hanteiWidth = 0;
-            for (int i = 0; i<7; i++) 
+            for (int i = 0; i<rtMojiPanel.Count; i++) 
             {
-                
-                //Debug.Log(pKaigyou);
                 //パネルの位置調整
                 //下方向は-なので、-rtMojiPanel[0].sizeDelta.y*pKaigyou
                 //Debug.Log(rtMojiPanel[0].sizeDelta.y);
@@ -124,22 +122,22 @@ public class testPrehubNarabe : MonoBehaviour
                 //mojipanelのスタート位置を代入---
                 startWidth += rtMojiPanel[i].sizeDelta.x;
 
-                if(i<6)hanteiWidth= startWidth+ rtMojiPanel[i+1].sizeDelta.x;
+                //kaigyouのため＞hanteiWidthにこれまでのmojipanelの幅と次のmojipanelの幅を入れる
+                //最後のmojipanelの１つ前の段階で判定が終了するのでrtMojiPanel.Count-1までとなる
+                if (i< rtMojiPanel.Count-1) hanteiWidth= startWidth+ rtMojiPanel[i+1].sizeDelta.x;
 
-                //Debug.Log("textpanel::" + rtTextPanel.sizeDelta.x + " startwidth::" + startWidth);
-
-                if (rtTextPanel.sizeDelta.x < hanteiWidth) {
+                //kaigyouのため判定
+                if (rtTextPanel.sizeDelta.x < hanteiWidth) 
+                {
                     pKaigyou = pKaigyou + 1;
                     startWidth = 0;
-                    //Debug.Log(rtTextPanel.sizeDelta.x);
-                    Debug.Log(pKaigyou);
                 }
-
             }
             
         }turnCount++;
-        //ボタンクリックで
+        //ボタンクリックで再びmojipanel並びなおし
         if (Input.GetMouseButtonDown(0)) turnCount = 0;
+        //debuglogのためのk++
         k++;
         //Debug.Log("OKK::"+k);
 

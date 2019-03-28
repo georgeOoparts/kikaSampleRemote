@@ -53,7 +53,7 @@ public class testPrehubYobi2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < kodomoTextText.Count; i++) {
             kodomoTextText[i].text = content(i, kyotu.rrCount);
         }
 

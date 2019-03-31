@@ -58,6 +58,8 @@ public class testPrehubYobi2 : MonoBehaviour
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
             kodomoTextText[i].text = content(i, kyotu.rrCount);
+            //k7_1_2:オブジェを見えるようにするよ。
+            mojiPanel[i].GetComponent<Image>().enabled = true;
         }
         //kyotu.rrCountの数を増やす
         if (Input.GetMouseButtonDown(0)) kyotu.rrCount++;

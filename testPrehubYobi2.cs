@@ -59,10 +59,77 @@ public class testPrehubYobi2 : MonoBehaviour
         {
             kodomoTextText[i].text = content(i, kyotu.rrCount);
             //k7_1_2:オブジェを見えるようにするよ。
-            mojiPanel[i].GetComponent<Image>().enabled = true;
+            //mojiPanel[i].GetComponent<Image>().enabled = true;
         }
+        //強調すべきパネルを強調するメソッド
+        kyochouPanel(kyotu.rrCount);
         //kyotu.rrCountの数を増やす
         if (Input.GetMouseButtonDown(0)) kyotu.rrCount++;
+    }
+    void kyochouPanel(int count) 
+    {
+        if (count == 0) 
+        {
+            //k7_1_2:オブジェを見えるようにするよ。
+            mojiPanel[1].GetComponent<Image>().enabled = true;
+        }
+        else if(count == 1)
+        {
+            for (int i=0;i<kodomoTextText.Count;i++) 
+            {
+                mojiPanel[i].GetComponent<Image>().enabled = false;
+            }
+            
+            //k7_1_2:オブジェを見えるようにするよ。
+            mojiPanel[1].GetComponent<Image>().enabled = true;
+
+
+        } 
+        else if (count == 2) 
+        {
+            for (int i = 0; i < kodomoTextText.Count; i++) 
+            {
+                mojiPanel[i].GetComponent<Image>().enabled = false;
+            }
+            //k7_1_2:オブジェを見えるようにするよ。
+            mojiPanel[3].GetComponent<Image>().enabled = true;
+        } 
+        else if (count == 3) 
+        {
+            for (int i = 0; i < kodomoTextText.Count; i++) 
+            {
+                mojiPanel[i].GetComponent<Image>().enabled = false;
+            }
+            //k7_1_2:オブジェを見えるようにするよ。
+            mojiPanel[5].GetComponent<Image>().enabled = true;
+        } 
+        else if (count == 4) 
+        {
+            for (int i = 0; i < kodomoTextText.Count; i++) 
+            {
+                mojiPanel[i].GetComponent<Image>().enabled = false;
+            }
+            //k7_1_2:オブジェを見えるようにするよ。
+            mojiPanel[1].GetComponent<Image>().enabled = true;
+        } 
+        else if (count == 5) 
+        {
+            for (int i = 0; i < kodomoTextText.Count; i++) 
+            {
+                mojiPanel[i].GetComponent<Image>().enabled = false;
+            }
+            //k7_1_2:オブジェを見えるようにするよ。
+            mojiPanel[3].GetComponent<Image>().enabled = true;
+        } 
+        else if (count == 6) 
+        {
+            for (int i = 0; i < kodomoTextText.Count; i++) 
+            {
+                mojiPanel[i].GetComponent<Image>().enabled = false;
+            }
+            //k7_1_2:オブジェを見えるようにするよ。
+            mojiPanel[5].GetComponent<Image>().enabled = true;
+        }
     }
     string content(int textNumber, int count) {
         string content = "";

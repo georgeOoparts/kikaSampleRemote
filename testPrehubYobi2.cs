@@ -24,8 +24,7 @@ public class testPrehubYobi2 : MonoBehaviour
     //textオブジェのコンポTEXTに当てはめるText変数
     List<Text> kodomoTextText = new List<Text>();
 
-    void Start()
-    {
+    void Start() {
 
         for (int i = 0; i < 7; i++) 
         {
@@ -42,36 +41,64 @@ public class testPrehubYobi2 : MonoBehaviour
 
             //k0014_2_1_1: オブジェの名前を変化させる
             mojiPanel[i].name = "mojiPanel" + i;
-            kodomoTextObj[i].name = "text"+i;
-
+            kodomoTextObj[i].name = "text" + i;
         }
-
-
+        //k6_aa:ストップウォッチスタート
+        stopwatch.Start();
     }
-    //k7_1_1:オブジェを存在するけど見えなくする。
-    //this.gameObject.GetComponent<Image>().enabled = false;
+    
+    
 
-    //k7_1_2:オブジェを見えるようにするよ。
-    //this.gameObject.GetComponent<Image>().enabled = true;
     void Update()
     {
+        //k6_ac:何秒たったかを変数elapseに入れる
+        elapse = (float)stopwatch.Elapsed.TotalSeconds;
+        //Debug.Log(elapse);//何秒たったかを表示させたいときはこれを使う
+
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
             kodomoTextText[i].text = content(i, kyotu.rrCount);
             //k7_1_2:オブジェを見えるようにするよ。
             //mojiPanel[i].GetComponent<Image>().enabled = true;
         }
+        
         //強調すべきパネルを強調するメソッド
         kyochouPanel(kyotu.rrCount);
+        
         //kyotu.rrCountの数を増やす
         if (Input.GetMouseButtonDown(0)) kyotu.rrCount++;
     }
+    //k6_a:ストップウォッチ関数を使う時のおまじない。
+    private System.Diagnostics.Stopwatch stopwatch
+        = new System.Diagnostics.Stopwatch();
+    private float elapse;
+    private bool tenmetuOnOff = true;
+    public float interval = 0.35f;
     void kyochouPanel(int count) 
     {
         if (count == 0) 
         {
             //k7_1_2:オブジェを見えるようにするよ。
-            mojiPanel[1].GetComponent<Image>().enabled = true;
+            //mojiPanel[1].GetComponent<Image>().enabled = true;
+            if (tenmetuOnOff == true) {
+                if (elapse >= interval) {
+                    tenmetuOnOff = false;
+                    //k7_a:オブジェを存在するけど見えなくする。
+                    mojiPanel[1].GetComponent<Image>().enabled = false;
+                    //k6_ab:ストップウォッチの時間をリセット
+                    stopwatch.Reset();
+                    //k6_aa:ストップウォッチスタート
+                    stopwatch.Start();
+                }
+            } else if (elapse >= interval) {
+                tenmetuOnOff = true;
+                //k7_b:オブジェを見えるようにするよ。
+                mojiPanel[1].GetComponent<Image>().enabled = true;
+                //k6_ab:ストップウォッチの時間をリセット
+                stopwatch.Reset();
+                //k6_aa:ストップウォッチスタート
+                stopwatch.Start();
+            }
         }
         else if(count == 1)
         {

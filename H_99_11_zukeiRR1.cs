@@ -47,7 +47,9 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
 
             //プレハブから呼び出したオブジェに名前をつける
             L[i].name = "line"+i;
-           
+
+            Moji[i].name = "moji" + i;
+
             //k0015_99_1 :線を引くline回り　オブジェにラインをくっつける
             LR.Add(L[i].GetComponent<LineRenderer>());
            

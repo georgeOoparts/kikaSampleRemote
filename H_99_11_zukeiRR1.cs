@@ -10,12 +10,15 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
 
     public GameObject moji;
 
+    //呼び出したmojiの親オブジェにするオブジェ。
+    public GameObject zukei;
+
     //プレハブから呼び出したlineを実際に当てはめる変数
     List<GameObject> L = new List<GameObject>();
 
     List<GameObject> Moji = new List<GameObject>();
 
-    List<Text> tMoji=new List<Text>();
+    List<Text> textMoji=new List<Text>();
 
     List<RectTransform> rtMoji = new List<RectTransform>();
 
@@ -35,8 +38,12 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
             //k0014_1_1 :プレハブを使う
             L.Add(Instantiate(line) as GameObject);
 
+            Moji.Add(Instantiate(moji)as GameObject);
+
             //k0014_2_1_1 :プレハブをキャンバスの子供にする()
             L[i].transform.SetParent(this.gameObject.transform, false);
+
+            Moji[i].transform.SetParent(zukei.transform, false);
 
             //プレハブから呼び出したオブジェに名前をつける
             L[i].name = "line"+i;

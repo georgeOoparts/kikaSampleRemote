@@ -125,7 +125,7 @@ public class testPrehubYobi2 : MonoBehaviour
             }
             
             //k7_1_2:オブジェを見えるようにするよ。
-            mojiPanel[1].GetComponent<Image>().enabled = true;
+            mojiPanel[1].GetComponent<Image>().enabled = kyochoHantei();
 
 
         } 
@@ -136,7 +136,7 @@ public class testPrehubYobi2 : MonoBehaviour
                 mojiPanel[i].GetComponent<Image>().enabled = false;
             }
             //k7_1_2:オブジェを見えるようにするよ。
-            mojiPanel[3].GetComponent<Image>().enabled = true;
+            mojiPanel[3].GetComponent<Image>().enabled = kyochoHantei();
         } 
         else if (count == 3) 
         {
@@ -145,7 +145,7 @@ public class testPrehubYobi2 : MonoBehaviour
                 mojiPanel[i].GetComponent<Image>().enabled = false;
             }
             //k7_1_2:オブジェを見えるようにするよ。
-            mojiPanel[5].GetComponent<Image>().enabled = true;
+            mojiPanel[5].GetComponent<Image>().enabled = kyochoHantei();
         } 
         else if (count == 4) 
         {
@@ -154,7 +154,7 @@ public class testPrehubYobi2 : MonoBehaviour
                 mojiPanel[i].GetComponent<Image>().enabled = false;
             }
             //k7_1_2:オブジェを見えるようにするよ。
-            mojiPanel[1].GetComponent<Image>().enabled = true;
+            mojiPanel[1].GetComponent<Image>().enabled = kyochoHantei();
         } 
         else if (count == 5) 
         {
@@ -163,7 +163,7 @@ public class testPrehubYobi2 : MonoBehaviour
                 mojiPanel[i].GetComponent<Image>().enabled = false;
             }
             //k7_1_2:オブジェを見えるようにするよ。
-            mojiPanel[3].GetComponent<Image>().enabled = true;
+            mojiPanel[3].GetComponent<Image>().enabled = kyochoHantei();
         } 
         else if (count == 6) 
         {
@@ -172,7 +172,7 @@ public class testPrehubYobi2 : MonoBehaviour
                 mojiPanel[i].GetComponent<Image>().enabled = false;
             }
             //k7_1_2:オブジェを見えるようにするよ。
-            mojiPanel[5].GetComponent<Image>().enabled = true;
+            mojiPanel[5].GetComponent<Image>().enabled = kyochoHantei();
         }
     }
     //content(int textNumber, int count)メソッド-------------------------------------------------------------------------

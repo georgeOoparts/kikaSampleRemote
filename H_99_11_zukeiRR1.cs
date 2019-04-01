@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class H_99_11_zukeiRR1 : MonoBehaviour
 {
@@ -12,8 +13,17 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
     //プレハブから呼び出したlineを実際に当てはめる変数
     List<GameObject> L = new List<GameObject>();
 
+    List<GameObject> Moji = new List<GameObject>();
+
+    List<Text> tMoji=new List<Text>();
+
+    List<RectTransform> rtMoji = new List<RectTransform>();
+
+
     //k0015_99_1 :線を引くline回り　オブジェにラインをくっつける
     List<LineRenderer> LR =new List<LineRenderer>();
+
+
 
     public float upDown = 1;
     //public float rightLeft = 0;

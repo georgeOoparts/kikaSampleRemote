@@ -68,6 +68,8 @@ public class testPrehubYobi2 : MonoBehaviour
         //kyotu.rrCountの数を増やす
         if (Input.GetMouseButtonDown(0)) kyotu.rrCount++;
     }
+    //点滅強調に使う。kyochoHantei()メソッド--------------------------------------------------------
+    //void kyochouPanel(int count) の中で使う。
     //k6_a:ストップウォッチ関数を使う時のおまじない。
     private System.Diagnostics.Stopwatch stopwatch
         = new System.Diagnostics.Stopwatch();
@@ -75,7 +77,7 @@ public class testPrehubYobi2 : MonoBehaviour
     private bool tenmetuOnOff = true;
     public float interval = 0.35f;
 
-    bool kyochoHantei(int textNumber) 
+    bool kyochoHantei() 
     {
         if (tenmetuOnOff == true) 
         {
@@ -104,16 +106,15 @@ public class testPrehubYobi2 : MonoBehaviour
         return (false);
     }
 
-
+    //kyochouPanel(int count) ------------------------------------------------------------------------------
     void kyochouPanel(int count) 
     {
         if (count == 0) 
         {
+            //mojiPanel[1]の点滅強調
             //k7_1_2:オブジェを見えるようにするよ。
-            //mojiPanel[1].GetComponent<Image>().enabled = true;
-            
             //k7_a:オブジェを存在するけど見えなくする。
-            mojiPanel[1].GetComponent<Image>().enabled = kyochoHantei(1);
+            mojiPanel[1].GetComponent<Image>().enabled = kyochoHantei();
                    
         }
         else if(count == 1)
@@ -174,6 +175,7 @@ public class testPrehubYobi2 : MonoBehaviour
             mojiPanel[5].GetComponent<Image>().enabled = true;
         }
     }
+    //content(int textNumber, int count)メソッド-------------------------------------------------------------------------
     string content(int textNumber, int count) {
         string content = "";
         if (textNumber == 0) {

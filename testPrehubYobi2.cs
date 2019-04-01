@@ -75,7 +75,34 @@ public class testPrehubYobi2 : MonoBehaviour
     private bool tenmetuOnOff = true;
     public float interval = 0.35f;
 
-
+    bool kyochoHantei(int textNumber) 
+    {
+        if (tenmetuOnOff == true) 
+        {
+            if (elapse >= interval) 
+            {
+                tenmetuOnOff = false;
+                
+                //k6_ab:ストップウォッチの時間をリセット
+                stopwatch.Reset();
+                //k6_aa:ストップウォッチスタート
+                stopwatch.Start();
+                return (tenmetuOnOff);
+            }
+            return (true);
+        } 
+        else if (elapse >= interval) 
+        {
+            tenmetuOnOff = true;
+            
+            //k6_ab:ストップウォッチの時間をリセット
+            stopwatch.Reset();
+            //k6_aa:ストップウォッチスタート
+            stopwatch.Start();
+            return (tenmetuOnOff);
+        }
+        return (false);
+    }
 
 
     void kyochouPanel(int count) 
@@ -84,25 +111,10 @@ public class testPrehubYobi2 : MonoBehaviour
         {
             //k7_1_2:オブジェを見えるようにするよ。
             //mojiPanel[1].GetComponent<Image>().enabled = true;
-            if (tenmetuOnOff == true) {
-                if (elapse >= interval) {
-                    tenmetuOnOff = false;
-                    //k7_a:オブジェを存在するけど見えなくする。
-                    mojiPanel[1].GetComponent<Image>().enabled = false;
-                    //k6_ab:ストップウォッチの時間をリセット
-                    stopwatch.Reset();
-                    //k6_aa:ストップウォッチスタート
-                    stopwatch.Start();
-                }
-            } else if (elapse >= interval) {
-                tenmetuOnOff = true;
-                //k7_b:オブジェを見えるようにするよ。
-                mojiPanel[1].GetComponent<Image>().enabled = true;
-                //k6_ab:ストップウォッチの時間をリセット
-                stopwatch.Reset();
-                //k6_aa:ストップウォッチスタート
-                stopwatch.Start();
-            }
+            
+            //k7_a:オブジェを存在するけど見えなくする。
+            mojiPanel[1].GetComponent<Image>().enabled = kyochoHantei(1);
+                   
         }
         else if(count == 1)
         {

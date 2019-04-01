@@ -74,6 +74,10 @@ public class testPrehubYobi2 : MonoBehaviour
     private float elapse;
     private bool tenmetuOnOff = true;
     public float interval = 0.35f;
+
+
+
+
     void kyochouPanel(int count) 
     {
         if (count == 0) 

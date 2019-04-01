@@ -7,6 +7,8 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
     //k0014_1 :プレハブ（画面のobjでもOK）を使う objにはりつけ
     public GameObject line;
 
+    public GameObject moji;
+
     //プレハブから呼び出したlineを実際に当てはめる変数
     List<GameObject> L = new List<GameObject>();
 

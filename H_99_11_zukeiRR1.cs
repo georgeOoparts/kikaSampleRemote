@@ -10,7 +10,7 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
     public GameObject line;
     
     //プレハブで文字のオブジェを呼び出す
-    public GameObject moji;
+    public GameObject preMoji;
 
     //呼び出したmojiの親オブジェにするオブジェ。
     public GameObject zukei;
@@ -24,13 +24,13 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
     
     //文字オブジェ関係のlist-----------------------------------------
     //文字のオブジェを当てはめるlist
-    List<GameObject> gMoji = new List<GameObject>();
+    List<GameObject> gPreMoji = new List<GameObject>();
     
     //文字のオブジェのtextを当てはめるlist
     List<Text> textMoji=new List<Text>();
-    
+
     //文字のオブジェのrecttransformを当てはめるlist
-    //List<RectTransform> rtMoji = new List<RectTransform>();
+    List<RectTransform> rtPreMoji = new List<RectTransform>();
     //---------------------------------------------------------------
 
     //lineで作った三角形全体を上下に移動させる変数
@@ -43,17 +43,17 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
             //k0014_1_1 :プレハブを使う
             L.Add(Instantiate(line) as GameObject);
 
-            gMoji.Add(Instantiate(moji)as GameObject);
+            gPreMoji.Add(Instantiate(preMoji)as GameObject);
 
             //k0014_2_1_1 :プレハブをキャンバスの子供にする()
             L[i].transform.SetParent(this.gameObject.transform, false);
 
-            gMoji[i].transform.SetParent(zukei.transform, false);
+            gPreMoji[i].transform.SetParent(zukei.transform, false);
 
             //プレハブから呼び出したオブジェに名前をつける
             L[i].name = "line"+i;
 
-            gMoji[i].name = "moji" + i;
+            gPreMoji[i].name = "moji" + i;
 
             //k0015_99_1 :線を引くline回り　オブジェにラインをくっつける
             LR.Add(L[i].GetComponent<LineRenderer>());
@@ -64,7 +64,7 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
             //k2_1_1:Textをこのオブジェクトで使うためのおまじない
             //text = this.gameObject.GetComponent<Text>();
             //k0016_99_1_1_1：list新しい値を入れる
-            textMoji.Add(gMoji[i].GetComponent<Text>());
+            textMoji.Add(gPreMoji[i].transform.GetChild(0).gameObject.GetComponent<Text>());
 
             //rtMoji.Add(gMoji[i].GetComponent<RectTransform>());
 
@@ -85,9 +85,9 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
 
         //k2_1_1_1:text.text = "・・・ "でTEXTのないよう変更。
         //text.text = "k2_1_TextContentChange";
-        //textMoji[0].text = "A";
-        //textMoji[1].text = "B";
-        //textMoji[2].text = "C";
+        textMoji[0].text = "A";
+        textMoji[1].text = "B";
+        textMoji[2].text = "C";
 
     }
 }

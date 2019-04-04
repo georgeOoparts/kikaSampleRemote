@@ -5,31 +5,36 @@ using UnityEngine.UI;
 
 public class H_99_11_zukeiRR1 : MonoBehaviour
 {
-    //k0014_1 :プレハブ（画面のobjでもOK）を使う objにはりつけ
+    //k0014_1 :プレハブ（画面のobjでもOK）を使う objにはりつけ--------
+    //プレハブで線のオブジェを呼び出す
     public GameObject line;
-
+    
+    //プレハブで文字のオブジェを呼び出す
     public GameObject moji;
 
     //呼び出したmojiの親オブジェにするオブジェ。
     public GameObject zukei;
 
-    //プレハブから呼び出したlineを実際に当てはめる変数
+    //プレハブから呼び出したlineを実際に当てはめる変数----------------
+    //線のオブジェを当てはめるlist
     List<GameObject> L = new List<GameObject>();
 
-    List<GameObject> Moji = new List<GameObject>();
-
-    List<Text> textMoji=new List<Text>();
-
-    List<RectTransform> rtMoji = new List<RectTransform>();
-
-
     //k0015_99_1 :線を引くline回り　オブジェにラインをくっつける
-    List<LineRenderer> LR =new List<LineRenderer>();
+    List<LineRenderer> LR = new List<LineRenderer>();
+    
+    //文字オブジェ関係のlist-----------------------------------------
+    //文字のオブジェを当てはめるlist
+    List<GameObject> Moji = new List<GameObject>();
+    
+    //文字のオブジェのtextを当てはめるlist
+    List<Text> textMoji=new List<Text>();
+    
+    //文字のオブジェのrecttransformを当てはめるlist
+    List<RectTransform> rtMoji = new List<RectTransform>();
+    //---------------------------------------------------------------
 
-
-
+    //lineで作った三角形全体を上下に移動させる変数
     public float upDown = 1;
-    //public float rightLeft = 0;
 
     void Start()
     {

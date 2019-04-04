@@ -24,13 +24,13 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
     
     //文字オブジェ関係のlist-----------------------------------------
     //文字のオブジェを当てはめるlist
-    List<GameObject> Moji = new List<GameObject>();
+    List<GameObject> gMoji = new List<GameObject>();
     
     //文字のオブジェのtextを当てはめるlist
     List<Text> textMoji=new List<Text>();
     
     //文字のオブジェのrecttransformを当てはめるlist
-    List<RectTransform> rtMoji = new List<RectTransform>();
+    //List<RectTransform> rtMoji = new List<RectTransform>();
     //---------------------------------------------------------------
 
     //lineで作った三角形全体を上下に移動させる変数
@@ -43,23 +43,31 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
             //k0014_1_1 :プレハブを使う
             L.Add(Instantiate(line) as GameObject);
 
-            Moji.Add(Instantiate(moji)as GameObject);
+            gMoji.Add(Instantiate(moji)as GameObject);
 
             //k0014_2_1_1 :プレハブをキャンバスの子供にする()
             L[i].transform.SetParent(this.gameObject.transform, false);
 
-            Moji[i].transform.SetParent(zukei.transform, false);
+            gMoji[i].transform.SetParent(zukei.transform, false);
 
             //プレハブから呼び出したオブジェに名前をつける
             L[i].name = "line"+i;
 
-            Moji[i].name = "moji" + i;
+            gMoji[i].name = "moji" + i;
 
             //k0015_99_1 :線を引くline回り　オブジェにラインをくっつける
             LR.Add(L[i].GetComponent<LineRenderer>());
            
             //k0015_99_1_2 :頂点の数（この場合２つ）
             LR[i].positionCount = 2;
+
+            //k2_1_1:Textをこのオブジェクトで使うためのおまじない
+            //text = this.gameObject.GetComponent<Text>();
+            //k0016_99_1_1_1：list新しい値を入れる
+            textMoji.Add(gMoji[i].GetComponent<Text>());
+
+            //rtMoji.Add(gMoji[i].GetComponent<RectTransform>());
+
         }
     }
 
@@ -74,6 +82,12 @@ public class H_99_11_zukeiRR1 : MonoBehaviour
 
         LR[2].SetPosition(0, new Vector3(11.2f, 3.46f + upDown, -3f));
         LR[2].SetPosition(1, new Vector3(9.2f, 0f + upDown, -3f));
+
+        //k2_1_1_1:text.text = "・・・ "でTEXTのないよう変更。
+        //text.text = "k2_1_TextContentChange";
+        //textMoji[0].text = "A";
+        //textMoji[1].text = "B";
+        //textMoji[2].text = "C";
 
     }
 }

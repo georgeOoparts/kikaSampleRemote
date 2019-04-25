@@ -228,7 +228,7 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     int kazu=(int)fKazu
      ---------------------------------------------------------------------
     k0011:textのぼやけを直す
-    k0011:ヒエラルキー＞transform>scale x,yを小さくして(0.01暗い)＞textMesh＞fontsizeサイズ調整（７０位）
+    k0011:ヒエラルキー＞transform>scale x,yを小さくして(0.01暗い)＞textMesh＞fontsizeサイズ調整（500位）*charactorSizeじゃない事に注意
     ----------------------------------------------------------------------
     k0012:3dtextをuitextの後ろに表示しようとする。
     k0012:uitextをカメラに固定カメラのｚポジション０

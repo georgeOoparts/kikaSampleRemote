@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class H_99_11_zukeiRR1 : MonoBehaviour
 {
     //オブジェRRの子供＞RR1にアタッチ
-    //１　線で3角形を表示
+    
+        //１　線で3角形を表示
     //２　１の三角形で使う記号の文字を表示
 
     //k0014_1 :プレハブ（画面のobjでもOK）を使う objにはりつけ--------

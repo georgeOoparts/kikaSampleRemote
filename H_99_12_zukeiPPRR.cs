@@ -11,8 +11,26 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     public H_99_01_kyoutuHensu kyotu;
 
-    //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
-    //yosu.cube1で普通に使える
+
+    //pprrのオブジェを当てはめる
+    //>まずは文字から
+    public GameObject pprrTextA;
+    public GameObject pprrTextB;
+    public GameObject pprrTextC;
+    public GameObject pprrTextP;
+
+    //>線を当てはめる
+    public GameObject pprrLineAB;
+    public GameObject pprrLineBC;
+    public GameObject pprrLineCA;
+    public GameObject pprrLineAP;
+
+    //>強調線を当てはめる
+    public GameObject pprrLineSAB;
+    public GameObject pprrLineSBC;
+    public GameObject pprrLineSCA;
+    public GameObject pprrLineSAP;
+
     void Start()
     {
         
@@ -20,6 +38,10 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("zykei" + kyotu.rrCount);
+        //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
+        //yosu.cube1で普通に使える
+        //Debug.Log("zykei" + kyotu.rrCount);
+        Debug.Log(pprrTextA.name);
+
     }
 }

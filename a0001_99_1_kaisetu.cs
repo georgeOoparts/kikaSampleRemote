@@ -197,7 +197,7 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     
     具体例＞＞Debug.Log(elapse);//何秒たったかを表示させたいときはこれを使う
 ----------------------------------------------------------------------------------
-    //k7オブジェクトを見えたり見えなくしたりする
+    //k7オブジェクトを見えたり見えなくしたりする(オブジェがUIの時)---
 
     //k7_1:Imageコンポーネントを使う
     using UnityEngine.UI;
@@ -207,6 +207,15 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
 
     //k7_1_2:オブジェを見えるようにするよ。
     this.gameObject.GetComponent<Image>().enabled = true;
+
+    //k7Bオブジェクトを見えたり見えなくしたりする(uiじゃないオブジェの時)---
+
+    //k7B_1_1:オブジェを存在するけど見えなくする。
+    this.gameObject.GetComponent<Renderer>().enabled = false; 
+
+    //k7B_1_2:オブジェを見えるようにするよ。
+    this.gameObject.GetComponent<Renderer>().enabled = true;
+
 ----------------------------------------------------------------------------------
     k8：：親、子供　オブジェ呼び出し
 

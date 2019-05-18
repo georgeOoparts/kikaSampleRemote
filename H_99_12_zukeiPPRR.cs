@@ -34,7 +34,9 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
 
     void Start()
     {
-        pprrTextA.GetComponent<Image>().enabled = false;
+        //pprrTextA.GetComponent<Image>().enabled = false;
+        Debug.Log(pprrTextA.name);
+
     }
 
     void Update()

@@ -8,6 +8,7 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
     //空のオブジェPPRRにアタッチして　zukei変化をコントロールするプルグラム
     //ターンは共通変数のrrCountで進む
     //rrcountはtestPrehubYobi2で進むようにしてある。
+    //とりあえずa,b,cなどの文字のばっくを点滅させる。
 
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     public H_99_01_kyoutuHensu kyotu;
@@ -34,7 +35,7 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
 
     void Start()
     {
-        pprrTextA.GetComponent<Renderer>().enabled = false; 
+        //pprrTextA.GetComponent<Renderer>().enabled = false; 
             //renderer.enabled = false;
         //Debug.Log(pprrTextA.name);
 

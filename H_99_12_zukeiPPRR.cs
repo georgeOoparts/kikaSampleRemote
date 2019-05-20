@@ -35,9 +35,9 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
 
     void Start()
     {
-        //pprrTextA.GetComponent<Renderer>().enabled = false; 
-        //renderer.enabled = false;
         //Debug.Log(pprrTextA.name);
+        
+        //kyouchoupanelの点滅の時間処理のために使う。ストップウォッチ
         //k6_aa:ストップウォッチスタート
         stopwatch.Start();
 
@@ -47,11 +47,8 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
     {
         //k6_ac:何秒たったかを変数elapseに入れる
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
-        
-        //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
-        //yosu.cube1で普通に使える
-        //Debug.Log("zykei" + kyotu.rrCount);
-        //Debug.Log(pprrTextA.name);
+
+        //強調表現の為のメソッドrrcountで処理
         kyochouPanel(kyotu.rrCount);//
 
     }
@@ -97,14 +94,13 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
     void kyochouPanel(int count) {
         if (count == 0) 
         {
-            //mojiPanel[1]の点滅強調
-            //k7_1_2:オブジェを見えるようにするよ。
-            //k7_a:オブジェを存在するけど見えなくする。
-            //mojiPanel[1].GetComponent<Image>().enabled = kyochoHantei();
-            //pprrTextA.GetComponent<Image>().enabled = kyochoHantei();//////
-            //pprrTextA.GetComponent<Image>().enabled = false;
+            //strongtextの点滅強調
+
+            //k7B_1_1:オブジェを存在するけど見えなくする。
+            //k7B_1_2:オブジェを見えるようにするよ。
+
             pprrTextA.GetComponent<Renderer>().enabled = kyochoHantei();
-            //pprrTextA.GetComponent<Renderer>().enabled = false;
+            
             Debug.Log("OKKKK:::"+ elapse);
             //} else if (count == 1) {
             //    for (int i = 0; i < kodomoTextText.Count; i++) {

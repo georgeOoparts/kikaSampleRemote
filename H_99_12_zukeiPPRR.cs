@@ -50,7 +50,7 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
         //yosu.cube1で普通に使える
         //Debug.Log("zykei" + kyotu.rrCount);
         //Debug.Log(pprrTextA.name);
-        //kyochouPanel(kyotu.rrCount);//
+        kyochouPanel(kyotu.rrCount);//
 
     }
     //点滅強調に使う。kyochoHantei()メソッド--------------------------------------------------------
@@ -93,13 +93,17 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
 
     //kyochouPanel(int count) ------------------------------------------------------------------------------
     void kyochouPanel(int count) {
-        if (count == 0) {
+        if (count == 0) 
+        {
             //mojiPanel[1]の点滅強調
             //k7_1_2:オブジェを見えるようにするよ。
             //k7_a:オブジェを存在するけど見えなくする。
             //mojiPanel[1].GetComponent<Image>().enabled = kyochoHantei();
             //pprrTextA.GetComponent<Image>().enabled = kyochoHantei();//////
             //pprrTextA.GetComponent<Image>().enabled = false;
+            //pprrTextA.GetComponent<Renderer>().enabled = kyochoHantei();
+            pprrTextA.GetComponent<Renderer>().enabled = false;
+            Debug.Log("OKKKK:::"+ pprrTextA.name);
             //} else if (count == 1) {
             //    for (int i = 0; i < kodomoTextText.Count; i++) {
             //        mojiPanel[i].GetComponent<Image>().enabled = false;

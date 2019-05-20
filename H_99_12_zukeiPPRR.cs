@@ -15,11 +15,24 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
 
 
     //pprrのオブジェを当てはめる
-    //>まずは文字から
-    public GameObject pprrTextA;
-    public GameObject pprrTextB;
-    public GameObject pprrTextC;
-    public GameObject pprrTextP;
+
+    //>点（シリンダーオブジェの角度変えた物）    
+    public GameObject pointA;
+    public GameObject pointB;
+    public GameObject pointC;
+    public GameObject pointP;
+
+    //>それぞれの点の名前をあらわす文字
+    public GameObject pointTextA;
+    public GameObject pointTextB;
+    public GameObject pointTextC;
+    public GameObject pointTextP;
+
+    //>それぞれの点の名前をあらわす文字を強調するためのCUBEオブジェ
+    public GameObject pointTextStrongA;
+    public GameObject pointTextStrongB;
+    public GameObject pointTextStrongC;
+    public GameObject pointTextStrongP;
 
     //>線を当てはめる
     public GameObject pprrLineAB;
@@ -99,7 +112,7 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
             //k7B_1_1:オブジェを存在するけど見えなくする。
             //k7B_1_2:オブジェを見えるようにするよ。
 
-            pprrTextA.GetComponent<Renderer>().enabled = kyochoHantei();
+            pointTextStrongA.GetComponent<Renderer>().enabled = kyochoHantei();
             
             Debug.Log("OKKKK:::"+ elapse);
             //} else if (count == 1) {

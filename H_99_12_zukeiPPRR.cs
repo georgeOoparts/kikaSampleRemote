@@ -38,6 +38,7 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
         //pprrTextA.GetComponent<Renderer>().enabled = false; 
         //renderer.enabled = false;
         //Debug.Log(pprrTextA.name);
+        //k6_aa:ストップウォッチスタート
         stopwatch.Start();
 
     }
@@ -102,8 +103,8 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
             //mojiPanel[1].GetComponent<Image>().enabled = kyochoHantei();
             //pprrTextA.GetComponent<Image>().enabled = kyochoHantei();//////
             //pprrTextA.GetComponent<Image>().enabled = false;
-            //pprrTextA.GetComponent<Renderer>().enabled = kyochoHantei();
-            pprrTextA.GetComponent<Renderer>().enabled = false;
+            pprrTextA.GetComponent<Renderer>().enabled = kyochoHantei();
+            //pprrTextA.GetComponent<Renderer>().enabled = false;
             Debug.Log("OKKKK:::"+ elapse);
             //} else if (count == 1) {
             //    for (int i = 0; i < kodomoTextText.Count; i++) {

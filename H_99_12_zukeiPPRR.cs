@@ -36,8 +36,9 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
     void Start()
     {
         //pprrTextA.GetComponent<Renderer>().enabled = false; 
-            //renderer.enabled = false;
+        //renderer.enabled = false;
         //Debug.Log(pprrTextA.name);
+        stopwatch.Start();
 
     }
 
@@ -103,7 +104,7 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
             //pprrTextA.GetComponent<Image>().enabled = false;
             //pprrTextA.GetComponent<Renderer>().enabled = kyochoHantei();
             pprrTextA.GetComponent<Renderer>().enabled = false;
-            Debug.Log("OKKKK:::"+ pprrTextA.name);
+            Debug.Log("OKKKK:::"+ elapse);
             //} else if (count == 1) {
             //    for (int i = 0; i < kodomoTextText.Count; i++) {
             //        mojiPanel[i].GetComponent<Image>().enabled = false;

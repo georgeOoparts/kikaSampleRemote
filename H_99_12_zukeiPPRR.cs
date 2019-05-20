@@ -35,16 +35,16 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
     public GameObject pointTextStrongP;
 
     //>線を当てはめる
-    public GameObject pprrLineAB;
-    public GameObject pprrLineBC;
-    public GameObject pprrLineCA;
-    public GameObject pprrLineAP;
+    public GameObject LineAB;
+    public GameObject LineBC;
+    public GameObject LineCA;
+    public GameObject LineAP;
 
     //>強調線を当てはめる
-    public GameObject pprrLineSAB;
-    public GameObject pprrLineSBC;
-    public GameObject pprrLineSCA;
-    public GameObject pprrLineSAP;
+    public GameObject LineSAB;
+    public GameObject LineSBC;
+    public GameObject LineSCA;
+    public GameObject LineSAP;
 
     void Start()
     {
@@ -113,7 +113,20 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
             //k7B_1_2:オブジェを見えるようにするよ。
 
             pointTextStrongA.GetComponent<Renderer>().enabled = kyochoHantei();
-            
+            pointTextStrongB.GetComponent<Renderer>().enabled = kyochoHantei();
+            pointTextStrongC.GetComponent<Renderer>().enabled = kyochoHantei();
+
+            //lineA,B,Cの点滅強調
+
+            //k7B_1_1:オブジェを存在するけど見えなくする。
+            //k7B_1_2:オブジェを見えるようにするよ。
+
+            //LineAB.GetComponent<Renderer>().enabled = kyochoHantei();
+            //LineBC.GetComponent<Renderer>().enabled = kyochoHantei();
+            //LineCA.GetComponent<Renderer>().enabled = kyochoHantei();
+
+
+
             Debug.Log("OKKKK:::"+ elapse);
             //} else if (count == 1) {
             //    for (int i = 0; i < kodomoTextText.Count; i++) {

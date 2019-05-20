@@ -113,19 +113,26 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
             //k7B_1_2:オブジェを見えるようにするよ。
 
             pointTextStrongA.GetComponent<Renderer>().enabled = kyochoHantei();
-            pointTextStrongB.GetComponent<Renderer>().enabled = kyochoHantei();
-            pointTextStrongC.GetComponent<Renderer>().enabled = kyochoHantei();
+            pointTextStrongB.GetComponent<Renderer>().enabled = tenmetuOnOff;
+            pointTextStrongC.GetComponent<Renderer>().enabled = tenmetuOnOff;
 
             //lineA,B,Cの点滅強調
 
             //k7B_1_1:オブジェを存在するけど見えなくする。
             //k7B_1_2:オブジェを見えるようにするよ。
 
-            //LineAB.GetComponent<Renderer>().enabled = kyochoHantei();
-            //LineBC.GetComponent<Renderer>().enabled = kyochoHantei();
-            //LineCA.GetComponent<Renderer>().enabled = kyochoHantei();
+            LineSAB.GetComponent<Renderer>().enabled = tenmetuOnOff;
+            LineSBC.GetComponent<Renderer>().enabled = tenmetuOnOff;
+            LineSCA.GetComponent<Renderer>().enabled = tenmetuOnOff;
 
+            //lineA,B,Cの点滅強調
 
+            //k7B_1_1:オブジェを存在するけど見えなくする。
+            //k7B_1_2:オブジェを見えるようにするよ。
+
+            pointA.GetComponent<Renderer>().enabled = tenmetuOnOff;
+            pointB.GetComponent<Renderer>().enabled = tenmetuOnOff;
+            pointC.GetComponent<Renderer>().enabled = tenmetuOnOff;
 
             Debug.Log("OKKKK:::"+ elapse);
             //} else if (count == 1) {

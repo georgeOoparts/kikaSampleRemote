@@ -143,8 +143,9 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
             if(firstResetCount==1)turnReset();
 
             //強調
-            pointA.GetComponent<Renderer>().enabled = kyochoHantei();
-            //pointA.GetComponent<Renderer>().enabled = tenmetuOnOff;
+            pointTextStrongA.GetComponent<Renderer>().enabled = kyochoHantei();
+
+            pointA.GetComponent<Renderer>().enabled = tenmetuOnOff;
 
             Debug.Log("OKKKK:"+count+"::" + elapse);
 
@@ -152,7 +153,32 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
         else if (count == 2) 
         {
             //初期リセット
-            turnReset();
+            if (firstResetCount == 2) turnReset();
+        } 
+        else if (count == 3) 
+        {
+            //初期リセット
+            if (firstResetCount == 3) turnReset();
+        } 
+        else if (count == 4) 
+        {
+            //初期リセット
+            if (firstResetCount == 4) turnReset();
+        } 
+        else if (count == 5) 
+        {
+            //初期リセット
+            if (firstResetCount == 5) turnReset();
+        } 
+        else if (count == 6) 
+        {
+            //初期リセット
+            if (firstResetCount == 6) turnReset();
+        } 
+        else if (count == 7) 
+        {
+            //初期リセット
+            if (firstResetCount == 7) turnReset();
         }
     }
     //ターンの最初にオブジェを初期化するメソッド--------------
@@ -165,11 +191,13 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
         //>点滅につかうブール変数をリセット
         tenmetuOnOff = true;
 
-        //k6_ab:ストップウォッチの時間をリセット
-        //stopwatch.Reset();
-        //k6_aa:ストップウォッチスタート
-        //stopwatch.Start();
 
+        //点滅のタイミングを文字とあわせるためにやる----
+        //k6_ab:ストップウォッチの時間をリセット
+        stopwatch.Reset();
+        //k6_aa:ストップウォッチスタート
+        stopwatch.Start();
+        //------
 
 
         //>線の初期リセット

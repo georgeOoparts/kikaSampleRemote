@@ -108,8 +108,7 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
 
     //kyochouPanel(int count) ------------------------------------------------------------------------------
     void kyochouPanel(int count) {
-        if (count == 0) 
-        {
+        if (count == 0) {
             //strongtextの点滅強調
 
             //k7B_1_1:オブジェを存在するけど見えなくする。
@@ -137,34 +136,55 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
             pointB.GetComponent<Renderer>().enabled = tenmetuOnOff;
             pointC.GetComponent<Renderer>().enabled = tenmetuOnOff;
 
-            Debug.Log("OKKKK:::"+ elapse);
-        }
+            Debug.Log("OKKKK:::" + elapse);
+        } 
         else if (count == 1) 
         {
             //初期リセット
-            //>線の初期リセット
-            LineAB.GetComponent<Renderer>().enabled = true;
-            LineBC.GetComponent<Renderer>().enabled = true;
-            LineCA.GetComponent<Renderer>().enabled = true;
-            LineAP.GetComponent<Renderer>().enabled = false;
+            turnReset();
 
-            //>強調線の初期リセット
-            LineSAB.GetComponent<Renderer>().enabled = false;
-            LineSBC.GetComponent<Renderer>().enabled = false;
-            LineSCA.GetComponent<Renderer>().enabled = false;
-            LineSAP.GetComponent<Renderer>().enabled = false;
-
-            //>点の初期リセット
-            pointA.GetComponent<Renderer>().enabled = false;
-            pointB.GetComponent<Renderer>().enabled = false;
-            pointC.GetComponent<Renderer>().enabled = false;
-            pointP.GetComponent<Renderer>().enabled = false;
-
-            //>強調文字キューブの初期リセット
-            pointTextStrongA.GetComponent<Renderer>().enabled = false;
-            pointTextStrongB.GetComponent<Renderer>().enabled = false;
-            pointTextStrongC.GetComponent<Renderer>().enabled = false;
-            pointTextStrongP.GetComponent<Renderer>().enabled = false;
+            //強調
+            pointA.GetComponent<Renderer>().enabled = kyochoHantei();
+        } 
+        else if (count==2) 
+        {
+            //初期リセット
+            turnReset();
         }
+    }
+    //ターンの最初にオブジェを初期化するメソッド
+    void turnReset() 
+    {
+        //初期リセット
+
+        //>点滅につかうブール変数をリセット
+        tenmetuOnOff = true;
+
+        //k6_ac:何秒たったかを変数elapseに入れる
+        //elapse = 0;
+
+        //>線の初期リセット
+        LineAB.GetComponent<Renderer>().enabled = true;
+        LineBC.GetComponent<Renderer>().enabled = true;
+        LineCA.GetComponent<Renderer>().enabled = true;
+        LineAP.GetComponent<Renderer>().enabled = false;
+
+        //>強調線の初期リセット
+        LineSAB.GetComponent<Renderer>().enabled = false;
+        LineSBC.GetComponent<Renderer>().enabled = false;
+        LineSCA.GetComponent<Renderer>().enabled = false;
+        LineSAP.GetComponent<Renderer>().enabled = false;
+
+        //>点の初期リセット
+        pointA.GetComponent<Renderer>().enabled = false;
+        pointB.GetComponent<Renderer>().enabled = false;
+        pointC.GetComponent<Renderer>().enabled = false;
+        pointP.GetComponent<Renderer>().enabled = false;
+
+        //>強調文字キューブの初期リセット
+        pointTextStrongA.GetComponent<Renderer>().enabled = false;
+        pointTextStrongB.GetComponent<Renderer>().enabled = false;
+        pointTextStrongC.GetComponent<Renderer>().enabled = false;
+        pointTextStrongP.GetComponent<Renderer>().enabled = false;
     }
 }

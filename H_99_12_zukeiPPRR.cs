@@ -138,46 +138,16 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
             pointC.GetComponent<Renderer>().enabled = tenmetuOnOff;
 
             Debug.Log("OKKKK:::"+ elapse);
-            //} else if (count == 1) {
-            //    for (int i = 0; i < kodomoTextText.Count; i++) {
-            //        mojiPanel[i].GetComponent<Image>().enabled = false;
-            //    }
+        }
+        else if (count == 1) 
+        {
+            //初期リセット
+            //>線の初期リセット
+            LineAB.GetComponent<Renderer>().enabled = true;
+            LineBC.GetComponent<Renderer>().enabled = true;
+            LineCA.GetComponent<Renderer>().enabled = true;
+            LineAP.GetComponent<Renderer>().enabled = false;
 
-            //    //k7_1_2:オブジェを見えるようにするよ。
-            //    mojiPanel[1].GetComponent<Image>().enabled = kyochoHantei();
-
-
-            //} else if (count == 2) {
-            //    for (int i = 0; i < kodomoTextText.Count; i++) {
-            //        mojiPanel[i].GetComponent<Image>().enabled = false;
-            //    }
-            //    //k7_1_2:オブジェを見えるようにするよ。
-            //    mojiPanel[3].GetComponent<Image>().enabled = kyochoHantei();
-            //} else if (count == 3) {
-            //    for (int i = 0; i < kodomoTextText.Count; i++) {
-            //        mojiPanel[i].GetComponent<Image>().enabled = false;
-            //    }
-            //    //k7_1_2:オブジェを見えるようにするよ。
-            //    mojiPanel[5].GetComponent<Image>().enabled = kyochoHantei();
-            //} else if (count == 4) {
-            //    for (int i = 0; i < kodomoTextText.Count; i++) {
-            //        mojiPanel[i].GetComponent<Image>().enabled = false;
-            //    }
-            //    //k7_1_2:オブジェを見えるようにするよ。
-            //    mojiPanel[1].GetComponent<Image>().enabled = kyochoHantei();
-            //} else if (count == 5) {
-            //    for (int i = 0; i < kodomoTextText.Count; i++) {
-            //        mojiPanel[i].GetComponent<Image>().enabled = false;
-            //    }
-            //    //k7_1_2:オブジェを見えるようにするよ。
-            //    mojiPanel[3].GetComponent<Image>().enabled = kyochoHantei();
-            //} else if (count == 6) {
-            //    for (int i = 0; i < kodomoTextText.Count; i++) {
-            //        mojiPanel[i].GetComponent<Image>().enabled = false;
-            //    }
-            //    //k7_1_2:オブジェを見えるようにするよ。
-            //    mojiPanel[5].GetComponent<Image>().enabled = kyochoHantei();
-            //}
         }
     }
 }

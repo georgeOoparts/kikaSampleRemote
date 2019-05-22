@@ -73,7 +73,7 @@ public class testPrehubYobi2 : MonoBehaviour
     //k6_a:ストップウォッチ関数を使う時のおまじない。
     private System.Diagnostics.Stopwatch stopwatch
         = new System.Diagnostics.Stopwatch();
-    private float elapse;
+    public float elapse=0;
     private bool tenmetuOnOff = true;
     public float interval = 0.35f;
 

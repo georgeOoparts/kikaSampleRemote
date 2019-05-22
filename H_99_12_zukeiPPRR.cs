@@ -46,23 +46,27 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
     public GameObject LineSCA;
     public GameObject LineSAP;
 
+    public testPrehubYobi2 t2;
+
     void Start()
     {
         //Debug.Log(pprrTextA.name);
         
         //kyouchoupanelの点滅の時間処理のために使う。ストップウォッチ
         //k6_aa:ストップウォッチスタート
-        stopwatch.Start();
+        //stopwatch.Start();
 
     }
 
     void Update()
     {
         //k6_ac:何秒たったかを変数elapseに入れる
-        elapse = (float)stopwatch.Elapsed.TotalSeconds;
+        //elapse = (float)stopwatch.Elapsed.TotalSeconds;
+
+        //Debug.Log(t2.interval);
 
         //強調表現の為のメソッドrrcountで処理
-        kyochouPanel(kyotu.rrCount);//
+        kyochouPanel(kyotu.rrCount);//////////////65
 
     }
     //点滅強調に使う。kyochoHantei()メソッド--------------------------------------------------------
@@ -71,36 +75,37 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
     //updateメソッドで、 elapse = (float)stopwatch.Elapsed.TotalSeconds;
     //をわすれずに
     //k6_a:ストップウォッチ関数を使う時のおまじない。
-    private System.Diagnostics.Stopwatch stopwatch
-        = new System.Diagnostics.Stopwatch();
-    private float elapse;
+    //private System.Diagnostics.Stopwatch stopwatch
+    //    = new System.Diagnostics.Stopwatch();
+    //private float elapse;
     private bool tenmetuOnOff = true;
     public float interval = 0.35f;
+
 
     bool kyochoHantei() 
     {
         if (tenmetuOnOff == true) 
         {
-            if (elapse >= interval) 
+            if (t2.elapse >= interval) //////////////86
             {
                 tenmetuOnOff = false;
 
                 //k6_ab:ストップウォッチの時間をリセット
-                stopwatch.Reset();
+                //stopwatch.Reset();
                 //k6_aa:ストップウォッチスタート
-                stopwatch.Start();
+                //stopwatch.Start();
                 return (tenmetuOnOff);
             }
             return (true);
         } 
-        else if (elapse >= interval) 
+        else if (t2.elapse >= interval) 
         {
             tenmetuOnOff = true;
 
             //k6_ab:ストップウォッチの時間をリセット
-            stopwatch.Reset();
+            //stopwatch.Reset();
             //k6_aa:ストップウォッチスタート
-            stopwatch.Start();
+            //stopwatch.Start();
             return (tenmetuOnOff);
         }
         return (false);
@@ -114,7 +119,7 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
             //k7B_1_1:オブジェを存在するけど見えなくする。
             //k7B_1_2:オブジェを見えるようにするよ。
 
-            pointTextStrongA.GetComponent<Renderer>().enabled = kyochoHantei();
+            pointTextStrongA.GetComponent<Renderer>().enabled = kyochoHantei();//////119
             pointTextStrongB.GetComponent<Renderer>().enabled = tenmetuOnOff;
             pointTextStrongC.GetComponent<Renderer>().enabled = tenmetuOnOff;
 

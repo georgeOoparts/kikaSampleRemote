@@ -148,6 +148,13 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
             LineCA.GetComponent<Renderer>().enabled = true;
             LineAP.GetComponent<Renderer>().enabled = false;
 
+            //>点の初期リセット
+            pointA.GetComponent<Renderer>().enabled = false;
+            pointB.GetComponent<Renderer>().enabled = false;
+            pointC.GetComponent<Renderer>().enabled = false;
+            pointP.GetComponent<Renderer>().enabled = false;
+
+
         }
     }
 }

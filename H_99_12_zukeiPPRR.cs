@@ -67,6 +67,9 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
     }
     //点滅強調に使う。kyochoHantei()メソッド--------------------------------------------------------
     //void kyochouPanel(int count) の中で使う。
+    //startメソッドで、stopwatch.Start();
+    //updateメソッドで、 elapse = (float)stopwatch.Elapsed.TotalSeconds;
+    //をわすれずに
     //k6_a:ストップウォッチ関数を使う時のおまじない。
     private System.Diagnostics.Stopwatch stopwatch
         = new System.Diagnostics.Stopwatch();

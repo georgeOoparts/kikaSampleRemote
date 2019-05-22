@@ -154,26 +154,46 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
         {
             //初期リセット
             if (firstResetCount == 2) turnReset();
+
+            //pointTextStrongB.GetComponent<Renderer>().enabled = kyochoHantei();
+
+    
+
+            LineSBC.GetComponent<Renderer>().enabled = kyochoHantei();
         } 
         else if (count == 3) 
         {
             //初期リセット
             if (firstResetCount == 3) turnReset();
+
+            LineSAP.GetComponent<Renderer>().enabled = kyochoHantei();
+
         } 
         else if (count == 4) 
         {
             //初期リセット
             if (firstResetCount == 4) turnReset();
+
+            LineSAP.GetComponent<Renderer>().enabled = kyochoHantei();
         } 
         else if (count == 5) 
         {
             //初期リセット
             if (firstResetCount == 5) turnReset();
+
+            LineSBC.GetComponent<Renderer>().enabled = kyochoHantei();
         } 
         else if (count == 6) 
         {
             //初期リセット
             if (firstResetCount == 6) turnReset();
+
+            pointTextStrongP.GetComponent<Renderer>().enabled = kyochoHantei();
+
+            pointP.GetComponent<Renderer>().enabled = tenmetuOnOff;
+
+            pointTextP.GetComponent<Renderer>().enabled = true;
+
         } 
         else if (count == 7) 
         {
@@ -189,22 +209,35 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
         //初期リセット
 
         //>点滅につかうブール変数をリセット
-        tenmetuOnOff = true;
+        //tenmetuOnOff = true;
 
 
         //点滅のタイミングを文字とあわせるためにやる----
         //k6_ab:ストップウォッチの時間をリセット
-        stopwatch.Reset();
+        //stopwatch.Reset();
         //k6_aa:ストップウォッチスタート
-        stopwatch.Start();
+        //stopwatch.Start();
         //------
 
+        if (firstResetCount>=7) 
+        {
+            pointTextP.GetComponent<Renderer>().enabled = true;
+        }
 
         //>線の初期リセット
         LineAB.GetComponent<Renderer>().enabled = true;
         LineBC.GetComponent<Renderer>().enabled = true;
         LineCA.GetComponent<Renderer>().enabled = true;
-        LineAP.GetComponent<Renderer>().enabled = false;
+        if (firstResetCount >= 3) 
+        {
+            LineAP.GetComponent<Renderer>().enabled = true;
+        } 
+        else 
+        {
+            LineAP.GetComponent<Renderer>().enabled = false;
+        }
+
+
 
         //>強調線の初期リセット
         LineSAB.GetComponent<Renderer>().enabled = false;

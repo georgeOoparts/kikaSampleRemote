@@ -147,7 +147,7 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
 
             pointA.GetComponent<Renderer>().enabled = tenmetuOnOff;
 
-            Debug.Log("OKKKK:"+count+"::" + elapse);
+            //Debug.Log("OKKKK:"+count+"::" + elapse);
 
         } 
         else if (count == 2) 

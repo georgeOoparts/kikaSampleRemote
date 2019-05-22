@@ -148,13 +148,23 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
             LineCA.GetComponent<Renderer>().enabled = true;
             LineAP.GetComponent<Renderer>().enabled = false;
 
+            //>強調線の初期リセット
+            LineSAB.GetComponent<Renderer>().enabled = false;
+            LineSBC.GetComponent<Renderer>().enabled = false;
+            LineSCA.GetComponent<Renderer>().enabled = false;
+            LineSAP.GetComponent<Renderer>().enabled = false;
+
             //>点の初期リセット
             pointA.GetComponent<Renderer>().enabled = false;
             pointB.GetComponent<Renderer>().enabled = false;
             pointC.GetComponent<Renderer>().enabled = false;
             pointP.GetComponent<Renderer>().enabled = false;
 
-
+            //>強調文字キューブの初期リセット
+            pointTextStrongA.GetComponent<Renderer>().enabled = false;
+            pointTextStrongB.GetComponent<Renderer>().enabled = false;
+            pointTextStrongC.GetComponent<Renderer>().enabled = false;
+            pointTextStrongP.GetComponent<Renderer>().enabled = false;
         }
     }
 }

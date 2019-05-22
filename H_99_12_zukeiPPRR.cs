@@ -136,23 +136,28 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
             pointB.GetComponent<Renderer>().enabled = tenmetuOnOff;
             pointC.GetComponent<Renderer>().enabled = tenmetuOnOff;
 
-            Debug.Log("OKKKK:::" + elapse);
         } 
         else if (count == 1) 
         {
             //初期リセット
-            turnReset();
+            if(firstResetCount==1)turnReset();
 
             //強調
             pointA.GetComponent<Renderer>().enabled = kyochoHantei();
+            //pointA.GetComponent<Renderer>().enabled = tenmetuOnOff;
+
+            Debug.Log("OKKKK:"+count+"::" + elapse);
+
         } 
-        else if (count==2) 
+        else if (count == 2) 
         {
             //初期リセット
             turnReset();
         }
     }
-    //ターンの最初にオブジェを初期化するメソッド
+    //ターンの最初にオブジェを初期化するメソッド--------------
+    //最初の1回だけリセットしたい。そのための変数
+    private int firstResetCount = 1;
     void turnReset() 
     {
         //初期リセット
@@ -160,8 +165,12 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
         //>点滅につかうブール変数をリセット
         tenmetuOnOff = true;
 
-        //k6_ac:何秒たったかを変数elapseに入れる
-        //elapse = 0;
+        //k6_ab:ストップウォッチの時間をリセット
+        //stopwatch.Reset();
+        //k6_aa:ストップウォッチスタート
+        //stopwatch.Start();
+
+
 
         //>線の初期リセット
         LineAB.GetComponent<Renderer>().enabled = true;
@@ -186,5 +195,7 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
         pointTextStrongB.GetComponent<Renderer>().enabled = false;
         pointTextStrongC.GetComponent<Renderer>().enabled = false;
         pointTextStrongP.GetComponent<Renderer>().enabled = false;
+
+        firstResetCount++;
     }
 }

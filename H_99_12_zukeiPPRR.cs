@@ -5,10 +5,13 @@ using UnityEngine.UI;
 
 public class H_99_12_zukeiPPRR : MonoBehaviour
 {
-    //空のオブジェPPRRにアタッチして　zukei変化をコントロールするプルグラム
+    //空のオブジェPPRRにアタッチして　zukei表示変化、強調変化をコントロールするプルグラム
     //ターンは共通変数のrrCountで進む
     //rrcountはtestPrehubYobi2で進むようにしてある。
     //とりあえずa,b,cなどの文字のばっくを点滅させる。
+
+    //プロトプロト　完成版　
+    //注意、testPrehubYobi2のストップウォッチと同期するためelapseを共通変数にしている
 
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     public H_99_01_kyoutuHensu kyotu;
@@ -46,54 +49,36 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
     public GameObject LineSCA;
     public GameObject LineSAP;
 
+    //testPrehubYobi2との共通変数
     public testPrehubYobi2 t2;
 
     void Start()
     {
-        //Debug.Log(pprrTextA.name);
-        
-        //kyouchoupanelの点滅の時間処理のために使う。ストップウォッチ
-        //k6_aa:ストップウォッチスタート
-        //stopwatch.Start();
+       
 
     }
 
     void Update()
     {
-        //k6_ac:何秒たったかを変数elapseに入れる
-        //elapse = (float)stopwatch.Elapsed.TotalSeconds;
-
-        //Debug.Log(t2.interval);
-
         //強調表現の為のメソッドrrcountで処理
         kyochouPanel(kyotu.rrCount);//////////////65
-
     }
     //点滅強調に使う。kyochoHantei()メソッド--------------------------------------------------------
     //void kyochouPanel(int count) の中で使う。
     //startメソッドで、stopwatch.Start();
-    //updateメソッドで、 elapse = (float)stopwatch.Elapsed.TotalSeconds;
-    //をわすれずに
-    //k6_a:ストップウォッチ関数を使う時のおまじない。
-    //private System.Diagnostics.Stopwatch stopwatch
-    //    = new System.Diagnostics.Stopwatch();
-    //private float elapse;
+    
     private bool tenmetuOnOff = true;
     public float interval = 0.35f;
-
 
     bool kyochoHantei() 
     {
         if (tenmetuOnOff == true) 
         {
-            if (t2.elapse >= interval) //////////////86
+            if (t2.elapse >= interval) //testPrehubYobi2との共通変数
             {
                 tenmetuOnOff = false;
 
-                //k6_ab:ストップウォッチの時間をリセット
-                //stopwatch.Reset();
-                //k6_aa:ストップウォッチスタート
-                //stopwatch.Start();
+                
                 return (tenmetuOnOff);
             }
             return (true);
@@ -102,10 +87,7 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
         {
             tenmetuOnOff = true;
 
-            //k6_ab:ストップウォッチの時間をリセット
-            //stopwatch.Reset();
-            //k6_aa:ストップウォッチスタート
-            //stopwatch.Start();
+            
             return (tenmetuOnOff);
         }
         return (false);
@@ -213,17 +195,6 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
     {
         //初期リセット
 
-        //>点滅につかうブール変数をリセット
-        //tenmetuOnOff = true;
-
-
-        //点滅のタイミングを文字とあわせるためにやる----
-        //k6_ab:ストップウォッチの時間をリセット
-        //stopwatch.Reset();
-        //k6_aa:ストップウォッチスタート
-        //stopwatch.Start();
-        //------
-
         if (firstResetCount>=7) 
         {
             pointTextP.GetComponent<Renderer>().enabled = true;
@@ -241,8 +212,6 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
         {
             LineAP.GetComponent<Renderer>().enabled = false;
         }
-
-
 
         //>強調線の初期リセット
         LineSAB.GetComponent<Renderer>().enabled = false;

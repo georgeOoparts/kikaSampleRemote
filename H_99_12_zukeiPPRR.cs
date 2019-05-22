@@ -16,7 +16,6 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     public H_99_01_kyoutuHensu kyotu;
 
-
     //pprrのオブジェを当てはめる
 
     //>点（シリンダーオブジェの角度変えた物）    
@@ -50,6 +49,7 @@ public class H_99_12_zukeiPPRR : MonoBehaviour
     public GameObject LineSAP;
 
     //testPrehubYobi2との共通変数
+    //点滅処理のストップウォッチ経過時間elapseを共有したいだけのためにつかう。
     public testPrehubYobi2 t2;
 
     void Start()

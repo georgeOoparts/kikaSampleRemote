@@ -56,6 +56,8 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     //u2まずcanvas＞screenspace＞maincameraにして　mainncameraを選択
     //u2＞カメラをuiを置きたい場所まで持っていく。＞その上でcanvas＞screenspace＞worldspace
     //u2にする。これで、カメラの位置に関係なくCANVASを固定できる＞この子供にUIを設置
+
+    //u3 シーンを丸まるコピー＞edit＞copy＞duplicate
     
     ------------------------------------------------------------------------------
 

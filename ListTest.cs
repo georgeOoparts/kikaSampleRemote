@@ -30,12 +30,13 @@ public class ListTest : MonoBehaviour
         //}
         //Debug.Log("testInt::" + intValues[intValues.Length - 1, 1]);
         //Debug.Log("testInt::" + intValues[intValues.GetLength(0) - 1, 1]);
-        if (hCount < 3) {
-            Debug.Log("testInt::" + intValues[kyotu.meidaiCount,hCount, 1]);
+        if (hCount < intValues.GetLongLength(1)) 
+        {
+            Debug.Log("Mcount::" + kyotu.MCount + " hcount::" + hCount+"atai::" + intValues[kyotu.MCount,hCount, 1]);
 
         } else {
             //intValues[,intValues.GetLength(0) - 1, 1] = "";//
-            Debug.Log("testInt::" + intValues[kyotu.meidaiCount, intValues.GetLength(1) - 1, 1]);
+            Debug.Log("Mcount::" + kyotu.MCount + " hcount::"+hCount);
         }
     }
     void textIn() 
@@ -49,9 +50,9 @@ public class ListTest : MonoBehaviour
                 {"zzzz", "yyyyy","",""}
             },
             {
-                {"aaa","bbb","",""},
-                {"111", "222","",""},
-                {"zzzz", "yyyyy","",""}
+                {"aaa11","LFbbb11","",""},
+                {"111aa", "LF222aa","",""},
+                {"zzzzaa", "LFyyyyyaa","",""}
             }
 
         };

@@ -45,7 +45,6 @@ public class H_99_13_mojiHonban : MonoBehaviour
         }
         //k6_aa:ストップウォッチスタート
         stopwatch.Start();
-        Debug.Log("OKKKK");
     }
 
 
@@ -56,19 +55,26 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //Debug.Log(elapse);//何秒たったかを表示させたいときはこれを使う
 
         //7このtextに内容を入れる
-        for (int i = 0; i < kodomoTextText.Count; i++) {
-            //kodomoTextText[i].text = content(i, kyotu.rrCount);
-            //k7_1_2:オブジェを見えるようにするよ。
-            //mojiPanel[i].GetComponent<Image>().enabled = true;
-            kodomoTextText[i].text = intValues[i,kyotu.rrCount];
-            //Debug.Log(intValues[i, kyotu.rrCount]+"::");
-        }
+        if (kyotu.rrCount < intValues.Length) {
+            for (int i = 0; i < kodomoTextText.Count; i++) {
+                //kodomoTextText[i].text = content(i, kyotu.rrCount);
+                //k7_1_2:オブジェを見えるようにするよ。
+                //mojiPanel[i].GetComponent<Image>().enabled = true;
+                if (kyotu.rrCount >= intValues.Length)
+                    kodomoTextText[i].text = "";
+                else
+                    kodomoTextText[i].text = intValues[i, kyotu.rrCount];
 
+                //Debug.Log(intValues[i, kyotu.rrCount]+"::");
+            }
+        }
         //強調すべきパネルを強調するメソッド
         kyochouPanel(kyotu.rrCount);
 
         //kyotu.rrCountの数を増やす
         if (Input.GetMouseButtonDown(0)) kyotu.rrCount++;
+        Debug.Log("rrCount" + kyotu.rrCount);
+
     }
     //点滅強調に使う。kyochoHantei()メソッド--------------------------------------------------------
     //void kyochouPanel(int count) の中で使う。
@@ -200,7 +206,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //　配列の要素数の確保
         intValues = new string[,]
         {
-            {"aaa","bbb","ccc","ddd","eee","fff","ggg"},
+            {"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","bbbbbbbbbbbbbbbbbbbbbbbbbbb","ccc","ddddddddddddddddddddd","eee","fff","gggggggggggggggggggggggggg"},
             {"111", "222","333","444","555","666","777"},
             {"111", "222","333","444","555","666","777"},
             {"111", "222","333","444","555","666","777"},

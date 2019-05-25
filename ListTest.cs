@@ -23,46 +23,41 @@ public class ListTest : MonoBehaviour
     private string[,] intValues;
     void Start()
     {
+        textIn();
+        
+
+
+
+
+    }
+    private int hCount=0;
+    void Update()
+    {
+        //kyotu.rrCountの数を増やす
+        if (Input.GetMouseButtonDown(0)) hCount++;
+        //if (hCount > 3) 
+        //{
+        //hCount--;
+
+        //}
+        //Debug.Log("testInt::" + intValues[intValues.Length - 1, 1]);
+        //Debug.Log("testInt::" + intValues[intValues.GetLength(0) - 1, 1]);
+        if (hCount < 3) {
+            Debug.Log("testInt::" + intValues[hCount, 1]);
+
+        } else {
+            intValues[intValues.GetLength(0) - 1, 1] = "";//
+            Debug.Log("testInt::" + intValues[intValues.GetLength(0) - 1, 1]);
+        }
+    }
+    void textIn() 
+    {
         //　配列の要素数の確保
-        intValues = new string[,] 
+        intValues = new string[,]
         {
             {"aaa","bbb","",""},
             {"111", "222","",""},
             {"zzzz", "yyyyy","",""}
         };
-
-        Debug.Log("testInt::"+intValues[0,1]);
-
-        //t = "weeeee";
-        //list[0].Add(t);
-        //listlist[0][0] = "wweee";
-        //listlist.Add(new List<string>());
-        //list[0].
-        //allList[0] = new List<int>();
-        //allList[1] = new List<int>();
-
-        //allList[0].Add(0);
-        //allList[0].Add(1);
-        //allList[0].Add(2);
-
-        //allList[1].Add(3);
-        //allList[1].Add(4);
-        //allList[1].Add(5);
-
-        //allList.Add(list1);
-        //allList.Add(list2);
-        // k0016_99_1_1_1：list新しい値を入れる
-        //testInt0.Add(0);
-        //testInt0.Add(1);
-        //testInt0.Add(2);
-        //testInt0.Add(3);
-        //listlist[0].Add("999");
-
-        //Debug.Log("testInt::"+ listlist[0][0]);
-    }
-
-    void Update()
-    {
-        
     }
 }

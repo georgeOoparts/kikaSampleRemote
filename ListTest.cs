@@ -5,21 +5,9 @@ using UnityEngine;
 
 public class ListTest : MonoBehaviour
 {
-    //k0016_99_1_1：listの宣言
-    //private List<int> testInt0 = new List<int>();
+    
 
-    //List<List<int>> allList= new List<List<int>>();
-
-    //List<List<int>> allList = new List<List<int>>();
-    //List list1 = new List();
-    //List list2 = new List();
-
-    //List<List<string>> listlist;
-    //List<List<int>> = new List<List<int>>();
-    //List<int> list = new List<int>();
-    //private List<string> list = new List<string>();
-
-    //string t;
+    //3次元配列テスト
     private string[,] intValues;
     void Start()
     {

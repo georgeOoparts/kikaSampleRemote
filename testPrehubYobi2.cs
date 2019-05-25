@@ -55,6 +55,7 @@ public class testPrehubYobi2 : MonoBehaviour
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
         //Debug.Log(elapse);//何秒たったかを表示させたいときはこれを使う
 
+        //7このtextに内容を入れる
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
             kodomoTextText[i].text = content(i, kyotu.rrCount);

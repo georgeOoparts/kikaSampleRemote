@@ -342,4 +342,12 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     //k0017_99_1：配列使い方
     //Transform[] trMeidai1=new Transform[6];
 
+    //k0017_99_1_1:配列　要素の数を得る。
+    //trMeidai1.Length
+
+    //k0017_99_2:2次元配列　宣言
+    //string[,] intValues=new string[6,8];
+    
+    //k0017_99_2_1:2次元配列　最初の要素の個数を得る
+     intValues.GetLength(0)
      */

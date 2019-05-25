@@ -27,7 +27,8 @@ public class H_99_13_mojiHonban : MonoBehaviour
     void Start() {
         //配列に解説文を割り当てる。
         setWord();
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 7; i++) 
+        {
             //プレハブを使う
             //k0016_99_1_1_1：list新しい値を入れる
             mojiPanel.Add(Instantiate(premoji) as GameObject);
@@ -49,34 +50,26 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
 
 
-    void Update() {
+    void Update() 
+    {
         //k6_ac:何秒たったかを変数elapseに入れる
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
-        //Debug.Log(elapse);//何秒たったかを表示させたいときはこれを使う
-
-        //7このtextに内容を入れる
-        //if (kyotu.rrCount == intValues.Length) 
-        //{
-            //Array.Resize(ref intValues, intValues.Length + 1);
-        //}
-            for (int i = 0; i < kodomoTextText.Count; i++) {
-            //kodomoTextText[i].text = content(i, kyotu.rrCount);
-            //k7_1_2:オブジェを見えるようにするよ。
-            //mojiPanel[i].GetComponent<Image>().enabled = true;
-
-            if (kyotu.rrCount >= intValues.GetLength(0))
-                    kodomoTextText[i].text = "";
-                else
-                    kodomoTextText[i].text = intValues[i, kyotu.rrCount];
-
-                //Debug.Log(intValues[i, kyotu.rrCount]+"::");
-            }
-        //}
+        
+        //UItextに2次元配列の値を入れていく
+        for (int i = 0; i < kodomoTextText.Count; i++) 
+        {
+            //k0017_99_2_1:2次元配列　最初の要素の個数を得る
+            if (kyotu.rrCount < intValues.GetLength(0))
+                kodomoTextText[i].text = intValues[i, kyotu.rrCount];
+            else
+                kodomoTextText[i].text = "";
+        }
         //強調すべきパネルを強調するメソッド
         kyochouPanel(kyotu.rrCount);
 
         //kyotu.rrCountの数を増やす
-        if (Input.GetMouseButtonDown(0)) kyotu.rrCount++;
+        if (Input.GetMouseButtonDown(0))
+            kyotu.rrCount++;
         Debug.Log("rrCount" + kyotu.rrCount);
 
     }
@@ -164,46 +157,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
             mojiPanel[5].GetComponent<Image>().enabled = kyochoHantei();
         }
     }
-    //content(int textNumber, int count)メソッド-------------------------------------------------------------------------
-    string content(int textNumber, int count) {
-        string content = "";
-        if (textNumber == 0) {
-            if (count == 0) content = "三角形";
-            else if (count == 1 || count == 2 || count == 3) content = "点";
-            else content = "";
-        } else if (textNumber == 1) {
-            if (count == 0) content = "ABC";
-            else if (count == 1 || count == 2 || count == 3) content = "A";
-            else if (count == 4 || count == 5 || count == 6) content = "垂線";
-            else content = "";
-        } else if (textNumber == 2) {
-            if (count == 0) content = "がある。";
-            else if (count == 1 || count == 2 || count == 3) content = "から辺";
-            else if (count == 4 || count == 5 || count == 6) content = "と辺";
-            else content = "";
-        } else if (textNumber == 3) {
-            if (count == 0) content = "";
-            else if (count == 1 || count == 2 || count == 3) content = "BC";
-            else if (count == 4 || count == 5 || count == 6) content = "BC";
-            else content = "";
-        } else if (textNumber == 4) {
-            if (count == 0) content = "";
-            else if (count == 1 || count == 2 || count == 3) content = "に";
-            else if (count == 4 || count == 5 || count == 6) content = "の交点を";
-            else content = "";
-        } else if (textNumber == 5) {
-            if (count == 0) content = "";
-            else if (count == 1 || count == 2 || count == 3) content = "垂線";
-            else if (count == 4 || count == 5 || count == 6) content = "P";
-            else content = "";
-        } else if (textNumber == 6) {
-            if (count == 0) content = "";
-            else if (count == 1 || count == 2 || count == 3) content = "を引く";
-            else if (count == 4 || count == 5 || count == 6) content = "と名づける";
-            else content = "";
-        }
-        return (content);
-    }
+    //Uitextの中身----------------------------------------------------------------------------------------------------
     private string[,] intValues;
     void setWord() 
     {

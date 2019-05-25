@@ -25,7 +25,8 @@ public class H_99_13_mojiHonban : MonoBehaviour
     List<Text> kodomoTextText = new List<Text>();
 
     void Start() {
-
+        //配列に解説文を割り当てる。
+        setWord();
         for (int i = 0; i < 7; i++) {
             //プレハブを使う
             //k0016_99_1_1_1：list新しい値を入れる
@@ -56,9 +57,11 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
         //7このtextに内容を入れる
         for (int i = 0; i < kodomoTextText.Count; i++) {
-            kodomoTextText[i].text = content(i, kyotu.rrCount);
+            //kodomoTextText[i].text = content(i, kyotu.rrCount);
             //k7_1_2:オブジェを見えるようにするよ。
             //mojiPanel[i].GetComponent<Image>().enabled = true;
+            kodomoTextText[i].text = intValues[i,kyotu.rrCount];
+            //Debug.Log(intValues[i, kyotu.rrCount]+"::");
         }
 
         //強調すべきパネルを強調するメソッド
@@ -191,6 +194,21 @@ public class H_99_13_mojiHonban : MonoBehaviour
         }
         return (content);
     }
-
-
+    private string[,] intValues;
+    void setWord() 
+    {
+        //　配列の要素数の確保
+        intValues = new string[,]
+        {
+            {"aaa","bbb","ccc","ddd","eee","fff","ggg"},
+            {"111", "222","333","444","555","666","777"},
+            {"111", "222","333","444","555","666","777"},
+            {"111", "222","333","444","555","666","777"},
+            {"111", "222","333","444","555","666","777"},
+            {"111", "222","333","444","555","666","777"},
+            {"111", "222","333","444","555","666","777"}
+            //{"zzzz", "yyyyy","qqqqq","wwwww","rrrr","tttt","yyyyy"}
+        };
+    }
+   
 }

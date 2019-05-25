@@ -55,19 +55,23 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //Debug.Log(elapse);//何秒たったかを表示させたいときはこれを使う
 
         //7このtextに内容を入れる
-        if (kyotu.rrCount < intValues.Length) {
+        //if (kyotu.rrCount == intValues.Length) 
+        //{
+            //Array.Resize(ref intValues, intValues.Length + 1);
+        //}
             for (int i = 0; i < kodomoTextText.Count; i++) {
-                //kodomoTextText[i].text = content(i, kyotu.rrCount);
-                //k7_1_2:オブジェを見えるようにするよ。
-                //mojiPanel[i].GetComponent<Image>().enabled = true;
-                if (kyotu.rrCount >= intValues.Length)
+            //kodomoTextText[i].text = content(i, kyotu.rrCount);
+            //k7_1_2:オブジェを見えるようにするよ。
+            //mojiPanel[i].GetComponent<Image>().enabled = true;
+
+            if (kyotu.rrCount >= intValues.GetLength(0))
                     kodomoTextText[i].text = "";
                 else
                     kodomoTextText[i].text = intValues[i, kyotu.rrCount];
 
                 //Debug.Log(intValues[i, kyotu.rrCount]+"::");
             }
-        }
+        //}
         //強調すべきパネルを強調するメソッド
         kyochouPanel(kyotu.rrCount);
 

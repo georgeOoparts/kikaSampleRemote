@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class ListTest : MonoBehaviour
 {
-    
 
+    public H_99_01_kyoutuHensu kyotu;
     //3次元配列テスト
-    private string[,] intValues;
+    private string[,,] intValues;
     void Start()
     {
         textIn();
@@ -31,21 +31,29 @@ public class ListTest : MonoBehaviour
         //Debug.Log("testInt::" + intValues[intValues.Length - 1, 1]);
         //Debug.Log("testInt::" + intValues[intValues.GetLength(0) - 1, 1]);
         if (hCount < 3) {
-            Debug.Log("testInt::" + intValues[hCount, 1]);
+            Debug.Log("testInt::" + intValues[kyotu.meidaiCount,hCount, 1]);
 
         } else {
-            intValues[intValues.GetLength(0) - 1, 1] = "";//
-            Debug.Log("testInt::" + intValues[intValues.GetLength(0) - 1, 1]);
+            //intValues[,intValues.GetLength(0) - 1, 1] = "";//
+            Debug.Log("testInt::" + intValues[kyotu.meidaiCount, intValues.GetLength(1) - 1, 1]);
         }
     }
     void textIn() 
     {
         //　配列の要素数の確保
-        intValues = new string[,]
+        intValues = new string[,,]
         {
-            {"aaa","bbb","",""},
-            {"111", "222","",""},
-            {"zzzz", "yyyyy","",""}
+            {
+                {"aaa","bbb","",""},
+                {"111", "222","",""},
+                {"zzzz", "yyyyy","",""}
+            },
+            {
+                {"aaa","bbb","",""},
+                {"111", "222","",""},
+                {"zzzz", "yyyyy","",""}
+            }
+
         };
     }
 }

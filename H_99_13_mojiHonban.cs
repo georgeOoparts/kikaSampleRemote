@@ -59,8 +59,8 @@ public class H_99_13_mojiHonban : MonoBehaviour
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
             //k0017_99_2_1:2次元配列　最初の要素の個数を得る
-            if (kyotu.rrCount < intValues.GetLength(0))
-                kodomoTextText[i].text = intValues[i, kyotu.rrCount];
+            if (kyotu.rrCount < intValues.GetLength(1))
+                kodomoTextText[i].text = intValues[0,i, kyotu.rrCount];
             else
                 kodomoTextText[i].text = "";
         }
@@ -158,20 +158,39 @@ public class H_99_13_mojiHonban : MonoBehaviour
         }
     }
     //Uitextの中身----------------------------------------------------------------------------------------------------
-    private string[,] intValues;
+    private string[,,] intValues;
     void setWord() 
     {
         //　配列の要素数の確保
-        intValues = new string[,]
+        intValues = new string[,,]
         {
-            {"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","bbbbbbbbbbbbbbbbbbbbbbbbbbb","ccc","ddddddddddddddddddddd","eee","fff","gggggggggggggggggggggggggg"},
-            {"111", "222","333","444","555","666","777"},
-            {"111", "222","333","444","555","666","777"},
-            {"111", "222","333","444","555","666","777"},
-            {"111", "222","333","444","555","666","777"},
-            {"111", "222","333","444","555","666","777"},
-            {"111", "222","333","444","555","666","777"}
-            //{"zzzz", "yyyyy","qqqqq","wwwww","rrrr","tttt","yyyyy"}
+            {
+                {"aaaaaaaaaaaa","bbbbbbbbbbbbbbbbbbbbbbbbbbb","ccc","ddddddddddddddddddddd","eee","fff","gggggggggggggggggggggggggg"},
+                {"111", "222","333","444","555","666","777"},
+                {"111", "222","333","444","555","666","777"},
+                {"111", "222","333","444","555","666","777"},
+                {"111", "222","333","444","555","666","777"},
+                {"111", "222","333","444","555","666","777"},
+                {"111", "222","333","444","555","666","777"}
+            },
+            {
+                {"aaaaaaaaaaaa","bbbbbbbbbbbbbbbbbbbbbbbbbbb","ccc","ddddddddddddddddddddd","eee","fff","gggggggggggggggggggggggggg"},
+                {"111", "222","333","444","555","666","777"},
+                {"111", "222","333","444","555","666","777"},
+                {"111", "222","333","444","555","666","777"},
+                {"111", "222","333","444","555","666","777"},
+                {"111", "222","333","444","555","666","777"},
+                {"111", "222","333","444","555","666","777"}
+            },
+            {
+                {"aaaaaaaaaaaa","bbbbbbbbbbbbbbbbbbbbbbbbbbb","ccc","ddddddddddddddddddddd","eee","fff","gggggggggggggggggggggggggg"},
+                {"111", "222","333","444","555","666","777"},
+                {"111", "222","333","444","555","666","777"},
+                {"111", "222","333","444","555","666","777"},
+                {"111", "222","333","444","555","666","777"},
+                {"111", "222","333","444","555","666","777"},
+                {"111", "222","333","444","555","666","777"}
+            }
         };
     }
    

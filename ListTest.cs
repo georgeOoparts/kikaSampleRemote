@@ -12,11 +12,6 @@ public class ListTest : MonoBehaviour
     void Start()
     {
         textIn();
-        
-
-
-
-
     }
     private int hCount=0;
     void Update()
@@ -34,7 +29,9 @@ public class ListTest : MonoBehaviour
         {
             Debug.Log("Mcount::" + kyotu.MCount + " hcount::" + hCount+"atai::" + intValues[kyotu.MCount,hCount, 1]);
 
-        } else {
+        } 
+        else 
+        {
             //intValues[,intValues.GetLength(0) - 1, 1] = "";//
             Debug.Log("Mcount::" + kyotu.MCount + " hcount::"+hCount);
         }

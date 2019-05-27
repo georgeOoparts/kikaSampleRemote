@@ -31,7 +31,7 @@ public class testPrehubNarabe : MonoBehaviour
     {
         //プレハブの呼び出しはtextPrehubYobiでやっている
         //そっちのプログラムを先に呼び込むように設定する。
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < 11; i++) {
             //k0016_99_1_1_1：list新しい値を入れる
             ///別プログラムで呼び出されたmojipanelオブジェを当てはめる
             mojiPanel.Add(GameObject.Find("mojiPanel" + i).gameObject);

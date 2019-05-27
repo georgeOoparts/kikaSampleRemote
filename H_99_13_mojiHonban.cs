@@ -88,7 +88,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
         }
         //強調すべきパネルを強調するメソッド
-        kyochouPanel(kyotu.rrCount);
+        kyochouPanel(kyouchouHenkanInt);
 
         
 
@@ -129,53 +129,14 @@ public class H_99_13_mojiHonban : MonoBehaviour
     }
 
     //kyochouPanel(int count) ------------------------------------------------------------------------------
-    void kyochouPanel(int count) {
-        if (count == 0) {
-            //mojiPanel[1]の点滅強調
-            //k7_1_2:オブジェを見えるようにするよ。
-            //k7_a:オブジェを存在するけど見えなくする。
-            mojiPanel[1].GetComponent<Image>().enabled = kyochoHantei();
-
-        } else if (count == 1) {
-            for (int i = 0; i < kodomoTextText.Count; i++) {
-                mojiPanel[i].GetComponent<Image>().enabled = false;
-            }
-
-            //k7_1_2:オブジェを見えるようにするよ。
-            mojiPanel[1].GetComponent<Image>().enabled = kyochoHantei();
-
-
-        } else if (count == 2) {
-            for (int i = 0; i < kodomoTextText.Count; i++) {
-                mojiPanel[i].GetComponent<Image>().enabled = false;
-            }
-            //k7_1_2:オブジェを見えるようにするよ。
-            mojiPanel[3].GetComponent<Image>().enabled = kyochoHantei();
-        } else if (count == 3) {
-            for (int i = 0; i < kodomoTextText.Count; i++) {
-                mojiPanel[i].GetComponent<Image>().enabled = false;
-            }
-            //k7_1_2:オブジェを見えるようにするよ。
-            mojiPanel[5].GetComponent<Image>().enabled = kyochoHantei();
-        } else if (count == 4) {
-            for (int i = 0; i < kodomoTextText.Count; i++) {
-                mojiPanel[i].GetComponent<Image>().enabled = false;
-            }
-            //k7_1_2:オブジェを見えるようにするよ。
-            mojiPanel[1].GetComponent<Image>().enabled = kyochoHantei();
-        } else if (count == 5) {
-            for (int i = 0; i < kodomoTextText.Count; i++) {
-                mojiPanel[i].GetComponent<Image>().enabled = false;
-            }
-            //k7_1_2:オブジェを見えるようにするよ。
-            mojiPanel[3].GetComponent<Image>().enabled = kyochoHantei();
-        } else if (count == 6) {
-            for (int i = 0; i < kodomoTextText.Count; i++) {
-                mojiPanel[i].GetComponent<Image>().enabled = false;
-            }
-            //k7_1_2:オブジェを見えるようにするよ。
-            mojiPanel[5].GetComponent<Image>().enabled = kyochoHantei();
+    void kyochouPanel(int count) 
+    { 
+        for (int i = 0; i < kodomoTextText.Count; i++) 
+        {
+            mojiPanel[i].GetComponent<Image>().enabled = false;
         }
+        //k7_1_2:オブジェを見えるようにするよ。
+        mojiPanel[count].GetComponent<Image>().enabled = kyochoHantei();
     }
     //Uitextの中身----------------------------------------------------------------------------------------------------
     private string[,,] intValues;

@@ -54,7 +54,19 @@ public class H_99_13_mojiHonban : MonoBehaviour
     {
         //k6_ac:何秒たったかを変数elapseに入れる
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
-        
+
+        //kyotu.rrCountの数を増やす
+        if (Input.GetMouseButtonDown(0))
+            kyotu.rrCount++;
+        //Debug.Log("rrCount" + kyotu.rrCount);
+        else if (Input.GetMouseButtonDown(1)) {
+            kyotu.MCount++;
+            kyotu.rrCount = 0;
+        }
+
+        Debug.Log("MCount" + kyotu.MCount);
+
+
         //UItextに2次元配列の値を入れていく
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
@@ -67,13 +79,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //強調すべきパネルを強調するメソッド
         kyochouPanel(kyotu.rrCount);
 
-        //kyotu.rrCountの数を増やす
-        if (Input.GetMouseButtonDown(0))
-            kyotu.rrCount++;
-        //Debug.Log("rrCount" + kyotu.rrCount);
-        else if (Input.GetMouseButtonDown(1))
-            kyotu.MCount++;
-        Debug.Log("MCount" + kyotu.MCount);
+        
 
     }
     //点滅強調に使う。kyochoHantei()メソッド--------------------------------------------------------

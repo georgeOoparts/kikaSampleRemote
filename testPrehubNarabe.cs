@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class testPrehubNarabe : MonoBehaviour
 {
     //uiTEXT７つをuiPANELの中で並び替え
+    //mojiを書くUIpanelにアタッチ、textpanelにアタッチしている
+    //左右両方のクリックで文字の並び替えをやるように改良
 
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     //このスクリプトをアタッチしたオブジェクトにいちいちこのオブジェクトをアタッチ
@@ -107,7 +109,8 @@ public class testPrehubNarabe : MonoBehaviour
         }turnCount++;
 
         //ボタンクリックで再びmojipanel並びなおし
-        if (Input.GetMouseButtonDown(0)) {
+        //右クリックInput.GetMouseButtonDown(1)でも並びなおし
+        if (Input.GetMouseButtonDown(0)|| Input.GetMouseButtonDown(1)) {
             turnCount = 0;
         }
         //textpanelの幅が変わったらmojipanelを並び替えるため

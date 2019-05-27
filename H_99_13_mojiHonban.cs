@@ -60,7 +60,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         {
             //k0017_99_2_1:2次元配列　最初の要素の個数を得る
             if (kyotu.rrCount < intValues.GetLength(1))
-                kodomoTextText[i].text = intValues[0,kyotu.rrCount,i];
+                kodomoTextText[i].text = intValues[kyotu.MCount,kyotu.rrCount,i];
             else
                 kodomoTextText[i].text = "";
         }
@@ -71,7 +71,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
             kyotu.rrCount++;
         //Debug.Log("rrCount" + kyotu.rrCount);
-        if (Input.GetMouseButtonDown(1))
+        else if (Input.GetMouseButtonDown(1))
             kyotu.MCount++;
         Debug.Log("MCount" + kyotu.MCount);
 

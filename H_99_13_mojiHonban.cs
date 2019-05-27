@@ -70,7 +70,10 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //kyotu.rrCountの数を増やす
         if (Input.GetMouseButtonDown(0))
             kyotu.rrCount++;
-        Debug.Log("rrCount" + kyotu.rrCount);
+        //Debug.Log("rrCount" + kyotu.rrCount);
+        if (Input.GetMouseButtonDown(1))
+            kyotu.MCount++;
+        Debug.Log("MCount" + kyotu.MCount);
 
     }
     //点滅強調に使う。kyochoHantei()メソッド--------------------------------------------------------

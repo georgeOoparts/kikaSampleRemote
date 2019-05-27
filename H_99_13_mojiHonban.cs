@@ -75,21 +75,19 @@ public class H_99_13_mojiHonban : MonoBehaviour
             if (kyotu.rrCount < intValues.GetLength(1) && kyotu.MCount < intValues.GetLength(0)) 
             {
                 kodomoTextText[i].text = intValues[kyotu.MCount, kyotu.rrCount, i];
-
-                //k10_2:strin>int変換
-                kyouchouHenkanInt = int.Parse(intValues[kyotu.MCount, kyotu.rrCount, intValues.GetLength(2) - 1]);
-                //Debug.Log("kyouchou:::" + kyouchouHenkan);
-                
-
             } 
             else
                 kodomoTextText[i].text = "";
 
 
         }
+        //k10_2:strin>int変換
+        if (kyotu.rrCount < intValues.GetLength(1) && kyotu.MCount < intValues.GetLength(0))
+            kyouchouHenkanInt = int.Parse(intValues[kyotu.MCount, kyotu.rrCount, intValues.GetLength(2) - 1]);
+        
         //強調すべきパネルを強調するメソッド
         kyochouPanel(kyouchouHenkanInt);
-
+        Debug.Log("OKKKKKK");
         
 
     }

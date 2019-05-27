@@ -59,22 +59,30 @@ public class H_99_13_mojiHonban : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
             kyotu.rrCount++;
         //Debug.Log("rrCount" + kyotu.rrCount);
-        else if (Input.GetMouseButtonDown(1)) {
+        else if (Input.GetMouseButtonDown(1)) 
+        {
             kyotu.MCount++;
             kyotu.rrCount = 0;
         }
 
-        Debug.Log("MCount" + kyotu.MCount);
+        //Debug.Log("MCount" + kyotu.MCount);
 
 
         //UItextに2次元配列の値を入れていく
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
             //k0017_99_2_1:2次元配列　最初の要素の個数を得る
-            if (kyotu.rrCount < intValues.GetLength(1) && kyotu.MCount< intValues.GetLength(0))
-                kodomoTextText[i].text = intValues[kyotu.MCount,kyotu.rrCount,i];
+            if (kyotu.rrCount < intValues.GetLength(1) && kyotu.MCount < intValues.GetLength(0)) 
+            {
+                kodomoTextText[i].text = intValues[kyotu.MCount, kyotu.rrCount, i];
+                Debug.Log("kyouchou:::" + intValues[kyotu.MCount, kyotu.rrCount, intValues.GetLength(2)-1]);
+                //Debug.Log(intValues.GetLength(2));
+
+            } 
             else
                 kodomoTextText[i].text = "";
+
+
         }
         //強調すべきパネルを強調するメソッド
         kyochouPanel(kyotu.rrCount);

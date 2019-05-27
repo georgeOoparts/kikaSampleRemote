@@ -27,7 +27,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
     void Start() {
         //配列に解説文を割り当てる。
         setWord();
-        for (int i = 0; i < 7; i++) 
+        for (int i = 0; i < 11; i++) 
         {
             //プレハブを使う
             //k0016_99_1_1_1：list新しい値を入れる
@@ -94,7 +94,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
 
         //強調すべきパネルを強調するメソッド
-        kyochouPanel(kyouchouHenkanInt);
+        kyochouPanel(kyouchouHenkanInt);///
         Debug.Log("OKKKKKK");
         
 
@@ -146,7 +146,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         if (count!=99) 
         {
             //k7_1_2:オブジェを見えるようにするよ。
-            mojiPanel[count].GetComponent<Image>().enabled = kyochoHantei();
+            mojiPanel[count].GetComponent<Image>().enabled = kyochoHantei();///
         }
             
     }

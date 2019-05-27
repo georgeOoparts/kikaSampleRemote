@@ -60,7 +60,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         {
             //k0017_99_2_1:2次元配列　最初の要素の個数を得る
             if (kyotu.rrCount < intValues.GetLength(1))
-                kodomoTextText[i].text = intValues[0,i, kyotu.rrCount];
+                kodomoTextText[i].text = intValues[0,kyotu.rrCount,i];
             else
                 kodomoTextText[i].text = "";
         }
@@ -165,13 +165,13 @@ public class H_99_13_mojiHonban : MonoBehaviour
         intValues = new string[,,]
         {
             {
-                {"aaaaaaaaaaaa","bbbbbbbbbbbbbbbbbbbbbbbbbbb","ccc","ddddddddddddddddddddd","eee","fff","gggggggggggggggggggggggggg"},
-                {"111", "222","333","444","555","666","777"},
-                {"111", "222","333","444","555","666","777"},
-                {"111", "222","333","444","555","666","777"},
-                {"111", "222","333","444","555","666","777"},
-                {"111", "222","333","444","555","666","777"},
-                {"111", "222","333","444","555","666","777"}
+                {"0000000000","001111111","002222222","0033333333","0044444444","00555555","0066666"},
+                {"010000", "0111111","012222","013333","014444","015555","016666"},
+                {"02000", "0211111","022222","023333","0244444","0255555","026666"},
+                {"03000", "031111","032222","0333333","034444","035555","036666"},
+                {"04000", "041111","042222","043333","04444","045555","046666"},
+                {"050000", "051111","052222","053333","054444","055555","05666"},
+                {"06000", "06111","06222","063333","064444","065555","0666666"}
             },
             {
                 {"aaaaaaaaaaaa","bbbbbbbbbbbbbbbbbbbbbbbbbbb","ccc","ddddddddddddddddddddd","eee","fff","gggggggggggggggggggggggggg"},

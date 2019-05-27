@@ -75,7 +75,18 @@ public class H_99_13_mojiHonban : MonoBehaviour
             if (kyotu.rrCount < intValues.GetLength(1) && kyotu.MCount < intValues.GetLength(0)) 
             {
                 kodomoTextText[i].text = intValues[kyotu.MCount, kyotu.rrCount, i];
-                Debug.Log("kyouchou:::" + intValues[kyotu.MCount, kyotu.rrCount, intValues.GetLength(2)-1]);
+                //int kyouchouHenkan=(int)intValues[kyotu.MCount, kyotu.rrCount, intValues.GetLength(2) - 1];
+
+                int kyouchouHenkan = int.Parse(intValues[kyotu.MCount, kyotu.rrCount, intValues.GetLength(2) - 1]);
+                Debug.Log("kyouchou:::" + kyouchouHenkan);
+                //k10 float>int変換 
+                ////?
+                //float fKazu = 10.0f;
+
+                //k10_1:float>int に小数点以下切り上げで変換。
+                //int kazu = (int)fKazu
+
+
                 //Debug.Log(intValues.GetLength(2));
 
             } 

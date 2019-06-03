@@ -95,7 +95,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
         //強調すべきパネルを強調するメソッド
         kyochouPanel(kyouchouHenkanInt);///
-        Debug.Log("OKKKKKK");
+        //Debug.Log("OKKKKKK");
         
 
     }

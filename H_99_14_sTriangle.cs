@@ -23,6 +23,15 @@ public class H_99_14_sTriangle : MonoBehaviour
 
     void Update()
     {
-        triMove.position = new Vector2(9.17f, 1.11f);
+
+        if (kyotu.MCount==0) 
+        {
+            triMove.position = new Vector2(9.17f, 1.11f);
+
+        }
+        else 
+        {
+            triMove.position = new Vector2(14.76f,-0.55f);
+        }
     }
 }

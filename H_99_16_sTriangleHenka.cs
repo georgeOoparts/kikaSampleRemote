@@ -91,13 +91,23 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
 
     void Update()
     {
-        
+
         //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
 
-        reset();
+        henka(kyotu.rrCount);
 
         Debug.Log("wwwwwwwwwwwwwwww" + kyotu.rrCount);
     }
+    //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
+    private void henka(int count) 
+    {
+        if (count==0) 
+        {
+            reset();
+        }
+    }
+    
+    
     //リセット表示を全部消すメソッド　kyotu.rrcount-----------------------------
     private void reset() 
     {

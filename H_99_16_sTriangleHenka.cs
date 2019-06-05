@@ -67,6 +67,9 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
 
     void Start()
     {
+        //k6_aa:ストップウォッチスタート
+        stopwatch.Start();
+
         rrlineAB = lineAB.GetComponent<Renderer>();
         rrlineSAB = lineSAB.GetComponent<Renderer>();
 
@@ -91,6 +94,8 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
 
     void Update()
     {
+        //k6_ac:何秒たったかを変数elapseに入れる
+        elapse = (float)stopwatch.Elapsed.TotalSeconds;
 
         //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
 
@@ -101,9 +106,16 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
     //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
     private void henka(int count) 
     {
-        if (count==0) 
+        if (count == 0) 
         {
             reset();
+        } 
+        else if (count == 1) 
+        {
+            reset();
+            rrlineBC.enabled = true;
+            rrlineSBC.enabled = kyochoHantei();
+
         }
     }
     
@@ -136,5 +148,42 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
         rrPointC.enabled = false;
         rrTextC.enabled = false;
         rrStrongTextCubeC.enabled = false;
+    }
+    //点滅強調に使う。kyochoHantei()メソッド--------------------------------------------------------
+    //void kyochouPanel(int count) の中で使う。
+    //k6_a:ストップウォッチ関数を使う時のおまじない。
+    //updateでelapse = (float)stopwatch.Elapsed.TotalSeconds;忘れずに 
+    private System.Diagnostics.Stopwatch stopwatch
+        = new System.Diagnostics.Stopwatch();
+    //このelapseはH_99_12_zukeiPPRRのほうで共通変数として利用される
+    //それによって、点滅のタイミングを完全に合わせる
+    //startでstopwatch.Start();忘れずに
+
+    public float elapse = 0;
+    private bool tenmetuOnOff = true;
+    public float interval = 0.35f;
+
+    bool kyochoHantei() {
+        if (tenmetuOnOff == true) {
+            if (elapse >= interval) {
+                tenmetuOnOff = false;
+
+                //k6_ab:ストップウォッチの時間をリセット
+                stopwatch.Reset();
+                //k6_aa:ストップウォッチスタート
+                stopwatch.Start();
+                return (tenmetuOnOff);
+            }
+            return (true);
+        } else if (elapse >= interval) {
+            tenmetuOnOff = true;
+
+            //k6_ab:ストップウォッチの時間をリセット
+            stopwatch.Reset();
+            //k6_aa:ストップウォッチスタート
+            stopwatch.Start();
+            return (tenmetuOnOff);
+        }
+        return (false);
     }
 }

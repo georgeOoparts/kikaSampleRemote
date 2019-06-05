@@ -102,6 +102,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
     //点滅強調に使う。kyochoHantei()メソッド--------------------------------------------------------
     //void kyochouPanel(int count) の中で使う。
     //k6_a:ストップウォッチ関数を使う時のおまじない。
+    //updateでelapse = (float)stopwatch.Elapsed.TotalSeconds;忘れずに 
     private System.Diagnostics.Stopwatch stopwatch
         = new System.Diagnostics.Stopwatch();
     //このelapseはH_99_12_zukeiPPRRのほうで共通変数として利用される

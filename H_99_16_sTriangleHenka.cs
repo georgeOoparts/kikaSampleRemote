@@ -53,6 +53,18 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
     private Renderer rrlineCA;
     private Renderer rrlineSCA;
 
+    private Renderer rrPointA;
+    private Renderer rrTextA;
+    private Renderer rrStrongTextCubeA;
+
+    private Renderer rrPointB;
+    private Renderer rrTextB;
+    private Renderer rrStrongTextCubeB;
+
+    private Renderer rrPointC;
+    private Renderer rrTextC;
+    private Renderer rrStrongTextCubeC;
+
     void Start()
     {
         rrlineAB = lineAB.GetComponent<Renderer>();
@@ -63,6 +75,18 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
 
         rrlineCA = lineCA.GetComponent<Renderer>();
         rrlineSCA = lineSCA.GetComponent<Renderer>();
+
+        rrPointA = pointA.GetComponent<Renderer>();
+        rrTextA = textA.GetComponent<Renderer>();
+        rrStrongTextCubeA = strongTextCubeA.GetComponent<Renderer>();
+
+        rrPointB = pointB.GetComponent<Renderer>();
+        rrTextB = textB.GetComponent<Renderer>();
+        rrStrongTextCubeB = strongTextCubeB.GetComponent<Renderer>();
+
+        rrPointC = pointC.GetComponent<Renderer>();
+        rrTextC = textC.GetComponent<Renderer>();
+        rrStrongTextCubeC = strongTextCubeC.GetComponent<Renderer>();
     }
 
     void Update()
@@ -81,6 +105,18 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
 
         rrlineCA.enabled = false;
         rrlineSCA.enabled = false;
+
+        rrPointA.enabled = false;
+        rrTextA.enabled = false;
+        rrStrongTextCubeA.enabled = false;
+
+        rrPointB.enabled = false;
+        rrTextB.enabled = false;
+        rrStrongTextCubeB.enabled = false;
+
+        rrPointC.enabled = false;
+        rrTextC.enabled = false;
+        rrStrongTextCubeC.enabled = false;
 
         Debug.Log("wwwwwwwwwwwwwwww" + kyotu.rrCount);
     }

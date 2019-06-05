@@ -91,12 +91,21 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
 
     void Update()
     {
+        
+        //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
+
+        reset();
+
+        Debug.Log("wwwwwwwwwwwwwwww" + kyotu.rrCount);
+    }
+    //リセット表示を全部消すメソッド　kyotu.rrcount-----------------------------
+    private void reset() 
+    {
         //k7B_1_1:オブジェを存在するけど見えなくする。
         //this.gameObject.GetComponent<Renderer>().enabled = false; 
 
         //k7B_1_2:オブジェを見えるようにするよ。
         //this.gameObject.GetComponent<Renderer>().enabled = true;
-        //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
         rrlineAB.enabled = false;
         rrlineSAB.enabled = false;
 
@@ -117,7 +126,5 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
         rrPointC.enabled = false;
         rrTextC.enabled = false;
         rrStrongTextCubeC.enabled = false;
-
-        Debug.Log("wwwwwwwwwwwwwwww" + kyotu.rrCount);
     }
 }

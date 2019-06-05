@@ -9,9 +9,12 @@ public class H_99_01_kyoutuHensu : MonoBehaviour
     //ヒエでアタッチ
 
     //今、対象としているmeidaiを0から対応させる
-    //
+    //どのプログラムで数が増える？
+
     public int MCount = 0;
-    //rrの何ターン目かをカウントする共通変数    
+    //rrの何ターン目かをカウントする共通変数 
+    //どのプログラムで数が増える？＞testPrehubYobi2、textpanelオブジェにアタッチされている
+
     public int rrCount=0;
     //maincameraがある位置を1～３で表す。
     public int mainCameraPosi = 0;

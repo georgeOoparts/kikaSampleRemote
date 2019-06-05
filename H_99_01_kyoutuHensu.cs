@@ -8,6 +8,9 @@ public class H_99_01_kyoutuHensu : MonoBehaviour
     //k5_3_1: gameobject(メソッド、変数)を外部から呼び出す。
     //ヒエでアタッチ
 
+    
+    public float elapse=0.0f;    
+        
     //今、対象としているmeidaiを0から対応させる
     //どのプログラムで数が増える？
 

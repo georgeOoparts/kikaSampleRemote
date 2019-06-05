@@ -8,8 +8,12 @@ public class H_99_01_kyoutuHensu : MonoBehaviour
     //k5_3_1: gameobject(メソッド、変数)を外部から呼び出す。
     //ヒエでアタッチ
 
+    //elapseのためだけにstart関数を使い、
+    //からのオブジェSWにこのプログラムをアタッチ
+
     
-    public float elapse=0.0f;    
+
+    
         
     //今、対象としているmeidaiを0から対応させる
     //どのプログラムで数が増える？
@@ -108,14 +112,25 @@ public class H_99_01_kyoutuHensu : MonoBehaviour
     public GameObject p1_6_5;
     public GameObject p1_6_6;
 
+    //k6_a:ストップウォッチ関数を使う時のおまじない。
+    //updateでelapse = (float)stopwatch.Elapsed.TotalSeconds;忘れずに 
+    private System.Diagnostics.Stopwatch stopwatch
+        = new System.Diagnostics.Stopwatch();
+    //このelapseは点滅表現で使うプログラムの共通変数として利用される
+    //それによって、点滅のタイミングを完全に合わせる
+    //強調表現点滅につかう時間を扱う変数
+    public float elapse = 0;
     void Start()
     {
-        
+        //k6_aa:ストップウォッチスタート
+        stopwatch.Start();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //k6_ac:何秒たったかを変数elapseに入れる
+        elapse = (float)stopwatch.Elapsed.TotalSeconds;
+        Debug.Log(elapse);
     }
 }

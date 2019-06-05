@@ -213,10 +213,10 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     //k7Bオブジェクトを見えたり見えなくしたりする(uiじゃないオブジェの時)---
 
     //k7B_1_1:オブジェを存在するけど見えなくする。
-    this.gameObject.GetComponent<Renderer>().enabled = false; 
+    //this.gameObject.GetComponent<Renderer>().enabled = false; 
 
     //k7B_1_2:オブジェを見えるようにするよ。
-    this.gameObject.GetComponent<Renderer>().enabled = true;
+    //this.gameObject.GetComponent<Renderer>().enabled = true;
 
 ----------------------------------------------------------------------------------
     k8：：親、子供　オブジェ呼び出し

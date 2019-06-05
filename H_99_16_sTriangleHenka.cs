@@ -101,7 +101,7 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
 
         henka(kyotu.rrCount);
 
-        Debug.Log("wwwwwwwwwwwwwwww" + kyotu.rrCount);
+        //Debug.Log("wwwwwwwwwwwwwwww" + kyotu.rrCount);
     }
     //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
     private void henka(int count) 

@@ -10,28 +10,27 @@ public class H_99_14_sTriangle : MonoBehaviour
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     public H_99_01_kyoutuHensu kyotu;
 
-    Transform triMove;
+    Transform samTriMove;
 
     void Start()
     {
-        triMove = this.gameObject.GetComponent<Transform>();
+        samTriMove = this.gameObject.GetComponent<Transform>();
 
 
         //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
-        Debug.Log("samTriangle"+kyotu.MCount);    
+        //Debug.Log("samTriangle"+kyotu.MCount);    
     }
 
     void Update()
     {
-
         if (kyotu.MCount==0) 
         {
-            triMove.position = new Vector2(9.17f, 1.11f);
+            samTriMove.position = new Vector2(9.17f, 1.11f);
 
         }
         else 
         {
-            triMove.position = new Vector2(14.76f,-0.55f);
+            samTriMove.position = new Vector2(14.76f,-0.55f);
         }
     }
 }

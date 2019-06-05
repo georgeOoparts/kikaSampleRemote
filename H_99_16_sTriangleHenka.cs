@@ -45,10 +45,24 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
     //public GameObject textP;
     //public GameObject strongTextCubeP;
     private Renderer rrlineAB;
+    private Renderer rrlineSAB;
+
+    private Renderer rrlineBC;
+    private Renderer rrlineSBC;
+
+    private Renderer rrlineCA;
+    private Renderer rrlineSCA;
 
     void Start()
     {
         rrlineAB = lineAB.GetComponent<Renderer>();
+        rrlineSAB = lineSAB.GetComponent<Renderer>();
+
+        rrlineBC = lineBC.GetComponent<Renderer>();
+        rrlineSBC = lineSBC.GetComponent<Renderer>();
+
+        rrlineCA = lineCA.GetComponent<Renderer>();
+        rrlineSCA = lineSCA.GetComponent<Renderer>();
     }
 
     void Update()
@@ -60,6 +74,14 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
         //this.gameObject.GetComponent<Renderer>().enabled = true;
         //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
         rrlineAB.enabled = false;
+        rrlineSAB.enabled = false;
+
+        rrlineBC.enabled = false;
+        rrlineSBC.enabled = false;
+
+        rrlineCA.enabled = false;
+        rrlineSCA.enabled = false;
+
         Debug.Log("wwwwwwwwwwwwwwww" + kyotu.rrCount);
     }
 }

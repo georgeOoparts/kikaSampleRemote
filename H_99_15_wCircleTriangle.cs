@@ -18,7 +18,7 @@ public class H_99_15_wCircleTriangle : MonoBehaviour
 
 
         //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
-        Debug.Log("wCircleTriangle"+kyotu.MCount);    
+        //Debug.Log("wCircleTriangle"+kyotu.MCount);    
     }
 
     void Update() 

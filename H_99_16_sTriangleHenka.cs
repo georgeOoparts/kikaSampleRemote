@@ -44,15 +44,22 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
     //public GameObject pointP;
     //public GameObject textP;
     //public GameObject strongTextCubeP;
+    private Renderer rrlineAB;
 
     void Start()
     {
-        
+        rrlineAB = lineAB.GetComponent<Renderer>();
     }
 
     void Update()
     {
+        //k7B_1_1:オブジェを存在するけど見えなくする。
+        //this.gameObject.GetComponent<Renderer>().enabled = false; 
+
+        //k7B_1_2:オブジェを見えるようにするよ。
+        //this.gameObject.GetComponent<Renderer>().enabled = true;
         //k5_3_1_1_1:gameobject(メソッド、変数)を使いまわす
+        rrlineAB.enabled = false;
         Debug.Log("wwwwwwwwwwwwwwww" + kyotu.rrCount);
     }
 }

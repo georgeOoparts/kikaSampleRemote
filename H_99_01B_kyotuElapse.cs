@@ -8,7 +8,7 @@ public class H_99_01B_kyotuElapse : MonoBehaviour
     //強調表現　点滅のブール変数tenmetuOnOffを作るプログラム
 
     //共通変数であるelapse,tenmetuOnOff使いまわす
-
+    //使っている13mojihonban,
 
     //アタッチ＞mainncamera
 

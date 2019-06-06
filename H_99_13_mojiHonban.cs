@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class H_99_13_mojiHonban : MonoBehaviour
 {
+    //UIオブジェcanvasworld＞UIオブジェtextpanelの中に
+    //UIプレハブpremoji（UIpanel＞UITEXT）を呼び出す
+    //UIプレハブの文章の内容を決定する。
+    //アタッチ＞UIオブジェcanvasworld＞UIオブジェtextpanel
+    //セット＞kyotuhensu、kyotuhensuelapse、UIオブジェプレハブpremoji
+
     //uitext のプレハブ //canvasはプレハブ化せずにおく、publicにはしておく
 
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす

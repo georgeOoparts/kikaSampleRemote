@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class H_99_01B_kyotuElapse : MonoBehaviour
 {
+    //ストップウォッチで使う、共通変数であるelapseを作るプログラム
+    //強調表現　点滅のブール変数tenmetuOnOffを作るプログラム
+    //アタッチ＞mainncamera
+
+
+
     //k6_a:ストップウォッチ関数を使う時のおまじない。
     //updateでelapse = (float)stopwatch.Elapsed.TotalSeconds;忘れずに 
     private System.Diagnostics.Stopwatch stopwatch

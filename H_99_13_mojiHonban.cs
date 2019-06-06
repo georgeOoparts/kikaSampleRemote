@@ -9,13 +9,15 @@ public class H_99_13_mojiHonban : MonoBehaviour
     //UIプレハブpremoji（UIpanel＞UITEXT）を呼び出す
     //UIプレハブの文章の内容を決定する。
     //アタッチ＞UIオブジェcanvasworld＞UIオブジェtextpanel
-    //セット＞kyotuhensu、kyotuhensuelapse、UIオブジェプレハブpremoji
+    //セット＞kyotuhensu、kyotuhensuelapse(maincameraをセット)、UIオブジェプレハブpremoji
 
     //uitext のプレハブ //canvasはプレハブ化せずにおく、publicにはしておく
 
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     //このスクリプトをアタッチしたオブジェクトにいちいちこのオブジェクトをアタッチ
     public H_99_01_kyoutuHensu kyotu;
+
+    public H_99_01B_kyotuElapse kyotuEla;
 
     //k0014_2 :プレハブ（画面のobjでもOK）を使う objにはりつけ
     public GameObject premoji;

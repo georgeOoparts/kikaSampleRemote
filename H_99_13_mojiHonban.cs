@@ -16,7 +16,8 @@ public class H_99_13_mojiHonban : MonoBehaviour
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     //このスクリプトをアタッチしたオブジェクトにいちいちこのオブジェクトをアタッチ
     public H_99_01_kyoutuHensu kyotu;
-
+    
+    //強調表現点滅に使う変数を共通変数として使う。
     public H_99_01B_kyotuElapse kyotuEla;
 
     //k0014_2 :プレハブ（画面のobjでもOK）を使う objにはりつけ
@@ -32,7 +33,8 @@ public class H_99_13_mojiHonban : MonoBehaviour
     //textオブジェのコンポTEXTに当てはめるText変数
     List<Text> kodomoTextText = new List<Text>();
 
-    void Start() {
+    void Start() 
+    {
         //配列に解説文を割り当てる。
         setWord();
         for (int i = 0; i < 11; i++) 

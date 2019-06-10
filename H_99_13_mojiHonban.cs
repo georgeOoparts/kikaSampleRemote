@@ -63,7 +63,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
     void Update() 
     {
 
-        Debug.Log("OKKKKKKdesuka2222");
+        Debug.Log(kyotuEla.elapse+"OKKKKKKdesuka2222"+kyotuEla.tenmetuOnOff);
         //k6_ac:何秒たったかを変数elapseに入れる
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
 

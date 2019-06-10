@@ -23,7 +23,7 @@ public class H_99_01B_kyotuElapse : MonoBehaviour
     //このelapseはH_99_12_zukeiPPRRのほうで共通変数として利用される
     //それによって、点滅のタイミングを完全に合わせる
     public float elapse = 0;
-    private bool tenmetuOnOff = true;
+    public bool tenmetuOnOff = true;
     public float interval = 0.35f;
 
     bool kyochoHantei() 

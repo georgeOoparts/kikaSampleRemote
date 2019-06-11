@@ -14,6 +14,10 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
 
     public H_99_01_kyoutuHensu kyotu;
 
+    //強調表現点滅に使う変数を共通変数として使う。
+    public H_99_01B_kyotuElapse kyotuEla;
+
+
     public GameObject lineAB;
     public GameObject lineSAB;
 
@@ -94,6 +98,8 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("woooo"+kyotuEla.tenmetuOnOff);
+
         //k6_ac:何秒たったかを変数elapseに入れる
         elapse = (float)stopwatch.Elapsed.TotalSeconds;
 

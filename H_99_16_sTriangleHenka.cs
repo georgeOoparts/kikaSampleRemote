@@ -122,7 +122,33 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
             rrlineBC.enabled = true;
             //共通変数の kyotuEla.tenmetuOnOffで点滅処理
             rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+        } 
+        else if (count == 2) 
+        {
+            reset();
+            rrlineBC.enabled = true;
+            //共通変数の kyotuEla.tenmetuOnOffで点滅処理
+            rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+        } 
+        else if (count == 3) 
+        {
+            reset();
 
+            rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //共通変数の kyotuEla.tenmetuOnOffで点滅処理
+            rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+        } 
+        else if (count == 4) 
+        {
+            reset();
+
+            rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
         }
     }
     

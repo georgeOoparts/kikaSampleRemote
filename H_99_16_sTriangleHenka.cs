@@ -98,7 +98,7 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("woooo"+kyotuEla.tenmetuOnOff);
+        //Debug.Log("woooo"+kyotuEla.tenmetuOnOff);
 
         //k6_ac:何秒たったかを変数elapseに入れる
         //elapse = (float)stopwatch.Elapsed.TotalSeconds;

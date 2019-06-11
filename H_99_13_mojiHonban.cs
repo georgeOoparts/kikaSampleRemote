@@ -84,16 +84,26 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //UItextに2次元配列の値を入れていく
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
+            //mojiを並べる3次元配列なので要素をおVERするとすぐにエラーになる。
             //k0017_99_2_1:2次元配列　最初の要素の個数を得る
             if (kyotu.rrCount < intValues.GetLength(1) && kyotu.MCount < intValues.GetLength(0)) 
             {
                 kodomoTextText[i].text = intValues[kyotu.MCount, kyotu.rrCount, i];
-            } 
-            else
-                kodomoTextText[i].text = "";
+            }
+
+            //クリックしていき最後の文字列にたどり着いたら、後は同じ表示をし続ける。
+            //>meidai１、の場合　最後の文字列はrrcount４　最後の文字列を表示し続ける。
+            if (kyotu.MCount==0 && kyotu.rrCount>=4) 
+            {
+                kodomoTextText[i].text = intValues[kyotu.MCount,4, i];
+            }
+            
+
+
 
 
         }
+        //文字が入った配列の情報から、強調すべき文字の順番をintで得る
         //k10_2:strin>int変換
         if (kyotu.rrCount < intValues.GetLength(1) && kyotu.MCount < intValues.GetLength(0)) 
         {
@@ -131,6 +141,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
             
     }
     //Uitextの中身----------------------------------------------------------------------------------------------------
+    //3次元配列
     private string[,,] intValues;
     void setWord() 
     {

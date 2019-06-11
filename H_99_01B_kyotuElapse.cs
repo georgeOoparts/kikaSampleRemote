@@ -13,6 +13,9 @@ public class H_99_01B_kyotuElapse : MonoBehaviour
     //アタッチ＞mainncamera
 
 
+    //このelapseはH_99_12_zukeiPPRRのほうで共通変数として利用される
+    //H_99_16_sTriangleHenkaも
+
 
     //点滅強調に使う。kyochoHantei()メソッド--------------------------------------------------------
     //void kyochouPanel(int count) の中で使う。
@@ -20,9 +23,7 @@ public class H_99_01B_kyotuElapse : MonoBehaviour
     //updateでelapse = (float)stopwatch.Elapsed.TotalSeconds;忘れずに 
     private System.Diagnostics.Stopwatch stopwatch
         = new System.Diagnostics.Stopwatch();
-    //このelapseはH_99_12_zukeiPPRRのほうで共通変数として利用される
-    //H_99_16_sTriangleHenkaも
-
+    
     //それによって、点滅のタイミングを完全に合わせる
     public float elapse = 0;
     public bool tenmetuOnOff = true;

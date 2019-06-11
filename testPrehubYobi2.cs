@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class testPrehubYobi2 : MonoBehaviour
 {
+    //使ってないプログラム
+
     //uitext のプレハブ //canvasはプレハブ化せずにおく、publicにはしておく
 
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
@@ -68,6 +70,8 @@ public class testPrehubYobi2 : MonoBehaviour
         
         //kyotu.rrCountの数を増やす
         if (Input.GetMouseButtonDown(0)) kyotu.rrCount++;
+
+        //Debug.Log("tukaltultuteru????");
     }
     //点滅強調に使う。kyochoHantei()メソッド--------------------------------------------------------
     //void kyochouPanel(int count) の中で使う。

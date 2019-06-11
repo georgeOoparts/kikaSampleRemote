@@ -11,19 +11,26 @@ public class H_99_01_kyoutuHensu : MonoBehaviour
     //elapseのためだけにstart関数を使い、
     //からのオブジェSWにこのプログラムをアタッチ
 
-    
 
-    
-        
-    //今、対象としているmeidaiを0から対応させる
-    //どのプログラムで数が増える？
+
+
+
+    //今、対象としているmeidaiを0から対応させる-----------
+    //use　H_99_13_mojiHonban
+    //どのプログラムで数が増える？>canvasworld>textpanel>H_99_13_mojiHonban(右クリックで増える)
 
     public int MCount = 0;
-    //rrの何ターン目かをカウントする共通変数 
-    //どのプログラムで数が増える？＞testPrehubYobi2、textpanelオブジェにアタッチされている
+
+    //rrの何ターン目かをカウントする共通変数 -----------
+
+    //use　H_99_16_sTriangleHenka、H_99_13_mojiHonban    
+    //どのプログラムで数が増える？＞canvasworld>textpanel>H_99_13_mojiHonban（左クリック）
+    //どのプログラムで減る＞canvasworld>textpanel>H_99_13_mojiHonban（右クリック0にリセット）
 
     public int rrCount=0;
-    //maincameraがある位置を1～３で表す。
+    
+    
+    //maincameraがある位置を1～３で表す。----------------------
     public int mainCameraPosi = 0;
         
         

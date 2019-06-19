@@ -12,7 +12,11 @@ public class H_99_01_kyoutuHensu : MonoBehaviour
     //からのオブジェSWにこのプログラムをアタッチ
 
 
+    //文字の内容と強調するプログラムH_99_13_mojiHonbanで使う
+    //公理、公準、定義、meidaiのどの文字を表示させるかを決める
+    //どのプログラムで数が増える？>canvasworld>textpanel>H_99_13_mojiHonban(右クリックで増える)
 
+    public int mojiSwitch = 0;
 
 
     //今、対象としているmeidaiを0から対応させる-----------

@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class H_99_13_mojiHonban : MonoBehaviour
 {
+    //クリックした回数に合わせて、文字の表示、文字のバック点滅強調をするプログラム
+    //ユクユクはこれを分割させたい。
+
     //UIオブジェcanvasworld＞UIオブジェtextpanelの中に
     //UIプレハブpremoji（UIpanel＞UITEXT）を呼び出す
     //UIプレハブの文章の内容を決定する。
@@ -93,6 +96,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
             //クリックしていき最後の文字列にたどり着いたら、後は同じ表示をし続ける。
             //>meidai１、の場合　最後の文字列はrrcount４　最後の文字列を表示し続ける。
+            //＞＞
             if (kyotu.MCount==0 && kyotu.rrCount>=4) 
             {
                 kodomoTextText[i].text = intValues[kyotu.MCount,4, i];

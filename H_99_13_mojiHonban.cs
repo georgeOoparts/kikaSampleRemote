@@ -37,8 +37,22 @@ public class H_99_13_mojiHonban : MonoBehaviour
     //textオブジェのコンポTEXTに当てはめるText変数
     List<Text> kodomoTextText = new List<Text>();
 
+    //List<List<string>> listlist = new List<Text>();
+
+    //listlist[x][y];
+    //List<List<string>> momonew =new List<< List<string> > ();
+    
+
     void Start() 
     {
+        List<List<string>> dictionary = new List<List<string>>() {
+      // Listの中にListを追加
+      new List<string>() {"apple", "action", "after"},  // 'a'で始まる単語のList
+      new List<string>() {"big", "best", "bridge"},     // 'b'で始まる単語のList
+      new List<string>() {"cheese", "cat", "connect"},  // 'c'で始まる単語のList
+    };
+        //listlist[0][0]; = "weeeee";  
+
         //配列に解説文を割り当てる。
         //setWord();
         for (int i = 0; i < 11; i++) 

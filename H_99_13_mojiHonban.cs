@@ -65,13 +65,10 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //    new List<string>() { "big", "best", "bridge" },     // 'b'で始まる単語のList
         //    new List<string>() { "cheese", "cat", "connect" },  // 'c'で始まる単語のList
         //};
-        dictionary = new List<List<string>>() 
-        {
-            // Listの中にListを追加
-            new List<string>(),  // 'a'で始まる単語のList
-            new List<string>(),     // 'b'で始まる単語のList
-            new List<string>(),  // 'c'で始まる単語のList
-        };
+        dictionary.Add(new List<string>());
+        dictionary.Add(new List<string>());
+        dictionary.Add(new List<string>());
+
         dictionary[0].Add("wwwwww");
         dictionary[2].Add("2222222");
         //listlist[0][0]; = "weeeee";  

@@ -66,6 +66,25 @@ public class H_99_13_mojiHonban : MonoBehaviour
     private int kyouchouHenkanInt;
     void Update() 
     {
+        if (Input.GetKeyDown("0")) 
+        {
+            kyotu.mojiSwitch = 0;
+        } 
+        else if (Input.GetKeyDown("1")) 
+        {
+            kyotu.mojiSwitch = 1;
+        } 
+        else if (Input.GetKeyDown("2")) 
+        {
+            kyotu.mojiSwitch = 2;
+        } 
+        else if (Input.GetKeyDown("3")) 
+        {
+            kyotu.mojiSwitch = 3;
+        }
+
+
+
         Debug.Log("やりなおし"+kyotu.mojiSwitch);
         //Debug.Log(kyotuEla.elapse+"OKKKKKKdesuka2222"+kyotuEla.tenmetuOnOff);
         

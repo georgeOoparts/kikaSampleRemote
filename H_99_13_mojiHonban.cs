@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//using NUnit.Framework;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -41,18 +42,42 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
     //listlist[x][y];
     //List<List<string>> momonew =new List<< List<string> > ();
-    
 
+    //List<List<string>> dictionary = new List<List<string>>();
+    //List<List> dic = new List<List>();
+
+    //List list1 = new List<string>();
+    //List list2 = new List<string>();
+
+    List<List<string>> dictionary = new List<List<string>>();
+    //List<string> dictionary0 = new List<string>();
     void Start() 
     {
-        List<List<string>> dictionary = new List<List<string>>() {
-      // Listの中にListを追加
-      new List<string>() {"apple", "action", "after"},  // 'a'で始まる単語のList
-      new List<string>() {"big", "best", "bridge"},     // 'b'で始まる単語のList
-      new List<string>() {"cheese", "cat", "connect"},  // 'c'で始まる単語のList
-    };
+        //dic.Add(list1);
+        //dic.Add(list2);
+        //dictionary[0][0] ="wow";
+        //dictionary[0][1] = "011111111111";
+        //dictionary[1][0] = "100000000000";
+        //dictionary = new List<List<string>>()
+        //{
+        //    // Listの中にListを追加
+        //    new List<string>() { "apple", "action", "after" },  // 'a'で始まる単語のList
+        //    new List<string>() { "big", "best", "bridge" },     // 'b'で始まる単語のList
+        //    new List<string>() { "cheese", "cat", "connect" },  // 'c'で始まる単語のList
+        //};
+        dictionary = new List<List<string>>() 
+        {
+            // Listの中にListを追加
+            new List<string>(),  // 'a'で始まる単語のList
+            new List<string>(),     // 'b'で始まる単語のList
+            new List<string>(),  // 'c'で始まる単語のList
+        };
+        dictionary[0].Add("wwwwww");
+        dictionary[2].Add("2222222");
         //listlist[0][0]; = "weeeee";  
+        //dictionary.Add= new List<dictionary0>(); //dictionary0;
 
+        Debug.Log("やりなおし::"+dictionary[2][0]);
         //配列に解説文を割り当てる。
         //setWord();
         for (int i = 0; i < 11; i++) 
@@ -99,7 +124,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
 
 
-        Debug.Log("やりなおし"+kyotu.mojiSwitch);
+        //Debug.Log("やりなおし"+kyotu.mojiSwitch);
         //Debug.Log(kyotuEla.elapse+"OKKKKKKdesuka2222"+kyotuEla.tenmetuOnOff);
         
         //k6_ac:何秒たったかを変数elapseに入れる

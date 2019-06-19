@@ -7,6 +7,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
 {
     //クリックした回数に合わせて、文字の表示、文字のバック点滅強調をするプログラム
     //ユクユクはこれを分割させたい。
+    //　プレハブセット、共通変数セット、最後までクリックしても表示させる。めん土井。
 
     //UIオブジェcanvasworld＞UIオブジェtextpanelの中に
     //UIプレハブpremoji（UIpanel＞UITEXT）を呼び出す
@@ -84,7 +85,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //Debug.Log("MCount" + kyotu.MCount);
 
 
-        //UItextに2次元配列の値を入れていく
+        //UItextに2次元配列の値を入れていく＞＞ここだけいちいち変える必要が有る
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
             //mojiを並べる3次元配列なので要素をおVERするとすぐにエラーになる。

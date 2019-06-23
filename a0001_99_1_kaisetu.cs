@@ -343,6 +343,55 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     ///k0016_99_1_1_6　：List 直接値をいれて定義する。
     //private List<float> meidaiSita = new List<float> { 8.05f, 15.2f,8.9f,4.9f,12.3f,10.0f };
 
+    //k0016_99_2 :2次元listを使う
+    //using System.Collections.Generic;が入ってなきゃ駄目
+
+    //k0016_99_2_1：2次元listの宣言
+    //private List<List<int>> kariList = new List<List<int>>();
+
+    //k0016_99_2_1_1：2次元list [0][0],[0][1]をつくる
+    //kariList[0].Add(new List<int>());
+    //kariList[1].Add(new List<int>());
+
+    //k0016_99_2_1_1_1：Listの要素を使用、変数に代入、配列と同じように使用出来る
+    //debug.log(kariList[0][0]);
+
+    //k0016_99_1 :4次元listを使う
+    //using System.Collections.Generic;が入ってなきゃ駄目
+
+    //k0016_99_2_1：4次元listの宣言
+    //List<List<List<List<string>>>> kariList = new List<List<List<List<string>>>>();
+    
+    //k0016_99_2_1_1：4次元listに3次元listを当てはめる [0][0],[0][1]をつくる
+    //kariList[0][][][]を作る
+    //kariList.Add(new List<List<List<string>>>());
+    //kariList[1][][][]を作る
+    //kariList.Add(new List<List<List<string>>>());
+
+    //k0016_99_2_1_1_1：3次元listに2次元listを当てはめる [0][0][0],[0][0][1]をつくる
+    //kariList[0][0][][]を作る
+    //kariList[0].Add(new List<List<string>>());
+    //kariList[0][1][][]を作る
+    //kariList[0].Add(new List<List<string>>());
+
+    //k0016_99_2_1_1_1_1：2次元listに1次元listを当てはめる [0][0][0],[0][0][1]をつくる
+    //kariList[0][0][0][]を作る
+    //kariList[0][0].Add(new List<string>());
+    //kariList[0][0][1][]を作る
+    //kariList[0][0].Add(new List<string>());
+
+    //k0016_99_2_1_1_1_1_1：2次元listに1次元listを当てはめる [0][0][0][0],[0][0][0][1]をつくる
+    //kariList[0][0][0][0]を作る
+    //kariList[0][0][0].Add("w0000");
+    //kariList[0][0][0][1]を作る
+    //kariList[0][0][0].Add("w0001");
+
+
+    
+    //k0016_99_2_1_1_1：Listの要素を使用、変数に代入、配列と同じように使用出来る
+    //debug.log(kariList[0][0]);
+
+
     ーーーーーーーーーーー－－－－－－－－－－－－－－－－－－
     //k0017_99_1：配列使い方
     //Transform[] trMeidai1=new Transform[6];

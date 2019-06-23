@@ -49,7 +49,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
     //List list1 = new List<string>();
     //List list2 = new List<string>();
 
-    List<List<List<string>>> dictionary = new List<List<List<string>>>();
+    List<List<List<List<string>>>> dictionary = new List<List<List<List<string>>>>();
     //List<string> dictionary0 = new List<string>();
     void Start() 
     {
@@ -65,24 +65,49 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //    new List<string>() { "big", "best", "bridge" },     // 'b'で始まる単語のList
         //    new List<string>() { "cheese", "cat", "connect" },  // 'c'で始まる単語のList
         //};
+        //4元目に3元目を当てはめる
+        //>dictionary[0,,,]を作成
+        dictionary.Add(new List<List<List<string>>>());
+        //>dictionary[1,,,]を作成
+        dictionary.Add(new List<List<List<string>>>());
+        //>dictionary[2,,,]を作成
+        dictionary.Add(new List<List<List<string>>>());
+
         //3元目に2元目を当てはめる
-        dictionary.Add(new List<List<string>>());
-        dictionary.Add(new List<List<string>>());
-        dictionary.Add(new List<List<string>>());
+        //>dictionary[0,0,,]を作成
+        dictionary[0].Add(new List<List<string>>());
+        //>dictionary[0,1,,]を作成
+        dictionary[0].Add(new List<List<string>>());
+
+
+        //dictionary.Add(new List<List<string>>());
+        //dictionary.Add(new List<List<string>>());
+        //dictionary.Add(new List<List<string>>());
 
         //2元目に1元目を当てはめる
-        dictionary[0].Add(new List<string>());
-        dictionary[0].Add(new List<string>());
-        dictionary[0].Add(new List<string>());
+        //>dictionary[0,0,0,]を作成
+        dictionary[0][0].Add(new List<string>());
+        //>dictionary[0,0,0,]を作成
+        dictionary[0][0].Add(new List<string>());
+        //>dictionary[0,0,0,]を作成
+        dictionary[0][0].Add(new List<string>());
+
+
+
+
+        //dictionary[0].Add(new List<string>());
+        //dictionary[0].Add(new List<string>());
+        //dictionary[0].Add(new List<string>());
 
 
         //1元目にデータを当てはめる
-        dictionary[0][0].Add("wwwwwwdesuyo000");
+        //dictionary[0][0][0][0]を作成
+        dictionary[0][0][0].Add("4jigen");
         //dictionary[2].Add("2222222");
         //listlist[0][0]; = "weeeee";  
         //dictionary.Add= new List<dictionary0>(); //dictionary0;
 
-        Debug.Log("やりなおし::"+dictionary[0][0][0]);
+        Debug.Log("やりなおし::"+dictionary[0][0][0][0]);
         //配列に解説文を割り当てる。
         //setWord();
         for (int i = 0; i < 11; i++) 

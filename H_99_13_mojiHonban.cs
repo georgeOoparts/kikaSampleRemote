@@ -67,6 +67,10 @@ public class H_99_13_mojiHonban : MonoBehaviour
         {
             bunsho[3].Add(new List<List<string>>());
         }
+        ///k0016_99_1_1_6　：List 直接値をいれて定義する。
+        //private List<float> meidaiSita = new List<float> { 8.05f, 15.2f,8.9f,4.9f,12.3f,10.0f };
+
+        
 
 
         //2元目に1元目を当てはめる
@@ -84,8 +88,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //    bunsho[3][0].Add(new List<string>());
         //}
         //bunsho[3][0]
-        ///k0016_99_1_1_6　：List 直接値をいれて定義する。
-        //private List<float> meidaiSita = new List<float> { 8.05f, 15.2f,8.9f,4.9f,12.3f,10.0f };
+        
         //bunsho[3][0] ={ { 0,1},{ 0,1} };
 
         //1元目にデータを当てはめる
@@ -93,7 +96,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         bunsho[0][0][0].Add("4jigen");
         
 
-        Debug.Log("やりなおし::"+ bunsho[0][0][0][0]);
+        //Debug.Log("やりなおし::"+ bunsho[0][0][0][0]);
         //配列に解説文を割り当てる。
         //setWord();
         for (int i = 0; i < 11; i++) 

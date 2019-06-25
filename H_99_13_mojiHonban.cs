@@ -79,12 +79,14 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
         //2元目に1元目を当てはめる　meidai１の文章数13
         //>bunsho[3][0][0]～[3][0][12]を作成 meidai1の文章 1～13に対応
-        for (int i = 0; i < 13; i++) 
-        {
-            bunsho[3][0].Add(new List<string>());
-        }
-
-
+        //for (int i = 0; i < 13; i++) 
+        //{
+        //    bunsho[3][0].Add(new List<string>());
+        //}
+        //bunsho[3][0]
+        ///k0016_99_1_1_6　：List 直接値をいれて定義する。
+        //private List<float> meidaiSita = new List<float> { 8.05f, 15.2f,8.9f,4.9f,12.3f,10.0f };
+        //bunsho[3][0] ={ { 0,1},{ 0,1} };
 
         //1元目にデータを当てはめる
         //bunsho[0][0][0][0]を作成

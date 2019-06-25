@@ -44,29 +44,39 @@ public class H_99_13_mojiHonban : MonoBehaviour
     void Start() 
     {
         //4元目に3元目を当てはめる
-        //>dictionary[0]を作成
+        //>bunsho[0]を作成 定義　0
         bunsho.Add(new List<List<List<string>>>());
-        //>dictionary[1]を作成
+        //>bunsho[1]を作成　公準　1
         bunsho.Add(new List<List<List<string>>>());
-        //>dictionary[2]を作成
+        //>bunsho[2]を作成　公理　2
         bunsho.Add(new List<List<List<string>>>());
+        //>bunsho[3]を作成　meidai　3
+        bunsho.Add(new List<List<List<string>>>());
+
 
         //3元目に2元目を当てはめる
-        //>dictionary[0][0]を作成
+        //>bunsho[0][0]を作成
         bunsho[0].Add(new List<List<string>>());
-        //>dictionary[0][1]を作成
+        //>bunsho[0][1]を作成
         bunsho[0].Add(new List<List<string>>());
 
+        //3元目に2元目を当てはめる
+        //>bunsho[3][0]を作成
+        bunsho[3].Add(new List<List<string>>());
+        //>bunsho[3][1]を作成
+        bunsho[3].Add(new List<List<string>>());
+
+
         //2元目に1元目を当てはめる
-        //>dictionary[0][0][0]を作成
+        //>bunsho[0][0][0]を作成
         bunsho[0][0].Add(new List<string>());
-        //>dictionary[0][0][1]を作成
+        //>bunsho[0][0][1]を作成
         bunsho[0][0].Add(new List<string>());
-        //>dictionary[0][0][2]を作成
+        //>bunsho[0][0][2]を作成
         bunsho[0][0].Add(new List<string>());
 
         //1元目にデータを当てはめる
-        //dictionary[0][0][0][0]を作成
+        //bunsho[0][0][0][0]を作成
         bunsho[0][0][0].Add("4jigen");
         
 

@@ -38,63 +38,39 @@ public class H_99_13_mojiHonban : MonoBehaviour
     //textオブジェのコンポTEXTに当てはめるText変数
     List<Text> kodomoTextText = new List<Text>();
 
-    //List<List<string>> listlist = new List<Text>();
-
-    //listlist[x][y];
-    //List<List<string>> momonew =new List<< List<string> > ();
-
-    //List<List<string>> dictionary = new List<List<string>>();
-    //List<List> dic = new List<List>();
-
-    //List list1 = new List<string>();
-    //List list2 = new List<string>();
-
     //4次元listを定義
-    List<List<List<List<string>>>> dictionary = new List<List<List<List<string>>>>();
-    //List<string> dictionary0 = new List<string>();
+    List<List<List<List<string>>>> bunsho = new List<List<List<List<string>>>>();
+
     void Start() 
     {
-        //dic.Add(list1);
-        //dic.Add(list2);
-        //dictionary[0][0] ="wow";
-        //dictionary[0][1] = "011111111111";
-        //dictionary[1][0] = "100000000000";
-        //dictionary = new List<List<string>>()
-        //{
-        //    // Listの中にListを追加
-        //    new List<string>() { "apple", "action", "after" },  // 'a'で始まる単語のList
-        //    new List<string>() { "big", "best", "bridge" },     // 'b'で始まる単語のList
-        //    new List<string>() { "cheese", "cat", "connect" },  // 'c'で始まる単語のList
-        //};
-        
         //4元目に3元目を当てはめる
         //>dictionary[0]を作成
-        dictionary.Add(new List<List<List<string>>>());
+        bunsho.Add(new List<List<List<string>>>());
         //>dictionary[1]を作成
-        dictionary.Add(new List<List<List<string>>>());
+        bunsho.Add(new List<List<List<string>>>());
         //>dictionary[2]を作成
-        dictionary.Add(new List<List<List<string>>>());
+        bunsho.Add(new List<List<List<string>>>());
 
         //3元目に2元目を当てはめる
         //>dictionary[0][0]を作成
-        dictionary[0].Add(new List<List<string>>());
+        bunsho[0].Add(new List<List<string>>());
         //>dictionary[0][1]を作成
-        dictionary[0].Add(new List<List<string>>());
+        bunsho[0].Add(new List<List<string>>());
 
         //2元目に1元目を当てはめる
         //>dictionary[0][0][0]を作成
-        dictionary[0][0].Add(new List<string>());
+        bunsho[0][0].Add(new List<string>());
         //>dictionary[0][0][1]を作成
-        dictionary[0][0].Add(new List<string>());
+        bunsho[0][0].Add(new List<string>());
         //>dictionary[0][0][2]を作成
-        dictionary[0][0].Add(new List<string>());
+        bunsho[0][0].Add(new List<string>());
 
         //1元目にデータを当てはめる
         //dictionary[0][0][0][0]を作成
-        dictionary[0][0][0].Add("4jigen");
+        bunsho[0][0][0].Add("4jigen");
         
 
-        Debug.Log("やりなおし::"+dictionary[0][0][0][0]);
+        Debug.Log("やりなおし::"+ bunsho[0][0][0][0]);
         //配列に解説文を割り当てる。
         //setWord();
         for (int i = 0; i < 11; i++) 
@@ -114,8 +90,6 @@ public class H_99_13_mojiHonban : MonoBehaviour
             mojiPanel[i].name = "mojiPanel" + i;
             kodomoTextObj[i].name = "text" + i;
         }
-        //k6_aa:ストップウォッチスタート
-        //stopwatch.Start();
     }
 
 
@@ -139,26 +113,15 @@ public class H_99_13_mojiHonban : MonoBehaviour
             kyotu.mojiSwitch = 3;
         }
 
-
-
-        //Debug.Log("やりなおし"+kyotu.mojiSwitch);
-        //Debug.Log(kyotuEla.elapse+"OKKKKKKdesuka2222"+kyotuEla.tenmetuOnOff);
-        
-        //k6_ac:何秒たったかを変数elapseに入れる
-        //elapse = (float)stopwatch.Elapsed.TotalSeconds;
-
         //kyotu.rrCountの数を増やす
         if (Input.GetMouseButtonDown(0))
             kyotu.rrCount++;
-        //Debug.Log("rrCount" + kyotu.rrCount);
+
         else if (Input.GetMouseButtonDown(1)) 
         {
             kyotu.MCount++;
             kyotu.rrCount = 0;
         }
-
-        //Debug.Log("MCount" + kyotu.MCount);
-
 
         //UItextに2次元配列の値を入れていく＞＞ここだけいちいち変える必要が有る
         for (int i = 0; i < kodomoTextText.Count; i++) 
@@ -177,19 +140,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
             //{
               //  kodomoTextText[i].text = intValues[kyotu.MCount,4, i];
             //}
-            
-
-
-
-
         }
-        
-
-        //強調すべきパネルを強調するメソッド
-        //kyochouPanel(kyouchouHenkanInt);///
-        //Debug.Log("OKKKKKK");
-        
-
     }
     
     //kyochouPanel(int count) ------------------------------------------------------------------------------

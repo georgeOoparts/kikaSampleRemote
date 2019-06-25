@@ -343,7 +343,7 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     ///k0016_99_1_1_6　：List 直接値をいれて定義する。
     //private List<float> meidaiSita = new List<float> { 8.05f, 15.2f,8.9f,4.9f,12.3f,10.0f };
 
-    //k0016_99_2 :2次元listを使う
+    //k0016_99_2 :2次元listを使う---------------------------------------------------------
     //using System.Collections.Generic;が入ってなきゃ駄目
 
     //k0016_99_2_1：2次元listの宣言
@@ -356,7 +356,7 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     //k0016_99_2_1_1_1：Listの要素を使用、変数に代入、配列と同じように使用出来る
     //debug.log(kariList[0][0]);
 
-    //k0016_99_1 :4次元listを使う
+    //k0016_99_1 :4次元listを使う--------------------------------------
     //using System.Collections.Generic;が入ってなきゃ駄目
 
     //k0016_99_2_1：4次元listの宣言

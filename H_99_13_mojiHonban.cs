@@ -62,9 +62,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
         //3元目に2元目を当てはめる
         //>bunsho[3][0]を作成 meidai 1～6までの6個のmeidaiに対応
-        //bunsho[3].Add(new List<List<string>>());
-        //>bunsho[3][1]を作成　meidai 文章１
-        //bunsho[3].Add(new List<List<string>>());
+        
         for(int i=0; i<6;i++) 
         {
             bunsho[3].Add(new List<List<string>>());
@@ -78,6 +76,15 @@ public class H_99_13_mojiHonban : MonoBehaviour
         bunsho[0][0].Add(new List<string>());
         //>bunsho[0][0][2]を作成
         bunsho[0][0].Add(new List<string>());
+
+        //2元目に1元目を当てはめる　meidai１の文章数13
+        //>bunsho[3][0][0]～[3][0][12]を作成 meidai1の文章 1～13に対応
+        for (int i = 0; i < 13; i++) 
+        {
+            bunsho[3][0].Add(new List<string>());
+        }
+
+
 
         //1元目にデータを当てはめる
         //bunsho[0][0][0][0]を作成

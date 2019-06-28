@@ -44,10 +44,17 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
     void Start() 
     {
-        //k0016_99_2_1_1：2次元list [0][0],[0][1]をつくる
+        //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
         kariList.Add(new List<string>());
         kariList.Add(new List<string>());
-        
+
+        kariList[0].Add("wow");
+
+        Debug.Log("OKK::"+ kariList[0][0]);
+
+
+
+
         ////4元目に3元目を当てはめる
         ////>bunsho[0]を作成 定義　0
         //bunsho.Add(new List<List<List<string>>>());
@@ -122,7 +129,6 @@ public class H_99_13_mojiHonban : MonoBehaviour
             kodomoTextObj[i].name = "text" + i;
         }
         //ここから↑ないとバグ出る-----------------
-        Debug.Log("OKK");
     }
 
 

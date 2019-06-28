@@ -1,5 +1,4 @@
-﻿//using NUnit.Framework;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -39,46 +38,46 @@ public class H_99_13_mojiHonban : MonoBehaviour
     List<Text> kodomoTextText = new List<Text>();
 
     //4次元listを定義
-    List<List<List<List<string>>>> bunsho = new List<List<List<List<string>>>>();
+    //List<List<List<List<string>>>> bunsho = new List<List<List<List<string>>>>();
 
     void Start() 
     {
-        //4元目に3元目を当てはめる
-        //>bunsho[0]を作成 定義　0
-        bunsho.Add(new List<List<List<string>>>());
-        //>bunsho[1]を作成　公準　1
-        bunsho.Add(new List<List<List<string>>>());
-        //>bunsho[2]を作成　公理　2
-        bunsho.Add(new List<List<List<string>>>());
-        //>bunsho[3]を作成　meidai　3
-        bunsho.Add(new List<List<List<string>>>());
+        ////4元目に3元目を当てはめる
+        ////>bunsho[0]を作成 定義　0
+        //bunsho.Add(new List<List<List<string>>>());
+        ////>bunsho[1]を作成　公準　1
+        //bunsho.Add(new List<List<List<string>>>());
+        ////>bunsho[2]を作成　公理　2
+        //bunsho.Add(new List<List<List<string>>>());
+        ////>bunsho[3]を作成　meidai　3
+        //bunsho.Add(new List<List<List<string>>>());
 
-        //3元目に2元目を当てはめる
-        //>bunsho[0][0]を作成
-        bunsho[0].Add(new List<List<string>>());
-        //>bunsho[0][1]を作成
-        bunsho[0].Add(new List<List<string>>());
+        ////3元目に2元目を当てはめる
+        ////>bunsho[0][0]を作成
+        //bunsho[0].Add(new List<List<string>>());
+        ////>bunsho[0][1]を作成
+        //bunsho[0].Add(new List<List<string>>());
 
         //3元目に2元目を当てはめる
         //>bunsho[3][0]を作成 meidai 1～6までの6個のmeidaiに対応
         
-        for(int i=0; i<6;i++) 
-        {
-            bunsho[3].Add(new List<List<string>>());
-        }
+        //for(int i=0; i<6;i++) 
+        //{
+        //    bunsho[3].Add(new List<List<string>>());
+        //}
         ///k0016_99_1_1_6　：List 直接値をいれて定義する。
         //private List<float> meidaiSita = new List<float> { 8.05f, 15.2f,8.9f,4.9f,12.3f,10.0f };
 
         
 
 
-        //2元目に1元目を当てはめる
-        //>bunsho[0][0][0]を作成
-        bunsho[0][0].Add(new List<string>());
-        //>bunsho[0][0][1]を作成
-        bunsho[0][0].Add(new List<string>());
-        //>bunsho[0][0][2]を作成
-        bunsho[0][0].Add(new List<string>());
+        ////2元目に1元目を当てはめる
+        ////>bunsho[0][0][0]を作成
+        //bunsho[0][0].Add(new List<string>());
+        ////>bunsho[0][0][1]を作成
+        //bunsho[0][0].Add(new List<string>());
+        ////>bunsho[0][0][2]を作成
+        //bunsho[0][0].Add(new List<string>());
 
         //2元目に1元目を当てはめる　meidai１の文章数13
         //>bunsho[3][0][0]～[3][0][12]を作成 meidai1の文章 1～13に対応
@@ -92,7 +91,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
         //1元目にデータを当てはめる
         //bunsho[0][0][0][0]を作成
-        bunsho[0][0][0].Add("4jigen");
+        //bunsho[0][0][0].Add("4jigen");
         
 
         //Debug.Log("やりなおし::"+ bunsho[0][0][0][0]);

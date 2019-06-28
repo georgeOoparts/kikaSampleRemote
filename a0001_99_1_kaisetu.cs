@@ -350,8 +350,8 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     //private List<List<int>> kariList = new List<List<int>>();
 
     //k0016_99_2_1_1：2次元list [0][0],[0][1]をつくる
-    //kariList[0].Add(new List<int>());
-    //kariList[1].Add(new List<int>());
+    //kariList.Add(new List<int>());
+    //kariList.Add(new List<int>());
 
     //k0016_99_2_1_1_1：Listの要素を使用、変数に代入、配列と同じように使用出来る
     //debug.log(kariList[0][0]);

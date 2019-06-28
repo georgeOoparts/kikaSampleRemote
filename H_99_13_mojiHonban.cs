@@ -53,7 +53,6 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //>bunsho[3]を作成　meidai　3
         bunsho.Add(new List<List<List<string>>>());
 
-
         //3元目に2元目を当てはめる
         //>bunsho[0][0]を作成
         bunsho[0].Add(new List<List<string>>());

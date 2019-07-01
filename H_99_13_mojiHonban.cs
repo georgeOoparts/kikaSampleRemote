@@ -41,17 +41,28 @@ public class H_99_13_mojiHonban : MonoBehaviour
     //List<List<List<List<string>>>> bunsho = new List<List<List<List<string>>>>();
     //k0016_99_2_1：2次元listの宣言
     private List<List<string>> kariList = new List<List<string>>();
+    
+    
+    ///k0016_99_1_1_6　：List 直接値をいれて定義する。
+    List<string> meidaiSita = new List<string> { "www", "eee","ttt" };
 
+    //kariList.Add(new List<string>);
+    
     void Start() 
     {
         //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
         kariList.Add(new List<string>());
         kariList.Add(new List<string>());
 
-        kariList[0].Add("wow");
+        //kariList.Add(meidaiSita);
+        for (int i=0;i<meidaiSita.Count;i++) 
+        {
+            kariList[0].Add(meidaiSita[i]);
+        }
 
-        Debug.Log("OKK::"+ kariList[0][0]);
 
+        Debug.Log("OKK::"+ kariList[0][1]);
+        //Debug.Log("OKK::");
 
 
 

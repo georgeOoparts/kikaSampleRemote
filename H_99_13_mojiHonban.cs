@@ -44,10 +44,14 @@ public class H_99_13_mojiHonban : MonoBehaviour
     
     
     ///k0016_99_1_1_6　：List 直接値をいれて定義する。
-    List<string> meidaiSita = new List<string> { "www", "eee","ttt" };
+    List<string> meidaiSita = new List<string> 
+    { "www", "eee","ttt" };
 
-    //kariList.Add(new List<string>);
+    //private List<List<string>> test = new List<List<string>>(){ { "www", "eee", "ttt" },{ }, };
+
     
+    
+
     void Start() 
     {
         //k0016_99_2_1_1：2次元list [0][],[1][]をつくる

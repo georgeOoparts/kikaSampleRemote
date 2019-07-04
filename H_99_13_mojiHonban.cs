@@ -60,10 +60,10 @@ public class H_99_13_mojiHonban : MonoBehaviour
         kariList.Add(new List<string>());
 
         //kariList.Add(meidaiSita);
-        for (int i=0;i<meidaiSita.Count;i++) 
-        {
-            kariList[0].Add(meidaiSita[i]);
-        }
+        //for (int i=0;i<meidaiSita.Count;i++) 
+        //{
+          //  kariList[0].Add(meidaiSita[i]);
+        //}
 
 
         //Debug.Log("OKK::"+ kariList[0][1]);
@@ -147,7 +147,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //ここから↑ないとバグ出る-----------------
     }
     ///k0016_99_1_1_6　：List 直接値をいれて定義する。
-    List<string> meidaiSita = new List<string>
+    List<string> meidaiSita1_1 = new List<string>
     {"命題I-1","","","","","","","","","","","99"};
 
     private int kyouchouHenkanInt;
@@ -183,7 +183,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //UItextに2次元配列の値を入れていく＞＞ここだけいちいち変える必要が有る
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
-            kodomoTextText[i].text = meidaiSita[i];//intValues[kyotu.MCount, kyotu.rrCount, i];
+            kodomoTextText[i].text = meidaiSita1_1[i];//intValues[kyotu.MCount, kyotu.rrCount, i];
             //mojiを並べる3次元配列なので要素をおVERするとすぐにエラーになる。
             //k0017_99_2_1:2次元配列　最初の要素の個数を得る
             //if (kyotu.rrCount < intValues.GetLength(1) && kyotu.MCount < intValues.GetLength(0)) 

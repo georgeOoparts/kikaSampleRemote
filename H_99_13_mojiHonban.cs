@@ -43,9 +43,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
     private List<List<string>> kariList = new List<List<string>>();
     
     
-    ///k0016_99_1_1_6　：List 直接値をいれて定義する。
-    List<string> meidaiSita = new List<string> 
-    { "www", "eee","ttt" };
+    
 
     //{"命題I-1","","","","","","","","","","","99"},
     //                {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","0"},
@@ -68,7 +66,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         }
 
 
-        Debug.Log("OKK::"+ kariList[0][1]);
+        //Debug.Log("OKK::"+ kariList[0][1]);
         //Debug.Log("OKK::");
 
 
@@ -148,7 +146,9 @@ public class H_99_13_mojiHonban : MonoBehaviour
         }
         //ここから↑ないとバグ出る-----------------
     }
-
+    ///k0016_99_1_1_6　：List 直接値をいれて定義する。
+    List<string> meidaiSita = new List<string>
+    {"命題I-1","","","","","","","","","","","99"};
 
     private int kyouchouHenkanInt;
     void Update() 
@@ -183,11 +183,12 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //UItextに2次元配列の値を入れていく＞＞ここだけいちいち変える必要が有る
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
+            kodomoTextText[i].text = meidaiSita[i];//intValues[kyotu.MCount, kyotu.rrCount, i];
             //mojiを並べる3次元配列なので要素をおVERするとすぐにエラーになる。
             //k0017_99_2_1:2次元配列　最初の要素の個数を得る
             //if (kyotu.rrCount < intValues.GetLength(1) && kyotu.MCount < intValues.GetLength(0)) 
             //{
-                //kodomoTextText[i].text = intValues[kyotu.MCount, kyotu.rrCount, i];
+            //kodomoTextText[i].text = intValues[kyotu.MCount, kyotu.rrCount, i];
             //}
 
             //クリックしていき最後の文字列にたどり着いたら、後は同じ表示をし続ける。
@@ -195,7 +196,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
             //＞＞
             //if (kyotu.MCount==0 && kyotu.rrCount>=4) 
             //{
-              //  kodomoTextText[i].text = intValues[kyotu.MCount,4, i];
+            //  kodomoTextText[i].text = intValues[kyotu.MCount,4, i];
             //}
         }
     }

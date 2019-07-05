@@ -51,10 +51,19 @@ public class H_99_13_mojiHonban : MonoBehaviour
     //                {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","4"},
     //                {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","99"},
     
-    
+    //k0016_99_1_1：listの宣言
+    private List<string> M1 = new List<string>();
 
     void Start() 
     {
+        //2次元配列にmojipanelに入れる文字をセットする。
+        setWord();
+        //for (int i=0;i<intValues.Length;i++) 
+        //{
+        //}
+        Debug.Log(intValues.GetLength(0)+"::"+ intValues.GetLength(1));
+
+        
         //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
         kariList.Add(new List<string>());
         kariList.Add(new List<string>());
@@ -147,8 +156,8 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //ここから↑ないとバグ出る-----------------
     }
     ///k0016_99_1_1_6　：List 直接値をいれて定義する。
-    List<string> meidaiSita1_1 = new List<string>
-    {"命題I-1","","","","","","","","","","","99"};
+    //List<string> meidaiSita1_1 = new List<string>
+    //{"命題I-1","","","","","","","","","","","99"};
 
     private int kyouchouHenkanInt;
     void Update() 
@@ -183,7 +192,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //UItextに2次元配列の値を入れていく＞＞ここだけいちいち変える必要が有る
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
-            kodomoTextText[i].text = meidaiSita1_1[i];//intValues[kyotu.MCount, kyotu.rrCount, i];
+            //kodomoTextText[i].text = meidaiSita1_1[i];//intValues[kyotu.MCount, kyotu.rrCount, i];
             //mojiを並べる3次元配列なので要素をおVERするとすぐにエラーになる。
             //k0017_99_2_1:2次元配列　最初の要素の個数を得る
             //if (kyotu.rrCount < intValues.GetLength(1) && kyotu.MCount < intValues.GetLength(0)) 
@@ -200,7 +209,24 @@ public class H_99_13_mojiHonban : MonoBehaviour
             //}
         }
     }
-    
+    //Uitextの中身----------------------------------------------------------------------------------------------------
+    //3次元配列
+    private string[,] intValues;
+    void setWord() 
+    {
+        //　配列の要素数の確保
+        intValues = new string[,]
+        {
+            {"命題I-1","","","","","","","","","","","99"},
+            {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","0"},
+            {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","2"},
+            {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","4"},
+            {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","99"},
+            {"", "","","","","","","","","","","99"},
+            {"", "","","","","","","","","","","99"},
+        };
+    }
+
     //kyochouPanel(int count) ------------------------------------------------------------------------------
     void kyochouPanel(int count) 
     {

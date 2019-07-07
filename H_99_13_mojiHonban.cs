@@ -198,22 +198,17 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //UItextに2次元配列の値を入れていく＞＞ここだけいちいち変える必要が有る
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
-            kodomoTextText[i].text = kariList[kyotu.rrCount][i];
-            //intValues[kyotu.MCount, kyotu.rrCount, i];
-            //mojiを並べる3次元配列なので要素をおVERするとすぐにエラーになる。
-            //k0017_99_2_1:2次元配列　最初の要素の個数を得る
-            //if (kyotu.rrCount < intValues.GetLength(1) && kyotu.MCount < intValues.GetLength(0)) 
-            //{
-            //kodomoTextText[i].text = intValues[kyotu.MCount, kyotu.rrCount, i];
-            //}
 
-            //クリックしていき最後の文字列にたどり着いたら、後は同じ表示をし続ける。
-            //>meidai１、の場合　最後の文字列はrrcount４　最後の文字列を表示し続ける。
-            //＞＞
-            //if (kyotu.MCount==0 && kyotu.rrCount>=4) 
-            //{
-            //  kodomoTextText[i].text = intValues[kyotu.MCount,4, i];
-            //}
+            if (kyotu.rrCount < intValues.GetLength(0)) 
+            {
+                //mojipanelの各UItextに文字を代入していく
+                kodomoTextText[i].text = kariList[kyotu.rrCount][i];
+            } 
+            else 
+            {
+                //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
+                kodomoTextText[i].text = kariList[intValues.GetLength(0) - 1][i];
+            }
         }Debug.Log(intValues[intValues.GetLength(0)-1, intValues.GetLength(1)-1]);
     }
     //Uitextの中身----------------------------------------------------------------------------------------------------
@@ -224,7 +219,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
     　  {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","0"},
         {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","2"},
         {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","4"},
-        {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","end"},
+        {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","99"},
     };
 
 

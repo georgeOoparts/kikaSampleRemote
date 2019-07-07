@@ -59,9 +59,6 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //2次元配列にmojipanelに入れる文字をセットする。
         setWord();
 
-       
-        
-
         for (int i = 0; i < intValues.GetLength(0); i++) 
         {
             //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
@@ -201,7 +198,8 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //UItextに2次元配列の値を入れていく＞＞ここだけいちいち変える必要が有る
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
-            kodomoTextText[i].text = kariList[0][i];//intValues[kyotu.MCount, kyotu.rrCount, i];
+            kodomoTextText[i].text = kariList[kyotu.rrCount][i];
+            //intValues[kyotu.MCount, kyotu.rrCount, i];
             //mojiを並べる3次元配列なので要素をおVERするとすぐにエラーになる。
             //k0017_99_2_1:2次元配列　最初の要素の個数を得る
             //if (kyotu.rrCount < intValues.GetLength(1) && kyotu.MCount < intValues.GetLength(0)) 

@@ -209,7 +209,19 @@ public class H_99_13_mojiHonban : MonoBehaviour
                 //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
                 kodomoTextText[i].text = kariList[intValues.GetLength(0) - 1][i];
             }
-        }Debug.Log(intValues[intValues.GetLength(0)-1, intValues.GetLength(1)-1]);
+        }//Debug.Log(intValues[intValues.GetLength(0)-1, intValues.GetLength(1)-1]);
+
+        //文字が入った配列の情報から、強調すべき文字の順番をintで得る
+        //k10_2:strin>int変換
+        if(kyotu.rrCount< intValues.GetLength(0))
+        kyouchouHenkanInt = int.Parse(intValues[kyotu.rrCount, intValues.GetLength(1) - 1]);
+        //てきすとの強調kyochouPanel(kyouchouHenkanInt);でどこも強調しない数値99
+        //kyouchouHenkanInt = 99;
+
+        //強調すべきパネルを強調するメソッド
+        kyochouPanel(kyouchouHenkanInt);///
+        Debug.Log("okkkkkk");
+
     }
     //Uitextの中身----------------------------------------------------------------------------------------------------
     //3次元配列

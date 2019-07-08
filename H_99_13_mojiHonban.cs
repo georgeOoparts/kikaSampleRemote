@@ -59,14 +59,14 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //2次元配列にmojipanelに入れる文字をセットする。
         //setWord();
 
-        for (int i = 0; i < intValues.GetLength(0); i++) 
+        for (int i = 0; i < m1_1.GetLength(0); i++) 
         {
             //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
             kariList.Add(new List<string>());
 
-            for (int j=0; j<intValues.GetLength(1);j++) 
+            for (int j=0; j<m1_1.GetLength(1);j++) 
             {
-                kariList[i].Add(intValues[i,j]);
+                kariList[i].Add(m1_1[i,j]);
             }
         }
         //Debug.Log(intValues.GetLength(0)+"::"+ intValues.GetLength(1));
@@ -199,7 +199,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
 
-            if (kyotu.rrCount < intValues.GetLength(0)) 
+            if (kyotu.rrCount < m1_1.GetLength(0)) 
             {
                 //mojipanelの各UItextに文字を代入していく
                 kodomoTextText[i].text = kariList[kyotu.rrCount][i];
@@ -207,14 +207,14 @@ public class H_99_13_mojiHonban : MonoBehaviour
             else 
             {
                 //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
-                kodomoTextText[i].text = kariList[intValues.GetLength(0) - 1][i];
+                kodomoTextText[i].text = kariList[m1_1.GetLength(0) - 1][i];
             }
         }//Debug.Log(intValues[intValues.GetLength(0)-1, intValues.GetLength(1)-1]);
 
         //文字が入った配列の情報から、強調すべき文字の順番をintで得る
         //k10_2:strin>int変換
-        if(kyotu.rrCount< intValues.GetLength(0))
-        kyouchouHenkanInt = int.Parse(intValues[kyotu.rrCount, intValues.GetLength(1) - 1]);
+        if(kyotu.rrCount< m1_1.GetLength(0))
+        kyouchouHenkanInt = int.Parse(m1_1[kyotu.rrCount, m1_1.GetLength(1) - 1]);
         //てきすとの強調kyochouPanel(kyouchouHenkanInt);でどこも強調しない数値99
         //kyouchouHenkanInt = 99;
 
@@ -225,7 +225,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
     }
     //Uitextの中身----------------------------------------------------------------------------------------------------
     //3次元配列
-    private string[,] intValues =new string[,]
+    private string[,] m1_1 =new string[,]
     {
         {"命題I-1","","","","","","","","","","","99"},
     　  {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","0"},

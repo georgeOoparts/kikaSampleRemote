@@ -185,7 +185,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
             kyotu.MCount++;
             kyotu.rrCount = 0;
         }
-
+        listReset();
         hairetutolist();
         //文字パネルに入れるlistに内容を入れる
         //for (int i = 0; i < m1_0.GetLength(0); i++) 
@@ -226,6 +226,14 @@ public class H_99_13_mojiHonban : MonoBehaviour
         Debug.Log("okkkkkk");
 
     }
+
+    //list 初期化
+    void listReset() 
+    {
+        ///k0016_99_1_1_4　：Listすべての要素を削除
+        kariList.Clear();
+    }
+
     //配列からlistへ文字を送る
     void hairetutolist() 
     {

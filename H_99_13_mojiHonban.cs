@@ -111,24 +111,30 @@ public class H_99_13_mojiHonban : MonoBehaviour
         
 
         //UItextに2次元配列の値を入れていく
+        //文章増えるたびに変更
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
-            if (kyotu.rrCount < m1_0.GetLength(0)) 
+            if (kyotu.MCount == 0) 
             {
-                //mojipanelの各UItextに文字を代入していく
-                kodomoTextText[i].text = kariList[kyotu.rrCount][i];
-            } 
-            else 
-            {
-                //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
-                kodomoTextText[i].text = kariList[m1_0.GetLength(0) - 1][i];
+                if (kyotu.rrCount < m1_0.GetLength(0)) {
+                    //mojipanelの各UItextに文字を代入していく
+                    kodomoTextText[i].text = kariList[kyotu.rrCount][i];
+                } else {
+                    //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
+                    kodomoTextText[i].text = kariList[m1_0.GetLength(0) - 1][i];
+                }
             }
         }
-
+        //文章増えるたびに変更
         //文字が入った配列の情報から、強調すべき文字の順番をintで得る
         //k10_2:strin>int変換
-        if(kyotu.rrCount< m1_0.GetLength(0))
-        kyouchouHenkanInt = int.Parse(m1_0[kyotu.rrCount, m1_0.GetLength(1) - 1]);
+        if (kyotu.MCount == 0) 
+        {
+            if (kyotu.rrCount < m1_0.GetLength(0))
+                kyouchouHenkanInt = int.Parse(m1_0[kyotu.rrCount, m1_0.GetLength(1) - 1]);
+        }
+
+        
         //てきすとの強調kyochouPanel(kyouchouHenkanInt);でどこも強調しない数値99
         //kyouchouHenkanInt = 99;
 
@@ -145,6 +151,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         kariList.Clear();
     }
 
+    //文章増えるたびに変更
     //配列からlistへ文字を送る
     void hairetuToList() 
     {
@@ -159,6 +166,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         }
     }
     //Uitextの中身----------------------------------------------------------------------------------------------------
+    //文章増えるたびに変更
     //3次元配列
     private string[,] m1_0 =new string[,]
     {

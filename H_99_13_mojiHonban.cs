@@ -108,6 +108,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         }
         //listReset();
         hairetuToList();
+
         
 
         //UItextに2次元配列の値を入れていく

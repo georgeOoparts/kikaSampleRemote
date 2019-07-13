@@ -92,6 +92,11 @@ public class H_99_13_mojiHonban : MonoBehaviour
         {
             listReset();
             kyotu.mojiSwitch = 3;
+        } 
+        else if (Input.GetKeyDown("b")) {
+            listReset();
+            if(kyotu.rrCount>0)//0の時はバックできない
+            kyotu.rrCount--;
         }
 
         //kyotu.rrCountの数を増やす

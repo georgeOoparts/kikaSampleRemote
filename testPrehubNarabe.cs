@@ -78,6 +78,7 @@ public class testPrehubNarabe : MonoBehaviour
         //textpanelの幅が変わったらmojipanelを並び替えるため
         //過去と現在のTextPanelの幅が違っていたら、
         //mojipanelを並び替える
+        //rtTextPanel.sizeDelta.x、つまりこのアタッチしているtexpanelの幅
         if (turnCount==1 || kakoTextPanelWidth != rtTextPanel.sizeDelta.x) 
         {
             //startwizeを０に初期化。
@@ -108,9 +109,10 @@ public class testPrehubNarabe : MonoBehaviour
             }
         }turnCount++;
 
+        //並び
         //ボタンクリックで再びmojipanel並びなおし
         //右クリックInput.GetMouseButtonDown(1)でも並びなおし
-        if (Input.GetMouseButtonDown(0)|| Input.GetMouseButtonDown(1)) {
+        if (Input.GetMouseButtonDown(0)|| Input.GetMouseButtonDown(1)|| Input.GetKeyDown("b")) {
             turnCount = 0;
         }
         //textpanelの幅が変わったらmojipanelを並び替えるため

@@ -99,6 +99,13 @@ public class H_99_13_mojiHonban : MonoBehaviour
             if(kyotu.rrCount>0)//0の時はバックできない
             kyotu.rrCount--;
         }
+        //mcountを戻すにはとりあえずｂを押す
+        else if (Input.GetKeyDown("n")) {
+            listReset();
+            kyotu.rrCount=0;
+            if (kyotu.MCount > 0)//0の時はバックできない
+                kyotu.MCount--;
+        }
 
         //kyotu.rrCountの数を増やす
         if (Input.GetMouseButtonDown(0)) 
@@ -112,7 +119,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
             kyotu.MCount++;
             kyotu.rrCount = 0;
         }
-        //listReset();
+
         hairetuToList();
 
         

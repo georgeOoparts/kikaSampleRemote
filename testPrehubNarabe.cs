@@ -9,6 +9,7 @@ public class testPrehubNarabe : MonoBehaviour
     //mojiを書くUIpanelにアタッチ、textpanelにアタッチしている
     //左右両方のクリックで文字の並び替えをやるように改良
     //まきもどし機能追加する Input.GetKeyDown("b")115行目
+    //mcountまきもどし機能追加する　 Input.GetKeyDown("n")115行目
 
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     //このスクリプトをアタッチしたオブジェクトにいちいちこのオブジェクトをアタッチ
@@ -113,8 +114,9 @@ public class testPrehubNarabe : MonoBehaviour
         //並び
         //ボタンクリックで再びmojipanel並びなおし
         //右クリックInput.GetMouseButtonDown(1)でも並びなおし
-        //まきもどし機能追加する Input.GetKeyDown("b")
-        if (Input.GetMouseButtonDown(0)|| Input.GetMouseButtonDown(1)|| Input.GetKeyDown("b")) {
+        //rrcountまきもどし機能追加する Input.GetKeyDown("b")
+        //mcountまきもどし機能追加する　 Input.GetKeyDown("n")
+        if (Input.GetMouseButtonDown(0)|| Input.GetMouseButtonDown(1)|| Input.GetKeyDown("b") || Input.GetKeyDown("n")) {
             turnCount = 0;
         }
         //textpanelの幅が変わったらmojipanelを並び替えるため

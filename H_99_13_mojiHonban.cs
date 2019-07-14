@@ -120,6 +120,30 @@ public class H_99_13_mojiHonban : MonoBehaviour
             kyotu.rrCount = 0;
         }
 
+        //kyotu.mojiSwitch 初期値:3
+        //変更
+        //公理:0,公準:1,定義:2,meidai:3
+        if (Input.GetKeyDown("q")) 
+        {
+            listReset();
+            kyotu.mojiSwitch = 0;
+        }
+        else if (Input.GetKeyDown("w")) 
+        {
+            listReset();
+            kyotu.mojiSwitch = 1;
+        } 
+        else if (Input.GetKeyDown("e")) 
+        {
+            listReset();
+            kyotu.mojiSwitch = 2;
+        } 
+        else if (Input.GetKeyDown("r")) 
+        {
+            listReset();
+            kyotu.mojiSwitch = 3;
+        }
+
         hairetuToList();
 
         
@@ -128,6 +152,8 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //文章増えるたびに変更
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
+
+
             if (kyotu.MCount == 0) 
             {
                 if (kyotu.rrCount < m1_1.GetLength(0)) {
@@ -167,7 +193,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
         //強調すべきパネルを強調するメソッド
         kyochouPanel(kyouchouHenkanInt);///
-        Debug.Log("ok::"+kyotu.MCount);
+        Debug.Log("ok::"+kyotu.mojiSwitch);
 
     }
 

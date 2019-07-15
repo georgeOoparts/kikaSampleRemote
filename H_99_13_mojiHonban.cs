@@ -251,9 +251,23 @@ public class H_99_13_mojiHonban : MonoBehaviour
     {
         //文字パネルに入れるlistに内容を入れる
         //公理:0,公準:1,定義:2,meidai:3
+        //kouriに対応
+        if (kyotu.mojiSwitch == 0) {
+            //kouriに対応
+            if (kyotu.MCount == 0) {
+                for (int i = 0; i < ka1.GetLength(0); i++) {
+                    //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
+                    kariList.Add(new List<string>());
 
+                    for (int j = 0; j < ka1.GetLength(1); j++) {
+                        kariList[i].Add(ka1[i, j]);
+                    }
+                }
+            }
+            
+        }
         //meidaiに対応
-        if (kyotu.mojiSwitch == 3)        
+        else if (kyotu.mojiSwitch == 3)        
         {
             //meidai1に対応
             if (kyotu.MCount == 0) {
@@ -363,7 +377,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
     //kouri
     private string[,] ka1 = new string[,]
     {
-        {"命題a1","","","","","","","","","","","99"},
+        {"公理a1","","","","","","","","","","","99"},
         {"同じもの","に","等しいもの","は互いに等しい。","","","","","","","","99"},
     };
     //koujun

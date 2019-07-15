@@ -80,6 +80,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         {
             listReset();
             kyotu.rrCount = 0;
+            //kyotu.MCount = 0;
             kyotu.mojiSwitch = 0;
         } 
         else if (Input.GetKeyDown("1")) 
@@ -135,8 +136,20 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //文章増えるたびに変更
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
-
-            if (kyotu.mojiSwitch==3)//meidai 
+            //公理:0,公準:1,定義:2,meidai:3
+            if (kyotu.mojiSwitch == 0)//kouri
+            {
+                if (kyotu.MCount == 0) {
+                    if (kyotu.rrCount < ka1.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[kyotu.rrCount][i];
+                    } else {
+                        //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[ka1.GetLength(0) - 1][i];
+                    }
+                }
+            }
+            else if (kyotu.mojiSwitch == 3)//meidai 
             {
                 if (kyotu.MCount == 0) {
                     if (kyotu.rrCount < m1_1.GetLength(0)) {
@@ -161,7 +174,16 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //文章増えるたびに変更
         //文字が入った配列の情報から、強調すべき文字の順番をintで得る
 
-        if (kyotu.mojiSwitch==3)//meidai 
+        //公理:0,公準:1,定義:2,meidai:3
+        if (kyotu.mojiSwitch == 0)//kouri
+        {
+            //k10_2:strin>int変換
+            if (kyotu.MCount == 0) {
+                if (kyotu.rrCount < ka1.GetLength(0))
+                    kyouchouHenkanInt = int.Parse(ka1[kyotu.rrCount, ka1.GetLength(1) - 1]);
+            }
+        }
+        else if (kyotu.mojiSwitch == 3)//meidai 
         {
             //k10_2:strin>int変換
             if (kyotu.MCount == 0) {
@@ -195,19 +217,31 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //文章増えるたびに変更
         for (int i = 0; i < kodomoTextText.Count; i++) {
 
-
-            if (kyotu.MCount == 0) {
-                if (kyotu.rrCount < m1_1.GetLength(0)) {
-                    //mojipanelの各UItextに文字を代入していく
-                    kodomoTextText[i].text ="";
+            //公理:0,公準:1,定義:2,meidai:3
+            if (kyotu.mojiSwitch == 0)//kouri
+            {
+                if (kyotu.MCount == 0) {
+                    if (kyotu.rrCount < ka1.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = "";
+                    }
                 } 
-            } 
-            else if (kyotu.MCount == 1) {
-                if (kyotu.rrCount < m1_2.GetLength(0)) {
-                    //mojipanelの各UItextに文字を代入していく
-                    kodomoTextText[i].text = "";//eeee
+            }
+            else if (kyotu.mojiSwitch == 3)//meidai
+            {
+                if (kyotu.MCount == 0) {
+                    if (kyotu.rrCount < m1_1.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = "";
+                    }
+                } else if (kyotu.MCount == 1) {
+                    if (kyotu.rrCount < m1_2.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = "";//eeee
+                    }
                 }
             }
+            
         }
     }
 
@@ -216,29 +250,36 @@ public class H_99_13_mojiHonban : MonoBehaviour
     void hairetuToList() 
     {
         //文字パネルに入れるlistに内容を入れる
-        //meidai1に対応
-        if (kyotu.MCount==0) 
+        //公理:0,公準:1,定義:2,meidai:3
+
+        //meidaiに対応
+        if (kyotu.mojiSwitch == 3)        
         {
-            for (int i = 0; i < m1_1.GetLength(0); i++) {
-                //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
-                kariList.Add(new List<string>());
+            //meidai1に対応
+            if (kyotu.MCount == 0) {
+                for (int i = 0; i < m1_1.GetLength(0); i++) {
+                    //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
+                    kariList.Add(new List<string>());
 
-                for (int j = 0; j < m1_1.GetLength(1); j++) {
-                    kariList[i].Add(m1_1[i, j]);
+                    for (int j = 0; j < m1_1.GetLength(1); j++) {
+                        kariList[i].Add(m1_1[i, j]);
+                    }
+                }
+            }
+            //meidai2に対応
+            else if (kyotu.MCount == 1) 
+            {
+                for (int i = 0; i < m1_2.GetLength(0); i++) {
+                    //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
+                    kariList.Add(new List<string>());
+
+                    for (int j = 0; j < m1_2.GetLength(1); j++) {
+                        kariList[i].Add(m1_2[i, j]);
+                    }
                 }
             }
         }
-        //meidai2に対応
-        else if (kyotu.MCount == 1) {
-            for (int i = 0; i < m1_2.GetLength(0); i++) {
-                //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
-                kariList.Add(new List<string>());
-
-                for (int j = 0; j < m1_2.GetLength(1); j++) {
-                    kariList[i].Add(m1_2[i, j]);
-                }
-            }
-        }
+        
     }
     //Uitextの中身----------------------------------------------------------------------------------------------------
     //文章増えるたびに変更

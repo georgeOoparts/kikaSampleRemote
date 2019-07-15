@@ -202,6 +202,25 @@ public class H_99_13_mojiHonban : MonoBehaviour
     {
         ///k0016_99_1_1_4　：Listすべての要素を削除
         kariList.Clear();
+        
+        //UItextに2次元配列の値を全てリセット
+        //文章増えるたびに変更
+        for (int i = 0; i < kodomoTextText.Count; i++) {
+
+
+            if (kyotu.MCount == 0) {
+                if (kyotu.rrCount < m1_1.GetLength(0)) {
+                    //mojipanelの各UItextに文字を代入していく
+                    kodomoTextText[i].text ="";
+                } 
+            } 
+            else if (kyotu.MCount == 1) {
+                if (kyotu.rrCount < m1_2.GetLength(0)) {
+                    //mojipanelの各UItextに文字を代入していく
+                    kodomoTextText[i].text = "";//eeee
+                }
+            }
+        }
     }
 
     //文章増えるたびに変更

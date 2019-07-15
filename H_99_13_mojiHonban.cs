@@ -73,24 +73,31 @@ public class H_99_13_mojiHonban : MonoBehaviour
     private int kyouchouHenkanInt;
     void Update() 
     {
+        //kyotu.mojiSwitch 初期値:3
+        //変更
+        //公理:0,公準:1,定義:2,meidai:3
         if (Input.GetKeyDown("0")) 
         {
             listReset();
+            kyotu.rrCount = 0;
             kyotu.mojiSwitch = 0;
         } 
         else if (Input.GetKeyDown("1")) 
         {
             listReset();
+            kyotu.rrCount = 0;
             kyotu.mojiSwitch = 1;
         } 
         else if (Input.GetKeyDown("2")) 
         {
             listReset();
+            kyotu.rrCount = 0;
             kyotu.mojiSwitch = 2;
         } 
         else if (Input.GetKeyDown("3")) 
         {
             listReset();
+            kyotu.rrCount = 0;
             kyotu.mojiSwitch = 3;
         } 
         //rrcountを戻すにはとりあえずｂを押す
@@ -120,30 +127,6 @@ public class H_99_13_mojiHonban : MonoBehaviour
             kyotu.rrCount = 0;
         }
 
-        //kyotu.mojiSwitch 初期値:3
-        //変更
-        //公理:0,公準:1,定義:2,meidai:3
-        if (Input.GetKeyDown("q")) 
-        {
-            listReset();
-            kyotu.mojiSwitch = 0;
-        }
-        else if (Input.GetKeyDown("w")) 
-        {
-            listReset();
-            kyotu.mojiSwitch = 1;
-        } 
-        else if (Input.GetKeyDown("e")) 
-        {
-            listReset();
-            kyotu.mojiSwitch = 2;
-        } 
-        else if (Input.GetKeyDown("r")) 
-        {
-            listReset();
-            kyotu.mojiSwitch = 3;
-        }
-
         hairetuToList();
 
         
@@ -153,39 +136,43 @@ public class H_99_13_mojiHonban : MonoBehaviour
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
 
-
-            if (kyotu.MCount == 0) 
+            if (kyotu.mojiSwitch==3)//meidai 
             {
-                if (kyotu.rrCount < m1_1.GetLength(0)) {
-                    //mojipanelの各UItextに文字を代入していく
-                    kodomoTextText[i].text = kariList[kyotu.rrCount][i];
-                } else {
-                    //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
-                    kodomoTextText[i].text = kariList[m1_1.GetLength(0) - 1][i];
+                if (kyotu.MCount == 0) {
+                    if (kyotu.rrCount < m1_1.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[kyotu.rrCount][i];
+                    } else {
+                        //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[m1_1.GetLength(0) - 1][i];
+                    }
+                } else if (kyotu.MCount == 1) {
+                    if (kyotu.rrCount < m1_2.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[kyotu.rrCount][i];//eeee
+                    } else {
+                        //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[m1_2.GetLength(0) - 1][i];
+                    }
                 }
             }
-            else if (kyotu.MCount == 1) {
-                if (kyotu.rrCount < m1_2.GetLength(0)) {
-                    //mojipanelの各UItextに文字を代入していく
-                    kodomoTextText[i].text = kariList[kyotu.rrCount][i];//eeee
-                } else {
-                    //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
-                    kodomoTextText[i].text = kariList[m1_2.GetLength(0) - 1][i];
-                }
-            }
+            
         }
         //文章増えるたびに変更
         //文字が入った配列の情報から、強調すべき文字の順番をintで得る
-        //k10_2:strin>int変換
-        if (kyotu.MCount == 0) 
+
+        if (kyotu.mojiSwitch==3)//meidai 
         {
-            if (kyotu.rrCount < m1_1.GetLength(0))
-                kyouchouHenkanInt = int.Parse(m1_1[kyotu.rrCount, m1_1.GetLength(1) - 1]);
+            //k10_2:strin>int変換
+            if (kyotu.MCount == 0) {
+                if (kyotu.rrCount < m1_1.GetLength(0))
+                    kyouchouHenkanInt = int.Parse(m1_1[kyotu.rrCount, m1_1.GetLength(1) - 1]);
+            } else if (kyotu.MCount == 1) {
+                if (kyotu.rrCount < m1_2.GetLength(0))
+                    kyouchouHenkanInt = int.Parse(m1_2[kyotu.rrCount, m1_2.GetLength(1) - 1]);
+            }
         }
-        else if (kyotu.MCount == 1) {
-            if (kyotu.rrCount < m1_2.GetLength(0))
-                kyouchouHenkanInt = int.Parse(m1_2[kyotu.rrCount, m1_2.GetLength(1) - 1]);
-        }
+        
 
 
         //てきすとの強調kyochouPanel(kyouchouHenkanInt);でどこも強調しない数値99
@@ -200,6 +187,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
     //list 初期化
     void listReset() 
     {
+        //kyotu.rrCount = 0;
         ///k0016_99_1_1_4　：Listすべての要素を削除
         kariList.Clear();
         

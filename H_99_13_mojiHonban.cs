@@ -120,7 +120,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         {
             listReset();
             //rrcountが紙芝居の最後のページじゃなければ
-            //文字が増えるたびここも増える
+            //文字が増えるたびここも増える--------ここから---------------
             //公理:0,公準:1,定義:2,meidai:3
             if (kyotu.mojiSwitch == 0)//kouri
             {
@@ -133,7 +133,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     
                 }
                 else if (kyotu.MCount == 1) {
-                    if (kyotu.rrCount < ka2.GetLength(0) - 1) {
+                    if (kyotu.rrCount < ka3.GetLength(0) - 1) {
                         kyotu.rrCount++;
                     }
                 }
@@ -186,12 +186,12 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
                 }
                 else if (kyotu.MCount == 1) {
-                    if (kyotu.rrCount < ka2.GetLength(0)) {
+                    if (kyotu.rrCount < ka3.GetLength(0)) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = kariList[kyotu.rrCount][i];
                     } else {
                         //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
-                        kodomoTextText[i].text = kariList[ka2.GetLength(0) - 1][i];
+                        kodomoTextText[i].text = kariList[ka3.GetLength(0) - 1][i];
                     }
 
                 }
@@ -230,8 +230,8 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     kyouchouHenkanInt = int.Parse(ka1[kyotu.rrCount, ka1.GetLength(1) - 1]);
             }
             else if (kyotu.MCount == 1) {
-                if (kyotu.rrCount < ka2.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(ka2[kyotu.rrCount, ka2.GetLength(1) - 1]);
+                if (kyotu.rrCount < ka3.GetLength(0))
+                    kyouchouHenkanInt = int.Parse(ka3[kyotu.rrCount, ka3.GetLength(1) - 1]);
             }
         }
         else if (kyotu.mojiSwitch == 3)//meidai 
@@ -278,7 +278,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     }
                 }
                 else if (kyotu.MCount == 1) {
-                    if (kyotu.rrCount < ka2.GetLength(0)) {
+                    if (kyotu.rrCount < ka3.GetLength(0)) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";
                     }
@@ -322,12 +322,12 @@ public class H_99_13_mojiHonban : MonoBehaviour
                 }
             }
             else if (kyotu.MCount == 1) {
-                for (int i = 0; i < ka2.GetLength(0); i++) {
+                for (int i = 0; i < ka3.GetLength(0); i++) {
                     //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
                     kariList.Add(new List<string>());
 
-                    for (int j = 0; j < ka2.GetLength(1); j++) {
-                        kariList[i].Add(ka2[i, j]);
+                    for (int j = 0; j < ka3.GetLength(1); j++) {
+                        kariList[i].Add(ka3[i, j]);
                     }
                 }
             }
@@ -441,7 +441,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         {"与えられた直線", "と","同じ長さの直線","を","与えられた点","から作図すること。","","","","","","4"},
         {"与えられた直線", "と","同じ長さの直線","を","与えられた点","から作図すること。","","","","","","99"},
     };
-    //kouri
+    //kouri---------------------------------------------------------------
     private string[,] ka1 = new string[,]
     {
         {"公理a1","","","","","","","","","","","99"},
@@ -450,8 +450,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         {"同じもの","に","等しいもの","は互いに等しい。","","","","","","","","2"},
         {"同じもの","に","等しいもの","は互いに等しい。","","","","","","","","3"},
     };
-    //kouri
-    private string[,] ka2 = new string[,]
+    private string[,] ka3 = new string[,]
     {
         {"公理a2","","","","","","","","","","","99"},
         {"公理a2","に","等しいもの","は互いに等しい。","","","","","","","","0"},
@@ -459,7 +458,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         {"公理a2","に","等しいもの","は互いに等しい。","","","","","","","","2"},
         {"公理a2","に","等しいもの","は互いに等しい。","","","","","","","","3"},
     };
-    //koujun
+    //koujun------------------------------------------------------------------
     private string[,] kjp1 = new string[,]
     {
         {"公準p1","","","","","","","","","","","99"},

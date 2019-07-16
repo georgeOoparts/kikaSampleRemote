@@ -119,7 +119,37 @@ public class H_99_13_mojiHonban : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) 
         {
             listReset();
-            kyotu.rrCount++;
+            //rrcountが紙芝居の最後のページじゃなければ
+            //文字が増えるたびここも増える
+            //公理:0,公準:1,定義:2,meidai:3
+            if (kyotu.mojiSwitch == 0)//kouri
+            {
+                if (kyotu.MCount == 0) 
+                {
+                    if (kyotu.rrCount < ka1.GetLength(0)-1) 
+                    {
+                        kyotu.rrCount++;
+                    }
+                }
+            } 
+            else if (kyotu.mojiSwitch == 3)//meidai 
+            {
+                if (kyotu.MCount == 0) 
+                {
+                    if (kyotu.rrCount < m1_1.GetLength(0)-1) 
+                    {
+                        kyotu.rrCount++;
+                    } 
+                } 
+                else if (kyotu.MCount == 1) 
+                {
+                    if (kyotu.rrCount < m1_2.GetLength(0)-1) 
+                    {
+                        kyotu.rrCount++;
+                    } 
+                }
+            }
+
         } 
         else if (Input.GetMouseButtonDown(1)) 
         {
@@ -202,7 +232,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
         //強調すべきパネルを強調するメソッド
         kyochouPanel(kyouchouHenkanInt);///
-        Debug.Log("ok::"+kyotu.mojiSwitch);
+        Debug.Log("ok::"+/*kyotu.mojiSwitch*//*m1_2.GetLength(0)*/kyotu.rrCount);
 
     }
 

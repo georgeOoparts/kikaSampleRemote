@@ -170,6 +170,19 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     }
                 }
             } 
+            else if (kyotu.mojiSwitch == 2)//teigi　2つ
+            {
+                if (kyotu.MCount == 0) {
+                    if (kyotu.rrCount < tdi1.GetLength(0) - 1) {
+                        kyotu.rrCount++;
+                    }
+
+                } else if (kyotu.MCount == 1) {
+                    if (kyotu.rrCount < tdi15.GetLength(0) - 1) {
+                        kyotu.rrCount++;
+                    }
+                } 
+            } 
             else if (kyotu.mojiSwitch == 3)//meidai 
             {
                 if (kyotu.MCount == 0) 
@@ -285,7 +298,29 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     }
 
                 } 
-            }
+            } 
+            else if (kyotu.mojiSwitch == 2)//teigi 2tu
+            {
+                if (kyotu.MCount == 0) {
+                    if (kyotu.rrCount < tdi1.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[kyotu.rrCount][i];
+                    } else {
+                        //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[tdi1.GetLength(0) - 1][i];
+                    }
+
+                } else if (kyotu.MCount == 1) {
+                    if (kyotu.rrCount < tdi15.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[kyotu.rrCount][i];
+                    } else {
+                        //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[tdi15.GetLength(0) - 1][i];
+                    }
+
+                }
+            } 
             else if (kyotu.mojiSwitch == 3)//meidai 
             {
                 if (kyotu.MCount == 0) {
@@ -348,7 +383,17 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     kyouchouHenkanInt = int.Parse(kjp3[kyotu.rrCount, kjp3.GetLength(1) - 1]);
             } 
         } 
-        else if (kyotu.mojiSwitch == 3)//meidai 
+        else if (kyotu.mojiSwitch == 2)//teigi
+        {
+            //k10_2:strin>int変換
+            if (kyotu.MCount == 0) {
+                if (kyotu.rrCount < tdi1.GetLength(0))
+                    kyouchouHenkanInt = int.Parse(tdi1[kyotu.rrCount, tdi1.GetLength(1) - 1]);
+            } else if (kyotu.MCount == 1) {
+                if (kyotu.rrCount < tdi15.GetLength(0))
+                    kyouchouHenkanInt = int.Parse(tdi15[kyotu.rrCount, tdi15.GetLength(1) - 1]);
+            } 
+        } else if (kyotu.mojiSwitch == 3)//meidai 
         {
             //k10_2:strin>int変換
             if (kyotu.MCount == 0) {
@@ -434,6 +479,20 @@ public class H_99_13_mojiHonban : MonoBehaviour
                         kodomoTextText[i].text = "";
                     }
                 } 
+            } 
+            else if (kyotu.mojiSwitch == 2)//teigi
+            {
+                if (kyotu.MCount == 0) {
+                    if (kyotu.rrCount < tdi1.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = "";
+                    }
+                } else if (kyotu.MCount == 1) {
+                    if (kyotu.rrCount < tdi15.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = "";
+                    }
+                }
             } 
             else if (kyotu.mojiSwitch == 3)//meidai
             {
@@ -537,9 +596,33 @@ public class H_99_13_mojiHonban : MonoBehaviour
                 }
             } 
 
+        } 
+        else if (kyotu.mojiSwitch == 2) 
+        {
+            //koujunに対応 3tu
+            if (kyotu.MCount == 0) {
+                for (int i = 0; i < tdi1.GetLength(0); i++) {
+                    //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
+                    kariList.Add(new List<string>());
+
+                    for (int j = 0; j < tdi1.GetLength(1); j++) {
+                        kariList[i].Add(tdi1[i, j]);
+                    }
+                }
+            } else if (kyotu.MCount == 1) {
+                for (int i = 0; i < tdi15.GetLength(0); i++) {
+                    //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
+                    kariList.Add(new List<string>());
+
+                    for (int j = 0; j < tdi15.GetLength(1); j++) {
+                        kariList[i].Add(tdi15[i, j]);
+                    }
+                }
+            } 
+
         }
-        //meidaiに対応
-        else if (kyotu.mojiSwitch == 3)        
+          //meidaiに対応
+          else if (kyotu.mojiSwitch == 3)        
         {
             //meidai1に対応
             if (kyotu.MCount == 0) {
@@ -712,6 +795,9 @@ public class H_99_13_mojiHonban : MonoBehaviour
         {"定義di15","","","","","","","","","","","99"},
         {"円","とは","周と呼ばれる一つの線","の境界で囲まれた平面図形であって、","","","","","","","","0"},
         {"円","とは","周と呼ばれる一つの線","の境界で囲まれた平面図形であって、","","","","","","","","2"},
+        {"その中にある一つの点","から","円周上の点","に","引かれた直線","の長さがすべて等しいようなものである。","","","","","","0"},
+        {"その中にある一つの点","から","円周上の点","に","引かれた直線","の長さがすべて等しいようなものである。","","","","","","2"},
+        {"その中にある一つの点","から","円周上の点","に","引かれた直線","の長さがすべて等しいようなものである。","","","","","","6"},
         {"その中にある一つの点","から","円周上の点","に","引かれた直線","の長さがすべて等しいようなものである。","","","","","","99"},
    };
 

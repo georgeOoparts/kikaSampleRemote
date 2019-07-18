@@ -120,7 +120,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         {
             listReset();
             //rrcountが紙芝居の最後のページじゃなければ
-            //文字が増えるたびここも増える--------ここから---------------
+            //文字が増えるたびここも増える1--------ここから---------------
             //公理:0,公準:1,定義:2,meidai:3
             if (kyotu.mojiSwitch == 0)//kouri
             {
@@ -169,7 +169,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         
 
         //UItextに2次元配列の値を入れていく
-        //文章増えるたびに変更
+        //文章増えるたびに変更2---------------------------------
         for (int i = 0; i < kodomoTextText.Count; i++) 
         {
             //公理:0,公準:1,定義:2,meidai:3
@@ -263,9 +263,9 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //kyotu.rrCount = 0;
         ///k0016_99_1_1_4　：Listすべての要素を削除
         kariList.Clear();
-        
+
         //UItextに2次元配列の値を全てリセット
-        //文章増えるたびに変更
+        //文章増えるたびに変更3---------------------------------
         for (int i = 0; i < kodomoTextText.Count; i++) {
 
             //公理:0,公準:1,定義:2,meidai:3
@@ -306,6 +306,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
     //配列からlistへ文字を送る
     void hairetuToList() 
     {
+        //文章増えるたびに変更4---------------------------------
         //文字パネルに入れるlistに内容を入れる
         //公理:0,公準:1,定義:2,meidai:3
         //kouriに対応

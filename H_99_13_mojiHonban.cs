@@ -120,9 +120,9 @@ public class H_99_13_mojiHonban : MonoBehaviour
         {
             listReset();
             //rrcountが紙芝居の最後のページじゃなければ
-            //文字が増えるたびここも増える1--------ここから---------------
+            //文字が増えるたびここも増える1--------ここから-----123----------
             //公理:0,公準:1,定義:2,meidai:3
-            if (kyotu.mojiSwitch == 0)//kouri
+            if (kyotu.mojiSwitch == 0)//kouri　4つ
             {
                 if (kyotu.MCount == 0) 
                 {
@@ -132,8 +132,24 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     }
                     
                 }
-                else if (kyotu.MCount == 1) {
-                    if (kyotu.rrCount < ka3.GetLength(0) - 1) {
+                else if (kyotu.MCount == 1) 
+                {
+                    if (kyotu.rrCount < ka3.GetLength(0) - 1) 
+                    {
+                        kyotu.rrCount++;
+                    }
+                } 
+                else if (kyotu.MCount == 2) 
+                {
+                    if (kyotu.rrCount < ka4.GetLength(0) - 1) 
+                    {
+                        kyotu.rrCount++;
+                    }
+                } 
+                else if (kyotu.MCount == 3) 
+                {
+                    if (kyotu.rrCount < ka5.GetLength(0) - 1) 
+                    {
                         kyotu.rrCount++;
                     }
                 }
@@ -194,6 +210,33 @@ public class H_99_13_mojiHonban : MonoBehaviour
                         kodomoTextText[i].text = kariList[ka3.GetLength(0) - 1][i];
                     }
 
+                } 
+                else if (kyotu.MCount == 2) 
+                {
+                    if (kyotu.rrCount < ka4.GetLength(0)) 
+                    {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[kyotu.rrCount][i];
+                    } 
+                    else 
+                    {
+                        //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[ka4.GetLength(0) - 1][i];
+                    }
+
+                } 
+                else if (kyotu.MCount == 3) 
+                {
+                    if (kyotu.rrCount < ka5.GetLength(0)) 
+                    {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[kyotu.rrCount][i];
+                    } 
+                    else 
+                    {
+                        //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[ka5.GetLength(0) - 1][i];
+                    }
                 }
             }
             else if (kyotu.mojiSwitch == 3)//meidai 

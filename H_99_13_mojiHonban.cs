@@ -152,6 +152,23 @@ public class H_99_13_mojiHonban : MonoBehaviour
                         kyotu.rrCount++;
                     }
                 }
+            }
+            else if (kyotu.mojiSwitch == 1)//koujun　3つ kjp1～3
+            {
+                if (kyotu.MCount == 0) {
+                    if (kyotu.rrCount < kjp1.GetLength(0) - 1) {
+                        kyotu.rrCount++;
+                    }
+
+                } else if (kyotu.MCount == 1) {
+                    if (kyotu.rrCount < kjp2.GetLength(0) - 1) {
+                        kyotu.rrCount++;
+                    }
+                } else if (kyotu.MCount == 2) {
+                    if (kyotu.rrCount < kjp3.GetLength(0) - 1) {
+                        kyotu.rrCount++;
+                    }
+                }
             } 
             else if (kyotu.mojiSwitch == 3)//meidai 
             {
@@ -238,6 +255,37 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     }
                 }
             }
+            else if (kyotu.mojiSwitch == 1)//koujun 3tu
+            {
+                if (kyotu.MCount == 0) {
+                    if (kyotu.rrCount < kjp1.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[kyotu.rrCount][i];
+                    } else {
+                        //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[kjp1.GetLength(0) - 1][i];
+                    }
+
+                } else if (kyotu.MCount == 1) {
+                    if (kyotu.rrCount < kjp2.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[kyotu.rrCount][i];
+                    } else {
+                        //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[kjp2.GetLength(0) - 1][i];
+                    }
+
+                } else if (kyotu.MCount == 2) {
+                    if (kyotu.rrCount < kjp3.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[kyotu.rrCount][i];
+                    } else {
+                        //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[kjp3.GetLength(0) - 1][i];
+                    }
+
+                } 
+            }
             else if (kyotu.mojiSwitch == 3)//meidai 
             {
                 if (kyotu.MCount == 0) {
@@ -284,6 +332,22 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     kyouchouHenkanInt = int.Parse(ka5[kyotu.rrCount, ka5.GetLength(1) - 1]);
             }
         }
+        else if (kyotu.mojiSwitch == 1)//koujun
+        {
+            //k10_2:strin>int変換
+            if (kyotu.MCount == 0) {
+                if (kyotu.rrCount < kjp1.GetLength(0))
+                    kyouchouHenkanInt = int.Parse(ka1[kyotu.rrCount, kjp1.GetLength(1) - 1]);
+            } 
+            else if (kyotu.MCount == 1) {
+                if (kyotu.rrCount < kjp2.GetLength(0))
+                    kyouchouHenkanInt = int.Parse(kjp2[kyotu.rrCount, kjp2.GetLength(1) - 1]);
+            } 
+            else if (kyotu.MCount == 2) {
+                if (kyotu.rrCount < kjp3.GetLength(0))
+                    kyouchouHenkanInt = int.Parse(kjp3[kyotu.rrCount, kjp3.GetLength(1) - 1]);
+            } 
+        } 
         else if (kyotu.mojiSwitch == 3)//meidai 
         {
             //k10_2:strin>int変換
@@ -352,6 +416,25 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     }
                 }
             }
+            else if (kyotu.mojiSwitch == 1)//koujun
+            {
+                if (kyotu.MCount == 0) {
+                    if (kyotu.rrCount < kjp1.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = "";
+                    }
+                } else if (kyotu.MCount == 1) {
+                    if (kyotu.rrCount < kjp2.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = "";
+                    }
+                } else if (kyotu.MCount == 2) {
+                    if (kyotu.rrCount < kjp3.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = "";
+                    }
+                } 
+            } 
             else if (kyotu.mojiSwitch == 3)//meidai
             {
                 if (kyotu.MCount == 0) {
@@ -420,6 +503,39 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     }
                 }
             }
+
+        }
+        else if (kyotu.mojiSwitch == 1) 
+        {
+            //koujunに対応 3tu
+            if (kyotu.MCount == 0) {
+                for (int i = 0; i < kjp1.GetLength(0); i++) {
+                    //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
+                    kariList.Add(new List<string>());
+
+                    for (int j = 0; j < kjp1.GetLength(1); j++) {
+                        kariList[i].Add(kjp1[i, j]);
+                    }
+                }
+            } else if (kyotu.MCount == 1) {
+                for (int i = 0; i < kjp2.GetLength(0); i++) {
+                    //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
+                    kariList.Add(new List<string>());
+
+                    for (int j = 0; j < kjp2.GetLength(1); j++) {
+                        kariList[i].Add(kjp2[i, j]);
+                    }
+                }
+            } else if (kyotu.MCount == 2) {
+                for (int i = 0; i < kjp3.GetLength(0); i++) {
+                    //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
+                    kariList.Add(new List<string>());
+
+                    for (int j = 0; j < kjp3.GetLength(1); j++) {
+                        kariList[i].Add(kjp3[i, j]);
+                    }
+                }
+            } 
 
         }
         //meidaiに対応

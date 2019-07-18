@@ -47,7 +47,6 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
     void Start() 
     {
-        
         //ここから↓ないとバグ出る-----------------
         for (int i = 0; i < 11; i++) 
         {
@@ -275,6 +274,14 @@ public class H_99_13_mojiHonban : MonoBehaviour
             else if (kyotu.MCount == 1) {
                 if (kyotu.rrCount < ka3.GetLength(0))
                     kyouchouHenkanInt = int.Parse(ka3[kyotu.rrCount, ka3.GetLength(1) - 1]);
+            } 
+            else if (kyotu.MCount == 2) {
+                if (kyotu.rrCount < ka4.GetLength(0))
+                    kyouchouHenkanInt = int.Parse(ka4[kyotu.rrCount, ka4.GetLength(1) - 1]);
+            } 
+            else if (kyotu.MCount == 3) {
+                if (kyotu.rrCount < ka5.GetLength(0))
+                    kyouchouHenkanInt = int.Parse(ka5[kyotu.rrCount, ka5.GetLength(1) - 1]);
             }
         }
         else if (kyotu.mojiSwitch == 3)//meidai 
@@ -283,10 +290,16 @@ public class H_99_13_mojiHonban : MonoBehaviour
             if (kyotu.MCount == 0) {
                 if (kyotu.rrCount < m1_1.GetLength(0))
                     kyouchouHenkanInt = int.Parse(m1_1[kyotu.rrCount, m1_1.GetLength(1) - 1]);
-            } else if (kyotu.MCount == 1) {
+            } 
+            else if (kyotu.MCount == 1) {
                 if (kyotu.rrCount < m1_2.GetLength(0))
                     kyouchouHenkanInt = int.Parse(m1_2[kyotu.rrCount, m1_2.GetLength(1) - 1]);
             }
+            else if (kyotu.MCount == 1) {
+                if (kyotu.rrCount < m1_2.GetLength(0))
+                    kyouchouHenkanInt = int.Parse(m1_2[kyotu.rrCount, m1_2.GetLength(1) - 1]);
+            }
+
         }
         
 
@@ -322,6 +335,18 @@ public class H_99_13_mojiHonban : MonoBehaviour
                 }
                 else if (kyotu.MCount == 1) {
                     if (kyotu.rrCount < ka3.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = "";
+                    }
+                } 
+                else if (kyotu.MCount == 2) {
+                    if (kyotu.rrCount < ka4.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = "";
+                    }
+                } 
+                else if (kyotu.MCount == 3) {
+                    if (kyotu.rrCount < ka5.GetLength(0)) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";
                     }
@@ -374,6 +399,26 @@ public class H_99_13_mojiHonban : MonoBehaviour
                         kariList[i].Add(ka3[i, j]);
                     }
                 }
+            } 
+            else if (kyotu.MCount == 2) {
+                for (int i = 0; i < ka4.GetLength(0); i++) {
+                    //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
+                    kariList.Add(new List<string>());
+
+                    for (int j = 0; j < ka4.GetLength(1); j++) {
+                        kariList[i].Add(ka4[i, j]);
+                    }
+                }
+            } 
+            else if (kyotu.MCount == 3) {
+                for (int i = 0; i < ka5.GetLength(0); i++) {
+                    //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
+                    kariList.Add(new List<string>());
+
+                    for (int j = 0; j < ka5.GetLength(1); j++) {
+                        kariList[i].Add(ka5[i, j]);
+                    }
+                }
             }
 
         }
@@ -404,7 +449,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                 }
             }
         }
-        
+        //文章増えるたびに変更、ここまで
     }
     //Uitextの中身----------------------------------------------------------------------------------------------------
     //文章増えるたびに変更
@@ -520,9 +565,25 @@ public class H_99_13_mojiHonban : MonoBehaviour
     private string[,] kjp1 = new string[,]
     {
         {"公準p1","","","","","","","","","","","99"},
-        {"次が成り立つことを要請する。任意の点から任意の点へ直線を引くこと。","に","等しいもの","は互いに等しい。","","","","","","","","99"},
+        {"任意の点","から","任意の点","へ","直線","を引くこと。","","","","","","0"},
+        {"任意の点","から","任意の点","へ","直線","を引くこと。","","","","","","2"},
+        {"任意の点","から","任意の点","へ","直線","を引くこと。","","","","","","4"},
+        {"任意の点","から","任意の点","へ","直線","を引くこと。","","","","","","99"},
     };
-
+    private string[,] kjp2 = new string[,]
+    {
+        {"公準p2","","","","","","","","","","","99"},
+        {"任意の直線","を連続して延ばすこと。","","","","","","","","","","0"},
+        {"任意の直線","を連続して延ばすこと。","","","","","","","","","","99"},
+    };
+    private string[,] kjp3 = new string[,]
+    {
+        {"公準p3","","","","","","","","","","","99"},
+        {"任意の中心","と","任意の半径","の","円","を描くこと。","","","","","","0"},
+        {"任意の中心","と","任意の半径","の","円","を描くこと。","","","","","","2"},
+        {"任意の中心","と","任意の半径","の","円","を描くこと。","","","","","","4"},
+        {"任意の中心","と","任意の半径","の","円","を描くこと。","","","","","","99"},
+    };
     //teigi
     private string[,] tdi1 = new string[,]
     {

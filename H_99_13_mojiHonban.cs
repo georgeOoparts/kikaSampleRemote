@@ -198,6 +198,11 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     {
                         kyotu.rrCount++;
                     } 
+                } 
+                else if (kyotu.MCount == 2) {
+                    if (kyotu.rrCount < m1_3.GetLength(0) - 1) {
+                        kyotu.rrCount++;
+                    }
                 }
             }
 
@@ -331,13 +336,23 @@ public class H_99_13_mojiHonban : MonoBehaviour
                         //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = kariList[m1_1.GetLength(0) - 1][i];
                     }
-                } else if (kyotu.MCount == 1) {
+                } 
+                else if (kyotu.MCount == 1) {
                     if (kyotu.rrCount < m1_2.GetLength(0)) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = kariList[kyotu.rrCount][i];//eeee
                     } else {
                         //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = kariList[m1_2.GetLength(0) - 1][i];
+                    }
+                } 
+                else if (kyotu.MCount == 2) {
+                    if (kyotu.rrCount < m1_3.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[kyotu.rrCount][i];//eeee
+                    } else {
+                        //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[m1_3.GetLength(0) - 1][i];
                     }
                 }
             }
@@ -404,9 +419,9 @@ public class H_99_13_mojiHonban : MonoBehaviour
                 if (kyotu.rrCount < m1_2.GetLength(0))
                     kyouchouHenkanInt = int.Parse(m1_2[kyotu.rrCount, m1_2.GetLength(1) - 1]);
             }
-            else if (kyotu.MCount == 1) {
-                if (kyotu.rrCount < m1_2.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(m1_2[kyotu.rrCount, m1_2.GetLength(1) - 1]);
+            else if (kyotu.MCount == 2) {
+                if (kyotu.rrCount < m1_3.GetLength(0))
+                    kyouchouHenkanInt = int.Parse(m1_3[kyotu.rrCount, m1_3.GetLength(1) - 1]);
             }
 
         }
@@ -503,6 +518,12 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     }
                 } else if (kyotu.MCount == 1) {
                     if (kyotu.rrCount < m1_2.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = "";//eeee
+                    }
+                } 
+                else if (kyotu.MCount == 2) {
+                    if (kyotu.rrCount < m1_3.GetLength(0)) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";//eeee
                     }
@@ -644,6 +665,17 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
                     for (int j = 0; j < m1_2.GetLength(1); j++) {
                         kariList[i].Add(m1_2[i, j]);
+                    }
+                }
+            }
+            //meidai3に対応
+            else if (kyotu.MCount == 2) {
+                for (int i = 0; i < m1_3.GetLength(0); i++) {
+                    //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
+                    kariList.Add(new List<string>());
+
+                    for (int j = 0; j < m1_3.GetLength(1); j++) {
+                        kariList[i].Add(m1_3[i, j]);
                     }
                 }
             }
@@ -830,11 +862,11 @@ public class H_99_13_mojiHonban : MonoBehaviour
         {"よって", "AE","は","C","と等しい","[公理A-1]。","","","","","","3"},
         {"よって", "AE","は","C","と等しい","[公理A-1]。","","","","","","99"},
 
-        {"ゆえに、与えられた", "二つの直線","AB","と","C","について、","AE","は短い方の","直線C","と等しく、","","3"},
-        {"ゆえに、与えられた", "二つの直線","AB","と","C","について、","AE","は短い方の","直線C","と等しく、","","5"},
-        {"ゆえに、与えられた", "二つの直線","AB","と","C","について、","AE","は短い方の","直線C","と等しく、","","7"},
-        {"ゆえに、与えられた", "二つの直線","AB","と","C","について、","AE","は短い方の","直線C","と等しく、","","9"},
-        {"ゆえに、与えられた", "二つの直線","AB","と","C","について、","AE","は短い方の","直線C","と等しく、","","11"},
+        {"ゆえに、与えられた", "二つの直線","AB","と","C","について、","AE","は短い方の","直線C","と等しく、","","2"},
+        {"ゆえに、与えられた", "二つの直線","AB","と","C","について、","AE","は短い方の","直線C","と等しく、","","4"},
+        {"ゆえに、与えられた", "二つの直線","AB","と","C","について、","AE","は短い方の","直線C","と等しく、","","6"},
+        {"ゆえに、与えられた", "二つの直線","AB","と","C","について、","AE","は短い方の","直線C","と等しく、","","8"},
+
         {"ゆえに、与えられた", "二つの直線","AB","と","C","について、","AE","は短い方の","直線C","と等しく、","","99"},
 
         {"長い方の", "直線AB","を切り取る。","これが求められていたことであった。","","","","","","","","1"},

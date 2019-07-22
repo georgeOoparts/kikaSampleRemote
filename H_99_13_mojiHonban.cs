@@ -208,6 +208,16 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     if (kyotu.rrCount < m1_4.GetLength(0) - 1) {
                         kyotu.rrCount++;
                     }
+                } 
+                else if (kyotu.MCount == 4) {
+                    if (kyotu.rrCount < m1_5.GetLength(0) - 1) {
+                        kyotu.rrCount++;
+                    }
+                } 
+                else if (kyotu.MCount == 5) {
+                    if (kyotu.rrCount < m1_6.GetLength(0) - 1) {
+                        kyotu.rrCount++;
+                    }
                 }
             }
 
@@ -368,6 +378,24 @@ public class H_99_13_mojiHonban : MonoBehaviour
                         //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = kariList[m1_4.GetLength(0) - 1][i];
                     }
+                } 
+                else if (kyotu.MCount == 4) {
+                    if (kyotu.rrCount < m1_5.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[kyotu.rrCount][i];//eeee
+                    } else {
+                        //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[m1_5.GetLength(0) - 1][i];
+                    }
+                } 
+                else if (kyotu.MCount == 5) {
+                    if (kyotu.rrCount < m1_6.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[kyotu.rrCount][i];//eeee
+                    } else {
+                        //最終行を出力し続ける:mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = kariList[m1_6.GetLength(0) - 1][i];
+                    }
                 }
             }
             
@@ -441,6 +469,14 @@ public class H_99_13_mojiHonban : MonoBehaviour
             else if (kyotu.MCount == 3) {
                 if (kyotu.rrCount < m1_4.GetLength(0))
                     kyouchouHenkanInt = int.Parse(m1_4[kyotu.rrCount, m1_4.GetLength(1) - 1]);
+            } 
+            else if (kyotu.MCount == 4) {
+                if (kyotu.rrCount < m1_5.GetLength(0))
+                    kyouchouHenkanInt = int.Parse(m1_5[kyotu.rrCount, m1_5.GetLength(1) - 1]);
+            } 
+            else if (kyotu.MCount == 5) {
+                if (kyotu.rrCount < m1_6.GetLength(0))
+                    kyouchouHenkanInt = int.Parse(m1_6[kyotu.rrCount, m1_6.GetLength(1) - 1]);
             }
 
         }
@@ -550,6 +586,18 @@ public class H_99_13_mojiHonban : MonoBehaviour
                 } 
                 else if (kyotu.MCount == 3) {
                     if (kyotu.rrCount < m1_4.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = "";//eeee
+                    }
+                } 
+                else if (kyotu.MCount == 4) {
+                    if (kyotu.rrCount < m1_5.GetLength(0)) {
+                        //mojipanelの各UItextに文字を代入していく
+                        kodomoTextText[i].text = "";//eeee
+                    }
+                } 
+                else if (kyotu.MCount == 5) {
+                    if (kyotu.rrCount < m1_6.GetLength(0)) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";//eeee
                     }
@@ -713,6 +761,28 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
                     for (int j = 0; j < m1_4.GetLength(1); j++) {
                         kariList[i].Add(m1_4[i, j]);
+                    }
+                }
+            }
+            //meidai4に対応
+            else if (kyotu.MCount == 4) {
+                for (int i = 0; i < m1_5.GetLength(0); i++) {
+                    //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
+                    kariList.Add(new List<string>());
+
+                    for (int j = 0; j < m1_5.GetLength(1); j++) {
+                        kariList[i].Add(m1_5[i, j]);
+                    }
+                }
+            }
+            //meidai4に対応
+            else if (kyotu.MCount == 5) {
+                for (int i = 0; i < m1_6.GetLength(0); i++) {
+                    //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
+                    kariList.Add(new List<string>());
+
+                    for (int j = 0; j < m1_6.GetLength(1); j++) {
+                        kariList[i].Add(m1_6[i, j]);
                     }
                 }
             }
@@ -1027,11 +1097,11 @@ public class H_99_13_mojiHonban : MonoBehaviour
         {"このとき、", "角ABC","と","ACB","、","角CBD","と","BCE","が等しいと主張する。","","","5"},
         {"このとき、", "角ABC","と","ACB","、","角CBD","と","BCE","が等しいと主張する。","","","7"},
 
-        {"点F", "を","BD","上にとり、","AG","を","AE","から","AF分","切り取ったとする","[命題I-3]","1"},
-        {"点F", "を","BD","上にとり、","AG","を","AE","から","AF分","切り取ったとする","[命題I-3]","3"},
-        {"点F", "を","BD","上にとり、","AG","を","AE","から","AF分","切り取ったとする","[命題I-3]","5"},
-        {"点F", "を","BD","上にとり、","AG","を","AE","から","AF分","切り取ったとする","[命題I-3]","7"},
-        {"点F", "を","BD","上にとり、","AG","を","AE","から","AF分","切り取ったとする","[命題I-3]","9"},
+        {"点F", "を","BD","上にとり、","AG","を","AE","から","AF分","切り取ったとする","[命題I-3]","0"},
+        {"点F", "を","BD","上にとり、","AG","を","AE","から","AF分","切り取ったとする","[命題I-3]","2"},
+        {"点F", "を","BD","上にとり、","AG","を","AE","から","AF分","切り取ったとする","[命題I-3]","4"},
+        {"点F", "を","BD","上にとり、","AG","を","AE","から","AF分","切り取ったとする","[命題I-3]","6"},
+        {"点F", "を","BD","上にとり、","AG","を","AE","から","AF分","切り取ったとする","[命題I-3]","8"},
 
         {"そして、", "直線FC","と","GB","を描く","[公準P-1]","","","","","","1"},
         {"そして、", "直線FC","と","GB","を描く","[公準P-1]","","","","","","3"},
@@ -1067,7 +1137,6 @@ public class H_99_13_mojiHonban : MonoBehaviour
         {"そこから相等しい", "AB","と","AC","を引いた差の","BF","と","CG","は等しい","[公理A-3]","","5"},
         {"そこから相等しい", "AB","と","AC","を引いた差の","BF","と","CG","は等しい","[公理A-3]","","7"},
 
-        {"FC", "と","GB","は等しいから、","","","","","","","","99"},
         {"FC", "と","GB","は等しいから、","","","","","","","","0"},
         {"FC", "と","GB","は等しいから、","","","","","","","","2"},
 
@@ -1157,10 +1226,13 @@ public class H_99_13_mojiHonban : MonoBehaviour
         {"DB", "は","AC","と等しく、","BC","を共有しているから、","","","","","","4"},
 
 
-        {"DB", "、","BC","と","AC","、CB","の","二辺","がそれぞれ等しく、","","","0"},
-        {"DB", "、","BC","と","AC","、CB","の","二辺","がそれぞれ等しく、","","","2"},
-        {"DB", "、","BC","と","AC","、CB","の","二辺","がそれぞれ等しく、","","","4"},
-        {"DB", "、","BC","と","AC","、CB","の","二辺","がそれぞれ等しく、","","","6"},
+        {"DB", "、","BC","と","AC","、","CB","の","二辺","がそれぞれ等しく、","","0"},
+        {"DB", "、","BC","と","AC","、","CB","の","二辺","がそれぞれ等しく、","","2"},
+        {"DB", "、","BC","と","AC","、","CB","の","二辺","がそれぞれ等しく、","","4"},
+        {"DB", "、","BC","と","AC","、","CB","の","二辺","がそれぞれ等しく、","","6"},
+        {"DB", "、","BC","と","AC","、","CB","の","二辺","がそれぞれ等しく、","","8"},
+
+
 
         {"角DBC", "と","角ACB","が等しい。","","","","","","","","0"},
         {"角DBC", "と","角ACB","が等しい。","","","","","","","","2"},

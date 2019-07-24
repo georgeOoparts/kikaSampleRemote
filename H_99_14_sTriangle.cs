@@ -23,7 +23,7 @@ public class H_99_14_sTriangle : MonoBehaviour
 
     void Update()
     {
-        if (kyotu.MCount==0) 
+        if (kyotu.mojiSwitch==3 && kyotu.MCount == 0 && kyotu.rrCount<5  )
         {
             samTriMove.position = new Vector2(9.17f, 1.11f);
 
@@ -32,5 +32,7 @@ public class H_99_14_sTriangle : MonoBehaviour
         {
             samTriMove.position = new Vector2(14.76f,-0.55f);
         }
+        Debug.Log("MS::"+kyotu.mojiSwitch+"MC::"+kyotu.MCount+"RRC::"+kyotu.rrCount);
+
     }
 }

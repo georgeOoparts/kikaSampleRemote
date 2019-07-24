@@ -168,10 +168,33 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
         else if (count == 10) 
         {
             reset();
+
+            rrTextA.enabled = true;
+
+            rrTextB.enabled = true;
+
+            rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+
+            rrPointA.enabled= kyotuEla.tenmetuOnOff;
+
         } 
         else if (count == 11) 
         {
             reset();
+
+            rrTextA.enabled = true;
+
+            rrTextB.enabled = true;
+
+            rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+
+            rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+
+
         } 
         else if (count == 12) 
         {

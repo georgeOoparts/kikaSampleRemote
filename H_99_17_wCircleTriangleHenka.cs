@@ -198,8 +198,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextB.enabled = true;
 
             rrlineAB.enabled = true;
-            rrlineBC.enabled = true;
-            rrlineCA.enabled = true;
+            
 
             rrPointA.enabled= kyotuEla.tenmetuOnOff;
 
@@ -213,11 +212,11 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextB.enabled = true;
 
             rrlineAB.enabled = true;
-            rrlineBC.enabled = true;
-            rrlineCA.enabled = true;
+            
 
             rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
+            rrPointA.enabled = true;
 
         } 
         else if (count == 12) 
@@ -227,17 +226,37 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextA.enabled = true;
             rrTextB.enabled = true;
             rrTextC.enabled = true;
+            rrTextD.enabled = true;
 
             rrlineAB.enabled = true;
-            rrlineBC.enabled = true;
-            rrlineCA.enabled = true;
+           
 
-            rrOyaCylinder1.enabled = true;
-            rrCylinder1.enabled = true;
+            rrPointA.enabled = true;
+            rrPointB.enabled = true;
+            rrPointC.enabled = true;
+            rrPointD.enabled = true;
+
+            rrOyaCylinder1.enabled = kyotuEla.tenmetuOnOff;
+            rrCylinder1.enabled = kyotuEla.tenmetuOnOff;
 
         } else if (count == 13) 
         {
             reset();
+            rrTextA.enabled = true;
+            rrTextB.enabled = true;
+            rrTextC.enabled = true;
+            rrTextD.enabled = true;
+
+            rrlineAB.enabled = true;
+
+
+            rrPointA.enabled = true;
+            rrPointB.enabled = true;
+            rrPointC.enabled = true;
+            rrPointD.enabled = true;
+
+            rrOyaCylinder1.enabled = true;
+            rrCylinder1.enabled = true;
         } 
         else if (count == 14) 
         {

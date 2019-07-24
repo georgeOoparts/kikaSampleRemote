@@ -40,6 +40,14 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
     public GameObject wcTextC;
     public GameObject wcStrongTextCubeC;
 
+    public GameObject wcPointD;
+    public GameObject wcTextD;
+    public GameObject wcStrongTextCubeD;
+
+    public GameObject wcPointE;
+    public GameObject wcTextE;
+    public GameObject wcStrongTextCubeE;
+
     public GameObject wcOyaCylinder1;
     public GameObject wcCylinder1;
 
@@ -70,6 +78,14 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
     private Renderer rrPointC;
     private Renderer rrTextC;
     private Renderer rrStrongTextCubeC;
+
+    private Renderer rrPointD;
+    private Renderer rrTextD;
+    private Renderer rrStrongTextCubeD;
+
+    private Renderer rrPointE;
+    private Renderer rrTextE;
+    private Renderer rrStrongTextCubeE;
 
     //後ろの２つの円のrenderer
     private Renderer rrOyaCylinder1;
@@ -102,8 +118,16 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
         rrTextC = wcTextC.GetComponent<Renderer>();
         rrStrongTextCubeC = wcStrongTextCubeC.GetComponent<Renderer>();
 
+        rrPointD = wcPointD.GetComponent<Renderer>();
+        rrTextD = wcTextD.GetComponent<Renderer>();
+        rrStrongTextCubeD = wcStrongTextCubeD.GetComponent<Renderer>();
+
+        rrPointE = wcPointE.GetComponent<Renderer>();
+        rrTextE = wcTextE.GetComponent<Renderer>();
+        rrStrongTextCubeE = wcStrongTextCubeE.GetComponent<Renderer>();
+
         // 後ろの２つの円のrenderer
-        rrOyaCylinder1=wcOyaCylinder1.GetComponent<Renderer>();
+        rrOyaCylinder1 =wcOyaCylinder1.GetComponent<Renderer>();
         rrCylinder1= wcCylinder1.GetComponent<Renderer>();
 
         rrOyaCylinder2 = wcOyaCylinder2.GetComponent<Renderer>();
@@ -199,8 +223,19 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
         else if (count == 12) 
         {
             reset();
-        } 
-        else if (count == 13) 
+
+            rrTextA.enabled = true;
+            rrTextB.enabled = true;
+            rrTextC.enabled = true;
+
+            rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+
+            rrOyaCylinder1.enabled = true;
+            rrCylinder1.enabled = true;
+
+        } else if (count == 13) 
         {
             reset();
         } 
@@ -261,6 +296,14 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
         rrPointC.enabled = false;
         rrTextC.enabled = false;
         rrStrongTextCubeC.enabled = false;
+
+        rrPointD.enabled = false;
+        rrTextD.enabled = false;
+        rrStrongTextCubeD.enabled = false;
+
+        rrPointE.enabled = false;
+        rrTextE.enabled = false;
+        rrStrongTextCubeE.enabled = false;
 
         // 後ろの２つの円のrenderer
         rrOyaCylinder1.enabled = false;

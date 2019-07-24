@@ -123,13 +123,91 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
         if (count == 5) 
         {
             reset();
-            rrlineBC.enabled = true;
-            rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+            rrTextA.enabled = true;
+            rrTextB.enabled = true;
+            rrlineAB.enabled = true;
+            rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
         }
         else if(count == 6) 
         {
             reset();
+            rrTextA.enabled = true;
+            rrTextB.enabled = true;
+            rrlineAB.enabled = true;
+        } 
+        else if (count == 7) 
+        {
+            reset();
+            rrTextA.enabled = true;
+            rrTextB.enabled = true;
+            rrlineAB.enabled = true;
+            rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+        } 
+        else if (count == 8) {
+            reset();
+            rrTextA.enabled = true;
+            rrTextB.enabled = true;
+
+            rrlineAB.enabled = true;
+            rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
             rrlineBC.enabled = true;
+            rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+            rrlineCA.enabled = true;
+            rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+        } 
+        else if (count == 9) 
+        {
+            reset();
+            rrTextA.enabled = true;
+            rrTextB.enabled = true;
+
+            rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+        } 
+        else if (count == 10) 
+        {
+            reset();
+        } 
+        else if (count == 11) 
+        {
+            reset();
+        } 
+        else if (count == 12) 
+        {
+            reset();
+        } 
+        else if (count == 13) 
+        {
+            reset();
+        } 
+        else if (count == 14) 
+        {
+            reset();
+        } 
+        else if (count == 15) 
+        {
+            reset();
+        } 
+        else if (count == 16) 
+        {
+            reset();
+        } 
+        else if (count == 17) 
+        {
+            reset();
+        } 
+        else if (count == 18) 
+        {
+            reset();
+        } 
+        else if (count == 19) 
+        {
+            reset();
+        } 
+        else if (count == 20) 
+        {
+            reset();
         }
     }
     //リセット表示を全部消すメソッド　kyotu.rrcount-----------------------------

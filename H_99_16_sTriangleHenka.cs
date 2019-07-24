@@ -72,9 +72,7 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
 
     void Start()
     {
-        //k6_aa:ストップウォッチスタート
-        //stopwatch.Start();
-
+        //redererを当てはめていく
         rrlineAB = lineAB.GetComponent<Renderer>();
         rrlineSAB = lineSAB.GetComponent<Renderer>();
 

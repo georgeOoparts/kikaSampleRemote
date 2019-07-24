@@ -32,7 +32,6 @@ public class H_99_14_sTriangle : MonoBehaviour
         {
             samTriMove.position = new Vector2(14.76f,-0.55f);
         }
-        Debug.Log("MS::"+kyotu.mojiSwitch+"MC::"+kyotu.MCount+"RRC::"+kyotu.rrCount);
 
     }
 }

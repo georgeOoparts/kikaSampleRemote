@@ -17,7 +17,8 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
     //強調表現点滅に使う変数を共通変数として使う。
     public H_99_01B_kyotuElapse kyotuEla;
 
-
+    //いちいちunityで当てはめなきゃ駄目　↓---------------
+    //三角形の線分
     public GameObject lineAB;
     public GameObject lineSAB;
 
@@ -30,6 +31,7 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
     public GameObject lineAP;
     public GameObject lineSAP;
 
+    //三角形の頂点
     //zukei のポイントを表すgameobject
     //アタッチするのはPPRRPointAであることに注意
 
@@ -44,10 +46,9 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
     public GameObject pointC;
     public GameObject textC;
     public GameObject strongTextCubeC;
+    //いちいちunityで当てはめなきゃ駄目　↑---------------
 
-    //public GameObject pointP;
-    //public GameObject textP;
-    //public GameObject strongTextCubeP;
+    //線分を出したり消したりするときに使う  
     private Renderer rrlineAB;
     private Renderer rrlineSAB;
 

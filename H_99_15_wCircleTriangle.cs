@@ -23,7 +23,8 @@ public class H_99_15_wCircleTriangle : MonoBehaviour
 
     void Update() 
     {
-        if (kyotu.MCount == 1) 
+        //meidai  m1_1 count5以上
+        if (kyotu.mojiSwitch == 3 && kyotu.MCount == 0 && kyotu.rrCount >= 5) 
         {
             wCircleTriMove.position = new Vector2(10.25f, 2.7f);
         } 
@@ -31,5 +32,6 @@ public class H_99_15_wCircleTriangle : MonoBehaviour
         {
             wCircleTriMove.position = new Vector2(16.35f, -3.74f);
         }
+
     }
 }

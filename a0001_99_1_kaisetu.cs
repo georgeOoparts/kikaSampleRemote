@@ -211,12 +211,29 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     this.gameObject.GetComponent<Image>().enabled = true;
 
     //k7Bオブジェクトを見えたり見えなくしたりする(uiじゃないオブジェの時)---
+    //スプライトの場合もspriterendererじゃなくこれ。
+    //しかし、スプライトの場合Rederer変数が作れないので注意
 
     //k7B_1_1:オブジェを存在するけど見えなくする。
     //this.gameObject.GetComponent<Renderer>().enabled = false; 
 
     //k7B_1_2:オブジェを見えるようにするよ。
     //this.gameObject.GetComponent<Renderer>().enabled = true;
+
+
+
+----------------------------------------------------------------------------------
+    //shape2dの使い方
+    shape2d使い方（スプライトで円周の一部を作れる）
+
+    hierarchy右クリック＞shapes2d>sprites>ellipse
+    で円を作れる
+
+    作った円のinspecter＞shape＞innerCutout x=0.9,y=0.9
+    位で円周を表せる
+
+    円周のinspecter＞shape＞startAngle、endAngleを調整する事で
+    円周の一部のみを表示できる
 
 ----------------------------------------------------------------------------------
     k8：：親、子供　オブジェ呼び出し

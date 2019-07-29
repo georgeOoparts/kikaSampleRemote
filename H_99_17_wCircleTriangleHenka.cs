@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class H_99_17_wCircleTriangleHenka : MonoBehaviour
 {
@@ -48,11 +49,11 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
     public GameObject wcTextE;
     public GameObject wcStrongTextCubeE;
 
-    public GameObject wcOyaCylinder1;
     public GameObject wcCylinder1;
+    public GameObject stWcCylinder1;//強調用
 
-    public GameObject wcOyaCylinder2;
     public GameObject wcCylinder2;
+    public GameObject stWcCylinder2;//強調用
 
     //いちいちunityで当てはめなきゃ駄目　↑---------------
     //線分を出したり消したりするときに使う Rendererを当てはめる
@@ -88,11 +89,11 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
     private Renderer rrStrongTextCubeE;
 
     //後ろの２つの円のrenderer
-    private Renderer rrOyaCylinder1;
     private Renderer rrCylinder1;
+    private Renderer rrStCylinder1;
 
-    private Renderer rrOyaCylinder2;
     private Renderer rrCylinder2;
+    private Renderer rrStCylinder2;
 
     void Start()
     {
@@ -127,11 +128,11 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
         rrStrongTextCubeE = wcStrongTextCubeE.GetComponent<Renderer>();
 
         // 後ろの２つの円のrenderer
-        rrOyaCylinder1 =wcOyaCylinder1.GetComponent<Renderer>();
-        rrCylinder1= wcCylinder1.GetComponent<Renderer>();
+        rrCylinder1 =wcCylinder1.GetComponent<Renderer>();
+        rrStCylinder1= stWcCylinder1.GetComponent<Renderer>();
 
-        rrOyaCylinder2 = wcOyaCylinder2.GetComponent<Renderer>();
         rrCylinder2 = wcCylinder2.GetComponent<Renderer>();
+        rrStCylinder2 = stWcCylinder2.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -236,8 +237,8 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointC.enabled = true;
             rrPointD.enabled = true;
 
-            rrOyaCylinder1.enabled = kyotuEla.tenmetuOnOff;
-            rrCylinder1.enabled = kyotuEla.tenmetuOnOff;
+            rrCylinder1.enabled = true;
+            rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
 
         } else if (count == 13) 
         {
@@ -255,7 +256,6 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointC.enabled = true;
             rrPointD.enabled = true;
 
-            rrOyaCylinder1.enabled = true;
             rrCylinder1.enabled = true;
         } 
         else if (count == 14) 
@@ -325,11 +325,11 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
         rrStrongTextCubeE.enabled = false;
 
         // 後ろの２つの円のrenderer
-        rrOyaCylinder1.enabled = false;
         rrCylinder1.enabled = false;
+        rrStCylinder1.enabled = false;
 
-        rrOyaCylinder2.enabled = false;
         rrCylinder2.enabled = false;
+        rrStCylinder2.enabled = false;
     }
 
 }

@@ -67,10 +67,11 @@ public class H_99_13_mojiHonban : MonoBehaviour
         }
         //ここから↑ないとバグ出る-----------------
     }
-   
+
     //強調する文字が配列の何番目かを入れる変数（強調できる文字数２つ）
-    private int kyouchouHenkanInt1;
-    private int kyouchouHenkanInt2;
+    //99は何も文字を強調しないという整数
+    private int kyouchouHenkanInt1=99;
+    private int kyouchouHenkanInt2=99;
     void Update() 
     {
         //kyotu.mojiSwitch 初期値:3
@@ -491,7 +492,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //kyouchouHenkanInt = 99;
 
         //強調すべきパネルを強調するメソッド
-        kyochouPanel(kyouchouHenkanInt1);///
+        kyochouPanel(kyouchouHenkanInt1, kyouchouHenkanInt2);///
 
     }
 
@@ -1338,7 +1339,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
 
 
     //kyochouPanel(int count) ------------------------------------------------------------------------------
-    void kyochouPanel(int count) 
+    void kyochouPanel(int count1,int count2) 
     {
        
         for (int i = 0; i < kodomoTextText.Count; i++) 
@@ -1346,13 +1347,19 @@ public class H_99_13_mojiHonban : MonoBehaviour
             mojiPanel[i].GetComponent<Image>().enabled = false;
         }
         
-        if (count!=99) 
+        if (count1!=99) 
         {
             //k7_1_2:オブジェを見えるようにするよ。
             //共通変数の kyotuEla.tenmetuOnOffで点滅処理
-            mojiPanel[count].GetComponent<Image>().enabled = kyotuEla.tenmetuOnOff;///
+            mojiPanel[count1].GetComponent<Image>().enabled = kyotuEla.tenmetuOnOff;///
         }
-            
+        if (count2 != 99) 
+        {
+            //k7_1_2:オブジェを見えるようにするよ。
+            //共通変数の kyotuEla.tenmetuOnOffで点滅処理
+            mojiPanel[count2].GetComponent<Image>().enabled = kyotuEla.tenmetuOnOff;///
+        }
+
     }
     //Uitextの中身----------------------------------------------------------------------------------------------------
     //3次元配列

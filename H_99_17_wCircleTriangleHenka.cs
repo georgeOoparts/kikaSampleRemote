@@ -401,6 +401,8 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineCA.enabled = true;
+            rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -423,6 +425,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+
+            rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -435,8 +441,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
 
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
-        } 
-        else if (count == 22) {
+        } else if (count == 22) {
             reset();
             rrTextA.enabled = true;
             rrTextB.enabled = true;
@@ -445,6 +450,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -456,7 +465,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrCylinder1.enabled = true;
 
             rrCylinder2.enabled = true;
-            //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
+            //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;        
         } 
         else if (count == 23) {
             reset();
@@ -467,9 +476,13 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
-            rrPointA.enabled = true;
+            rrPointA.enabled = kyotuEla.tenmetuOnOff;
             rrPointB.enabled = true;
             rrPointC.enabled = true;
             rrPointD.enabled = true;
@@ -479,8 +492,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
 
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
-        } 
-        else if (count == 24) {
+        } else if (count == 24) {
             reset();
             rrTextA.enabled = true;
             rrTextB.enabled = true;
@@ -489,6 +501,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -498,11 +514,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
-        } 
-        else if (count == 25) {
+        } else if (count == 25) {
             reset();
             rrTextA.enabled = true;
             rrTextB.enabled = true;
@@ -511,6 +526,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -520,7 +539,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } else if (count == 26) {

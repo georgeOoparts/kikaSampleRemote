@@ -68,8 +68,9 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //ここから↑ないとバグ出る-----------------
     }
    
-
-    private int kyouchouHenkanInt;
+    //強調する文字が配列の何番目かを入れる変数（強調できる文字数２つ）
+    private int kyouchouHenkanInt1;
+    private int kyouchouHenkanInt2;
     void Update() 
     {
         //kyotu.mojiSwitch 初期値:3
@@ -402,26 +403,28 @@ public class H_99_13_mojiHonban : MonoBehaviour
         }
         //文章増えるたびに変更
         //文字が入った配列の情報から、強調すべき文字の順番をintで得る
-
+        //強調できる文字数２つ
+        //ka1.GetLength(1) - 2　１つめ
+        //ka1.GetLength(1) - 1　2つめ
         //公理:0,公準:1,定義:2,meidai:3
         if (kyotu.mojiSwitch == 0)//kouri
         {
             //k10_2:strin>int変換
             if (kyotu.MCount == 0) {
                 if (kyotu.rrCount < ka1.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(ka1[kyotu.rrCount, ka1.GetLength(1) - 1]);
+                    kyouchouHenkanInt1 = int.Parse(ka1[kyotu.rrCount, ka1.GetLength(1) - 2]);
             }
             else if (kyotu.MCount == 1) {
                 if (kyotu.rrCount < ka3.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(ka3[kyotu.rrCount, ka3.GetLength(1) - 1]);
+                    kyouchouHenkanInt1 = int.Parse(ka3[kyotu.rrCount, ka3.GetLength(1) - 2]);
             } 
             else if (kyotu.MCount == 2) {
                 if (kyotu.rrCount < ka4.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(ka4[kyotu.rrCount, ka4.GetLength(1) - 1]);
+                    kyouchouHenkanInt1 = int.Parse(ka4[kyotu.rrCount, ka4.GetLength(1) - 2]);
             } 
             else if (kyotu.MCount == 3) {
                 if (kyotu.rrCount < ka5.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(ka5[kyotu.rrCount, ka5.GetLength(1) - 1]);
+                    kyouchouHenkanInt1 = int.Parse(ka5[kyotu.rrCount, ka5.GetLength(1) - 2]);
             }
         }
         else if (kyotu.mojiSwitch == 1)//koujun
@@ -429,15 +432,15 @@ public class H_99_13_mojiHonban : MonoBehaviour
             //k10_2:strin>int変換
             if (kyotu.MCount == 0) {
                 if (kyotu.rrCount < kjp1.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(ka1[kyotu.rrCount, kjp1.GetLength(1) - 1]);
+                    kyouchouHenkanInt1 = int.Parse(ka1[kyotu.rrCount, kjp1.GetLength(1) - 2]);
             } 
             else if (kyotu.MCount == 1) {
                 if (kyotu.rrCount < kjp2.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(kjp2[kyotu.rrCount, kjp2.GetLength(1) - 1]);
+                    kyouchouHenkanInt1 = int.Parse(kjp2[kyotu.rrCount, kjp2.GetLength(1) - 2]);
             } 
             else if (kyotu.MCount == 2) {
                 if (kyotu.rrCount < kjp3.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(kjp3[kyotu.rrCount, kjp3.GetLength(1) - 1]);
+                    kyouchouHenkanInt1 = int.Parse(kjp3[kyotu.rrCount, kjp3.GetLength(1) - 2]);
             } 
         } 
         else if (kyotu.mojiSwitch == 2)//teigi
@@ -445,10 +448,10 @@ public class H_99_13_mojiHonban : MonoBehaviour
             //k10_2:strin>int変換
             if (kyotu.MCount == 0) {
                 if (kyotu.rrCount < tdi1.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(tdi1[kyotu.rrCount, tdi1.GetLength(1) - 1]);
+                    kyouchouHenkanInt1 = int.Parse(tdi1[kyotu.rrCount, tdi1.GetLength(1) - 2]);
             } else if (kyotu.MCount == 1) {
                 if (kyotu.rrCount < tdi15.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(tdi15[kyotu.rrCount, tdi15.GetLength(1) - 1]);
+                    kyouchouHenkanInt1 = int.Parse(tdi15[kyotu.rrCount, tdi15.GetLength(1) - 2]);
             } 
         } 
         else if (kyotu.mojiSwitch == 3)//meidai 
@@ -456,27 +459,27 @@ public class H_99_13_mojiHonban : MonoBehaviour
             //k10_2:strin>int変換
             if (kyotu.MCount == 0) {
                 if (kyotu.rrCount < m1_1.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(m1_1[kyotu.rrCount, m1_1.GetLength(1) - 1]);
+                    kyouchouHenkanInt1 = int.Parse(m1_1[kyotu.rrCount, m1_1.GetLength(1) - 2]);
             } 
             else if (kyotu.MCount == 1) {
                 if (kyotu.rrCount < m1_2.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(m1_2[kyotu.rrCount, m1_2.GetLength(1) - 1]);
+                    kyouchouHenkanInt1 = int.Parse(m1_2[kyotu.rrCount, m1_2.GetLength(1) - 2]);
             }
             else if (kyotu.MCount == 2) {
                 if (kyotu.rrCount < m1_3.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(m1_3[kyotu.rrCount, m1_3.GetLength(1) - 1]);
+                    kyouchouHenkanInt1 = int.Parse(m1_3[kyotu.rrCount, m1_3.GetLength(1) - 2]);
             } 
             else if (kyotu.MCount == 3) {
                 if (kyotu.rrCount < m1_4.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(m1_4[kyotu.rrCount, m1_4.GetLength(1) - 1]);
+                    kyouchouHenkanInt1 = int.Parse(m1_4[kyotu.rrCount, m1_4.GetLength(1) - 2]);
             } 
             else if (kyotu.MCount == 4) {
                 if (kyotu.rrCount < m1_5.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(m1_5[kyotu.rrCount, m1_5.GetLength(1) - 1]);
+                    kyouchouHenkanInt1 = int.Parse(m1_5[kyotu.rrCount, m1_5.GetLength(1) - 2]);
             } 
             else if (kyotu.MCount == 5) {
                 if (kyotu.rrCount < m1_6.GetLength(0))
-                    kyouchouHenkanInt = int.Parse(m1_6[kyotu.rrCount, m1_6.GetLength(1) - 1]);
+                    kyouchouHenkanInt1 = int.Parse(m1_6[kyotu.rrCount, m1_6.GetLength(1) - 2]);
             }
 
         }
@@ -488,7 +491,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //kyouchouHenkanInt = 99;
 
         //強調すべきパネルを強調するメソッド
-        kyochouPanel(kyouchouHenkanInt);///
+        kyochouPanel(kyouchouHenkanInt1);///
 
     }
 
@@ -502,30 +505,31 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //UItextに2次元配列の値を全てリセット
         //文章増えるたびに変更3---------------------------------
         for (int i = 0; i < kodomoTextText.Count; i++) {
-
+            //配列後ろから2つが強調文字につかわれるので
+            //if (kyotu.rrCount < ka1.GetLength(0)-1)となる
             //公理:0,公準:1,定義:2,meidai:3
             if (kyotu.mojiSwitch == 0)//kouri
             {
                 if (kyotu.MCount == 0) {
-                    if (kyotu.rrCount < ka1.GetLength(0)) {
+                    if (kyotu.rrCount < ka1.GetLength(0)-1) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";
                     }
                 }
                 else if (kyotu.MCount == 1) {
-                    if (kyotu.rrCount < ka3.GetLength(0)) {
+                    if (kyotu.rrCount < ka3.GetLength(0)-1) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";
                     }
                 } 
                 else if (kyotu.MCount == 2) {
-                    if (kyotu.rrCount < ka4.GetLength(0)) {
+                    if (kyotu.rrCount < ka4.GetLength(0)-1) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";
                     }
                 } 
                 else if (kyotu.MCount == 3) {
-                    if (kyotu.rrCount < ka5.GetLength(0)) {
+                    if (kyotu.rrCount < ka5.GetLength(0)-1) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";
                     }
@@ -534,17 +538,17 @@ public class H_99_13_mojiHonban : MonoBehaviour
             else if (kyotu.mojiSwitch == 1)//koujun
             {
                 if (kyotu.MCount == 0) {
-                    if (kyotu.rrCount < kjp1.GetLength(0)) {
+                    if (kyotu.rrCount < kjp1.GetLength(0)-1) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";
                     }
                 } else if (kyotu.MCount == 1) {
-                    if (kyotu.rrCount < kjp2.GetLength(0)) {
+                    if (kyotu.rrCount < kjp2.GetLength(0)-1) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";
                     }
                 } else if (kyotu.MCount == 2) {
-                    if (kyotu.rrCount < kjp3.GetLength(0)) {
+                    if (kyotu.rrCount < kjp3.GetLength(0)-1) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";
                     }
@@ -553,12 +557,12 @@ public class H_99_13_mojiHonban : MonoBehaviour
             else if (kyotu.mojiSwitch == 2)//teigi
             {
                 if (kyotu.MCount == 0) {
-                    if (kyotu.rrCount < tdi1.GetLength(0)) {
+                    if (kyotu.rrCount < tdi1.GetLength(0)-1) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";
                     }
                 } else if (kyotu.MCount == 1) {
-                    if (kyotu.rrCount < tdi15.GetLength(0)) {
+                    if (kyotu.rrCount < tdi15.GetLength(0) - 1) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";
                     }
@@ -567,36 +571,36 @@ public class H_99_13_mojiHonban : MonoBehaviour
             else if (kyotu.mojiSwitch == 3)//meidai
             {
                 if (kyotu.MCount == 0) {
-                    if (kyotu.rrCount < m1_1.GetLength(0)) {
+                    if (kyotu.rrCount < m1_1.GetLength(0)-1) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";
                     }
                 } else if (kyotu.MCount == 1) {
-                    if (kyotu.rrCount < m1_2.GetLength(0)) {
+                    if (kyotu.rrCount < m1_2.GetLength(0) - 1) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";//eeee
                     }
                 } 
                 else if (kyotu.MCount == 2) {
-                    if (kyotu.rrCount < m1_3.GetLength(0)) {
+                    if (kyotu.rrCount < m1_3.GetLength(0) - 1) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";//eeee
                     }
                 } 
                 else if (kyotu.MCount == 3) {
-                    if (kyotu.rrCount < m1_4.GetLength(0)) {
+                    if (kyotu.rrCount < m1_4.GetLength(0) - 1) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";//eeee
                     }
                 } 
                 else if (kyotu.MCount == 4) {
-                    if (kyotu.rrCount < m1_5.GetLength(0)) {
+                    if (kyotu.rrCount < m1_5.GetLength(0) - 1) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";//eeee
                     }
                 } 
                 else if (kyotu.MCount == 5) {
-                    if (kyotu.rrCount < m1_6.GetLength(0)) {
+                    if (kyotu.rrCount < m1_6.GetLength(0) - 1) {
                         //mojipanelの各UItextに文字を代入していく
                         kodomoTextText[i].text = "";//eeee
                     }
@@ -614,14 +618,15 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //文字パネルに入れるlistに内容を入れる
         //公理:0,公準:1,定義:2,meidai:3
         //kouriに対応
+        
         if (kyotu.mojiSwitch == 0) {
             //kouriに対応
             if (kyotu.MCount == 0) {
                 for (int i = 0; i < ka1.GetLength(0); i++) {
                     //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
                     kariList.Add(new List<string>());
-
-                    for (int j = 0; j < ka1.GetLength(1); j++) {
+                    // ka1.GetLength(1)-1 注意　後ろ2つは文字強調
+                    for (int j = 0; j < ka1.GetLength(1)-1; j++) {
                         kariList[i].Add(ka1[i, j]);
                     }
                 }
@@ -631,7 +636,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
                     kariList.Add(new List<string>());
 
-                    for (int j = 0; j < ka3.GetLength(1); j++) {
+                    for (int j = 0; j < ka3.GetLength(1) - 1; j++) {
                         kariList[i].Add(ka3[i, j]);
                     }
                 }
@@ -641,7 +646,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
                     kariList.Add(new List<string>());
 
-                    for (int j = 0; j < ka4.GetLength(1); j++) {
+                    for (int j = 0; j < ka4.GetLength(1) - 1; j++) {
                         kariList[i].Add(ka4[i, j]);
                     }
                 }
@@ -651,7 +656,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
                     kariList.Add(new List<string>());
 
-                    for (int j = 0; j < ka5.GetLength(1); j++) {
+                    for (int j = 0; j < ka5.GetLength(1) - 1; j++) {
                         kariList[i].Add(ka5[i, j]);
                     }
                 }
@@ -666,7 +671,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
                     kariList.Add(new List<string>());
 
-                    for (int j = 0; j < kjp1.GetLength(1); j++) {
+                    for (int j = 0; j < kjp1.GetLength(1) - 1; j++) {
                         kariList[i].Add(kjp1[i, j]);
                     }
                 }
@@ -675,7 +680,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
                     kariList.Add(new List<string>());
 
-                    for (int j = 0; j < kjp2.GetLength(1); j++) {
+                    for (int j = 0; j < kjp2.GetLength(1) - 1; j++) {
                         kariList[i].Add(kjp2[i, j]);
                     }
                 }
@@ -684,7 +689,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
                     kariList.Add(new List<string>());
 
-                    for (int j = 0; j < kjp3.GetLength(1); j++) {
+                    for (int j = 0; j < kjp3.GetLength(1) - 1; j++) {
                         kariList[i].Add(kjp3[i, j]);
                     }
                 }
@@ -699,7 +704,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
                     kariList.Add(new List<string>());
 
-                    for (int j = 0; j < tdi1.GetLength(1); j++) {
+                    for (int j = 0; j < tdi1.GetLength(1) - 1; j++) {
                         kariList[i].Add(tdi1[i, j]);
                     }
                 }
@@ -708,7 +713,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
                     kariList.Add(new List<string>());
 
-                    for (int j = 0; j < tdi15.GetLength(1); j++) {
+                    for (int j = 0; j < tdi15.GetLength(1) - 1; j++) {
                         kariList[i].Add(tdi15[i, j]);
                     }
                 }
@@ -724,7 +729,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
                     kariList.Add(new List<string>());
 
-                    for (int j = 0; j < m1_1.GetLength(1); j++) {
+                    for (int j = 0; j < m1_1.GetLength(1) - 1; j++) {
                         kariList[i].Add(m1_1[i, j]);
                     }
                 }
@@ -736,7 +741,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
                     kariList.Add(new List<string>());
 
-                    for (int j = 0; j < m1_2.GetLength(1); j++) {
+                    for (int j = 0; j < m1_2.GetLength(1) - 1; j++) {
                         kariList[i].Add(m1_2[i, j]);
                     }
                 }
@@ -747,7 +752,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
                     kariList.Add(new List<string>());
 
-                    for (int j = 0; j < m1_3.GetLength(1); j++) {
+                    for (int j = 0; j < m1_3.GetLength(1) - 1; j++) {
                         kariList[i].Add(m1_3[i, j]);
                     }
                 }
@@ -758,7 +763,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
                     kariList.Add(new List<string>());
 
-                    for (int j = 0; j < m1_4.GetLength(1); j++) {
+                    for (int j = 0; j < m1_4.GetLength(1) - 1; j++) {
                         kariList[i].Add(m1_4[i, j]);
                     }
                 }
@@ -769,7 +774,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
                     kariList.Add(new List<string>());
 
-                    for (int j = 0; j < m1_5.GetLength(1); j++) {
+                    for (int j = 0; j < m1_5.GetLength(1) - 1; j++) {
                         kariList[i].Add(m1_5[i, j]);
                     }
                 }
@@ -780,7 +785,7 @@ public class H_99_13_mojiHonban : MonoBehaviour
                     //k0016_99_2_1_1：2次元list [0][],[1][]をつくる
                     kariList.Add(new List<string>());
 
-                    for (int j = 0; j < m1_6.GetLength(1); j++) {
+                    for (int j = 0; j < m1_6.GetLength(1) - 1; j++) {
                         kariList[i].Add(m1_6[i, j]);
                     }
                 }
@@ -793,59 +798,59 @@ public class H_99_13_mojiHonban : MonoBehaviour
     //3次元配列
     private string[,] m1_1 =new string[,]//01
     {
-        {"命題I-1","","","","","","","","","","","99"},
-    　  {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","0"},
-        {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","2"},
-        {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","4"},
-        {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","99"},
-        {"AB","を与えられた","直線","とする。","","","","","","","","0"},
-        {"AB","を与えられた","直線","とする。","","","","","","","","99"},
-        {"このとき、", "AB","を一辺とする","正三角形","を作図することが","求められている。","","","","","","1"},
-        {"このとき、", "AB","を一辺とする","正三角形","を作図することが","求められている。","","","","","","3"},
-        {"このとき、", "AB","を一辺とする","正三角形","を作図することが","求められている。","","","","","","99"},
-        {"A", "を中心とし、","AB","を半径とする円","BCD","を描く[公準P-3]","","","","","","0"},
-        {"A", "を中心とし、","AB","を半径とする円","BCD","を描く[公準P-3]","","","","","","2"},
-        {"A", "を中心とし、","AB","を半径とする円","BCD","を描く[公準P-3]","","","","","","4"},
+        {"命題I-1","","","","","","","","","","","99","99"/*,"99"*/},
+    　  {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","0","99"/*,"99"*/},
+        {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","2","99"/*,"99"*/},
+        {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","4","99"/*,"99"*/},
+        {"与えられた直線", "を","一辺","とする","正三角形","を作図する事。","","","","","","99","99"/*,"99"*/},
+        {"AB","を与えられた","直線","とする。","","","","","","","","0","99"/*,"99"*/},
+        {"AB","を与えられた","直線","とする。","","","","","","","","99","99"/*,"99"*/},
+        {"このとき、", "AB","を一辺とする","正三角形","を作図することが","求められている。","","","","","","1","99"/*,"99"*/},
+        {"このとき、", "AB","を一辺とする","正三角形","を作図することが","求められている。","","","","","","3","99"/*,"99"*/},
+        {"このとき、", "AB","を一辺とする","正三角形","を作図することが","求められている。","","","","","","99","99"/*,"99"*/},
+        {"A", "を中心とし、","AB","を半径とする円","BCD","を描く[公準P-3]","","","","","","0","99"/*,"99"*/},
+        {"A", "を中心とし、","AB","を半径とする円","BCD","を描く[公準P-3]","","","","","","2","99"/*,"99"*/},
+        {"A", "を中心とし、","AB","を半径とする円","BCD","を描く[公準P-3]","","","","","","4","99"/*,"99"*/},
         //↓本文        
-        {"A", "を中心とし、","AB","を半径とする円","BCD","を描く[公準P-3]","","","","","","99"},
-        {"BA", "を半径とする円","ACE","を描く[公準P-3]。","","","","","","","","0"},
-        {"BA", "を半径とする円","ACE","を描く[公準P-3]。","","","","","","","","2"},
-        {"BA", "を半径とする円","ACE","を描く[公準P-3]。","","","","","","","","99"},
-        {"そして二つの円の交点", "C","と","A","と","B","を結ぶ直線","CA","と","CB","を描く[公準P-1]。","1"},
-        {"そして二つの円の交点", "C","と","A","と","B","を結ぶ直線","CA","と","CB","を描く[公準P-1]。","3"},
-        {"そして二つの円の交点", "C","と","A","と","B","を結ぶ直線","CA","と","CB","を描く[公準P-1]。","5"},
-        {"そして二つの円の交点", "C","と","A","と","B","を結ぶ直線","CA","と","CB","を描く[公準P-1]。","7"},
-        {"そして二つの円の交点", "C","と","A","と","B","を結ぶ直線","CA","と","CB","を描く[公準P-1]。","9"},
-        {"そして二つの円の交点", "C","と","A","と","B","を結ぶ直線","CA","と","CB","を描く[公準P-1]。","99"},
-        {"点", "A","は円","CDB","の中心であるから、","AC","は","AB","と等しい","[定義DI-15]。","","1"},
-        {"点", "A","は円","CDB","の中心であるから、","AC","は","AB","と等しい","[定義DI-15]。","","3"},
-        {"点", "A","は円","CDB","の中心であるから、","AC","は","AB","と等しい","[定義DI-15]。","","5"},
-        {"点", "A","は円","CDB","の中心であるから、","AC","は","AB","と等しい","[定義DI-15]。","","7"},
-        {"点", "A","は円","CDB","の中心であるから、","AC","は","AB","と等しい","[定義DI-15]。","","99"},
-        {"また点", "B","は円","CAE","の中心であるから、","BC","と","BA","は等しい","[定義DI-15]。","","1"},
-        {"また点", "B","は円","CAE","の中心であるから、","BC","と","BA","は等しい","[定義DI-15]。","","3"},
-        {"また点", "B","は円","CAE","の中心であるから、","BC","と","BA","は等しい","[定義DI-15]。","","5"},
-        {"また点", "B","は円","CAE","の中心であるから、","BC","と","BA","は等しい","[定義DI-15]。","","7"},
-        {"また点", "B","は円","CAE","の中心であるから、","BC","と","BA","は等しい","[定義DI-15]。","","99"},
-        {"CA", "は","AB","と等しかったから、","CA","と","CB","は共に","AB","と等しい。","","0"},
-        {"CA", "は","AB","と等しかったから、","CA","と","CB","は共に","AB","と等しい。","","2"},
-        {"CA", "は","AB","と等しかったから、","CA","と","CB","は共に","AB","と等しい。","","4"},
-        {"CA", "は","AB","と等しかったから、","CA","と","CB","は共に","AB","と等しい。","","6"},
-        {"CA", "は","AB","と等しかったから、","CA","と","CB","は共に","AB","と等しい。","","8"},
-        {"CA", "は","AB","と等しかったから、","CA","と","CB","は共に","AB","と等しい。","","99"},
-        {"同じもの", "に","等しいもの","は互いに等しかったから","[公理A-1]","","","","","","","0"},
-        {"同じもの", "に","等しいもの","は互いに等しかったから","[公理A-1]","","","","","","","2"},
-        {"同じもの", "に","等しいもの","は互いに等しかったから","[公理A-1]","","","","","","","99"},
-        {"CA", "は","CB","に等しく、","CA","、","AB","、","BC","の三辺はすべて","互いに等しい。","0"},
-        {"CA", "は","CB","に等しく、","CA","、","AB","、","BC","の三辺はすべて","互いに等しい。","2"},
-        {"CA", "は","CB","に等しく、","CA","、","AB","、","BC","の三辺はすべて","互いに等しい。","4"},
-        {"CA", "は","CB","に等しく、","CA","、","AB","、","BC","の三辺はすべて","互いに等しい。","6"},
-        {"CA", "は","CB","に等しく、","CA","、","AB","、","BC","の三辺はすべて","互いに等しい。","8"},
-        {"CA", "は","CB","に等しく、","CA","、","AB","、","BC","の三辺はすべて","互いに等しい。","99"},
-        {"ゆえに、三角形", "ABC","は正三角形であり、","与えられた直線","AB","から作図","されたものである。","","","","","1"},
-        {"ゆえに、三角形", "ABC","は正三角形であり、","与えられた直線","AB","から作図","されたものである。","","","","","4"},
-        {"ゆえに、三角形", "ABC","は正三角形であり、","与えられた直線","AB","から作図","されたものである。","","","","","99"},
-        {"これが求められていた", "ことであった。","","","","","","","","","","99"},
+        {"A", "を中心とし、","AB","を半径とする円","BCD","を描く[公準P-3]","","","","","","99","99"/*,"99"*/},
+        {"BA", "を半径とする円","ACE","を描く[公準P-3]。","","","","","","","","0","99"/*,"99"*/},
+        {"BA", "を半径とする円","ACE","を描く[公準P-3]。","","","","","","","","2","99"/*,"99"*/},
+        {"BA", "を半径とする円","ACE","を描く[公準P-3]。","","","","","","","","99","99"/*,"99"*/},
+        {"そして二つの円の交点", "C","と","A","と","B","を結ぶ直線","CA","と","CB","を描く[公準P-1]。","1","99"/*,"99"*/},
+        {"そして二つの円の交点", "C","と","A","と","B","を結ぶ直線","CA","と","CB","を描く[公準P-1]。","3","99"/*,"99"*/},
+        {"そして二つの円の交点", "C","と","A","と","B","を結ぶ直線","CA","と","CB","を描く[公準P-1]。","5","99"/*,"99"*/},
+        {"そして二つの円の交点", "C","と","A","と","B","を結ぶ直線","CA","と","CB","を描く[公準P-1]。","7","99"/*,"99"*/},
+        {"そして二つの円の交点", "C","と","A","と","B","を結ぶ直線","CA","と","CB","を描く[公準P-1]。","9","99"/*,"99"*/},
+        {"そして二つの円の交点", "C","と","A","と","B","を結ぶ直線","CA","と","CB","を描く[公準P-1]。","99","99"/*,"99"*/},
+        {"点", "A","は円","CDB","の中心であるから、","AC","は","AB","と等しい","[定義DI-15]。","","1","99"/*,"99"*/},
+        {"点", "A","は円","CDB","の中心であるから、","AC","は","AB","と等しい","[定義DI-15]。","","3","99"/*,"99"*/},
+        {"点", "A","は円","CDB","の中心であるから、","AC","は","AB","と等しい","[定義DI-15]。","","5","99"/*,"99"*/},
+        {"点", "A","は円","CDB","の中心であるから、","AC","は","AB","と等しい","[定義DI-15]。","","7","99"/*,"99"*/},
+        {"点", "A","は円","CDB","の中心であるから、","AC","は","AB","と等しい","[定義DI-15]。","","99","99"/*,"99"*/},
+        {"また点", "B","は円","CAE","の中心であるから、","BC","と","BA","は等しい","[定義DI-15]。","","1","99"/*,"99"*/},
+        {"また点", "B","は円","CAE","の中心であるから、","BC","と","BA","は等しい","[定義DI-15]。","","3","99"/*,"99"*/},
+        {"また点", "B","は円","CAE","の中心であるから、","BC","と","BA","は等しい","[定義DI-15]。","","5","99"/*,"99"*/},
+        {"また点", "B","は円","CAE","の中心であるから、","BC","と","BA","は等しい","[定義DI-15]。","","7","99"/*,"99"*/},
+        {"また点", "B","は円","CAE","の中心であるから、","BC","と","BA","は等しい","[定義DI-15]。","","99","99"/*,"99"*/},
+        {"CA", "は","AB","と等しかったから、","CA","と","CB","は共に","AB","と等しい。","","0","99"/*,"99"*/},
+        {"CA", "は","AB","と等しかったから、","CA","と","CB","は共に","AB","と等しい。","","2","99"/*,"99"*/},
+        {"CA", "は","AB","と等しかったから、","CA","と","CB","は共に","AB","と等しい。","","4","99"/*,"99"*/},
+        {"CA", "は","AB","と等しかったから、","CA","と","CB","は共に","AB","と等しい。","","6","99"/*,"99"*/},
+        {"CA", "は","AB","と等しかったから、","CA","と","CB","は共に","AB","と等しい。","","8","99"/*,"99"*/},
+        {"CA", "は","AB","と等しかったから、","CA","と","CB","は共に","AB","と等しい。","","99","99"/*,"99"*/},
+        {"同じもの", "に","等しいもの","は互いに等しかったから","[公理A-1]","","","","","","","0","99"/*,"99"*/},
+        {"同じもの", "に","等しいもの","は互いに等しかったから","[公理A-1]","","","","","","","2","99"/*,"99"*/},
+        {"同じもの", "に","等しいもの","は互いに等しかったから","[公理A-1]","","","","","","","99","99"/*,"99"*/},
+        {"CA", "は","CB","に等しく、","CA","、","AB","、","BC","の三辺はすべて","互いに等しい。","0","99"/*,"99"*/},
+        {"CA", "は","CB","に等しく、","CA","、","AB","、","BC","の三辺はすべて","互いに等しい。","2","99"/*,"99"*/},
+        {"CA", "は","CB","に等しく、","CA","、","AB","、","BC","の三辺はすべて","互いに等しい。","4","99"/*,"99"*/},
+        {"CA", "は","CB","に等しく、","CA","、","AB","、","BC","の三辺はすべて","互いに等しい。","6","99"/*,"99"*/},
+        {"CA", "は","CB","に等しく、","CA","、","AB","、","BC","の三辺はすべて","互いに等しい。","8","99"/*,"99"*/},
+        {"CA", "は","CB","に等しく、","CA","、","AB","、","BC","の三辺はすべて","互いに等しい。","99","99"/*,"99"*/},
+        {"ゆえに、三角形", "ABC","は正三角形であり、","与えられた直線","AB","から作図","されたものである。","","","","","1","99"/*,"99"*/},
+        {"ゆえに、三角形", "ABC","は正三角形であり、","与えられた直線","AB","から作図","されたものである。","","","","","4","99"/*,"99"*/},
+        {"ゆえに、三角形", "ABC","は正三角形であり、","与えられた直線","AB","から作図","されたものである。","","","","","99","99"/*,"99"*/},
+        {"これが求められていた", "ことであった。","","","","","","","","","","99","99"/*,"99"*/},
 
     };
 

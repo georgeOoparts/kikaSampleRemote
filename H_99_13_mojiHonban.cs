@@ -460,27 +460,35 @@ public class H_99_13_mojiHonban : MonoBehaviour
             //k10_2:strin>int変換
             if (kyotu.MCount == 0) {
                 if (kyotu.rrCount < m1_1.GetLength(0))
+                    //強調する配列番号１、最後の番号から1つ手前である
                     kyouchouHenkanInt1 = int.Parse(m1_1[kyotu.rrCount, m1_1.GetLength(1) - 2]);
+                    //強調する配列番号２、最後の番号である
+                    kyouchouHenkanInt2 = int.Parse(m1_1[kyotu.rrCount, m1_1.GetLength(1) - 1]);
             } 
             else if (kyotu.MCount == 1) {
                 if (kyotu.rrCount < m1_2.GetLength(0))
                     kyouchouHenkanInt1 = int.Parse(m1_2[kyotu.rrCount, m1_2.GetLength(1) - 2]);
+                    kyouchouHenkanInt2 = int.Parse(m1_2[kyotu.rrCount, m1_2.GetLength(1) - 1]);
             }
             else if (kyotu.MCount == 2) {
                 if (kyotu.rrCount < m1_3.GetLength(0))
                     kyouchouHenkanInt1 = int.Parse(m1_3[kyotu.rrCount, m1_3.GetLength(1) - 2]);
+                    kyouchouHenkanInt2 = int.Parse(m1_3[kyotu.rrCount, m1_3.GetLength(1) - 1]);
             } 
             else if (kyotu.MCount == 3) {
                 if (kyotu.rrCount < m1_4.GetLength(0))
                     kyouchouHenkanInt1 = int.Parse(m1_4[kyotu.rrCount, m1_4.GetLength(1) - 2]);
+                    kyouchouHenkanInt2 = int.Parse(m1_4[kyotu.rrCount, m1_4.GetLength(1) - 1]);
             } 
             else if (kyotu.MCount == 4) {
                 if (kyotu.rrCount < m1_5.GetLength(0))
                     kyouchouHenkanInt1 = int.Parse(m1_5[kyotu.rrCount, m1_5.GetLength(1) - 2]);
+                    kyouchouHenkanInt2 = int.Parse(m1_5[kyotu.rrCount, m1_5.GetLength(1) - 1]);
             } 
             else if (kyotu.MCount == 5) {
                 if (kyotu.rrCount < m1_6.GetLength(0))
                     kyouchouHenkanInt1 = int.Parse(m1_6[kyotu.rrCount, m1_6.GetLength(1) - 2]);
+                    kyouchouHenkanInt2 = int.Parse(m1_6[kyotu.rrCount, m1_6.GetLength(1) - 1]);
             }
 
         }

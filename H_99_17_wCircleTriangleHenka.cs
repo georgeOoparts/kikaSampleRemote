@@ -551,7 +551,11 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
-            //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
             rrPointB.enabled = true;
@@ -560,11 +564,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
-        } 
-        else if (count == 27) {
+        } else if (count == 27) {
             reset();
             rrTextA.enabled = true;
             rrTextB.enabled = true;
@@ -573,6 +576,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -582,11 +589,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
-        } 
-        else if (count == 28) {
+        } else if (count == 28) {
             reset();
             rrTextA.enabled = true;
             rrTextB.enabled = true;
@@ -595,20 +601,23 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
-            rrPointB.enabled = true;
+            rrPointB.enabled = kyotuEla.tenmetuOnOff;
             rrPointC.enabled = true;
             rrPointD.enabled = true;
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
-        } 
-        else if (count == 29) {
+        } else if (count == 29) {
             reset();
             rrTextA.enabled = true;
             rrTextB.enabled = true;
@@ -617,6 +626,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -626,11 +639,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
-            //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
-        } 
-        else if (count == 30) {
+            rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
+        } else if (count == 30) {
             reset();
             rrTextA.enabled = true;
             rrTextB.enabled = true;
@@ -639,6 +651,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -648,7 +664,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } 
@@ -661,7 +677,11 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
-            //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
             rrPointB.enabled = true;
@@ -670,11 +690,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
-        } 
-        else if (count == 32) {
+        } else if (count == 32) {
             reset();
             rrTextA.enabled = true;
             rrTextB.enabled = true;
@@ -683,6 +702,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -692,11 +715,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
-        } 
-        else if (count == 33) {
+        } else if (count == 33) {
             reset();
             rrTextA.enabled = true;
             rrTextB.enabled = true;
@@ -705,6 +727,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -714,11 +740,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
-        } 
-        else if (count == 34) {
+        } else if (count == 34) {
             reset();
             rrTextA.enabled = true;
             rrTextB.enabled = true;
@@ -727,7 +752,11 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
-            //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
             rrPointB.enabled = true;
@@ -736,11 +765,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
-        } 
-        else if (count == 35) {
+        } else if (count == 35) {
             reset();
             rrTextA.enabled = true;
             rrTextB.enabled = true;
@@ -749,6 +777,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -758,7 +790,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } else if (count == 36) {
@@ -770,6 +802,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -779,7 +815,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } else if (count == 37) {
@@ -791,7 +827,11 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
-            //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
             rrPointB.enabled = true;
@@ -800,9 +840,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
+
         } else if (count == 38) {
             reset();
             rrTextA.enabled = true;
@@ -812,6 +853,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -821,7 +866,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } else if (count == 39) {
@@ -833,7 +878,11 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
-            //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
             rrPointB.enabled = true;
@@ -842,7 +891,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } else if (count == 40) {
@@ -854,6 +903,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -863,7 +916,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } else if (count == 41) {
@@ -875,6 +928,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -884,7 +941,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } else if (count == 42) {
@@ -896,6 +953,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -905,7 +966,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } else if (count == 43) {
@@ -917,6 +978,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -926,7 +991,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } else if (count == 44) {
@@ -938,6 +1003,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -947,7 +1016,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } else if (count == 45) {
@@ -959,7 +1028,11 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
-            //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
             rrPointB.enabled = true;
@@ -968,7 +1041,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } else if (count == 46) {
@@ -980,6 +1053,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -989,7 +1066,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } else if (count == 47) {
@@ -1001,7 +1078,11 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
-            //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
             rrPointB.enabled = true;
@@ -1010,7 +1091,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } else if (count == 48) {
@@ -1022,7 +1103,11 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
-            //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
             rrPointB.enabled = true;
@@ -1031,7 +1116,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } else if (count == 49) {
@@ -1043,7 +1128,11 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
-            //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+            rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
             rrPointB.enabled = true;
@@ -1052,7 +1141,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } else if (count == 50) {
@@ -1064,6 +1153,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -1073,7 +1166,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } else if (count == 51) {
@@ -1085,6 +1178,10 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
+            rrlineBC.enabled = true;
+            rrlineCA.enabled = true;
+            //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
             //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
 
             rrPointA.enabled = true;
@@ -1094,7 +1191,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrPointE.enabled = true;
 
             rrCylinder1.enabled = true;
-
+            //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
             rrCylinder2.enabled = true;
             //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         }

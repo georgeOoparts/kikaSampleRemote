@@ -247,9 +247,9 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
             rrTextB.enabled = true;
             rrTextC.enabled = true;
             rrTextD.enabled = true;
+            //rrTextE.enabled = true;
 
             rrlineAB.enabled = true;
-
 
             rrPointA.enabled = true;
             rrPointB.enabled = true;
@@ -261,14 +261,69 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
         else if (count == 14) 
         {
             reset();
+            rrTextA.enabled = true;
+            rrTextB.enabled = true;
+            rrTextC.enabled = true;
+            rrTextD.enabled = true;
+            //rrTextE.enabled = true;
+
+            rrlineAB.enabled = true;
+            rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+
+
+            rrPointA.enabled = true;
+            rrPointB.enabled = true;
+            rrPointC.enabled = true;
+            rrPointD.enabled = true;
+
+            rrCylinder1.enabled = true;
         } 
         else if (count == 15) 
         {
             reset();
-        } 
-        else if (count == 16) 
+            rrTextA.enabled = true;
+            rrTextB.enabled = true;
+            rrTextC.enabled = true;
+            rrTextD.enabled = true;
+            rrTextE.enabled = true;
+
+            rrlineAB.enabled = true;
+            //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+
+
+            rrPointA.enabled = true;
+            rrPointB.enabled = true;
+            rrPointC.enabled = true;
+            rrPointD.enabled = true;
+            rrPointE.enabled = true;
+
+            rrCylinder1.enabled = true;
+
+            rrCylinder2.enabled = true;
+            rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
+        } else if (count == 16) 
         {
             reset();
+            reset();
+            rrTextA.enabled = true;
+            rrTextB.enabled = true;
+            rrTextC.enabled = true;
+            rrTextD.enabled = true;
+            rrTextE.enabled = true;
+
+            rrlineAB.enabled = true;
+            //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+
+            rrPointA.enabled = true;
+            rrPointB.enabled = true;
+            rrPointC.enabled = true;
+            rrPointD.enabled = true;
+            rrPointE.enabled = true;
+
+            rrCylinder1.enabled = true;
+
+            rrCylinder2.enabled = true;
+            //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
         } 
         else if (count == 17) 
         {

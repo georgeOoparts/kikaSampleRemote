@@ -139,7 +139,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
     void Update()
     {
         henka(kyotu.rrCount);
-        Debug.Log("MS::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        
 
     }
     //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------

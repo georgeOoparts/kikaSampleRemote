@@ -512,6 +512,8 @@ public class H_99_13_mojiHonban : MonoBehaviour
         //強調すべきパネルを強調するメソッド
         kyochouPanel(kyouchouHenkanInt1, kyouchouHenkanInt2);///
 
+        Debug.Log("MS::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+
     }
 
     //list 初期化

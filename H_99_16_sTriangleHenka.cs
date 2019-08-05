@@ -111,44 +111,40 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
     //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
     private void henka(int count) 
     {
-        if (count == 0) 
+        //m1_2のときのみ実行
+        if (kyotu.mojiSwitch == 3 & kyotu.MCount == 0) 
         {
-            reset();
-        } 
-        else if (count == 1) 
-        {
-            reset();
-            rrlineBC.enabled = true;
-            //共通変数の kyotuEla.tenmetuOnOffで点滅処理
-            rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
-        } 
-        else if (count == 2) 
-        {
-            reset();
-            rrlineBC.enabled = true;
-            //共通変数の kyotuEla.tenmetuOnOffで点滅処理
-            rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
-        } 
-        else if (count == 3) 
-        {
-            reset();
+            if (count == 0) {
+                reset();
+            } else if (count == 1) {
+                reset();
+                rrlineBC.enabled = true;
+                //共通変数の kyotuEla.tenmetuOnOffで点滅処理
+                rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 2) {
+                reset();
+                rrlineBC.enabled = true;
+                //共通変数の kyotuEla.tenmetuOnOffで点滅処理
+                rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 3) {
+                reset();
 
-            rrlineAB.enabled = true;
-            rrlineBC.enabled = true;
-            rrlineCA.enabled = true;
-            //共通変数の kyotuEla.tenmetuOnOffで点滅処理
-            rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
-            rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
-            rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
-        } 
-        else if (count == 4) 
-        {
-            reset();
+                rrlineAB.enabled = true;
+                rrlineBC.enabled = true;
+                rrlineCA.enabled = true;
+                //共通変数の kyotuEla.tenmetuOnOffで点滅処理
+                rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+                rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+                rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 4) {
+                reset();
 
-            rrlineAB.enabled = true;
-            rrlineBC.enabled = true;
-            rrlineCA.enabled = true;
+                rrlineAB.enabled = true;
+                rrlineBC.enabled = true;
+                rrlineCA.enabled = true;
+            }
         }
+        
     }
     
     

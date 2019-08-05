@@ -8,8 +8,14 @@ public class H_99_19_M1_2preRRHenka : MonoBehaviour {
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     public H_99_01_kyoutuHensu kyotu;
 
+    //強調表現点滅に使う変数を共通変数として使う。
+    public H_99_01B_kyotuElapse kyotuEla;
+
     public GameObject M1_2preLine;
     public GameObject M1_2preSLine;
+
+    public GameObject M1_2preLine2;
+    public GameObject M1_2preSLine2;
 
     public GameObject M1_2prePoint;
 
@@ -19,6 +25,9 @@ public class H_99_19_M1_2preRRHenka : MonoBehaviour {
     private Renderer rrM1_2preLine;
     private Renderer rrM1_2preSLine;
 
+    private Renderer rrM1_2preLine2;
+    private Renderer rrM1_2preSLine2;
+
     //点のrenderer
     private Renderer rrM1_2prePoint;
 
@@ -27,6 +36,9 @@ public class H_99_19_M1_2preRRHenka : MonoBehaviour {
 
         rrM1_2preLine = M1_2preLine.GetComponent<Renderer>();
         rrM1_2preSLine = M1_2preSLine.GetComponent<Renderer>();
+
+        rrM1_2preLine2 = M1_2preLine2.GetComponent<Renderer>();
+        rrM1_2preSLine2 = M1_2preSLine2.GetComponent<Renderer>();
 
         rrM1_2prePoint = M1_2prePoint.GetComponent<Renderer>();
     }
@@ -39,18 +51,53 @@ public class H_99_19_M1_2preRRHenka : MonoBehaviour {
     //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
     private void henka(int count) 
     {
-        if (count == 0) {
-            reset();
-            //rrTextA.enabled = true;
-            //rrTextB.enabled = true;
-            //rrlineAB.enabled = true;
-            //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
-        } else if (count == 6) {
-            reset();
-            //rrTextA.enabled = true;
-            //rrTextB.enabled = true;
-            //rrlineAB.enabled = true;
+        //m1_2のときのみ実行
+        if (kyotu.mojiSwitch==3 &kyotu.MCount==1) 
+        {
+            if (count == 0) 
+            {
+                reset();
+            } 
+            else if (count == 1) 
+            {
+                reset();
+                rrM1_2preLine.enabled = true;
+                rrM1_2preSLine.enabled = kyotuEla.tenmetuOnOff;
+
+                //rrM1_2prePoint.enabled = true;
+            } 
+            else if (count == 2) {
+                reset();
+                rrM1_2preLine.enabled = true;
+                //rrM1_2preSLine.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_2preLine2.enabled = true;
+                rrM1_2preSLine2.enabled = kyotuEla.tenmetuOnOff;
+
+                //rrM1_2prePoint.enabled = true;
+            } 
+            else if (count == 3) {
+                reset();
+                rrM1_2preLine.enabled = true;
+                //rrM1_2preSLine.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_2preLine2.enabled = true;
+                //rrM1_2preSLine2.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_2prePoint.enabled = kyotuEla.tenmetuOnOff;
+            } 
+            else if (count == 4) {
+                reset();
+                rrM1_2preLine.enabled = true;
+                //rrM1_2preSLine.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_2preLine2.enabled = true;
+                //rrM1_2preSLine2.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_2prePoint.enabled = true;
+            }
         }
+        
     }
     //リセット表示を全部消すメソッド　kyotu.rrcount-----------------------------
     private void reset() 

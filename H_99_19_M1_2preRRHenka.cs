@@ -110,6 +110,9 @@ public class H_99_19_M1_2preRRHenka : MonoBehaviour {
         rrM1_2preLine.enabled = false;
         rrM1_2preSLine.enabled = false;
 
+        rrM1_2preLine2.enabled = false;
+        rrM1_2preSLine2.enabled = false;
+
         rrM1_2prePoint.enabled = false;
 
     }

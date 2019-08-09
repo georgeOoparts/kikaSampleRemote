@@ -18,7 +18,8 @@ public class H_99_20_M1_2RR : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update() 
+    {
         //meidai  m1_2 count5以上
         if (kyotu.mojiSwitch == 3 && kyotu.MCount == 1 && kyotu.rrCount >= 1 && kyotu.rrCount <= 4) {
             M1_2RRMove.position = new Vector2(11.02f, 2.95f);

@@ -75,6 +75,40 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour
     public GameObject M1_2TextF;
     public GameObject M1_2TextK;
 
+    //いちいちunityで当てはめなきゃ駄目　↑---------------
+
+    //renderer当てはめ
+    //＞linerederer当てはめ
+    private Renderer rrLineDB;
+    private Renderer rrlineSBD;
+
+    private Renderer rrLineDA;
+    private Renderer rrlineSDA;
+
+    private Renderer rrLineAB;
+    private Renderer rrlineSAB;
+
+    private Renderer rrLineAL;
+    private Renderer rrlineSAL;
+
+    private Renderer rrLineBG;
+    private Renderer rrlineSBG;
+
+    private Renderer rrLineAE;
+    private Renderer rrlineSAE;
+
+    private Renderer rrLineBF;
+    private Renderer rrlineSBF;
+
+    private Renderer rrLineBC;
+    private Renderer rrlineSBC;
+
+    private Renderer rrLineDL;
+    private Renderer rrlineSDL;
+
+    private Renderer rrLineDG;
+    private Renderer rrlineSDG;
+    
     void Start()
     {
         

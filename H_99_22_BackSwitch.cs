@@ -18,6 +18,11 @@ public class H_99_22_BackSwitch : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("switch::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        
+        //Debug.Log("switch::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+    }
+    public void onClick() 
+    {
+        Debug.Log("click");
     }
 }

@@ -80,69 +80,133 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour
     //renderer当てはめ
     //＞linerederer当てはめ
     private Renderer rrLineDB;
-    private Renderer rrlineSBD;
+    private Renderer rrLineSDB;
 
     private Renderer rrLineDA;
-    private Renderer rrlineSDA;
+    private Renderer rrLineSDA;
 
     private Renderer rrLineAB;
-    private Renderer rrlineSAB;
+    private Renderer rrLineSAB;
 
     private Renderer rrLineAL;
-    private Renderer rrlineSAL;
+    private Renderer rrLineSAL;
 
     private Renderer rrLineBG;
-    private Renderer rrlineSBG;
+    private Renderer rrLineSBG;
 
     private Renderer rrLineAE;
-    private Renderer rrlineSAE;
+    private Renderer rrLineSAE;
 
     private Renderer rrLineBF;
-    private Renderer rrlineSBF;
+    private Renderer rrLineSBF;
 
     private Renderer rrLineBC;
-    private Renderer rrlineSBC;
+    private Renderer rrLineSBC;
 
     private Renderer rrLineDL;
-    private Renderer rrlineSDL;
+    private Renderer rrLineSDL;
 
     private Renderer rrLineDG;
-    private Renderer rrlineSDG;
+    private Renderer rrLineSDG;
 
     //＞point rederer当てはめ
-    private Renderer pointD;
-    private Renderer pointA;
-    private Renderer pointC;
-    private Renderer pointE;
-    private Renderer pointF;
-    private Renderer pointG;
-    private Renderer pointH;
-    private Renderer pointK;
-    private Renderer pointL;
+    private Renderer rrPointD;
+    private Renderer rrPointA;
+    private Renderer rrPointC;
+    private Renderer rrPointE;
+    private Renderer rrPointF;
+    private Renderer rrPointG;
+    private Renderer rrPointH;
+    private Renderer rrPointK;
+    private Renderer rrPointL;
 
     //＞circle rederer当てはめ
-    private Renderer BigCircle;
-    private Renderer SBigCircle;
+    private Renderer rrBigCircle;
+    private Renderer rrSBigCircle;
 
-    private Renderer SmallCircle;
-    private Renderer SSmallCircle;
+    private Renderer rrSmallCircle;
+    private Renderer rrSSmallCircle;
 
     //＞text rederer当てはめ
-    private Renderer TextD;
-    private Renderer TextA;
-    private Renderer TextB;
-    private Renderer TextH;
-    private Renderer TextC;
-    private Renderer TextG;
-    private Renderer TextL;
-    private Renderer TextE;
-    private Renderer TextF;
-    private Renderer TextK;
+    private Renderer rrTextD;
+    private Renderer rrTextA;
+    private Renderer rrTextB;
+    private Renderer rrTextH;
+    private Renderer rrTextC;
+    private Renderer rrTextG;
+    private Renderer rrTextL;
+    private Renderer rrTextE;
+    private Renderer rrTextF;
+    private Renderer rrTextK;
    
-   
-   
-    void Start()
+   void Start()
     {
+        //gameobjectをredererに当てはめていく
+        //＞line：gameobjectをredererに当てはめていく
+        rrLineDB = M1_2LineDB.GetComponent<Renderer>();
+        rrLineSDB = M1_2LineSDB.GetComponent<Renderer>();
+
+        rrLineDA = M1_2LineDA.GetComponent<Renderer>();
+        rrLineSDA = M1_2LineSDA.GetComponent<Renderer>();
+
+        rrLineAB = M1_2LineAB.GetComponent<Renderer>();
+        rrLineSAB = M1_2LineSAB.GetComponent<Renderer>();
+
+        rrLineAL = M1_2LineAL.GetComponent<Renderer>();
+        rrLineSAL = M1_2LineSAL.GetComponent<Renderer>();
+
+        rrLineBG = M1_2LineBG.GetComponent<Renderer>();
+        rrLineSBG = M1_2LineSBG.GetComponent<Renderer>();
+
+        rrLineAE = M1_2LineAE.GetComponent<Renderer>();
+        rrLineSAE = M1_2LineSAE.GetComponent<Renderer>();
+
+        rrLineBF = M1_2LineBF.GetComponent<Renderer>();
+        rrLineSBF = M1_2LineSBF.GetComponent<Renderer>();
+
+        rrLineBC = M1_2LineBC.GetComponent<Renderer>();
+        rrLineSBC = M1_2LineSBC.GetComponent<Renderer>();
+
+        rrLineDL = M1_2LineDL.GetComponent<Renderer>();
+        rrLineSDL = M1_2LineSDL.GetComponent<Renderer>();
+
+        rrLineDG = M1_2LineDG.GetComponent<Renderer>();
+        rrLineSDG = M1_2LineSDG.GetComponent<Renderer>();
+
+        //＞point：gameobjectをredererに当てはめていく
+        rrPointD= M1_2PointD.GetComponent<Renderer>();
+        rrPointA = M1_2PointA.GetComponent<Renderer>();
+        rrPointC = M1_2PointC.GetComponent<Renderer>();
+        rrPointE = M1_2PointE.GetComponent<Renderer>();
+        rrPointF = M1_2PointF.GetComponent<Renderer>();
+        rrPointG = M1_2PointG.GetComponent<Renderer>();
+        rrPointH = M1_2PointH.GetComponent<Renderer>();
+        rrPointK = M1_2PointK.GetComponent<Renderer>();
+        rrPointL = M1_2PointL.GetComponent<Renderer>();
+
+        ////＞circle：gameobjectをredererに当てはめていく
+        rrBigCircle= M1_2BigCircle.GetComponent<Renderer>();
+        rrSBigCircle = M1_2SBigCircle.GetComponent<Renderer>();
+
+        rrSmallCircle = M1_2SmallCircle.GetComponent<Renderer>();
+        rrSSmallCircle = M1_2SSmallCircle.GetComponent<Renderer>();
+
+        ////＞text：gameobjectをredererに当てはめていく
+        rrTextD = M1_2TextD.GetComponent<Renderer>();
+        rrTextA = M1_2TextA.GetComponent<Renderer>();
+        rrTextB = M1_2TextB.GetComponent<Renderer>();
+        rrTextH = M1_2TextH.GetComponent<Renderer>();
+        rrTextC = M1_2TextC.GetComponent<Renderer>();
+        rrTextG = M1_2TextG.GetComponent<Renderer>();
+        rrTextL = M1_2TextL.GetComponent<Renderer>();
+        rrTextE = M1_2TextE.GetComponent<Renderer>();
+        rrTextF = M1_2TextF.GetComponent<Renderer>();
+        rrTextK = M1_2TextK.GetComponent<Renderer>();
+
+
+        
+       
+        
         
     }
 

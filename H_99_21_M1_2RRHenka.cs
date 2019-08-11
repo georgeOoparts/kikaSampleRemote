@@ -208,7 +208,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         henka(kyotu.rrCount);
-        Debug.Log("M1_2henka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        //Debug.Log("M1_2henka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
     }
     //リセット表示を全部消すメソッド　kyotu.rrcount-----------------------------
     private void reset() {
@@ -220,32 +220,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
 
         //gameobjectを見えなくする
         //＞line：gameobjectを見えなくする
-        rrLineDB.enabled=false;
-        rrLineSDB.enabled = false;
-
-        rrLineDA.enabled = false;
-        rrLineSDA.enabled = false;
-
-        rrLineAB.enabled = false;
-        rrLineSAB.enabled = false;
-
-        rrLineAL.enabled = false;
-        rrLineSAL.enabled = false;
-
-        rrLineBG.enabled = false;
-        rrLineSBG.enabled = false;
-
-        rrLineAE.enabled = false;
-        rrLineSAE.enabled = false;
-
-        rrLineBF.enabled = false;
-        rrLineSBF.enabled = false;
-
-        rrLineBC.enabled = false;
-        rrLineSBC.enabled = false;
-
-        rrLineDL.enabled = false;
-        rrLineSDL.enabled = false;
+        
 
         rrLineDG.enabled = false;
         rrLineSDG.enabled = false;
@@ -289,26 +264,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 reset();
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
-                rrLineDB.enabled = false;
-                rrLineSDB.enabled = false;
-
-                rrLineDA.enabled = false;
-                rrLineSDA.enabled = false;
-
-                rrLineAB.enabled = false;
-                rrLineSAB.enabled = false;
-
-                rrLineAL.enabled = false;
-                rrLineSAL.enabled = false;
-
-                rrLineBG.enabled = false;
-                rrLineSBG.enabled = false;
-
-                rrLineAE.enabled = false;
-                rrLineSAE.enabled = false;
-
-                rrLineBF.enabled = false;
-                rrLineSBF.enabled = false;
+        
 
                 rrLineBC.enabled = true;
                 rrLineSBC.enabled = false;
@@ -354,27 +310,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 reset();
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
-                rrLineDB.enabled = false;
-                rrLineSDB.enabled = false;
-
-                rrLineDA.enabled = false;
-                rrLineSDA.enabled = false;
-
-                rrLineAB.enabled = false;
-                rrLineSAB.enabled = false;
-
-                rrLineAL.enabled = false;
-                rrLineSAL.enabled = false;
-
-                rrLineBG.enabled = false;
-                rrLineSBG.enabled = false;
-
-                rrLineAE.enabled = false;
-                rrLineSAE.enabled = false;
-
-                rrLineBF.enabled = false;
-                rrLineSBF.enabled = false;
-
+                
                 rrLineBC.enabled = true;
                 rrLineSBC.enabled = kyotuEla.tenmetuOnOff;
 
@@ -418,26 +354,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 reset();
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
-                rrLineDB.enabled = false;
-                rrLineSDB.enabled = false;
-
-                rrLineDA.enabled = false;
-                rrLineSDA.enabled = false;
-
-                rrLineAB.enabled = false;
-                rrLineSAB.enabled = false;
-
-                rrLineAL.enabled = false;
-                rrLineSAL.enabled = false;
-
-                rrLineBG.enabled = false;
-                rrLineSBG.enabled = false;
-
-                rrLineAE.enabled = false;
-                rrLineSAE.enabled = false;
-
-                rrLineBF.enabled = false;
-                rrLineSBF.enabled = false;
+                
 
                 rrLineBC.enabled = true;
                 rrLineSBC.enabled = false;//kyotuEla.tenmetuOnOff;
@@ -482,26 +399,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 reset();
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
-                rrLineDB.enabled = false;
-                rrLineSDB.enabled = false;
-
-                rrLineDA.enabled = false;
-                rrLineSDA.enabled = false;
-
-                rrLineAB.enabled = false;
-                rrLineSAB.enabled = false;
-
-                rrLineAL.enabled = false;
-                rrLineSAL.enabled = false;
-
-                rrLineBG.enabled = false;
-                rrLineSBG.enabled = false;
-
-                rrLineAE.enabled = false;
-                rrLineSAE.enabled = false;
-
-                rrLineBF.enabled = false;
-                rrLineSBF.enabled = false;
+                
 
                 rrLineBC.enabled = true;
                 rrLineSBC.enabled = false;//kyotuEla.tenmetuOnOff;

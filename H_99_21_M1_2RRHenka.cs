@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class H_99_21_M1_2RRHenka : MonoBehaviour
-{
+public class H_99_21_M1_2RRHenka : MonoBehaviour {
     //M1_2Objectにアタッチ、countで変化させる
 
     //いちいちunityで当てはめなきゃ駄目　↓---------------
@@ -140,9 +139,8 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour
     private Renderer rrTextE;
     private Renderer rrTextF;
     private Renderer rrTextK;
-   
-   void Start()
-   {
+
+    void Start() {
         //gameobjectをredererに当てはめていく
         //＞line：gameobjectをredererに当てはめていく
         rrLineDB = M1_2LineDB.GetComponent<Renderer>();
@@ -176,7 +174,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour
         rrLineSDG = M1_2LineSDG.GetComponent<Renderer>();
 
         //＞point：gameobjectをredererに当てはめていく
-        rrPointD= M1_2PointD.GetComponent<Renderer>();
+        rrPointD = M1_2PointD.GetComponent<Renderer>();
         rrPointA = M1_2PointA.GetComponent<Renderer>();
         rrPointB = M1_2PointB.GetComponent<Renderer>();
         rrPointC = M1_2PointC.GetComponent<Renderer>();
@@ -188,7 +186,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour
         rrPointL = M1_2PointL.GetComponent<Renderer>();
 
         ////＞circle：gameobjectをredererに当てはめていく
-        rrBigCircle= M1_2BigCircle.GetComponent<Renderer>();
+        rrBigCircle = M1_2BigCircle.GetComponent<Renderer>();
         rrSBigCircle = M1_2SBigCircle.GetComponent<Renderer>();
 
         rrSmallCircle = M1_2SmallCircle.GetComponent<Renderer>();
@@ -208,10 +206,94 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        //henka(kyotu.rrCount);
-        Debug.Log("M1_2henka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount); 
+    void Update() {
+        henka(kyotu.rrCount);
+        Debug.Log("M1_2henka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+    }
+    //リセット表示を全部消すメソッド　kyotu.rrcount-----------------------------
+    private void reset() {
+        //k7B_1_1:オブジェを存在するけど見えなくする。
+        //this.gameObject.GetComponent<Renderer>().enabled = false; 
+
+        //k7B_1_2:オブジェを見えるようにするよ。
+        //this.gameObject.GetComponent<Renderer>().enabled = true;
+
+        //gameobjectを見えなくする
+        //＞line：gameobjectを見えなくする
+        rrLineDB.enabled=false;
+        rrLineSDB.enabled = false;
+
+        rrLineDA.enabled = false;
+        rrLineSDA.enabled = false;
+
+        rrLineAB.enabled = false;
+        rrLineSAB.enabled = false;
+
+        rrLineAL.enabled = false;
+        rrLineSAL.enabled = false;
+
+        rrLineBG.enabled = false;
+        rrLineSBG.enabled = false;
+
+        rrLineAE.enabled = false;
+        rrLineSAE.enabled = false;
+
+        rrLineBF.enabled = false;
+        rrLineSBF.enabled = false;
+
+        rrLineBC.enabled = false;
+        rrLineSBC.enabled = false;
+
+        rrLineDL.enabled = false;
+        rrLineSDL.enabled = false;
+
+        rrLineDG.enabled = false;
+        rrLineSDG.enabled = false;
+
+        //＞point：gameobjectを見えなくする
+        rrPointD.enabled = false;
+        rrPointA.enabled = false;
+        rrPointB.enabled = false;
+        rrPointC.enabled = false;
+        rrPointE.enabled = false;
+        rrPointF.enabled = false;
+        rrPointG.enabled = false;
+        rrPointH.enabled = false;
+        rrPointK.enabled = false;
+        rrPointL.enabled = false;
+
+        ////＞circle：gameobjectを見えなくする
+        rrBigCircle.enabled = false;
+        rrSBigCircle.enabled = false;
+
+        rrSmallCircle.enabled = false;
+        rrSSmallCircle.enabled = false;
+
+        ////＞text：gameobjectを見えなくする
+        rrTextD.enabled = false;
+        rrTextA.enabled = false;
+        rrTextB.enabled = false;
+        rrTextH.enabled = false;
+        rrTextC.enabled = false;
+        rrTextG.enabled = false;
+        rrTextL.enabled = false;
+        rrTextE.enabled = false;
+        rrTextF.enabled = false;
+        rrTextK.enabled = false;
+    }
+    //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
+    private void henka(int count) {
+        //m1_2のときのみ実行
+        if (kyotu.mojiSwitch == 3 & kyotu.MCount == 1) {
+            if (count == 5) {
+                reset();
+                //rrTextA.enabled = true;
+                //rrTextB.enabled = true;
+                //rrlineAB.enabled = true;
+                //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+            }
+
+        }
     }
 
 }

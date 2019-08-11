@@ -108,7 +108,39 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour
 
     private Renderer rrLineDG;
     private Renderer rrlineSDG;
-    
+
+    //＞point rederer当てはめ
+    private Renderer pointD;
+    private Renderer pointA;
+    private Renderer pointC;
+    private Renderer pointE;
+    private Renderer pointF;
+    private Renderer pointG;
+    private Renderer pointH;
+    private Renderer pointK;
+    private Renderer pointL;
+
+    //＞circle rederer当てはめ
+    private Renderer BigCircle;
+    private Renderer SBigCircle;
+
+    private Renderer SmallCircle;
+    private Renderer SSmallCircle;
+
+    //＞text rederer当てはめ
+    private Renderer TextD;
+    private Renderer TextA;
+    private Renderer TextB;
+    private Renderer TextH;
+    private Renderer TextC;
+    private Renderer TextG;
+    private Renderer TextL;
+    private Renderer TextE;
+    private Renderer TextF;
+    private Renderer TextK;
+   
+   
+   
     void Start()
     {
         

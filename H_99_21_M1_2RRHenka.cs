@@ -48,6 +48,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour
     //pointを当てはめる
     public GameObject M1_2PointD;
     public GameObject M1_2PointA;
+    public GameObject M1_2PointB;
     public GameObject M1_2PointC;
     public GameObject M1_2PointE;
     public GameObject M1_2PointF;
@@ -112,6 +113,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour
     //＞point rederer当てはめ
     private Renderer rrPointD;
     private Renderer rrPointA;
+    private Renderer rrPointB;
     private Renderer rrPointC;
     private Renderer rrPointE;
     private Renderer rrPointF;
@@ -140,7 +142,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour
     private Renderer rrTextK;
    
    void Start()
-    {
+   {
         //gameobjectをredererに当てはめていく
         //＞line：gameobjectをredererに当てはめていく
         rrLineDB = M1_2LineDB.GetComponent<Renderer>();
@@ -176,6 +178,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour
         //＞point：gameobjectをredererに当てはめていく
         rrPointD= M1_2PointD.GetComponent<Renderer>();
         rrPointA = M1_2PointA.GetComponent<Renderer>();
+        rrPointB = M1_2PointB.GetComponent<Renderer>();
         rrPointC = M1_2PointC.GetComponent<Renderer>();
         rrPointE = M1_2PointE.GetComponent<Renderer>();
         rrPointF = M1_2PointF.GetComponent<Renderer>();
@@ -202,18 +205,13 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour
         rrTextE = M1_2TextE.GetComponent<Renderer>();
         rrTextF = M1_2TextF.GetComponent<Renderer>();
         rrTextK = M1_2TextK.GetComponent<Renderer>();
-
-
-        
-       
-        
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+        //henka(kyotu.rrCount);
         Debug.Log("M1_2henka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount); 
-
     }
+
 }

@@ -10,6 +10,9 @@ public class H_99_22_BackSwitch : MonoBehaviour {
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     public H_99_01_kyoutuHensu kyotu;
     // Start is called before the first frame update
+
+    //public bool switchHantei=false;
+
     void Start()
     {
         
@@ -18,12 +21,14 @@ public class H_99_22_BackSwitch : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        
+
         Debug.Log("switch::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        //Debug.Log("switch::" +switchHantei);
+
     }
     public void onClick() 
     {
-        kyotu.rrCount--;
-        kyotu.rrCount--;
+        if(kyotu.rrCount!=0) kyotu.rrCount--;
+        if (kyotu.rrCount != 0) kyotu.rrCount--;
     }
 }

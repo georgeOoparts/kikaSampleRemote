@@ -220,10 +220,39 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
 
         //gameobjectを見えなくする
         //＞line：gameobjectを見えなくする
-        
+
+        rrLineDB.enabled=false;
+        rrLineSDB.enabled = false;
+
+        rrLineDA.enabled=false;
+        rrLineSDA.enabled=false;
+
+        rrLineAB.enabled = false;
+        rrLineSAB.enabled = false;
+
+        rrLineAL.enabled = false;
+        rrLineSAL.enabled = false;
+
+        rrLineBG.enabled = false;
+        rrLineSBG.enabled = false;
+
+        rrLineAE.enabled = false;
+        rrLineSAE.enabled = false;
+
+        rrLineBF.enabled = false;
+        rrLineSBF.enabled = false;
+
+        rrLineBC.enabled = false;
+        rrLineSBC.enabled = false;
+
+        rrLineDL.enabled = false;
+        rrLineSDL.enabled = false;
 
         rrLineDG.enabled = false;
         rrLineSDG.enabled = false;
+
+    //rrLineDG.enabled = false;
+        //rrLineSDG.enabled = false;
 
         //＞point：gameobjectを見えなくする
         rrPointD.enabled = false;
@@ -266,45 +295,17 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //＞line：gameobjectを見えるようにする
         
 
-                rrLineBC.enabled = true;
-                rrLineSBC.enabled = false;
-
-                rrLineDL.enabled = false;
-                rrLineSDL.enabled = false;
-
-                rrLineDG.enabled = false;
-                rrLineSDG.enabled = false;
-
-                //＞point：gameobjectを見えるようにする
-                rrPointD.enabled = false;
+                           
+                 //＞point：gameobjectを見えるようにする
+                
                 rrPointA.enabled = kyotuEla.tenmetuOnOff;
-                rrPointB.enabled = false;
-                rrPointC.enabled = false;
-                rrPointE.enabled = false;
-                rrPointF.enabled = false;
-                rrPointG.enabled = false;
-                rrPointH.enabled = false;
-                rrPointK.enabled = false;
-                rrPointL.enabled = false;
-
+                
                 ////＞circle：gameobjectを見えるようにする
-                rrBigCircle.enabled = false;
-                rrSBigCircle.enabled = false;
-
-                rrSmallCircle.enabled = false;
-                rrSSmallCircle.enabled = false;
-
+               
                 ////＞text：gameobjectを見えるようにする
-                rrTextD.enabled = false;
+                
                 rrTextA.enabled = true;
-                rrTextB.enabled = true;
-                rrTextH.enabled = false;
-                rrTextC.enabled = true;
-                rrTextG.enabled = false;
-                rrTextL.enabled = false;
-                rrTextE.enabled = false;
-                rrTextF.enabled = false;
-                rrTextK.enabled = false;
+               
             }
             else if (count == 6) {
                 reset();
@@ -314,23 +315,12 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 rrLineBC.enabled = true;
                 rrLineSBC.enabled = kyotuEla.tenmetuOnOff;
 
-                rrLineDL.enabled = false;
-                rrLineSDL.enabled = false;
-
-                rrLineDG.enabled = false;
-                rrLineSDG.enabled = false;
+              
 
                 //＞point：gameobjectを見えるようにする
-                rrPointD.enabled = false;
+                
                 rrPointA.enabled = true;
-                rrPointB.enabled = false;
-                rrPointC.enabled = false;
-                rrPointE.enabled = false;
-                rrPointF.enabled = false;
-                rrPointG.enabled = false;
-                rrPointH.enabled = false;
-                rrPointK.enabled = false;
-                rrPointL.enabled = false;
+               
 
                 ////＞circle：gameobjectを見えるようにする
                 rrBigCircle.enabled = false;
@@ -340,16 +330,12 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 rrSSmallCircle.enabled = false;
 
                 ////＞text：gameobjectを見えるようにする
-                rrTextD.enabled = false;
+               
                 rrTextA.enabled = true;
                 rrTextB.enabled = true;
                 rrTextH.enabled = false;
                 rrTextC.enabled = true;
-                rrTextG.enabled = false;
-                rrTextL.enabled = false;
-                rrTextE.enabled = false;
-                rrTextF.enabled = false;
-                rrTextK.enabled = false;
+                
             } else if (count == 7) {
                 reset();
                 //gameobjectを見えるようにする

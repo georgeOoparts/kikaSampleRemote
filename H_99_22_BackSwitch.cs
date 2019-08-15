@@ -22,7 +22,7 @@ public class H_99_22_BackSwitch : MonoBehaviour {
     void Update()
     {
 
-        Debug.Log("switch::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        //Debug.Log("switch::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
         //Debug.Log("switch::" +switchHantei);
 
     }

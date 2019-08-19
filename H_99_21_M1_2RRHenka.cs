@@ -56,6 +56,18 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
     public GameObject M1_2PointK;
     public GameObject M1_2PointL;
 
+    //>強調pointを当てはめる
+    public GameObject M1_2StPointD;
+    public GameObject M1_2StPointA;
+    public GameObject M1_2StPointB;
+    public GameObject M1_2StPointC;
+    public GameObject M1_2StPointE;
+    public GameObject M1_2StPointF;
+    public GameObject M1_2StPointG;
+    public GameObject M1_2StPointH;
+    public GameObject M1_2StPointK;
+    public GameObject M1_2StPointL;
+
     //circleを当てはめる
     public GameObject M1_2BigCircle;
     public GameObject M1_2SBigCircle;
@@ -109,7 +121,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
     private Renderer rrLineDG;
     private Renderer rrLineSDG;
 
-    //＞point rederer当てはめ
+    //＞＞point rederer当てはめ
     private Renderer rrPointD;
     private Renderer rrPointA;
     private Renderer rrPointB;
@@ -120,6 +132,18 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
     private Renderer rrPointH;
     private Renderer rrPointK;
     private Renderer rrPointL;
+
+    //＞＞point rederer当てはめ
+    private Renderer rrStPointD;
+    private Renderer rrStPointA;
+    private Renderer rrStPointB;
+    private Renderer rrStPointC;
+    private Renderer rrStPointE;
+    private Renderer rrStPointF;
+    private Renderer rrStPointG;
+    private Renderer rrStPointH;
+    private Renderer rrStPointK;
+    private Renderer rrStPointL;
 
     //＞circle rederer当てはめ
     private Renderer rrBigCircle;
@@ -184,6 +208,17 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
         rrPointH = M1_2PointH.GetComponent<Renderer>();
         rrPointK = M1_2PointK.GetComponent<Renderer>();
         rrPointL = M1_2PointL.GetComponent<Renderer>();
+
+        rrStPointD = M1_2StPointD.GetComponent<Renderer>();
+        rrStPointA = M1_2StPointA.GetComponent<Renderer>();
+        rrStPointB = M1_2StPointB.GetComponent<Renderer>();
+        rrStPointC = M1_2StPointC.GetComponent<Renderer>();
+        rrStPointE = M1_2StPointE.GetComponent<Renderer>();
+        rrStPointF = M1_2StPointF.GetComponent<Renderer>();
+        rrStPointG = M1_2StPointG.GetComponent<Renderer>();
+        rrStPointH = M1_2StPointH.GetComponent<Renderer>();
+        rrStPointK = M1_2StPointK.GetComponent<Renderer>();
+        rrStPointL = M1_2StPointL.GetComponent<Renderer>();
 
         ////＞circle：gameobjectをredererに当てはめていく
         rrBigCircle = M1_2BigCircle.GetComponent<Renderer>();
@@ -265,6 +300,17 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
         rrPointH.enabled = false;
         rrPointK.enabled = false;
         rrPointL.enabled = false;
+
+        rrStPointD.enabled = false;
+        rrStPointA.enabled = false;
+        rrStPointB.enabled = false;
+        rrStPointC.enabled = false;
+        rrStPointE.enabled = false;
+        rrStPointF.enabled = false;
+        rrStPointG.enabled = false;
+        rrStPointH.enabled = false;
+        rrStPointK.enabled = false;
+        rrStPointL.enabled = false;
 
         ////＞circle：gameobjectを見えなくする
         rrBigCircle.enabled = false;

@@ -1006,6 +1006,12 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 rrPointC.enabled = true;
                 //kyotuEla.tenmetuOnOff;
 
+                rrPointG.enabled = true;
+                //kyotuEla.tenmetuOnOff;
+
+                rrPointH.enabled = true;
+                //kyotuEla.tenmetuOnOff;
+
                 ////＞circle：gameobjectを見えるようにする
                 rrBigCircle.enabled = false;
                 rrSBigCircle.enabled = false;
@@ -1018,9 +1024,9 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 rrTextD.enabled = true;
                 rrTextA.enabled = true;
                 rrTextB.enabled = true;
-                rrTextH.enabled = false;
+                rrTextH.enabled = true;
                 rrTextC.enabled = true;
-                rrTextG.enabled = false;
+                rrTextG.enabled = true;
                 rrTextL.enabled = false;
                 rrTextE.enabled = true;
                 rrTextF.enabled = true;
@@ -1067,6 +1073,12 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 rrPointC.enabled = true;
                 //kyotuEla.tenmetuOnOff;
 
+                rrPointG.enabled = true;
+                //kyotuEla.tenmetuOnOff;
+
+                rrPointH.enabled = true;
+                //kyotuEla.tenmetuOnOff;
+
                 ////＞circle：gameobjectを見えるようにする
                 rrBigCircle.enabled = false;
                 rrSBigCircle.enabled = false;
@@ -1079,9 +1091,9 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 rrTextD.enabled = true;
                 rrTextA.enabled = true;
                 rrTextB.enabled = true;
-                rrTextH.enabled = false;
+                rrTextH.enabled = true;
                 rrTextC.enabled = true;
-                rrTextG.enabled = false;
+                rrTextG.enabled = true;
                 rrTextL.enabled = false;
                 rrTextE.enabled = true;
                 rrTextF.enabled = true;
@@ -1116,8 +1128,8 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //kyotuEla.tenmetuOnOff;
 
                 //＞point：gameobjectを見えるようにする
-                rrPointD.enabled = //true;
-                kyotuEla.tenmetuOnOff;
+                rrStPointD.enabled= kyotuEla.tenmetuOnOff;
+                rrPointD.enabled =true;
 
                 rrPointA.enabled = true;
                 //kyotuEla.tenmetuOnOff;
@@ -1126,6 +1138,12 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //kyotuEla.tenmetuOnOff;
 
                 rrPointC.enabled = true;
+                //kyotuEla.tenmetuOnOff;
+
+                rrPointG.enabled = true;
+                //kyotuEla.tenmetuOnOff;
+
+                rrPointH.enabled = true;
                 //kyotuEla.tenmetuOnOff;
 
                 ////＞circle：gameobjectを見えるようにする
@@ -1140,9 +1158,78 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 rrTextD.enabled = true;
                 rrTextA.enabled = true;
                 rrTextB.enabled = true;
-                rrTextH.enabled = false;
+                rrTextH.enabled = true;
                 rrTextC.enabled = true;
-                rrTextG.enabled = false;
+                rrTextG.enabled = true;
+                rrTextL.enabled = false;
+                rrTextE.enabled = true;
+                rrTextF.enabled = true;
+                rrTextK.enabled = false;
+            } else if (count == 28) {
+                reset();
+                //gameobjectを見えるようにする
+                //＞line：gameobjectを見えるようにする
+
+                rrLineAB.enabled = true;
+                rrLineSAB.enabled = false;
+                //kyotuEla.tenmetuOnOff;
+
+                rrLineDA.enabled = true;
+                rrLineSDA.enabled = false;
+                //kyotuEla.tenmetuOnOff;
+
+                rrLineDB.enabled = true;
+                rrLineSDB.enabled = false;
+                //kyotuEla.tenmetuOnOff;
+
+                rrLineBC.enabled = true;
+                rrLineSBC.enabled = false;
+                //kyotuEla.tenmetuOnOff;
+
+                rrLineAE.enabled = true;
+                rrLineSAE.enabled = false;
+                //kyotuEla.tenmetuOnOff;
+
+                rrLineBF.enabled = true;
+                rrLineSBF.enabled = false;
+                //kyotuEla.tenmetuOnOff;
+
+                rrLineDG.enabled = true;
+                rrLineSDG.enabled = kyotuEla.tenmetuOnOff;
+
+                //＞point：gameobjectを見えるようにする
+                rrStPointD.enabled = kyotuEla.tenmetuOnOff;
+                rrPointD.enabled = true;
+
+                rrPointA.enabled = true;
+                //kyotuEla.tenmetuOnOff;
+
+                rrPointB.enabled = true;
+                //kyotuEla.tenmetuOnOff;
+
+                rrPointC.enabled = true;
+                //kyotuEla.tenmetuOnOff;
+
+                rrPointG.enabled = true;
+
+                rrPointH.enabled = true;
+                //kyotuEla.tenmetuOnOff;
+
+                ////＞circle：gameobjectを見えるようにする
+                rrBigCircle.enabled = false;
+                rrSBigCircle.enabled = false;
+
+                rrSmallCircle.enabled = true;
+                rrSSmallCircle.enabled = false;
+                //kyotuEla.tenmetuOnOff;
+
+                ////＞text：gameobjectを見えるようにする
+                rrTextD.enabled = true;
+                rrTextA.enabled = true;
+                rrTextB.enabled = true;
+                rrTextH.enabled = true;
+                rrTextC.enabled = true;
+                rrTextG.enabled = true;
                 rrTextL.enabled = false;
                 rrTextE.enabled = true;
                 rrTextF.enabled = true;

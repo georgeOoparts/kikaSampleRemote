@@ -160,7 +160,7 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
     //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
     private void henka(int count) 
     {
-        //m1_2のときのみ実行
+        //m1_1のときのみ実行
         if (kyotu.mojiSwitch == 3 & kyotu.MCount == 0) 
         {
             if (count == 5) {

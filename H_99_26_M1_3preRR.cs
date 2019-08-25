@@ -10,17 +10,22 @@ public class H_99_26_M1_3preRR : MonoBehaviour
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     public H_99_01_kyoutuHensu kyotu;
 
-    //強調表現点滅に使う変数を共通変数として使う。
-    public H_99_01B_kyotuElapse kyotuEla;
+    Transform M1_3RRMove;
     void Start()
     {
-        
+        M1_3RRMove = this.gameObject.GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("M1_3pre::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        //meidai  m1_3 count4以下
+        if (kyotu.mojiSwitch == 3 && kyotu.MCount == 2 && kyotu.rrCount <=4 ) {
+            M1_3RRMove.position = new Vector3(8.92f, 1.82f,-1);
+        } else {
+            M1_3RRMove.position = new Vector3(16.35f, -3.74f,0);
+        }
+        //Debug.Log("M1_3pre::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
 
     }
 }

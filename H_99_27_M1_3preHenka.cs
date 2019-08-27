@@ -94,16 +94,57 @@ public class H_99_27_M1_3preHenka : MonoBehaviour
     //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
     private void henka(int count) {
         //m1_2のときのみ実行
-        if (kyotu.mojiSwitch == 3 & kyotu.MCount == 2) {
-            if (count <= 4) {
+        if (kyotu.mojiSwitch == 3 & kyotu.MCount == 2 & count<=4) {
+            if (count ==0) {
                 reset();
                 //gameobjectを見えるようにする
-                //＞point：gameobjectを見えるようにする
-                //rrPointA.enabled = true;
-                //rrStPointA.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_3preLineS.enabled = true;
+                //rrM1_3preLineStS.enabled = kyotuEla.tenmetuOnOff;
 
-                ////＞text：gameobjectを見えるようにする
-                //rrTextA.enabled = true;
+                rrM1_3preLineL.enabled = true;
+                //rrM1_3preLineStL.enabled = kyotuEla.tenmetuOnOff;
+                
+            }
+            else if (count == 1) {
+                reset();
+                //gameobjectを見えるようにする
+                rrM1_3preLineS.enabled = true;
+                rrM1_3preLineStS.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_3preLineL.enabled = true;
+                rrM1_3preLineStL.enabled = kyotuEla.tenmetuOnOff;
+
+            }
+            else if (count == 2) {
+                reset();
+                //gameobjectを見えるようにする
+                rrM1_3preLineS.enabled = true;
+                //rrM1_3preLineStS.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_3preLineL.enabled = true;
+                rrM1_3preLineStL.enabled = kyotuEla.tenmetuOnOff;
+
+            }
+            else if (count == 3) {
+                reset();
+                //gameobjectを見えるようにする
+                rrM1_3preLineS.enabled = true;
+                rrM1_3preLineStS.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_3preLineL.enabled = true;
+                //rrM1_3preLineStL.enabled = kyotuEla.tenmetuOnOff;
+
+            }
+            else if (count == 4) {
+                reset();
+                //gameobjectを見えるようにする
+                rrM1_3preLineS.enabled = true;
+                rrM1_3preLineStS.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_3preLineL.enabled = true;
+                rrM1_3preLineStS2.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_3preLineStL_S.enabled = kyotuEla.tenmetuOnOff;
+
             }
         }
     }

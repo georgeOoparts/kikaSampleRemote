@@ -38,8 +38,8 @@ public class H_99_27_M1_3preHenka : MonoBehaviour
     private Renderer rrM1_3preLineS2;
     private Renderer rrM1_3preLineStS2;
 
-    public Renderer rrM1_3preLineL_S;
-    public Renderer rrM1_3preLineStL_S;
+    private Renderer rrM1_3preLineL_S;
+    private Renderer rrM1_3preLineStL_S;
 
     void Start()
     {
@@ -63,6 +63,7 @@ public class H_99_27_M1_3preHenka : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        henka(kyotu.rrCount);
         Debug.Log("M1_3Henka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
 
     }
@@ -89,5 +90,21 @@ public class H_99_27_M1_3preHenka : MonoBehaviour
         rrM1_3preLineL_S.enabled = false;
         rrM1_3preLineStL_S.enabled = false;
 
+    }
+    //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
+    private void henka(int count) {
+        //m1_2のときのみ実行
+        if (kyotu.mojiSwitch == 3 & kyotu.MCount == 2) {
+            if (count <= 4) {
+                reset();
+                //gameobjectを見えるようにする
+                //＞point：gameobjectを見えるようにする
+                //rrPointA.enabled = true;
+                //rrStPointA.enabled = kyotuEla.tenmetuOnOff;
+
+                ////＞text：gameobjectを見えるようにする
+                //rrTextA.enabled = true;
+            }
+        }
     }
 }

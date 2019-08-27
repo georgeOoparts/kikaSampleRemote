@@ -66,4 +66,28 @@ public class H_99_27_M1_3preHenka : MonoBehaviour
         Debug.Log("M1_3Henka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
 
     }
+    //リセット表示を全部消すメソッド　kyotu.rrcount-----------------------------
+    private void reset() 
+    {
+        //k7B_1_1:オブジェを存在するけど見えなくする。
+        //this.gameObject.GetComponent<Renderer>().enabled = false; 
+
+        //k7B_1_2:オブジェを見えるようにするよ。
+        //this.gameObject.GetComponent<Renderer>().enabled = true;
+
+        //gameobjectを見えなくする
+        //＞line：gameobjectを見えなくする
+        rrM1_3preLineS.enabled = false;
+        rrM1_3preLineStS.enabled = false;
+
+        rrM1_3preLineL.enabled = false;
+        rrM1_3preLineStL.enabled = false;
+
+        rrM1_3preLineS2.enabled = false;
+        rrM1_3preLineStS2.enabled = false;
+
+        rrM1_3preLineL_S.enabled = false;
+        rrM1_3preLineStL_S.enabled = false;
+
+    }
 }

@@ -64,7 +64,7 @@ public class H_99_27_M1_3preHenka : MonoBehaviour
     void Update()
     {
         henka(kyotu.rrCount);
-        Debug.Log("M1_3Henka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        //Debug.Log("M1_3Henka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
 
     }
     //リセット表示を全部消すメソッド　kyotu.rrcount-----------------------------

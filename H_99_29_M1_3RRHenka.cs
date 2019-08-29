@@ -9,6 +9,9 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     public H_99_01_kyoutuHensu kyotu;
 
+    //強調表現点滅に使う変数を共通変数として使う。
+    public H_99_01B_kyotuElapse kyotuEla;
+
     //lineを当てはめる
     public GameObject M1_3LineAE;
     public GameObject M1_3LineSAE;
@@ -196,16 +199,105 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
     //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
     private void henka(int count) {
         //m1_3のときのみ実行
-        if (kyotu.mojiSwitch == 3 & kyotu.MCount == 2) {
+        if (kyotu.mojiSwitch == 3 & kyotu.MCount == 2 & count >=5) {
             if (count == 5) {
                 reset();
                 //gameobjectを見えるようにする
                 //＞point：gameobjectを見えるようにする
-                //rrPointA.enabled = true;
-                //rrStPointA.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_3LineAB.enabled = true;
+                rrM1_3LineSAB.enabled = kyotuEla.tenmetuOnOff;
+                
+                rrM1_3TextA.enabled = true;
+                rrM1_3TextB.enabled = true;
 
+                //rrM1_3StPointA.enabled = false;
+                //rrM1_3StPointB.enabled = false;
                 //////＞text：gameobjectを見えるようにする
                 //rrTextA.enabled = true;
+            }
+            if (count == 6) {
+                reset();
+                //gameobjectを見えるようにする
+                rrM1_3LineAB.enabled = true;
+                //rrM1_3LineSAB.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_3LineC.enabled = true;
+                rrM1_3LineSC.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_3TextA.enabled = true;
+                rrM1_3TextB.enabled = true;
+                rrM1_3TextC.enabled = true;
+                
+                //rrM1_3StPointA.enabled = false;
+                //rrM1_3StPointB.enabled = false;
+
+            }
+            if (count == 7) {
+                reset();
+                //gameobjectを見えるようにする
+                rrM1_3LineAB.enabled = true;
+                rrM1_3LineSAB.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_3LineC.enabled = true;
+                rrM1_3LineSC.enabled = kyotuEla.tenmetuOnOff;
+
+                //rrM1_3PointA.enabled = true;
+                //rrM1_3PointB.enabled = true;
+
+                rrM1_3TextA.enabled = true;
+                rrM1_3TextB.enabled = true;
+                rrM1_3TextC.enabled = true;
+                //rrM1_3StPointA.enabled = false;
+                //rrM1_3StPointB.enabled = false;
+            }
+            if (count == 8) {
+                reset();
+                //gameobjectを見えるようにする
+                rrM1_3LineAB.enabled = true;
+                rrM1_3LineSAB.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_3LineC.enabled = true;
+                rrM1_3LineSC.enabled = false;
+
+                //rrM1_3PointA.enabled = true;
+                //rrM1_3PointB.enabled = true;
+
+                rrM1_3TextA.enabled = true;
+                rrM1_3TextB.enabled = true;
+                rrM1_3TextC.enabled = true;
+                //rrM1_3StPointA.enabled = false;
+                //rrM1_3StPointB.enabled = false;
+            }
+            if (count == 9) {
+                reset();
+                //gameobjectを見えるようにする
+                rrM1_3LineAB.enabled = true;
+                rrM1_3LineSAB.enabled = false;
+                rrM1_3LineC.enabled = true;
+                rrM1_3LineSC.enabled = false;
+
+                //rrM1_3PointA.enabled = true;
+                //rrM1_3PointB.enabled = true;
+
+                rrM1_3TextA.enabled = true;
+                rrM1_3TextB.enabled = true;
+                rrM1_3TextC.enabled = true;
+                //rrM1_3StPointA.enabled = false;
+                //rrM1_3StPointB.enabled = false;
+            }
+            if (count == 10) {
+                reset();
+                //gameobjectを見えるようにする
+                rrM1_3LineAB.enabled = true;
+                rrM1_3LineSAB.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_3LineC.enabled = true;
+                rrM1_3LineSC.enabled = false;
+
+                //rrM1_3PointA.enabled = true;
+                //rrM1_3PointB.enabled = true;
+
+                rrM1_3TextA.enabled = true;
+                rrM1_3TextB.enabled = true;
+                rrM1_3TextC.enabled = true;
+                //rrM1_3StPointA.enabled = false;
+                //rrM1_3StPointB.enabled = false;
             }
         }
     }

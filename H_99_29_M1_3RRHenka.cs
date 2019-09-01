@@ -142,7 +142,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         henka(kyotu.rrCount);
-        Debug.Log("M1_3RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        //Debug.Log("M1_3RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
 
     }
     //リセット表示を全部消すメソッド　kyotu.rrcount-----------------------------
@@ -562,14 +562,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = kyotuEla.tenmetuOnOff;
@@ -618,14 +611,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -675,14 +661,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -732,14 +711,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = //false;
@@ -790,14 +762,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -848,14 +813,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -906,14 +864,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -964,14 +915,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -1022,14 +966,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -1080,14 +1017,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -1138,14 +1068,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -1196,14 +1119,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -1254,14 +1170,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -1312,14 +1221,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -1370,14 +1272,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -1428,14 +1323,10 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
+                
 
 
-                //rrM1_3PointB.enabled = true;
+               
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -1488,14 +1379,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -1548,14 +1432,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+               
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -1608,14 +1485,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+               
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -1627,8 +1497,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
                 rrM1_3TextD.enabled = true;
                 rrM1_3TextE.enabled = true;
                 rrM1_3TextF.enabled = true;
-                //rrM1_3StPointA.enabled = false;
-                //rrM1_3StPointB.enabled = false;
+               
             }
             if (count == 38) {
                 reset();
@@ -1668,15 +1537,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
-
+                
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
                 //kyotuEla.tenmetuOnOff;
@@ -1728,18 +1589,10 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
-                //kyotuEla.tenmetuOnOff;
 
                 rrM1_3TextA.enabled = true;
                 rrM1_3TextB.enabled = true;
@@ -1747,8 +1600,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
                 rrM1_3TextD.enabled = true;
                 rrM1_3TextE.enabled = true;
                 rrM1_3TextF.enabled = true;
-                //rrM1_3StPointA.enabled = false;
-                //rrM1_3StPointB.enabled = false;
+                
             }
             if (count == 39) {
                 reset();
@@ -1788,14 +1640,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
@@ -1807,8 +1652,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
                 rrM1_3TextD.enabled = true;
                 rrM1_3TextE.enabled = true;
                 rrM1_3TextF.enabled = true;
-                //rrM1_3StPointA.enabled = false;
-                //rrM1_3StPointB.enabled = false;
+                
             }
             if (count == 40) {
                 reset();
@@ -1848,18 +1692,10 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
-                //kyotuEla.tenmetuOnOff;
 
                 rrM1_3TextA.enabled = true;
                 rrM1_3TextB.enabled = true;
@@ -1867,8 +1703,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
                 rrM1_3TextD.enabled = true;
                 rrM1_3TextE.enabled = true;
                 rrM1_3TextF.enabled = true;
-                //rrM1_3StPointA.enabled = false;
-                //rrM1_3StPointB.enabled = false;
+               
             }
             if (count == 41) {
                 reset();
@@ -1908,18 +1743,10 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3StPointF.enabled = //kyotuEla.tenmetuOnOff; ;
                                         false;
-                //rrM1_3PointE.enabled = true;
-                //rrM1_3StPointE.enabled = kyotuEla.tenmetuOnOff; ;
-
-                //rrM1_3PointF.enabled = true;
-                //rrM1_3StPointF.enabled = kyotuEla.tenmetuOnOff; 
-
-
-                //rrM1_3PointB.enabled = true;
+                
 
                 rrM1_3Circle.enabled = true;
                 rrM1_3StCircle.enabled = false;
-                //kyotuEla.tenmetuOnOff;
 
                 rrM1_3TextA.enabled = true;
                 rrM1_3TextB.enabled = true;
@@ -1927,8 +1754,7 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
                 rrM1_3TextD.enabled = true;
                 rrM1_3TextE.enabled = true;
                 rrM1_3TextF.enabled = true;
-                //rrM1_3StPointA.enabled = false;
-                //rrM1_3StPointB.enabled = false;
+                
             }
         }
     }

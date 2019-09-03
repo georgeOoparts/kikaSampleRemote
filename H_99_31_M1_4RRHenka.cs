@@ -106,37 +106,97 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour
         rrM1_4LineStEF = M1_4LineStEF.GetComponent<Renderer>();
         rrM1_4LineStFD = M1_4LineStFD.GetComponent<Renderer>();
 
-        rrM1_4PointA = rrM1_4PointA.GetComponent<Renderer>();
-        rrM1_4PointB = rrM1_4PointB.GetComponent<Renderer>();
-        rrM1_4PointC = rrM1_4PointC.GetComponent<Renderer>();
-        rrM1_4PointD = rrM1_4PointD.GetComponent<Renderer>();
-        rrM1_4PointE = rrM1_4PointE.GetComponent<Renderer>();
-        rrM1_4PointF = rrM1_4PointF.GetComponent<Renderer>();
+        rrM1_4PointA = M1_4PointA.GetComponent<Renderer>();
+        rrM1_4PointB = M1_4PointB.GetComponent<Renderer>();
+        rrM1_4PointC = M1_4PointC.GetComponent<Renderer>();
+        rrM1_4PointD = M1_4PointD.GetComponent<Renderer>();
+        rrM1_4PointE = M1_4PointE.GetComponent<Renderer>();
+        rrM1_4PointF = M1_4PointF.GetComponent<Renderer>();
 
-        rrM1_4PointStA = rrM1_4PointStA.GetComponent<Renderer>();
-        rrM1_4PointStB = rrM1_4PointStB.GetComponent<Renderer>();
-        rrM1_4PointStC = rrM1_4PointStC.GetComponent<Renderer>();
-        rrM1_4PointStD = rrM1_4PointStD.GetComponent<Renderer>();
-        rrM1_4PointStE = rrM1_4PointStE.GetComponent<Renderer>();
-        rrM1_4PointStF = rrM1_4PointStF.GetComponent<Renderer>();
+        rrM1_4PointStA = M1_4PointStA.GetComponent<Renderer>();
+        rrM1_4PointStB = M1_4PointStB.GetComponent<Renderer>();
+        rrM1_4PointStC = M1_4PointStC.GetComponent<Renderer>();
+        rrM1_4PointStD = M1_4PointStD.GetComponent<Renderer>();
+        rrM1_4PointStE = M1_4PointStE.GetComponent<Renderer>();
+        rrM1_4PointStF = M1_4PointStF.GetComponent<Renderer>();
 
-        rrM1_4TextA = rrM1_4TextA.GetComponent<Renderer>();
-        rrM1_4TextB = rrM1_4TextB.GetComponent<Renderer>();
-        rrM1_4TextC = rrM1_4TextC.GetComponent<Renderer>();
-        rrM1_4TextD = rrM1_4TextD.GetComponent<Renderer>();
-        rrM1_4TextE = rrM1_4TextE.GetComponent<Renderer>();
-        rrM1_4TextF = rrM1_4TextF.GetComponent<Renderer>();
+        rrM1_4TextA = M1_4TextA.GetComponent<Renderer>();
+        rrM1_4TextB = M1_4TextB.GetComponent<Renderer>();
+        rrM1_4TextC = M1_4TextC.GetComponent<Renderer>();
+        rrM1_4TextD = M1_4TextD.GetComponent<Renderer>();
+        rrM1_4TextE = M1_4TextE.GetComponent<Renderer>();
+        rrM1_4TextF = M1_4TextF.GetComponent<Renderer>();
 
-        rrM1_4kakuABC = rrM1_4kakuABC.GetComponent<Renderer>();
-        rrM1_4kakuStABC = rrM1_4kakuStABC.GetComponent<Renderer>();
-        rrM1_4kakuDEF = rrM1_4kakuDEF.GetComponent<Renderer>();
-        rrM1_4kakuStDEF = rrM1_4kakuStDEF.GetComponent<Renderer>();
+        rrM1_4kakuABC = M1_4kakuABC.GetComponent<Renderer>();
+        rrM1_4kakuStABC = M1_4kakuStABC.GetComponent<Renderer>();
+        rrM1_4kakuDEF = M1_4kakuDEF.GetComponent<Renderer>();
+        rrM1_4kakuStDEF = M1_4kakuStDEF.GetComponent<Renderer>();
 
+    }
+    //リセット表示を全部消すメソッド　kyotu.rrcount-----------------------------
+    private void reset() {
+        //k7B_1_1:オブジェを存在するけど見えなくする。
+        //this.gameObject.GetComponent<Renderer>().enabled = false; 
+
+        //k7B_1_2:オブジェを見えるようにするよ。
+        //this.gameObject.GetComponent<Renderer>().enabled = true;
+
+        //gameobjectを見えなくする
+        //＞line：gameobjectを見えなくする
+
+        rrM1_4LineAB.enabled = false;
+        rrM1_4LineStAB.enabled = false;
+
+        rrM1_4LineBC.enabled = false;
+        rrM1_4LineStBC.enabled = false;
+
+        rrM1_4LineCA.enabled = false;
+        rrM1_4LineStCA.enabled = false;
+
+        rrM1_4LineDE.enabled = false;
+        rrM1_4LineStDE.enabled = false;
+
+        rrM1_4LineEF.enabled = false;
+        rrM1_4LineStEF.enabled = false;
+
+        rrM1_4LineFD.enabled = false;
+        rrM1_4LineStFD.enabled = false;
+
+        //＞point：gameobjectを見えなくする
+        rrM1_4PointA.enabled = false;
+        rrM1_4PointB.enabled = false;
+        rrM1_4PointC.enabled = false;
+
+        rrM1_4PointD.enabled = false;
+        rrM1_4PointE.enabled = false;
+        rrM1_4PointF.enabled = false;
+        //＞pointSt：gameobjectを見えなくする
+        rrM1_4PointStA.enabled = false;
+        rrM1_4PointStB.enabled = false;
+        rrM1_4PointStC.enabled = false;
+        rrM1_4PointStD.enabled = false;
+        rrM1_4PointStE.enabled = false;
+        rrM1_4PointStF.enabled = false;
+
+        ////＞text：gameobjectを見えなくする
+        rrM1_4TextA.enabled = false;
+        rrM1_4TextB.enabled = false;
+        rrM1_4TextC.enabled = false;
+        rrM1_4TextD.enabled = false;
+        rrM1_4TextE.enabled = false;
+        rrM1_4TextF.enabled = false;
+
+        rrM1_4kakuABC.enabled = false;
+        rrM1_4kakuStABC.enabled = false;
+        rrM1_4kakuDEF.enabled = false;
+        rrM1_4kakuStDEF.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        reset();
         Debug.Log("M1_4RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
 
     }

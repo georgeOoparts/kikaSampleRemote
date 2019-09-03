@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class H_99_31_M1_4RRHenka : MonoBehaviour
-{
+public class H_99_31_M1_4RRHenka : MonoBehaviour {
     //M1_3preにアタッチ。オブジェクト全体のいどうをするプログラム
     //いちいちunityで当てはめなきゃ駄目　↓---------------
 
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     public H_99_01_kyoutuHensu kyotu;
+
+    //強調表現点滅に使う変数を共通変数として使う。
+    public H_99_01B_kyotuElapse kyotuEla;
 
     public GameObject M1_4LineAB;
     public GameObject M1_4LineBC;
@@ -90,9 +92,8 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour
     private Renderer rrM1_4kakuDEF;
     private Renderer rrM1_4kakuStDEF;
 
-    void Start()
-    {
-        rrM1_4LineAB=M1_4LineAB.GetComponent<Renderer>();
+    void Start() {
+        rrM1_4LineAB = M1_4LineAB.GetComponent<Renderer>();
         rrM1_4LineBC = M1_4LineBC.GetComponent<Renderer>();
         rrM1_4LineCA = M1_4LineCA.GetComponent<Renderer>();
         rrM1_4LineDE = M1_4LineDE.GetComponent<Renderer>();
@@ -193,11 +194,89 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() 
     {
 
-        reset();
+        henka(kyotu.rrCount);
         Debug.Log("M1_4RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
 
+    }
+    //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
+    private void henka(int count) 
+    {
+        //m1_3のときのみ実行
+        if (kyotu.mojiSwitch == 3 & kyotu.MCount == 3) 
+        {
+            if (count == 1) 
+            {
+                reset();
+                rrM1_4LineAB.enabled = true;
+                rrM1_4LineStAB.enabled =kyotuEla.tenmetuOnOff; 
+
+                rrM1_4LineBC.enabled = true;
+                rrM1_4LineStBC.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_4LineCA.enabled = true;
+                rrM1_4LineStCA.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_4LineDE.enabled = true;
+                rrM1_4LineStDE.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_4LineEF.enabled = true;
+                rrM1_4LineStEF.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_4LineFD.enabled = true;
+                rrM1_4LineStFD.enabled = kyotuEla.tenmetuOnOff;
+            }
+            if (count == 2) 
+            {
+                reset();
+                rrM1_4LineAB.enabled = true;
+                rrM1_4LineStAB.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_4LineBC.enabled = true;
+                rrM1_4LineStBC.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_4LineCA.enabled = true;
+                rrM1_4LineStCA.enabled =//kyotuEla.tenmetuOnOff;
+                    false;
+                rrM1_4LineDE.enabled = true;
+                rrM1_4LineStDE.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_4LineEF.enabled = true;
+                rrM1_4LineStEF.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_4LineFD.enabled = true;
+                rrM1_4LineStFD.enabled = //kyotuEla.tenmetuOnOff;
+                    false;
+            }
+            if (count == 3) 
+            {
+                reset();
+                rrM1_4LineAB.enabled = true;
+                rrM1_4LineStAB.enabled = //kyotuEla.tenmetuOnOff;
+                    false;
+                rrM1_4LineBC.enabled = true;
+                rrM1_4LineStBC.enabled = //kyotuEla.tenmetuOnOff;
+                    false;
+                rrM1_4LineCA.enabled = true;
+                rrM1_4LineStCA.enabled =//kyotuEla.tenmetuOnOff;
+                    false;
+                rrM1_4LineDE.enabled = true;
+                rrM1_4LineStDE.enabled =  //kyotuEla.tenmetuOnOff;
+                    false;
+                rrM1_4LineEF.enabled = true;
+                rrM1_4LineStEF.enabled = //kyotuEla.tenmetuOnOff;
+                    false;
+                rrM1_4LineFD.enabled = true;
+                rrM1_4LineStFD.enabled = //kyotuEla.tenmetuOnOff;
+                    false;
+
+                rrM1_4kakuABC.enabled = true;
+                rrM1_4kakuStABC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4kakuDEF.enabled = true;
+                rrM1_4kakuStDEF.enabled = kyotuEla.tenmetuOnOff;
+            }
+        }
     }
 }

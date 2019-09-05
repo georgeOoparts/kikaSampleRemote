@@ -47,10 +47,7 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
     public GameObject M1_4TextE;
     public GameObject M1_4TextF;
 
-    public GameObject M1_4kakuABC;
-    public GameObject M1_4kakuStABC;
-    public GameObject M1_4kakuDEF;
-    public GameObject M1_4kakuStDEF;
+   
 
     public GameObject M1_4kakuBAC;
     public GameObject M1_4kakuStBAC;
@@ -92,10 +89,7 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
     private Renderer rrM1_4TextE;
     private Renderer rrM1_4TextF;
 
-    private Renderer rrM1_4kakuABC;
-    private Renderer rrM1_4kakuStABC;
-    private Renderer rrM1_4kakuDEF;
-    private Renderer rrM1_4kakuStDEF;
+   
 
     private Renderer rrM1_4kakuBAC;
     private Renderer rrM1_4kakuStBAC;
@@ -138,10 +132,7 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
         rrM1_4TextE = M1_4TextE.GetComponent<Renderer>();
         rrM1_4TextF = M1_4TextF.GetComponent<Renderer>();
 
-        rrM1_4kakuABC = M1_4kakuABC.GetComponent<Renderer>();
-        rrM1_4kakuStABC = M1_4kakuStABC.GetComponent<Renderer>();
-        rrM1_4kakuDEF = M1_4kakuDEF.GetComponent<Renderer>();
-        rrM1_4kakuStDEF = M1_4kakuStDEF.GetComponent<Renderer>();
+       
 
         rrM1_4kakuBAC = M1_4kakuBAC.GetComponent<Renderer>();
         rrM1_4kakuStBAC = M1_4kakuStBAC.GetComponent<Renderer>();
@@ -202,10 +193,7 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
         rrM1_4TextE.enabled = false;
         rrM1_4TextF.enabled = false;
 
-        rrM1_4kakuABC.enabled = false;
-        rrM1_4kakuStABC.enabled = false;
-        rrM1_4kakuDEF.enabled = false;
-        rrM1_4kakuStDEF.enabled = false;
+       
 
         rrM1_4kakuBAC.enabled = false;
         rrM1_4kakuStBAC.enabled = false;

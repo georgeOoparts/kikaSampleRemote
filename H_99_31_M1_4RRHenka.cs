@@ -26,6 +26,11 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
     public GameObject M1_4LineStEF;
     public GameObject M1_4LineStFD;
 
+    public GameObject M1_4LineStAB2;
+    public GameObject M1_4LineStCA2;
+    public GameObject M1_4LineStDE2;
+    public GameObject M1_4LineStFD2;
+
     public GameObject M1_4PointA;
     public GameObject M1_4PointB;
     public GameObject M1_4PointC;
@@ -51,8 +56,18 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
 
     public GameObject M1_4kakuBAC;
     public GameObject M1_4kakuStBAC;
+    public GameObject M1_4kakuABC;
+    public GameObject M1_4kakuStABC;
+    public GameObject M1_4kakuACB;
+    public GameObject M1_4kakuStACB;
+
     public GameObject M1_4kakuEDF;
     public GameObject M1_4kakuStEDF;
+    public GameObject M1_4kakuDEF;
+    public GameObject M1_4kakuStDEF;
+    public GameObject M1_4kakuDFE;
+    public GameObject M1_4kakuStDFE;
+
 
     private Renderer rrM1_4LineAB;
     private Renderer rrM1_4LineBC;
@@ -67,6 +82,11 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
     private Renderer rrM1_4LineStDE;
     private Renderer rrM1_4LineStEF;
     private Renderer rrM1_4LineStFD;
+
+    private Renderer rrM1_4LineStAB2;
+    private Renderer rrM1_4LineStCA2;
+    private Renderer rrM1_4LineStDE2;
+    private Renderer rrM1_4LineStFD2;
 
     private Renderer rrM1_4PointA;
     private Renderer rrM1_4PointB;
@@ -93,8 +113,17 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
 
     private Renderer rrM1_4kakuBAC;
     private Renderer rrM1_4kakuStBAC;
+    private Renderer rrM1_4kakuABC;
+    private Renderer rrM1_4kakuStABC;
+    private Renderer rrM1_4kakuACB;
+    private Renderer rrM1_4kakuStACB;
+
     private Renderer rrM1_4kakuEDF;
     private Renderer rrM1_4kakuStEDF;
+    private Renderer rrM1_4kakuDEF;
+    private Renderer rrM1_4kakuStDEF;
+    private Renderer rrM1_4kakuDFE;
+    private Renderer rrM1_4kakuStDFE;
 
     void Start() {
         rrM1_4LineAB = M1_4LineAB.GetComponent<Renderer>();
@@ -110,6 +139,12 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
         rrM1_4LineStDE = M1_4LineStDE.GetComponent<Renderer>();
         rrM1_4LineStEF = M1_4LineStEF.GetComponent<Renderer>();
         rrM1_4LineStFD = M1_4LineStFD.GetComponent<Renderer>();
+
+        rrM1_4LineStAB2 = M1_4LineStAB2.GetComponent<Renderer>();
+        rrM1_4LineStCA2 = M1_4LineStCA2.GetComponent<Renderer>();
+
+        rrM1_4LineStDE2 = M1_4LineStDE2.GetComponent<Renderer>();
+        rrM1_4LineStFD2 = M1_4LineStFD2.GetComponent<Renderer>();
 
         rrM1_4PointA = M1_4PointA.GetComponent<Renderer>();
         rrM1_4PointB = M1_4PointB.GetComponent<Renderer>();
@@ -136,8 +171,18 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
 
         rrM1_4kakuBAC = M1_4kakuBAC.GetComponent<Renderer>();
         rrM1_4kakuStBAC = M1_4kakuStBAC.GetComponent<Renderer>();
+        rrM1_4kakuABC = M1_4kakuABC.GetComponent<Renderer>();
+        rrM1_4kakuStABC = M1_4kakuStABC.GetComponent<Renderer>();
+        rrM1_4kakuACB = M1_4kakuACB.GetComponent<Renderer>();
+        rrM1_4kakuStACB = M1_4kakuStACB.GetComponent<Renderer>();
+
+
         rrM1_4kakuEDF = M1_4kakuEDF.GetComponent<Renderer>();
         rrM1_4kakuStEDF = M1_4kakuStEDF.GetComponent<Renderer>();
+        rrM1_4kakuDEF = M1_4kakuDEF.GetComponent<Renderer>();
+        rrM1_4kakuStDEF = M1_4kakuStDEF.GetComponent<Renderer>();
+        rrM1_4kakuDFE = M1_4kakuDFE.GetComponent<Renderer>();
+        rrM1_4kakuStDFE = M1_4kakuStDFE.GetComponent<Renderer>();
 
     }
     //リセット表示を全部消すメソッド　kyotu.rrcount-----------------------------
@@ -153,21 +198,29 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
 
         rrM1_4LineAB.enabled = false;
         rrM1_4LineStAB.enabled = false;
+        rrM1_4LineStAB2.enabled = false;
+
 
         rrM1_4LineBC.enabled = false;
         rrM1_4LineStBC.enabled = false;
 
         rrM1_4LineCA.enabled = false;
         rrM1_4LineStCA.enabled = false;
+        rrM1_4LineStCA2.enabled = false;
+
 
         rrM1_4LineDE.enabled = false;
         rrM1_4LineStDE.enabled = false;
+        rrM1_4LineStDE2.enabled = false;
+
 
         rrM1_4LineEF.enabled = false;
         rrM1_4LineStEF.enabled = false;
 
         rrM1_4LineFD.enabled = false;
         rrM1_4LineStFD.enabled = false;
+        rrM1_4LineStFD2.enabled = false;
+
 
         //＞point：gameobjectを見えなくする
         rrM1_4PointA.enabled = false;
@@ -193,12 +246,19 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
         rrM1_4TextE.enabled = false;
         rrM1_4TextF.enabled = false;
 
-       
-
         rrM1_4kakuBAC.enabled = false;
         rrM1_4kakuStBAC.enabled = false;
+        rrM1_4kakuABC.enabled = false;
+        rrM1_4kakuStABC.enabled = false;
+        rrM1_4kakuACB.enabled = false;
+        rrM1_4kakuStACB.enabled = false;
+
         rrM1_4kakuEDF.enabled = false;
         rrM1_4kakuStEDF.enabled = false;
+        rrM1_4kakuDEF.enabled = false;
+        rrM1_4kakuStDEF.enabled = false;
+        rrM1_4kakuDFE.enabled = false;
+        rrM1_4kakuStDFE.enabled = false;
     }
 
     // Update is called once per frame
@@ -220,26 +280,68 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
                 reset();
                 rrM1_4LineAB.enabled = false;
                 rrM1_4LineStAB.enabled = false;
+                rrM1_4LineStAB2.enabled = false;
+
 
                 rrM1_4LineBC.enabled = false;
                 rrM1_4LineStBC.enabled = false;
 
                 rrM1_4LineCA.enabled = false;
                 rrM1_4LineStCA.enabled = false;
+                rrM1_4LineStCA2.enabled = false;
+
 
                 rrM1_4LineDE.enabled = false;
                 rrM1_4LineStDE.enabled = false;
+                rrM1_4LineStDE2.enabled = false;
+
 
                 rrM1_4LineEF.enabled = false;
                 rrM1_4LineStEF.enabled = false;
 
                 rrM1_4LineFD.enabled = false;
                 rrM1_4LineStFD.enabled = false;
+                rrM1_4LineStFD2.enabled = false;
+
+
+                //＞point：gameobjectを見えなくする
+                rrM1_4PointA.enabled = false;
+                rrM1_4PointB.enabled = false;
+                rrM1_4PointC.enabled = false;
+
+                rrM1_4PointD.enabled = false;
+                rrM1_4PointE.enabled = false;
+                rrM1_4PointF.enabled = false;
+                //＞pointSt：gameobjectを見えなくする
+                rrM1_4PointStA.enabled = false;
+                rrM1_4PointStB.enabled = false;
+                rrM1_4PointStC.enabled = false;
+                rrM1_4PointStD.enabled = false;
+                rrM1_4PointStE.enabled = false;
+                rrM1_4PointStF.enabled = false;
+
+                ////＞text：gameobjectを見えなくする
+                rrM1_4TextA.enabled = false;
+                rrM1_4TextB.enabled = false;
+                rrM1_4TextC.enabled = false;
+                rrM1_4TextD.enabled = false;
+                rrM1_4TextE.enabled = false;
+                rrM1_4TextF.enabled = false;
 
                 rrM1_4kakuBAC.enabled = false;
                 rrM1_4kakuStBAC.enabled = false;
+                rrM1_4kakuABC.enabled = false;
+                rrM1_4kakuStABC.enabled = false;
+                rrM1_4kakuACB.enabled = false;
+                rrM1_4kakuStACB.enabled = false;
+
                 rrM1_4kakuEDF.enabled = false;
                 rrM1_4kakuStEDF.enabled = false;
+                rrM1_4kakuDEF.enabled = false;
+                rrM1_4kakuStDEF.enabled = false;
+                rrM1_4kakuDFE.enabled = false;
+                rrM1_4kakuStDFE.enabled = false;
+
             }
             if (count == 1) 
             {

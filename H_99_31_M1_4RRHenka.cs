@@ -97,6 +97,11 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
     private Renderer rrM1_4kakuDEF;
     private Renderer rrM1_4kakuStDEF;
 
+    private Renderer rrM1_4kakuBAC;
+    private Renderer rrM1_4kakuStBAC;
+    private Renderer rrM1_4kakuEDF;
+    private Renderer rrM1_4kakuStEDF;
+
     void Start() {
         rrM1_4LineAB = M1_4LineAB.GetComponent<Renderer>();
         rrM1_4LineBC = M1_4LineBC.GetComponent<Renderer>();
@@ -137,6 +142,11 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
         rrM1_4kakuStABC = M1_4kakuStABC.GetComponent<Renderer>();
         rrM1_4kakuDEF = M1_4kakuDEF.GetComponent<Renderer>();
         rrM1_4kakuStDEF = M1_4kakuStDEF.GetComponent<Renderer>();
+
+        rrM1_4kakuBAC = M1_4kakuBAC.GetComponent<Renderer>();
+        rrM1_4kakuStBAC = M1_4kakuStBAC.GetComponent<Renderer>();
+        rrM1_4kakuEDF = M1_4kakuEDF.GetComponent<Renderer>();
+        rrM1_4kakuStEDF = M1_4kakuStEDF.GetComponent<Renderer>();
 
     }
     //リセット表示を全部消すメソッド　kyotu.rrcount-----------------------------
@@ -197,10 +207,10 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
         rrM1_4kakuDEF.enabled = false;
         rrM1_4kakuStDEF.enabled = false;
 
-        //rrM1_4kakuBAC.enabled = false;
-        //rrM1_4kakuStBAC.enabled = false;
-        //rrM1_4kakuEDF.enabled = false;
-        //rrM1_4kakuStEDF.enabled = false;
+        rrM1_4kakuBAC.enabled = false;
+        rrM1_4kakuStBAC.enabled = false;
+        rrM1_4kakuEDF.enabled = false;
+        rrM1_4kakuStEDF.enabled = false;
     }
 
     // Update is called once per frame
@@ -282,10 +292,10 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
                 rrM1_4LineStFD.enabled = //kyotuEla.tenmetuOnOff;
                     false;
 
-                rrM1_4kakuABC.enabled = true;
-                rrM1_4kakuStABC.enabled = kyotuEla.tenmetuOnOff;
-                rrM1_4kakuDEF.enabled = true;
-                rrM1_4kakuStDEF.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4kakuBAC.enabled = true;
+                rrM1_4kakuStBAC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4kakuEDF.enabled = true;
+                rrM1_4kakuStEDF.enabled = kyotuEla.tenmetuOnOff;
             }
             if (count == 4) {
                 reset();
@@ -308,11 +318,11 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
                 rrM1_4LineStFD.enabled = //kyotuEla.tenmetuOnOff;
                     false;
 
-                rrM1_4kakuABC.enabled = true;
-                rrM1_4kakuStABC.enabled = //kyotuEla.tenmetuOnOff;
+                rrM1_4kakuBAC.enabled = true;
+                rrM1_4kakuStBAC.enabled = //kyotuEla.tenmetuOnOff;
                     false;
-                rrM1_4kakuDEF.enabled = true;
-                rrM1_4kakuStDEF.enabled = //kyotuEla.tenmetuOnOff;
+                rrM1_4kakuEDF.enabled = true;
+                rrM1_4kakuStEDF.enabled = //kyotuEla.tenmetuOnOff;
                     false;
             }
             if (count == 5) {
@@ -336,11 +346,11 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
                 rrM1_4LineStFD.enabled = //kyotuEla.tenmetuOnOff;
                     false;
 
-                rrM1_4kakuABC.enabled = true;
-                rrM1_4kakuStABC.enabled = //kyotuEla.tenmetuOnOff;
+                rrM1_4kakuBAC.enabled = true;
+                rrM1_4kakuStBAC.enabled = //kyotuEla.tenmetuOnOff;
                     false;
-                rrM1_4kakuDEF.enabled = true;
-                rrM1_4kakuStDEF.enabled = //kyotuEla.tenmetuOnOff;
+                rrM1_4kakuEDF.enabled = true;
+                rrM1_4kakuStEDF.enabled = //kyotuEla.tenmetuOnOff;
                     false;
             }
         }

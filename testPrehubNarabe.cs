@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class testPrehubNarabe : MonoBehaviour
 {
-    //uiTEXT７つをuiPANELの中で並び替え
+    //現在使用中
+    //uiTEXT16つをuiPANELの中で並び替え
     //mojiを書くUIpanelにアタッチ、textpanelにアタッチしている
     //左右両方のクリックで文字の並び替えをやるように改良
     //まきもどし機能追加する Input.GetKeyDown("b")115行目
@@ -33,7 +34,7 @@ public class testPrehubNarabe : MonoBehaviour
     {
         //プレハブの呼び出しはtextPrehubYobiでやっている
         //そっちのプログラムを先に呼び込むように設定する。
-        for (int i = 0; i < 11; i++) {
+        for (int i = 0; i < 16; i++) {
             //k0016_99_1_1_1：list新しい値を入れる
             ///別プログラムで呼び出されたmojipanelオブジェを当てはめる
             mojiPanel.Add(GameObject.Find("mojiPanel" + i).gameObject);

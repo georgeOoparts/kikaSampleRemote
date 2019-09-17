@@ -266,7 +266,7 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
     {
 
         henka(kyotu.rrCount);
-        Debug.Log("M1_4RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        //Debug.Log("M1_4RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
 
     }
     //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------

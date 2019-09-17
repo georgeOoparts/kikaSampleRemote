@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class H_99_33_M1_5RRHenka : MonoBehaviour
-{
+public class H_99_33_M1_5RRHenka : MonoBehaviour {
     //M1_3preにアタッチ。オブジェクト全体のいどうをするプログラム
     //いちいちunityで当てはめなきゃ駄目　↓---------------
 
@@ -141,9 +140,9 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour
     private Renderer rrM1_5KakuStCBG;
     private Renderer rrM1_5KakuStBCF;
 
-    void Start()
+    void Start()//startW
     {
-        rrM1_5TextA =M1_5TextA.GetComponent<Renderer>();
+        rrM1_5TextA = M1_5TextA.GetComponent<Renderer>();
         rrM1_5TextB = M1_5TextB.GetComponent<Renderer>();
         rrM1_5TextC = M1_5TextC.GetComponent<Renderer>();
         rrM1_5TextD = M1_5TextD.GetComponent<Renderer>();
@@ -207,10 +206,95 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour
         rrM1_5KakuStCBG = M1_5KakuStCBG.GetComponent<Renderer>();
         rrM1_5KakuStBCF = M1_5KakuStBCF.GetComponent<Renderer>();
     }
+    //リセット表示を全部消すメソッド　kyotu.rrcount------resetW-----------------------
+    private void reset() {
+        //k7B_1_1:オブジェを存在するけど見えなくする。
+        //this.gameObject.GetComponent<Renderer>().enabled = false; 
 
-    // Update is called once per frame
-    void Update()
+        //k7B_1_2:オブジェを見えるようにするよ。
+        //this.gameObject.GetComponent<Renderer>().enabled = true;
+
+        //gameobjectを見えなくする
+        //＞line：gameobjectを見えなくする
+
+        rrM1_5TextA.enabled = false;
+        rrM1_5TextB.enabled = false;
+        rrM1_5TextC.enabled = false;
+        rrM1_5TextD.enabled = false;
+        rrM1_5TextE.enabled = false;
+        rrM1_5TextF.enabled = false;
+        rrM1_5TextG.enabled = false;
+
+        rrM1_5LineAB.enabled = false;
+        rrM1_5LineBC.enabled = false;
+        rrM1_5LineCA.enabled = false;
+        rrM1_5LineAD.enabled = false;
+        rrM1_5LineAE.enabled = false;
+        rrM1_5LineAF.enabled = false;
+        rrM1_5LineAG.enabled = false;
+        rrM1_5LineBG.enabled = false;
+        rrM1_5LineCF.enabled = false;
+
+        rrM1_5LineStAB.enabled = false;
+        rrM1_5LineStBC.enabled = false;
+        rrM1_5LineStCA.enabled = false;
+        rrM1_5LineStAD.enabled = false;
+        rrM1_5LineStAE.enabled = false;
+        rrM1_5LineStAF.enabled = false;
+        rrM1_5LineStAG.enabled = false;
+        rrM1_5LineStBG.enabled = false;
+        rrM1_5LineStCF.enabled = false;
+
+        rrM1_5PointA.enabled = false;
+        rrM1_5PointB.enabled = false;
+        rrM1_5PointC.enabled = false;
+        rrM1_5PointF.enabled = false;
+        rrM1_5PointG.enabled = false;
+
+        rrM1_5PointStA.enabled = false;
+        rrM1_5PointStB.enabled = false;
+        rrM1_5PointStC.enabled = false;
+        rrM1_5PointStF.enabled = false;
+        rrM1_5PointStG.enabled = false;
+
+        rrM1_5KakuBAC.enabled = false;
+        rrM1_5KakuABC.enabled = false;
+        rrM1_5KakuACB.enabled = false;
+        rrM1_5KakuAFC.enabled = false;
+        rrM1_5KakuAGB.enabled = false;
+        rrM1_5KakuCBF.enabled = false;
+        rrM1_5KakuBCG.enabled = false;
+        rrM1_5KakuABG.enabled = false;
+        rrM1_5KakuACF.enabled = false;
+        rrM1_5KakuCBG.enabled = false;
+        rrM1_5KakuBCF.enabled = false;
+
+        rrM1_5KakuStBAC.enabled = false;
+        rrM1_5KakuStABC.enabled = false;
+        rrM1_5KakuStACB.enabled = false;
+        rrM1_5KakuStAFC.enabled = false;
+        rrM1_5KakuStAGB.enabled = false;
+        rrM1_5KakuStCBF.enabled = false;
+        rrM1_5KakuStBCG.enabled = false;
+        rrM1_5KakuStABG.enabled = false;
+        rrM1_5KakuStACF.enabled = false;
+        rrM1_5KakuStCBG.enabled = false;
+        rrM1_5KakuStBCF.enabled = false;
+    }
+    void Update()//updateW
     {
+        henka(kyotu.rrCount);
         Debug.Log("M1_5RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+    }
+    //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
+    private void henka(int count) {//henkaW
+        //m1_3のときのみ実行
+        if (kyotu.mojiSwitch == 3 & kyotu.MCount == 4) {
+            if (count == 0) {
+                reset();
+                
+
+            }
+        }
     }
 }

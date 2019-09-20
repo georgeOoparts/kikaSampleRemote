@@ -21,13 +21,19 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
     public GameObject M1_5TextG;
 
     public GameObject M1_5LineAB;
+   
+
     public GameObject M1_5LineBC;
     public GameObject M1_5LineCA;
     public GameObject M1_5LineAD;
     public GameObject M1_5LineAE;
     public GameObject M1_5LineAF;
     public GameObject M1_5LineAG;
+    
+
     public GameObject M1_5LineBG;
+    
+
     public GameObject M1_5LineCF;
     public GameObject M1_5LineBD;
     public GameObject M1_5LineCE;
@@ -47,6 +53,10 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
     public GameObject M1_5LineStCE;
     public GameObject M1_5LineStBF;
     public GameObject M1_5LineStCG;
+
+    public GameObject M1_5LineStAB2;
+    public GameObject M1_5LineStAG2;
+    public GameObject M1_5LineStBG2;
 
     public GameObject M1_5PointA;
     public GameObject M1_5PointB;
@@ -119,6 +129,11 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
     private Renderer rrM1_5LineStCE;
     private Renderer rrM1_5LineStBF;
     private Renderer rrM1_5LineStCG;
+
+    private Renderer rrM1_5LineStAB2;
+    private Renderer rrM1_5LineStAG2;
+    private Renderer rrM1_5LineStBG2;
+
 
     private Renderer rrM1_5PointA;
     private Renderer rrM1_5PointB;
@@ -195,6 +210,9 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
         rrM1_5LineStBF = M1_5LineStBF.GetComponent<Renderer>();
         rrM1_5LineStCG = M1_5LineStCG.GetComponent<Renderer>();
 
+        rrM1_5LineStAB2 = M1_5LineStAB2.GetComponent<Renderer>();
+        rrM1_5LineStAG2 = M1_5LineStAG2.GetComponent<Renderer>();
+        rrM1_5LineStBG2 = M1_5LineStBG2.GetComponent<Renderer>();
 
         rrM1_5PointA = M1_5PointA.GetComponent<Renderer>();
         rrM1_5PointB = M1_5PointB.GetComponent<Renderer>();
@@ -278,6 +296,10 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
         rrM1_5LineStCE.enabled = false;
         rrM1_5LineStBF.enabled = false;
         rrM1_5LineStCG.enabled = false;
+
+        rrM1_5LineStAB2.enabled = false;
+        rrM1_5LineStAG2.enabled = false;
+        rrM1_5LineStBG2.enabled = false;
 
         rrM1_5PointA.enabled = false;
         rrM1_5PointB.enabled = false;
@@ -1337,7 +1359,8 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
                 //rrM1_5LineStAE.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5LineStBD.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5LineStCE.enabled = kyotuEla.tenmetuOnOff;
-                rrM1_5LineStAG.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStAG.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5LineStAG2.enabled = kyotuEla.tenmetuOnOff;
 
                 rrM1_5KakuABC.enabled = true;
                 rrM1_5KakuACB.enabled = true;
@@ -1426,14 +1449,14 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
                 rrM1_5TextF.enabled = true;
                 rrM1_5TextG.enabled = true;
 
-
+               
                 rrM1_5PointF.enabled = true;
                 rrM1_5PointG.enabled = true;
 
                 //rrM1_5PointStF.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5PointG.enabled = true;
 
-            } else if (count == 31) {//henkaW
+            } else if (count == 31) {//henka31W
                 reset();
                 rrM1_5LineAB.enabled = true;
                 rrM1_5LineBC.enabled = true;
@@ -1451,6 +1474,8 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
                 //rrM1_5LineStCA.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5LineStAD.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5LineStAE.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5LineStAE.enabled = true;
+
                 //rrM1_5LineStBD.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5LineStCE.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5LineStAG.enabled = kyotuEla.tenmetuOnOff;
@@ -1513,13 +1538,17 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
                 //rrM1_5LineStCA.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5LineStAD.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5LineStAE.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5LineStAE.enabled = true;
+
+                rrM1_5LineStAG2.enabled = kyotuEla.tenmetuOnOff;
+
                 //rrM1_5LineStBD.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5LineStCE.enabled = kyotuEla.tenmetuOnOff;
-                rrM1_5LineStAG.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStAG.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5LineStAG.enabled = true;
 
-                //rrM1_5LineStAF.enabled = kyotuEla.tenmetuOnOff;
-                rrM1_5LineStAF.enabled = true;
+                rrM1_5LineStAF.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStAF.enabled = true;
 
 
                 rrM1_5KakuABC.enabled = true;
@@ -1614,9 +1643,10 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
                 rrM1_5TextF.enabled = true;
                 rrM1_5TextG.enabled = true;
 
-
+                rrM1_5PointA.enabled = true;
                 rrM1_5PointF.enabled = true;
                 rrM1_5PointG.enabled = true;
+
 
                 //rrM1_5PointStF.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5PointG.enabled = true;

@@ -1547,8 +1547,8 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
                 //rrM1_5LineStAG.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5LineStAG.enabled = true;
 
-                rrM1_5LineStAF.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_5LineStAF.enabled = true;
+                //rrM1_5LineStAF.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5LineStAF.enabled = true;
 
 
                 rrM1_5KakuABC.enabled = true;
@@ -1605,13 +1605,19 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
                 //rrM1_5LineStCA.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5LineStAD.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5LineStAE.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5LineStAE.enabled = true;
+
+                //rrM1_5LineStAG2.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5LineStAG2.enabled = true;
+
+
                 //rrM1_5LineStBD.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5LineStCE.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5LineStAG.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5LineStAG.enabled = true;
 
                 //rrM1_5LineStAF.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_5LineStAF.enabled = true;
+                rrM1_5LineStAF.enabled = true;
 
 
                 rrM1_5KakuABC.enabled = true;
@@ -1643,10 +1649,9 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
                 rrM1_5TextF.enabled = true;
                 rrM1_5TextG.enabled = true;
 
-                rrM1_5PointA.enabled = true;
+
                 rrM1_5PointF.enabled = true;
                 rrM1_5PointG.enabled = true;
-
 
                 //rrM1_5PointStF.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5PointG.enabled = true;

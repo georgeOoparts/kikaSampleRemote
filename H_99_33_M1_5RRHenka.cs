@@ -812,7 +812,9 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
                 rrM1_5LineBD.enabled = true;
                 rrM1_5LineCE.enabled = true;
 
-                
+                rrM1_5LineStAB.enabled = true;
+                rrM1_5LineStCA.enabled = true;
+
                 rrM1_5LineStBD.enabled = kyotuEla.tenmetuOnOff;
                 rrM1_5LineStCE.enabled = kyotuEla.tenmetuOnOff;
 

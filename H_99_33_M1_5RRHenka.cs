@@ -1001,14 +1001,14 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
                 rrM1_5KakuCBF.enabled = true;
 
                 //KakuSt true
-                rrM1_5KakuStABC.enabled = true;
-                rrM1_5KakuStACB.enabled = true;
-                rrM1_5KakuStCBF.enabled = true;
+                //rrM1_5KakuStABC.enabled = true;
+                //rrM1_5KakuStACB.enabled = true;
+                //rrM1_5KakuStCBF.enabled = true;
                 //KakuSt tenmetu
                 //rrM1_5KakuStABC.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5KakuStACB.enabled = kyotuEla.tenmetuOnOff;
                 rrM1_5KakuStCBF.enabled = kyotuEla.tenmetuOnOff;
-            } else if (count == 25) {//henka24
+            } else if (count == 25) {//henka25
                 reset();
                 //Line
                 rrM1_5LineAB.enabled = true;
@@ -1046,15 +1046,124 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
                 rrM1_5KakuABC.enabled = true;
                 rrM1_5KakuACB.enabled = true;
                 rrM1_5KakuCBF.enabled = true;
+                rrM1_5KakuBCG.enabled = true;
 
                 //KakuSt true
-                rrM1_5KakuStABC.enabled = true;
-                rrM1_5KakuStACB.enabled = true;
+                //rrM1_5KakuStABC.enabled = true;
+                //rrM1_5KakuStACB.enabled = true;
                 rrM1_5KakuStCBF.enabled = true;
+                //rrM1_5KakuStBCG.enabled = true;
+                //KakuSt tenmetu
+                //rrM1_5KakuStABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5KakuStACB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5KakuStCBF.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5KakuStBCG.enabled = kyotuEla.tenmetuOnOff;
+
+            } else if (count == 26) {//henka26
+                reset();
+                //Line
+                rrM1_5LineAB.enabled = true;
+                rrM1_5LineBC.enabled = true;
+                rrM1_5LineCA.enabled = true;
+                rrM1_5LineBD.enabled = true;
+                rrM1_5LineCE.enabled = true;
+
+                //LineSt true
+                //rrM1_5LineStAB.enabled = true;
+                //rrM1_5LineStBC.enabled = true;
+                //rrM1_5LineStCA.enabled = true;
+                //rrM1_5LineStBD.enabled = true;
+                //rrM1_5LineStCE.enabled = true;
+
+                //LineSt tenmetu
+                //rrM1_5LineStAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStCA.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStBD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStCE.enabled = kyotuEla.tenmetuOnOff;
+
+                //Text
+                rrM1_5TextA.enabled = true;
+                rrM1_5TextB.enabled = true;
+                rrM1_5TextC.enabled = true;
+                rrM1_5TextD.enabled = true;
+                rrM1_5TextE.enabled = true;
+
+                //Point
+                rrM1_5PointA.enabled = true;
+                rrM1_5PointB.enabled = true;
+                rrM1_5PointC.enabled = true;
+
+
+                //Kaku
+                rrM1_5KakuABC.enabled = true;
+                rrM1_5KakuACB.enabled = true;
+                rrM1_5KakuCBF.enabled = true;
+                rrM1_5KakuBCG.enabled = true;
+
+                //KakuSt true
+                //rrM1_5KakuStABC.enabled = true;
+                //rrM1_5KakuStACB.enabled = true;
+                //rrM1_5KakuStCBF.enabled = true;
+                //rrM1_5KakuStBCG.enabled = true;
+                
                 //KakuSt tenmetu
                 //rrM1_5KakuStABC.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5KakuStACB.enabled = kyotuEla.tenmetuOnOff;
                 rrM1_5KakuStCBF.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5KakuStBCG.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 27) {//henka27
+                reset();
+                //Line
+                rrM1_5LineAB.enabled = true;
+                rrM1_5LineBC.enabled = true;
+                rrM1_5LineCA.enabled = true;
+                rrM1_5LineBD.enabled = true;
+                rrM1_5LineCE.enabled = true;
+
+                //LineSt true
+                //rrM1_5LineStAB.enabled = true;
+                //rrM1_5LineStBC.enabled = true;
+                //rrM1_5LineStCA.enabled = true;
+                //rrM1_5LineStBD.enabled = true;
+                //rrM1_5LineStCE.enabled = true;
+
+                //LineSt tenmetu
+                //rrM1_5LineStAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStCA.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStBD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStCE.enabled = kyotuEla.tenmetuOnOff;
+
+                //Text
+                rrM1_5TextA.enabled = true;
+                rrM1_5TextB.enabled = true;
+                rrM1_5TextC.enabled = true;
+                rrM1_5TextD.enabled = true;
+                rrM1_5TextE.enabled = true;
+
+                //Point
+                rrM1_5PointA.enabled = true;
+                rrM1_5PointB.enabled = true;
+                rrM1_5PointC.enabled = true;
+
+                //Kaku
+                rrM1_5KakuABC.enabled = true;
+                rrM1_5KakuACB.enabled = true;
+                rrM1_5KakuCBF.enabled = true;
+                rrM1_5KakuBCG.enabled = true;
+
+                //KakuSt true
+                //rrM1_5KakuStABC.enabled = true;
+                //rrM1_5KakuStACB.enabled = true;
+                //rrM1_5KakuStCBF.enabled = true;
+                //rrM1_5KakuStBCG.enabled = true;
+
+                //KakuSt tenmetu
+                //rrM1_5KakuStABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5KakuStACB.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5KakuStCBF.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5KakuStBCG.enabled = kyotuEla.tenmetuOnOff;
             }
         }
     }

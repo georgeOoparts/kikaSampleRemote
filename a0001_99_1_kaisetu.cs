@@ -422,11 +422,16 @@ public class a0001_99_1_kaisetu : MonoBehaviour {
     //k0017_99_2_1:2次元配列　最初の要素の個数を得る
      intValues.GetLength(0)
      */
-     /*
-     uiボタンに　プログラムを日も付ける
-     スクリプトメソッドを作る＞uiにアタッチ
-     ui＞インスペ＞button（script）＞onclick　＋＞オブジェクトにボタンそのものをアタッチ＞→選んだオブジェのアタッチプログラムのメソッドを選択
-     
-     
-     
-     */
+/*
+uiボタンに　プログラムを日も付ける
+スクリプトメソッドを作る＞uiにアタッチ
+ui＞インスペ＞button（script）＞onclick　＋＞オブジェクトにボタンそのものをアタッチ＞→選んだオブジェのアタッチプログラムのメソッドを選択
+
+
+
+        */
+//k0018_99_1:マテリアルの変更
+//public GameObject obj;
+
+//public Material ColorPink;
+//obj.GetComponent<Renderer>().material = ColorPink;

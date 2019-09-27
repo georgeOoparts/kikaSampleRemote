@@ -13,7 +13,13 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
     public H_99_01B_kyotuElapse kyotuEla;
 
     public Material ColorPink;
-
+    public Material MColor1Blue;
+    public Material MColor2Red;
+    public Material MColor3Yellow;
+    public Material MColor4Orange;
+    public Material MColor5Green;
+    public Material MColor6Purple;
+    public Material MColor7Pink;
 
     public GameObject M1_5TextA;
     public GameObject M1_5TextB;

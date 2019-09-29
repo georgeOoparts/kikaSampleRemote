@@ -10,7 +10,8 @@ public class shape2dtest : MonoBehaviour
     {
    
         var shape = GetComponent<Shape>();
-        shape.settings.fillColor = Color.white;
+        //shape.settings.fillColor = Color.white;
+        shape.settings.fillColor = new Color32(109,200,45,255);
 
         Debug.Log("test");
     }

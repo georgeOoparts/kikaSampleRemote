@@ -435,3 +435,5 @@ ui＞インスペ＞button（script）＞onclick　＋＞オブジェクトに�
 
 //public Material ColorPink;
 //obj.GetComponent<Renderer>().material = ColorPink;
+
+    //GetComponent<Renderer>().material.color = new Color32(248, 168, 133, 1);

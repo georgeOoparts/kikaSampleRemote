@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
+public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW saisho
     //M1_3preにアタッチ。オブジェクト全体のいどうをするプログラム
     //いちいちunityで当てはめなきゃ駄目　↓---------------
 
@@ -380,6 +380,11 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
                 rrM1_5LineStBC.enabled = kyotuEla.tenmetuOnOff;
             } else if (count == 3) {//henka3
                 reset();
+
+                //rrM1_5KakuABC.material.color= new Color32(1,1,1,1);
+
+                //M1_5KakuABC.GetComponent<Shapes2D/shape>().color = 
+
                 rrM1_5LineAB.enabled = true;
                 rrM1_5LineBC.enabled = true;
                 rrM1_5LineCA.enabled = true;
@@ -1258,7 +1263,7 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW
                 //rrM1_5KakuStBCG.enabled = kyotuEla.tenmetuOnOff;
             } else if (count == 29) {//henka29
                 reset();
-                //マテリアルの変更
+                //k0018_99_1:マテリアルの変更
                 rrM1_5LineStAE.material = ColorPink;
                 //Line
                 rrM1_5LineAB.enabled = true;

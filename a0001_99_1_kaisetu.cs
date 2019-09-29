@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class a0001_99_1_kaisetu : MonoBehaviour {
 
-    
+
 }
 /*
     命名規則
@@ -431,9 +431,31 @@ ui＞インスペ＞button（script）＞onclick　＋＞オブジェクトに�
 
         */
 //k0018_99_1:マテリアルの変更
-//public GameObject obj;
-
-//public Material ColorPink;
+//public GameObject obj;//オブジェをセット
+//k0018_99_1_1:
+//public Material ColorPink;//マテリアルをセット
+//k0018_99_1_1_1:
 //obj.GetComponent<Renderer>().material = ColorPink;
+//k0018_99_1_1_2://色を数値で指定する
+//obj.GetComponent<Renderer>().material.color = new Color32(248, 168, 133, 1);
 
-    //GetComponent<Renderer>().material.color = new Color32(248, 168, 133, 1);
+//0019_99_1：shape2dで色をスクリプトから変更する
+//using Shapes2D;
+//var shape = GetComponent<Shape>();
+//shape.settings.fillColor = Color.white;
+//shape.settings.fillColor = new Color32(109,200,45,255);
+
+//0020_99_1:マテリアルのエミッションの色を得る
+//Material.GetColor("_EmissionColor")
+
+//マテリアルの通常の色をえる
+//Material.GetColor("_EmissionColor")
+//Material.Color
+
+    //0019_99_1：shape2dで色をスクリプトから変更する
+// 0020_99_1:マテリアルのエミッションの色を得る
+//M1_5KakuABC.GetComponent<Shape>().settings.fillColor = MColor6Pink_same2.GetColor("_EmissionColor");
+
+
+
+

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Shapes2D;//0019_99_1：shape2dで色をスクリプトから変更する
 
 public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW saisho
     //M1_3preにアタッチ。オブジェクト全体のいどうをするプログラム
@@ -182,9 +183,17 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW saisho
     private Renderer rrM1_5KakuStACF;
     private Renderer rrM1_5KakuStCBG;
     private Renderer rrM1_5KakuStBCF;
-
+    
+    //0019_99_1：shape2dで色をスクリプトから変更する
+    //Shape sM1_5kakuABC;
+    //Shape sM1_5kakuACB;
     void Start()
     {
+        //0019_99_1：shape2dで色をスクリプトから変更する
+        //sM1_5kakuABC = M1_5KakuABC.GetComponent<Shape>();
+        //sM1_5kakuACB = M1_5KakuACB.GetComponent<Shape>();
+
+
         rrM1_5TextA = M1_5TextA.GetComponent<Renderer>();
         rrM1_5TextB = M1_5TextB.GetComponent<Renderer>();
         rrM1_5TextC = M1_5TextC.GetComponent<Renderer>();
@@ -380,10 +389,14 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW saisho
                 rrM1_5LineStBC.enabled = kyotuEla.tenmetuOnOff;
             } else if (count == 3) {//henka3
                 reset();
+                //0019_99_1：shape2dで色をスクリプトから変更する
+                // 0020_99_1:マテリアルのエミッションの色を得る
+                M1_5KakuABC.GetComponent<Shape>().settings.fillColor = MColor6Pink_same2.GetColor("_EmissionColor"); 
 
-                //rrM1_5KakuABC.material.color= new Color32(1,1,1,1);
+                M1_5KakuACB.GetComponent<Shape>().settings.fillColor = MColor6Pink_same2.GetColor("_EmissionColor"); 
 
-                //M1_5KakuABC.GetComponent<Shapes2D/shape>().color = 
+
+                //rrM1_5KakuABC.shap = 
 
                 rrM1_5LineAB.enabled = true;
                 rrM1_5LineBC.enabled = true;
@@ -471,6 +484,12 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW saisho
                 //rrM1_5KakuStACB.enabled = kyotuEla.tenmetuOnOff;
             } else if (count == 8) {//henka8
                 reset();
+                //0019_99_1：shape2dで色をスクリプトから変更する
+                // 0020_99_1:マテリアルのエミッションの色を得る
+                M1_5KakuCBF.GetComponent<Shape>().settings.fillColor = MColor7DarkPurple_same3.GetColor("_EmissionColor");
+                M1_5KakuBCG.GetComponent<Shape>().settings.fillColor = MColor7DarkPurple_same3.GetColor("_EmissionColor");
+
+
                 rrM1_5LineAB.enabled = true;
                 rrM1_5LineBC.enabled = true;
                 rrM1_5LineCA.enabled = true;

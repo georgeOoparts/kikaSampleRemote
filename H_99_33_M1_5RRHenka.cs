@@ -3327,7 +3327,8 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW saisho
                 //rrM1_5KakuStBAC.enabled = kyotuEla.tenmetuOnOff;
             } else if (count == 55) {//henka55
                 reset();
-
+                //k0018_99_1_1_1:
+                rrM1_5LineCF.material = MColor3;
                 //Line
                 rrM1_5LineAB.enabled = true;
                 rrM1_5LineBC.enabled = true;
@@ -3413,7 +3414,8 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW saisho
                 //rrM1_5KakuStBAC.enabled = kyotuEla.tenmetuOnOff;
             } else if (count == 56) {//henka56
                 reset();
-
+                //k0018_99_1_1_1:
+                rrM1_5LineBG.material = MColor3;
                 //Line
                 rrM1_5LineAB.enabled = true;
                 rrM1_5LineBC.enabled = true;

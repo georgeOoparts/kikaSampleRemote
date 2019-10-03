@@ -2218,6 +2218,7 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW saisho
                 //rrM1_5KakuStBCG.enabled = kyotuEla.tenmetuOnOff;
             } else if (count == 42) {//henka42
                 reset();
+                
                 //Line
                 rrM1_5LineAB.enabled = true;
                 rrM1_5LineBC.enabled = true;
@@ -2384,6 +2385,8 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW saisho
                 //rrM1_5KakuStBCG.enabled = kyotuEla.tenmetuOnOff;
             } else if (count == 44) {//henka44
                 reset();
+                //k0018_99_1_1_1:
+                rrM1_5LineStAF.material = MColor6;
                 //Line
                 rrM1_5LineAB.enabled = true;
                 rrM1_5LineBC.enabled = true;
@@ -2467,6 +2470,8 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW saisho
                 //rrM1_5KakuStBCG.enabled = kyotuEla.tenmetuOnOff;
             } else if (count == 45) {//henka45
                 reset();
+                //k0018_99_1_1_1:
+                rrM1_5LineStAG.material = MColor6;
                 //Line
                 rrM1_5LineAB.enabled = true;
                 rrM1_5LineBC.enabled = true;

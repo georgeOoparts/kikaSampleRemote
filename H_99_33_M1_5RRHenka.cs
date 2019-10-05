@@ -4218,6 +4218,212 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW saisho
                 //rrM1_5KakuStACF.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_5KakuStABG.enabled = kyotuEla.tenmetuOnOff;
                 rrM1_5KakuStAGB.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 64) {//henka64
+                reset();
+
+                //0019_99_1：shape2dで色をスクリプトから変更する
+                //0020_99_1:マテリアルのエミッションの色を得る
+                //M1_5KakuAGB.GetComponent<Shape>().settings.fillColor = MColor8.GetColor("_EmissionColor");
+                //M1_5KakuABG.GetComponent<Shape>().settings.fillColor = MColor9.GetColor("_EmissionColor");
+                //Line
+                rrM1_5LineAB.enabled = true;
+                rrM1_5LineBC.enabled = true;
+                rrM1_5LineCA.enabled = true;
+                rrM1_5LineBD.enabled = true;
+                rrM1_5LineCE.enabled = true;
+                rrM1_5LineCF.enabled = true;
+                rrM1_5LineBG.enabled = true;
+
+                //LineSt true
+                //rrM1_5LineStAB.enabled = true;
+                //rrM1_5LineStBC.enabled = true;
+                //rrM1_5LineStCA.enabled = true;
+                //rrM1_5LineStBD.enabled = true;
+                //rrM1_5LineStCE.enabled = true;
+                //rrM1_5LineStAE.enabled = true;
+                //rrM1_5LineStAF.enabled = true;
+                //rrM1_5LineStAG.enabled = true;
+                //rrM1_5LineStCF.enabled = true;
+                //rrM1_5LineStBG.enabled = true;
+
+                //LineSt tenmetu
+                //rrM1_5LineStAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStBC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5LineStCA.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStBD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStCE.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStAE.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5LineStAF.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStAG.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5LineStCF.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStBG.enabled = kyotuEla.tenmetuOnOff;
+
+                //Text
+                rrM1_5TextA.enabled = true;
+                rrM1_5TextB.enabled = true;
+                rrM1_5TextC.enabled = true;
+                rrM1_5TextD.enabled = true;
+                rrM1_5TextE.enabled = true;
+                rrM1_5TextF.enabled = true;
+                rrM1_5TextG.enabled = true;
+
+                //Point
+                rrM1_5PointA.enabled = true;
+                rrM1_5PointB.enabled = true;
+                rrM1_5PointC.enabled = true;
+                rrM1_5PointF.enabled = true;
+                rrM1_5PointG.enabled = true;
+
+                //PointSt true
+                //rrM1_5PointStA.enabled = true;
+                //rrM1_5PointStB.enabled = true;
+                //rrM1_5PointStC.enabled = true;
+                //rrM1_5PointStF.enabled = true;
+                //rrM1_5PointStG.enabled = true;
+
+                //PointSt true
+                //rrM1_5PointStA.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5PointStB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5PointStC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5PointStF.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5PointStG.enabled = kyotuEla.tenmetuOnOff;
+
+                //Kaku
+                //rrM1_5KakuABC.enabled = true;
+                //rrM1_5KakuACB.enabled = true;
+                //rrM1_5KakuCBF.enabled = true;
+                //rrM1_5KakuBCG.enabled = true;
+                rrM1_5KakuBAC.enabled = true;
+                rrM1_5KakuAFC.enabled = true;
+                rrM1_5KakuACF.enabled = true;
+                rrM1_5KakuABG.enabled = true;
+                rrM1_5KakuAGB.enabled = true;
+
+                //KakuSt true
+                //rrM1_5KakuStABC.enabled = true;
+                //rrM1_5KakuStACB.enabled = true;
+                //rrM1_5KakuStCBF.enabled = true;
+                //rrM1_5KakuStBCG.enabled = true;
+                //rrM1_5KakuStBAC.enabled = true;
+                //rrM1_5KakuStAFC.enabled = true;
+                //rrM1_5KakuStACF.enabled = true;
+                //rrM1_5KakuStABG.enabled = true;
+                //rrM1_5KakuStAGB.enabled = true;
+
+
+                //KakuSt tenmetu
+                //rrM1_5KakuStABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5KakuStACB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5KakuStCBF.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5KakuStBCG.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5KakuStBAC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5KakuStAFC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5KakuStACF.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5KakuStABG.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5KakuStAGB.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 65) {//henka65
+                reset();
+
+                //0019_99_1：shape2dで色をスクリプトから変更する
+                //0020_99_1:マテリアルのエミッションの色を得る
+                //M1_5KakuAGB.GetComponent<Shape>().settings.fillColor = MColor8.GetColor("_EmissionColor");
+                //M1_5KakuABG.GetComponent<Shape>().settings.fillColor = MColor9.GetColor("_EmissionColor");
+                //Line
+                rrM1_5LineAB.enabled = true;
+                rrM1_5LineBC.enabled = true;
+                rrM1_5LineCA.enabled = true;
+                rrM1_5LineBD.enabled = true;
+                rrM1_5LineCE.enabled = true;
+                rrM1_5LineCF.enabled = true;
+                rrM1_5LineBG.enabled = true;
+
+                //LineSt true
+                //rrM1_5LineStAB.enabled = true;
+                //rrM1_5LineStBC.enabled = true;
+                //rrM1_5LineStCA.enabled = true;
+                //rrM1_5LineStBD.enabled = true;
+                //rrM1_5LineStCE.enabled = true;
+                //rrM1_5LineStAE.enabled = true;
+                //rrM1_5LineStAF.enabled = true;
+                //rrM1_5LineStAG.enabled = true;
+                //rrM1_5LineStCF.enabled = true;
+                //rrM1_5LineStBG.enabled = true;
+
+                //LineSt tenmetu
+                rrM1_5LineStAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStCA.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStBD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStCE.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStAE.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStAF.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5LineStAG.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5LineStCF.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5LineStBG.enabled = kyotuEla.tenmetuOnOff;
+
+                //Text
+                rrM1_5TextA.enabled = true;
+                rrM1_5TextB.enabled = true;
+                rrM1_5TextC.enabled = true;
+                rrM1_5TextD.enabled = true;
+                rrM1_5TextE.enabled = true;
+                rrM1_5TextF.enabled = true;
+                rrM1_5TextG.enabled = true;
+
+                //Point
+                rrM1_5PointA.enabled = true;
+                rrM1_5PointB.enabled = true;
+                rrM1_5PointC.enabled = true;
+                rrM1_5PointF.enabled = true;
+                rrM1_5PointG.enabled = true;
+
+                //PointSt true
+                //rrM1_5PointStA.enabled = true;
+                //rrM1_5PointStB.enabled = true;
+                //rrM1_5PointStC.enabled = true;
+                //rrM1_5PointStF.enabled = true;
+                //rrM1_5PointStG.enabled = true;
+
+                //PointSt true
+                //rrM1_5PointStA.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5PointStB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5PointStC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5PointStF.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5PointStG.enabled = kyotuEla.tenmetuOnOff;
+
+                //Kaku
+                //rrM1_5KakuABC.enabled = true;
+                //rrM1_5KakuACB.enabled = true;
+                //rrM1_5KakuCBF.enabled = true;
+                //rrM1_5KakuBCG.enabled = true;
+                rrM1_5KakuBAC.enabled = true;
+                //rrM1_5KakuAFC.enabled = true;
+                rrM1_5KakuACF.enabled = true;
+                rrM1_5KakuABG.enabled = true;
+                rrM1_5KakuAGB.enabled = true;
+
+                //KakuSt true
+                //rrM1_5KakuStABC.enabled = true;
+                //rrM1_5KakuStACB.enabled = true;
+                //rrM1_5KakuStCBF.enabled = true;
+                //rrM1_5KakuStBCG.enabled = true;
+                //rrM1_5KakuStBAC.enabled = true;
+                //rrM1_5KakuStAFC.enabled = true;
+                //rrM1_5KakuStACF.enabled = true;
+                //rrM1_5KakuStABG.enabled = true;
+                //rrM1_5KakuStAGB.enabled = true;
+
+
+                //KakuSt tenmetu
+                //rrM1_5KakuStABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5KakuStACB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5KakuStCBF.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5KakuStBCG.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5KakuStBAC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5KakuStAFC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_5KakuStACF.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5KakuStABG.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_5KakuStAGB.enabled = kyotuEla.tenmetuOnOff;
             }
         }
 

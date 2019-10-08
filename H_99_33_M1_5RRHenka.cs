@@ -4950,7 +4950,7 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW saisho
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
 
                 //0020_99_1:マテリアルのエミッションの色を得る//Material.GetColor("_EmissionColor")
-                rrM1_5LineBF.material =MColor6;
+                //rrM1_5LineBF.material =MColor6;
 
 
 
@@ -4970,7 +4970,7 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW saisho
                 //rrM1_5LineStBD.enabled = true;
                 //rrM1_5LineStCE.enabled = true;
                 //rrM1_5LineStAE.enabled = true;
-                //rrM1_5LineStAF.enabled = true;
+                rrM1_5LineStAF.enabled = true;
                 rrM1_5LineStAG.enabled = true;
                 //rrM1_5LineStCF.enabled = true;
                 //rrM1_5LineStBG.enabled = true;

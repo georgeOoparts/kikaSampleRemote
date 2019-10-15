@@ -364,7 +364,7 @@ public class H_99_33_M1_5RRHenka : MonoBehaviour {//atamaW saisho
     void Update()//updateW
     {
         henka(kyotu.rrCount);
-        Debug.Log("M1_5RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        //Debug.Log("M1_5RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
     }
     //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
     private void henka(int count) {//henkaW

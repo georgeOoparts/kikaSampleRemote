@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class H_99_35_TD1_15RRHenka : MonoBehaviour
-{
+public class H_99_35_TD1_15RRHenka : MonoBehaviour {
     //M1_5RRにアタッチ。オブジェクト全体のいどうをするプログラム
     //いちいちunityで当てはめなきゃ駄目　↓---------------
 
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす
     public H_99_01_kyoutuHensu kyotu;
 
+    //強調表現点滅に使う変数を共通変数として使う。
+    public H_99_01B_kyotuElapse kyotuEla;
 
     //MColor0Blue_point;
     public Material MColor0;
@@ -85,8 +86,7 @@ public class H_99_35_TD1_15RRHenka : MonoBehaviour
     private Renderer rrTD1_15StCircle;
 
 
-    void Start()
-    {
+    void Start() {
         //rrTD1_15TextA = TD1_15TextA.GetComponent<Renderer>();
         //rrTD1_15TextB = TD1_15TextB.GetComponent<Renderer>();
         //rrTD1_15TextC = TD1_15TextC.GetComponent<Renderer>();
@@ -151,9 +151,122 @@ public class H_99_35_TD1_15RRHenka : MonoBehaviour
 
     }
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+        henka(kyotu.rrCount);
         Debug.Log("TD1_15RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+    }
+    //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
+    private void henka(int count) {//henkaW
+        //m1_3のときのみ実行
+        if (kyotu.mojiSwitch == 2 & kyotu.MCount == 1) {
+            if (count == 0) {
+                reset();
+            } else if (count == 1) //henka1
+              {
+                reset();
+                rrTD1_15Circle.enabled = true;
+            } else if (count == 2) //henka2
+               {
+                reset();
+                rrTD1_15Circle.enabled = true;
+                rrTD1_15StCircle.enabled =kyotuEla.tenmetuOnOff;
+            } else if (count == 3) //henka3
+               {
+                reset();
+                rrTD1_15Circle.enabled = true;
+                rrTD1_15StCircle.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 4) //henka4
+               {
+                reset();
+                rrTD1_15Circle.enabled = true;
+                //rrTD1_15StCircle.enabled = kyotuEla.tenmetuOnOff;
 
+                rrTD1_15Point1.enabled = true;
+                //rrTD1_15Point2.enabled = true;
+
+                rrTD1_15StPoint1.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 5) //henka5
+                {
+                reset();
+                rrTD1_15Circle.enabled = true;
+                //rrTD1_15StCircle.enabled = kyotuEla.tenmetuOnOff;
+
+                rrTD1_15Point1.enabled = true;
+                rrTD1_15Point2.enabled = true;
+
+                //rrTD1_15StPoint1.enabled = kyotuEla.tenmetuOnOff;
+                rrTD1_15StPoint2.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 6) //henka6
+                 {
+                reset();
+                rrTD1_15Circle.enabled = true;
+                //rrTD1_15StCircle.enabled = kyotuEla.tenmetuOnOff;
+
+                rrTD1_15Point1.enabled = true;
+                rrTD1_15Point2.enabled = true;
+
+                //rrTD1_15StPoint1.enabled = kyotuEla.tenmetuOnOff;
+                //rrTD1_15StPoint2.enabled = kyotuEla.tenmetuOnOff;
+
+                rrTD1_15Line1.enabled = true;
+
+                rrTD1_15StLine1.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 7) //henka7
+                 {
+                reset();
+                rrTD1_15Circle.enabled = true;
+                //rrTD1_15StCircle.enabled = kyotuEla.tenmetuOnOff;
+
+                rrTD1_15Point1.enabled = true;
+                rrTD1_15Point2.enabled = true;
+
+                //rrTD1_15StPoint1.enabled = kyotuEla.tenmetuOnOff;
+                //rrTD1_15StPoint2.enabled = kyotuEla.tenmetuOnOff;
+
+                rrTD1_15Line1.enabled = true;
+
+                rrTD1_15StLine1.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 8) //henka8
+                  {
+                reset();
+                rrTD1_15Circle.enabled = true;
+                //rrTD1_15StCircle.enabled = kyotuEla.tenmetuOnOff;
+
+                rrTD1_15Point1.enabled = true;
+                rrTD1_15Point2.enabled = true;
+                rrTD1_15Point3.enabled = true;
+                rrTD1_15Point4.enabled = true;
+                //rrTD1_15StPoint1.enabled = kyotuEla.tenmetuOnOff;
+                //rrTD1_15StPoint2.enabled = kyotuEla.tenmetuOnOff;
+
+                rrTD1_15Line1.enabled = true;
+                rrTD1_15Line2.enabled = true;
+                rrTD1_15Line3.enabled = true;
+
+                rrTD1_15StLine1.enabled = kyotuEla.tenmetuOnOff;
+                rrTD1_15StLine2.enabled = kyotuEla.tenmetuOnOff;
+                rrTD1_15StLine3.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 9) //henka9
+                   {
+                reset();
+                rrTD1_15Circle.enabled = true;
+                //rrTD1_15StCircle.enabled = kyotuEla.tenmetuOnOff;
+
+                rrTD1_15Point1.enabled = true;
+                rrTD1_15Point2.enabled = true;
+                rrTD1_15Point3.enabled = true;
+                rrTD1_15Point4.enabled = true;
+                //rrTD1_15StPoint1.enabled = kyotuEla.tenmetuOnOff;
+                //rrTD1_15StPoint2.enabled = kyotuEla.tenmetuOnOff;
+
+                rrTD1_15Line1.enabled = true;
+                rrTD1_15Line2.enabled = true;
+                rrTD1_15Line3.enabled = true;
+
+                //rrTD1_15StLine1.enabled = kyotuEla.tenmetuOnOff;
+                //rrTD1_15StLine2.enabled = kyotuEla.tenmetuOnOff;
+                //rrTD1_15StLine3.enabled = kyotuEla.tenmetuOnOff;
+            }
+        }
     }
 }

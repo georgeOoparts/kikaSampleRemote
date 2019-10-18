@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class H_99_37_KJP_1RRHenka : MonoBehaviour
-{
+public class H_99_37_KJP_1RRHenka : MonoBehaviour {
     //M1_5RRにアタッチ。オブジェクト全体のいどうをするプログラム
     //いちいちunityで当てはめなきゃ駄目　↓---------------
 
@@ -54,8 +53,7 @@ public class H_99_37_KJP_1RRHenka : MonoBehaviour
     private Renderer rrKJP_StPoint1;
     private Renderer rrKJP_StPoint2;
 
-    void Start()
-    {
+    void Start() {
         rrKJP_Line1 = KJP_Line1.GetComponent<Renderer>();
 
         rrKJP_StLine1 = KJP_StLine1.GetComponent<Renderer>();
@@ -68,10 +66,87 @@ public class H_99_37_KJP_1RRHenka : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    //リセット表示を全部消すメソッド　kyotu.rrcount------resetW-----------------------
+    private void reset() {
+        //k7B_1_1:オブジェを存在するけど見えなくする。
+        //this.gameObject.GetComponent<Renderer>().enabled = false; 
+
+        //k7B_1_2:オブジェを見えるようにするよ。
+        //this.gameObject.GetComponent<Renderer>().enabled = true;
+
+        //gameobjectを見えなくする
+        //＞line：gameobjectを見えなくする
+
+        rrKJP_Line1.enabled = false;
+
+        rrKJP_StLine1.enabled = false;
+
+        rrKJP_Point1.enabled = false;
+        rrKJP_Point2.enabled = false;
+
+        rrKJP_StPoint1.enabled = false;
+        rrKJP_StPoint2.enabled = false;
+
+    }
+    void Update() {
+        henka(kyotu.rrCount);
         Debug.Log("KJP_1RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
 
+    }
+    //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
+    private void henka(int count) {//henkaW
+        //m1_3のときのみ実行
+        if (kyotu.mojiSwitch == 1 & kyotu.MCount == 0) {
+            if (count == 0) {
+                reset();
+            } 
+            else if (count == 1) //henka1
+            {
+                reset();
+                rrKJP_Point2.enabled = true;
+                rrKJP_StPoint2.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 2) //henka2
+            {
+                reset();
+                rrKJP_Point1.enabled = true;
+                rrKJP_StPoint1.enabled = kyotuEla.tenmetuOnOff;
+
+                rrKJP_Point2.enabled = true;
+                //rrKJP_StPoint2.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 3) //henka3
+            {
+                reset();
+                rrKJP_Point1.enabled = true;
+                //rrKJP_StPoint1.enabled = kyotuEla.tenmetuOnOff;
+
+                rrKJP_Point2.enabled = true;
+                //rrKJP_StPoint2.enabled = kyotuEla.tenmetuOnOff;
+
+                rrKJP_Line1.enabled = true;
+                rrKJP_StLine1.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 4) //henka4
+            {
+                reset();
+                rrKJP_Point1.enabled = true;
+                //rrKJP_StPoint1.enabled = kyotuEla.tenmetuOnOff;
+
+                rrKJP_Point2.enabled = true;
+                //rrKJP_StPoint2.enabled = kyotuEla.tenmetuOnOff;
+
+                rrKJP_Line1.enabled = true;
+                rrKJP_StLine1.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 5) //henka5
+            {
+                reset();
+                rrKJP_Point1.enabled = true;
+                //rrKJP_StPoint1.enabled = kyotuEla.tenmetuOnOff;
+
+                rrKJP_Point2.enabled = true;
+                //rrKJP_StPoint2.enabled = kyotuEla.tenmetuOnOff;
+
+                rrKJP_Line1.enabled = true;
+                //rrKJP_StLine1.enabled = kyotuEla.tenmetuOnOff;
+            }
+        }
     }
 }

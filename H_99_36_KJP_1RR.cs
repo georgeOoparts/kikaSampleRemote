@@ -24,7 +24,7 @@ public class H_99_36_KJP_1RR : MonoBehaviour
         } else {
             KJP_1Move.position = new Vector3(20.35f, -3.74f, 0);
         }
-        Debug.Log("KJP_1RR::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        //Debug.Log("KJP_1RR::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
 
     }
 }

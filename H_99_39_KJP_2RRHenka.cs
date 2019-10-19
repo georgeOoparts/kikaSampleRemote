@@ -103,7 +103,7 @@ public class H_99_39_KJP_2RRHenka : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         henka(kyotu.rrCount);
-        Debug.Log("KJP_2RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        //Debug.Log("KJP_2RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
     }
     //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
     private void henka(int count) {//henkaW

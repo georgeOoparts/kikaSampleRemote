@@ -111,6 +111,24 @@ public class H_99_39_KJP_2RRHenka : MonoBehaviour {
         if (kyotu.mojiSwitch == 1 & kyotu.MCount == 1) {
             if (count == 0) {
                 reset();
+            }else if (count == 1) {
+                reset();
+                rrKJP_2Line1.enabled = true;
+                rrKJP_2StLine1.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 2) {
+                reset();
+                rrKJP_2Line1.enabled = true;
+                rrKJP_2Line2.enabled = true;
+
+                //rrKJP_2StLine1.enabled = kyotuEla.tenmetuOnOff;
+                rrKJP_2StLine2.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 3) {
+                reset();
+                rrKJP_2Line1.enabled = true;
+                rrKJP_2Line2.enabled = true;
+
+                //rrKJP_2StLine1.enabled = kyotuEla.tenmetuOnOff;
+                //rrKJP_2StLine2.enabled = kyotuEla.tenmetuOnOff;
             }
         }
     }

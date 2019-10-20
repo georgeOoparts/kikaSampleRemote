@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class H_99_41_KJP_3RRHenka : MonoBehaviour
-{
+public class H_99_41_KJP_3RRHenka : MonoBehaviour {
     //M1_5RRにアタッチ。オブジェクト全体のいどうをするプログラム
     //いちいちunityで当てはめなきゃ駄目　↓---------------
 
@@ -33,7 +32,7 @@ public class H_99_41_KJP_3RRHenka : MonoBehaviour
     public Material MColor8;
     //MColor9Black_same5
     public Material MColor9;
-    
+
     //public GameObject KJP_3TextA;
     //public GameObject KJP_3TextB;
     //public GameObject KJP_3TextC;
@@ -151,9 +150,59 @@ public class H_99_41_KJP_3RRHenka : MonoBehaviour
         rrKJP_3StCircle.enabled = false;
 
     }
-    void Update()
-    {
+    void Update() {
+        henka(kyotu.rrCount);
         Debug.Log("KJP_3RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
 
+    }
+    
+    //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
+    private void henka(int count) {//henkaW
+        //m1_3のときのみ実行
+        if (kyotu.mojiSwitch == 1 & kyotu.MCount == 2) {
+            if (count == 0) {
+                reset();
+            } else if (count == 1) {//henka1
+                reset();
+                rrKJP_3Point1.enabled = true;
+
+                rrKJP_3StPoint1.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 2) {//henka2
+                reset();
+                rrKJP_3Point1.enabled = true;
+
+                //rrKJP_3StPoint1.enabled = kyotuEla.tenmetuOnOff;
+
+                rrKJP_3Line3.enabled = true;
+
+                rrKJP_3StLine3.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 3) {//henka3
+                reset();
+                rrKJP_3Point1.enabled = true;
+
+                //rrKJP_3StPoint1.enabled = kyotuEla.tenmetuOnOff;
+
+                rrKJP_3Line3.enabled = true;
+
+                //rrKJP_3StLine3.enabled = kyotuEla.tenmetuOnOff;
+
+                rrKJP_3Circle.enabled = true;
+
+                rrKJP_3StCircle.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 4) {//henka4
+                reset();
+                rrKJP_3Point1.enabled = true;
+
+                //rrKJP_3StPoint1.enabled = kyotuEla.tenmetuOnOff;
+
+                rrKJP_3Line3.enabled = true;
+
+                //rrKJP_3StLine3.enabled = kyotuEla.tenmetuOnOff;
+
+                rrKJP_3Circle.enabled = true;
+
+                //rrKJP_3StCircle.enabled = kyotuEla.tenmetuOnOff;
+            }
+        }
     }
 }

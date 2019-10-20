@@ -152,7 +152,7 @@ public class H_99_41_KJP_3RRHenka : MonoBehaviour {
     }
     void Update() {
         henka(kyotu.rrCount);
-        Debug.Log("KJP_3RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        //Debug.Log("KJP_3RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
 
     }
     

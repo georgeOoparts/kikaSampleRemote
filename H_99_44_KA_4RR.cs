@@ -19,8 +19,8 @@ public class H_99_44_KA_4RR : MonoBehaviour
     void Update() 
     {
         //meidai  m1_5 count4以下
-        if (kyotu.mojiSwitch == 0 && kyotu.MCount == 1) {
-            KA_4Move.position = new Vector3(11.2f, 1.6f, -1);
+        if (kyotu.mojiSwitch == 0 && kyotu.MCount == 2) {
+            KA_4Move.position = new Vector3(11.25f, 1f, -1);
         } else {
             KA_4Move.position = new Vector3(20.35f, -3.74f, 0);
         }

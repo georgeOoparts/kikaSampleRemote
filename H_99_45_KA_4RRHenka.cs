@@ -33,15 +33,100 @@ public class H_99_45_KA_4RRHenka : MonoBehaviour
     public Material MColor8;
     //MColor9Black_same5
     public Material MColor9;
+
+    public GameObject KA_4Line1A;
+
+    public GameObject KA_4Line1B;
+
+    public GameObject KA_4Line2;
+
+    public GameObject KA_4Line3A;
+
+    public GameObject KA_4Line3B;
+
+    public GameObject KA_4StLine1A;
+
+    public GameObject KA_4StLine2;
+
+    public GameObject KA_4StLine3A;
+
+    private Renderer rrKA_4Line1A;
+
+    private Renderer rrKA_4Line1B;
+
+    private Renderer rrKA_4Line2;
+
+    private Renderer rrKA_4Line3A;
+
+    private Renderer rrKA_4Line3B;
+
+    private Renderer rrKA_4StLine1A;
+
+    private Renderer rrKA_4StLine2;
+
+    private Renderer rrKA_4StLine3A;
+
+    //k0013_1: 宣言 
+    private Transform trKA_4Line1B;
+
+    private Transform trKA_4Line3B;
+
+    public float sitaV = 2f;
+
     void Start()
     {
-        
-    }
+        rrKA_4Line1A= KA_4Line1A.GetComponent<Renderer>();
+        rrKA_4Line1B = KA_4Line1B.GetComponent<Renderer>();
+        rrKA_4Line2 = KA_4Line2.GetComponent<Renderer>();
+        rrKA_4Line3A = KA_4Line3A.GetComponent<Renderer>();
+        rrKA_4Line3B = KA_4Line3B.GetComponent<Renderer>();
+        rrKA_4StLine1A = KA_4StLine1A.GetComponent<Renderer>();
+        rrKA_4StLine2 = KA_4StLine2.GetComponent<Renderer>();
+        rrKA_4StLine3A = KA_4StLine3A.GetComponent<Renderer>();
 
-    // Update is called once per frame
+        //k0013_1_1;オブジェに当てはめる；
+        trKA_4Line1B = KA_4Line1B.gameObject.GetComponent<Transform>();
+
+        trKA_4Line3B = KA_4Line3B.gameObject.GetComponent<Transform>();
+
+    }
+    //リセット表示を全部消すメソッド　kyotu.rrcount------resetW-----------------------
+    private void reset() {
+        //k7B_1_1:オブジェを存在するけど見えなくする。
+        //this.gameObject.GetComponent<Renderer>().enabled = false; 
+
+        //k7B_1_2:オブジェを見えるようにするよ。
+        //this.gameObject.GetComponent<Renderer>().enabled = true;
+
+        //gameobjectを見えなくする
+        //＞line：gameobjectを見えなくする
+
+        rrKA_4Line1A.enabled = false;
+        rrKA_4Line1B.enabled = false;
+        rrKA_4Line2.enabled = false;
+        rrKA_4Line3A.enabled = false;
+        rrKA_4Line3B.enabled = false;
+        rrKA_4StLine1A.enabled = false;
+        rrKA_4StLine2.enabled = false;
+        rrKA_4StLine3A.enabled = false;
+    }
     void Update()
     {
-        //Debug.Log("KA_4RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        henka(kyotu.rrCount);
+        Debug.Log("KA_4RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
 
+    }
+    //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
+    private void henka(int count) {//henkaW
+        //m1_3のときのみ実行
+        if (kyotu.mojiSwitch == 0 & kyotu.MCount == 1) {
+            if (count == 0) {
+                reset();
+            } else if (count == 1) {//henka1
+                reset();
+                
+
+            }
+        }
     }
 }

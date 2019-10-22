@@ -77,9 +77,53 @@ public class H_99_43_KA_1RRHenka : MonoBehaviour {
                 reset();
             } else if (count == 1) {//henka1
                 reset();
-                //rrKJP_3Point1.enabled = true;
+                rrKA_1Line1.enabled = true;
+                //rrKA_1Line2.enabled = true;
+                rrKA_1Line3.enabled = true;
 
-                //rrKJP_3StPoint1.enabled = kyotuEla.tenmetuOnOff;
+                rrKA_1StLine1.enabled = kyotuEla.tenmetuOnOff;
+                //rrKA_1StLine2.enabled = kyotuEla.tenmetuOnOff;
+                rrKA_1StLine3.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 2) {//henka2
+                reset();
+                rrKA_1Line1.enabled = true;
+                rrKA_1Line2.enabled = true;
+                rrKA_1Line3.enabled = true;
+
+                //rrKA_1StLine1.enabled = kyotuEla.tenmetuOnOff;
+                rrKA_1StLine1.enabled = false;
+
+                rrKA_1StLine2.enabled = kyotuEla.tenmetuOnOff;
+                rrKA_1StLine3.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 3) {//henka3
+                reset();
+                rrKA_1Line1.enabled = true;
+                rrKA_1Line2.enabled = true;
+                rrKA_1Line3.enabled = true;
+
+                rrKA_1StLine1.enabled = kyotuEla.tenmetuOnOff;
+                //rrKA_1StLine1.enabled = false;
+
+                rrKA_1StLine2.enabled = kyotuEla.tenmetuOnOff;
+                //rrKA_1StLine2.enabled = false;
+
+                //rrKA_1StLine3.enabled = kyotuEla.tenmetuOnOff;
+                rrKA_1StLine3.enabled = false;
+
+            } else if (count == 4) {//henka4
+                reset();
+                rrKA_1Line1.enabled = true;
+                rrKA_1Line2.enabled = true;
+                rrKA_1Line3.enabled = true;
+
+                //rrKA_1StLine1.enabled = kyotuEla.tenmetuOnOff;
+                rrKA_1StLine1.enabled = false;
+
+                //rrKA_1StLine2.enabled = kyotuEla.tenmetuOnOff;
+                rrKA_1StLine1.enabled = false;
+
+                //rrKA_1StLine3.enabled = kyotuEla.tenmetuOnOff;
+                rrKA_1StLine1.enabled = false;
             }
         }
     }

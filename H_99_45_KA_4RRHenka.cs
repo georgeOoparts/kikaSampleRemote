@@ -119,7 +119,7 @@ public class H_99_45_KA_4RRHenka : MonoBehaviour
     //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
     private void henka(int count) {//henkaW
         //m1_3のときのみ実行
-        if (kyotu.mojiSwitch == 0 & kyotu.MCount == 1) {
+        if (kyotu.mojiSwitch == 0 & kyotu.MCount == 2) {
             if (count == 0) {
                 reset();
             } else if (count == 1) {//henka1

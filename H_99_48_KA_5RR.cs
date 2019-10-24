@@ -23,7 +23,7 @@ public class H_99_48_KA_5RR : MonoBehaviour
         } else {
             KA_5Move.position = new Vector3(20.35f, -3.74f, 0);
         }
-        Debug.Log("KA_5RR::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        //Debug.Log("KA_5RR::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
 
     }
 }

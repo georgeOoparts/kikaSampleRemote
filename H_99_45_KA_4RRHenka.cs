@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class H_99_45_KA_4RRHenka : MonoBehaviour
 {
-    //M1_5RRにアタッチ。オブジェクト全体のいどうをするプログラム
+    //M1_4RRにアタッチ。オブジェクト全体のいどうをするプログラム
     //いちいちunityで当てはめなきゃ駄目　↓---------------
 
     //k5_3_1_1:gameobject(メソッド、変数)を使いまわす

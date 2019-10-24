@@ -89,6 +89,7 @@ public class H_99_45_KA_4RRHenka : MonoBehaviour
 
         trKA_4Line3B = KA_4Line3B.gameObject.GetComponent<Transform>();
 
+        //Debug.Log("KA_4RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
     }
     //リセット表示を全部消すメソッド　kyotu.rrcount------resetW-----------------------
     private void reset() {
@@ -122,10 +123,78 @@ public class H_99_45_KA_4RRHenka : MonoBehaviour
         if (kyotu.mojiSwitch == 0 & kyotu.MCount == 2) {
             if (count == 0) {
                 reset();
+                //line1B,line3Bの位置を調整　ターンが進んだり戻ったりするのの調整
+                trKA_4Line1B.localPosition = new Vector3(0, 3, 0);
+
+                trKA_4Line3B.localPosition = new Vector3(0, 0, 0);
             } else if (count == 1) {//henka1
                 reset();
                 
+               
 
+                rrKA_4Line1A.enabled = true;
+                rrKA_4Line1B.enabled = true;
+                rrKA_4Line3A.enabled = true;
+                rrKA_4Line3B.enabled = true;
+                //rrKA_4StLine1A.enabled = false;
+                //rrKA_4StLine2.enabled = false;
+                //rrKA_4StLine3A.enabled = false;
+
+                //line1B,line3Bを移動させるーーーーーーーーーーーーーーーーーーー
+                //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
+                //trKA_4Line1.position = new Vector3(13f, 0f, trKA_4Line1.position.z);
+                if (trKA_4Line1B.localPosition.y > 1.5f) {
+                    trKA_4Line1B.position += new Vector3(0, -0.01f * sitaV, 0);
+                    trKA_4Line3B.position += new Vector3(0, 0.01f * sitaV, 0);
+                } else {
+                    trKA_4Line1B.localPosition = new Vector3(0, 1.5f, 0);
+                    trKA_4Line3B.localPosition = new Vector3(0, 1.5f, 0);
+                    //点滅
+                    rrKA_4StLine2.enabled = kyotuEla.tenmetuOnOff;
+                }
+                //ーーーーーーーーーーーーーーーーーーー
+
+            } else if (count == 2) {//henka2
+                reset();
+                
+                //line1B,line3Bの位置を調整　ターンが進んだり戻ったりするのの調整
+                trKA_4Line1B.localPosition = new Vector3(0, 3, 0);
+
+                trKA_4Line3B.localPosition = new Vector3(0, 0, 0);
+
+                rrKA_4Line1A.enabled = true;
+                rrKA_4Line3A.enabled = true;
+                rrKA_4Line2.enabled = true;
+
+                //rrKA_4StLine1A.enabled = true;
+                rrKA_4StLine1A.enabled = kyotuEla.tenmetuOnOff;
+
+                //rrKA_4StLine3A.enabled = true;
+                rrKA_4StLine3A.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 3) {//henka3
+                reset();
+
+                rrKA_4Line1A.enabled = true;
+                rrKA_4Line3A.enabled = true;
+                rrKA_4Line2.enabled = true;
+
+                //rrKA_4StLine1A.enabled = true;
+                rrKA_4StLine1A.enabled = kyotuEla.tenmetuOnOff;
+
+                //rrKA_4StLine3A.enabled = true;
+                rrKA_4StLine3A.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 4) {//henka4
+                reset();
+
+                rrKA_4Line1A.enabled = true;
+                rrKA_4Line3A.enabled = true;
+                rrKA_4Line2.enabled = true;
+
+                //rrKA_4StLine1A.enabled = true;
+                //rrKA_4StLine1A.enabled = kyotuEla.tenmetuOnOff;
+
+                //rrKA_4StLine3A.enabled = true;
+                //rrKA_4StLine3A.enabled = kyotuEla.tenmetuOnOff;
             }
         }
     }

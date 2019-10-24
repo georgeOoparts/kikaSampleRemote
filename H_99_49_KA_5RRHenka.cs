@@ -59,7 +59,32 @@ public class H_99_49_KA_5RRHenka : MonoBehaviour {
         if (kyotu.mojiSwitch == 0 & kyotu.MCount == 3) {
             if (count == 0) {
                 reset();
-                
+            }
+            else if (count == 1) {//henka1
+                reset();
+                //rrKA_5Circle1.enabled = true;
+                rrKA_5Circle2.enabled = true;
+
+                //rrKA_5StCircle1.enabled = kyotuEla.tenmetuOnOff;
+                rrKA_5StCircle2.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 2) {//henka2
+                reset();
+                rrKA_5Circle1.enabled = true;
+                rrKA_5Circle2.enabled = true;
+
+                rrKA_5StCircle1.enabled = kyotuEla.tenmetuOnOff;
+                //rrKA_5StCircle2.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 3) {//henka3
+                reset();
+                rrKA_5Circle1.enabled = true;
+                rrKA_5Circle2.enabled = true;
+
+                //rrKA_5StCircle1.enabled = kyotuEla.tenmetuOnOff;
+                rrKA_5StCircle2.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 4) {//henka4
+                reset();
+                rrKA_5Circle1.enabled = true;
+                rrKA_5Circle2.enabled = true;
             }
         }
     }

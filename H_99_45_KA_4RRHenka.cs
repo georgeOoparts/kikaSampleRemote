@@ -114,7 +114,7 @@ public class H_99_45_KA_4RRHenka : MonoBehaviour
     void Update()
     {
         henka(kyotu.rrCount);
-        Debug.Log("KA_4RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        //Debug.Log("KA_4RRHenka::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
 
     }
     //rrCountでオブジェの表示、強調を変化させるメソッド---------------------------
@@ -130,15 +130,11 @@ public class H_99_45_KA_4RRHenka : MonoBehaviour
             } else if (count == 1) {//henka1
                 reset();
                 
-               
-
                 rrKA_4Line1A.enabled = true;
                 rrKA_4Line1B.enabled = true;
                 rrKA_4Line3A.enabled = true;
                 rrKA_4Line3B.enabled = true;
-                //rrKA_4StLine1A.enabled = false;
-                //rrKA_4StLine2.enabled = false;
-                //rrKA_4StLine3A.enabled = false;
+               
 
                 //line1B,line3Bを移動させるーーーーーーーーーーーーーーーーーーー
                 //k0013_1_1_1 オブジェ移動；オブジェの座標;z軸そのまま：オブジェのポジションを得る
@@ -190,11 +186,6 @@ public class H_99_45_KA_4RRHenka : MonoBehaviour
                 rrKA_4Line3A.enabled = true;
                 rrKA_4Line2.enabled = true;
 
-                //rrKA_4StLine1A.enabled = true;
-                //rrKA_4StLine1A.enabled = kyotuEla.tenmetuOnOff;
-
-                //rrKA_4StLine3A.enabled = true;
-                //rrKA_4StLine3A.enabled = kyotuEla.tenmetuOnOff;
             }
         }
     }

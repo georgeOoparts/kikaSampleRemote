@@ -22,7 +22,7 @@ public class H_99_50_M1_6RR : MonoBehaviour {
         } else {
             M1_6Move.position = new Vector3(20.35f, -3.74f, 0);
         }
-        Debug.Log("M1_6RR::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
+        //Debug.Log("M1_6RR::" + kyotu.mojiSwitch + "::MC::" + kyotu.MCount + "::RRC::" + kyotu.rrCount);
 
     }
 }

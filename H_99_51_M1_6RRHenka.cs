@@ -199,6 +199,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
 
                 rrM1_6LineAB.enabled = true;
                 rrM1_6LineBC.enabled = true;
@@ -211,6 +215,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6LineAB.enabled = true;
                 rrM1_6LineBC.enabled = true;
                 rrM1_6LineAC.enabled = true;
@@ -228,6 +236,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6LineAB.enabled = true;
                 rrM1_6LineBC.enabled = true;
                 rrM1_6LineAC.enabled = true;
@@ -245,6 +257,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6LineAB.enabled = true;
                 rrM1_6LineBC.enabled = true;
                 rrM1_6LineAC.enabled = true;
@@ -262,6 +278,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6LineAB.enabled = true;
                 rrM1_6LineBC.enabled = true;
                 rrM1_6LineAC.enabled = true;
@@ -279,6 +299,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6LineAB.enabled = true;
                 rrM1_6LineBC.enabled = true;
                 rrM1_6LineAC.enabled = true;
@@ -296,6 +320,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6LineAB.enabled = true;
                 rrM1_6LineBC.enabled = true;
                 rrM1_6LineAC.enabled = true;
@@ -313,6 +341,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6LineAB.enabled = true;
                 rrM1_6LineBC.enabled = true;
                 rrM1_6LineAC.enabled = true;
@@ -333,6 +365,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
                 rrM1_6TextC.enabled = true;
@@ -354,6 +390,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
                 rrM1_6TextC.enabled = true;
@@ -375,6 +415,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
                 rrM1_6TextC.enabled = true;
@@ -398,6 +442,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
                 rrM1_6TextC.enabled = true;
@@ -421,6 +469,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
                 rrM1_6TextC.enabled = true;
@@ -447,6 +499,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
                 rrM1_6TextC.enabled = true;
@@ -476,6 +532,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
                 rrM1_6TextC.enabled = true;
@@ -505,6 +565,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
                 rrM1_6TextC.enabled = true;
@@ -534,6 +598,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
                 rrM1_6TextC.enabled = true;
@@ -563,6 +631,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
                 rrM1_6TextC.enabled = true;
@@ -592,6 +664,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
                 rrM1_6TextC.enabled = true;
@@ -621,6 +697,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
                 rrM1_6TextC.enabled = true;
@@ -650,6 +730,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
                 rrM1_6TextC.enabled = true;
@@ -679,6 +763,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
                 rrM1_6TextC.enabled = true;
@@ -708,6 +796,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
                 rrM1_6TextC.enabled = true;
@@ -737,6 +829,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -766,7 +862,11 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
             } else if (count == 26) {//henka26
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
-                rrM1_6LineAC.material =MColor2;
+                rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -797,6 +897,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -832,6 +936,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -867,6 +975,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -902,6 +1014,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -940,6 +1056,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -978,6 +1098,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -1016,6 +1140,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -1054,6 +1182,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -1092,6 +1224,11 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor6;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor3;
+
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -1132,6 +1269,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor6;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor6;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -1173,6 +1314,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor1;
+                rrM1_6StLineAC.material = MColor6;
+                rrM1_6StLineBC.material = MColor3;
+                rrM1_6StLineBD.material = MColor6;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -1211,6 +1356,11 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor0;
+                rrM1_6StLineAC.material = MColor6;
+                rrM1_6StLineBC.material = MColor4;
+                rrM1_6StLineBD.material = MColor6;
+
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -1249,6 +1399,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor0;
+                rrM1_6StLineAC.material = MColor6;
+                rrM1_6StLineBC.material = MColor4;
+                rrM1_6StLineBD.material = MColor6;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -1290,6 +1444,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor0;
+                rrM1_6StLineAC.material = MColor6;
+                rrM1_6StLineBC.material = MColor4;
+                rrM1_6StLineBD.material = MColor6;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -1331,6 +1489,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor0;
+                rrM1_6StLineAC.material = MColor6;
+                rrM1_6StLineBC.material = MColor4;
+                rrM1_6StLineBD.material = MColor6;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -1374,6 +1536,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor0;
+                rrM1_6StLineAC.material = MColor6;
+                rrM1_6StLineBC.material = MColor4;
+                rrM1_6StLineBD.material = MColor6;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;
@@ -1417,6 +1583,10 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
                 rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor0;
+                rrM1_6StLineAC.material = MColor6;
+                rrM1_6StLineBC.material = MColor4;
+                rrM1_6StLineBD.material = MColor6;
 
                 rrM1_6TextA.enabled = true;
                 rrM1_6TextB.enabled = true;

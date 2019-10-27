@@ -186,7 +186,203 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 reset();
             } else if (count == 1) {//henka1
                 reset();
-               
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+
+                rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 2) {//henka2
+                reset();
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+
+                //rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+
+                rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 3) {//henka3
+                reset();
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+
+                //rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+
+                rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 4) {//henka4
+                reset();
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+
+                //rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+
+                rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 5) {//henka5
+                reset();
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+
+                rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+
+                //rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 6) {//henka6
+                reset();
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+
+                //rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+
+                rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 7) {//henka7
+                reset();
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+
+                rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+
+                //rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 8) {//henka8
+                reset();
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+
+                rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+
+                //rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 9) {//henka9
+                reset();
+            } else if (count == 10) {//henka10
+                reset();
+
+                rrM1_6TextA.enabled = true;
+                rrM1_6TextB.enabled = true;
+                rrM1_6TextC.enabled = true;
+
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+
+                rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+
+                //rrM1_6kakuABC.enabled = true;
+                //rrM1_6kakuACB.enabled = true;
+
+                //rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 11) {//henka11
+                reset();
+
+                rrM1_6TextA.enabled = true;
+                rrM1_6TextB.enabled = true;
+                rrM1_6TextC.enabled = true;
+
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+
+                //rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_6kakuABC.enabled = true;
+                //rrM1_6kakuACB.enabled = true;
+
+                rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 12) {//henka12
+                reset();
+
+                rrM1_6TextA.enabled = true;
+                rrM1_6TextB.enabled = true;
+                rrM1_6TextC.enabled = true;
+
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+
+                //rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+
+                //rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StkakuABC.enabled = true;
+
+                rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 13) {//henka13
+                reset();
+                rrM1_6TextA.enabled = true;
+                rrM1_6TextB.enabled = true;
+                rrM1_6TextC.enabled = true;
+
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+
+                //rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+
+                rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuABC.enabled = true;
+
+                rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
             }
         }
     }

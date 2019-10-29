@@ -2508,6 +2508,456 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 //rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_6StkakuBCD.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_6StkakuBCD.enabled = true;
+            } else if (count == 62) {//henka62
+                reset();
+                //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
+                rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor0;
+                rrM1_6StLineAC.material = MColor6;
+                rrM1_6StLineBC.material = MColor4;
+                rrM1_6StLineBD.material = MColor6;
+
+                rrM1_6TextA.enabled = true;
+                rrM1_6TextB.enabled = true;
+                rrM1_6TextC.enabled = true;
+                rrM1_6TextD.enabled = true;
+
+                rrM1_6PointA.enabled = true;
+                rrM1_6PointB.enabled = true;
+                rrM1_6PointC.enabled = true;
+                rrM1_6PointD.enabled = true;
+
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+                rrM1_6LineBD.enabled = true;
+                rrM1_6LineCD.enabled = true;
+
+                //rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAB.enabled = true;
+
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = true;
+
+                //rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAC.enabled = true;
+
+                //rrM1_6StLineBD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBD.enabled = true;
+
+                //rrM1_6StLineCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineCD.enabled = true;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+                rrM1_6kakuBCD.enabled = true;
+
+                //rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuABC.enabled = true;
+
+                rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StkakuBCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuBCD.enabled = true;
+            } else if (count == 63) {//henka63
+                reset();
+                //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
+                rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor0;
+                rrM1_6StLineAC.material = MColor6;
+                rrM1_6StLineBC.material = MColor4;
+                rrM1_6StLineBD.material = MColor6;
+
+                rrM1_6TextA.enabled = true;
+                rrM1_6TextB.enabled = true;
+                rrM1_6TextC.enabled = true;
+                rrM1_6TextD.enabled = true;
+
+                rrM1_6PointA.enabled = true;
+                rrM1_6PointB.enabled = true;
+                rrM1_6PointC.enabled = true;
+                rrM1_6PointD.enabled = true;
+
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+                rrM1_6LineBD.enabled = true;
+                rrM1_6LineCD.enabled = true;
+
+                //rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAB.enabled = true;
+
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = true;
+
+                //rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAC.enabled = true;
+
+                //rrM1_6StLineBD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBD.enabled = true;
+
+                //rrM1_6StLineCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineCD.enabled = true;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+                rrM1_6kakuBCD.enabled = true;
+
+                //rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuABC.enabled = true;
+
+                //rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StkakuBCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuBCD.enabled = true;
+            } else if (count == 64) {//henka64
+                reset();
+                //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
+                rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor0;
+                rrM1_6StLineAC.material = MColor6;
+                rrM1_6StLineBC.material = MColor4;
+                rrM1_6StLineBD.material = MColor6;
+
+                rrM1_6TextA.enabled = true;
+                rrM1_6TextB.enabled = true;
+                rrM1_6TextC.enabled = true;
+                rrM1_6TextD.enabled = true;
+
+                rrM1_6PointA.enabled = true;
+                rrM1_6PointB.enabled = true;
+                rrM1_6PointC.enabled = true;
+                rrM1_6PointD.enabled = true;
+
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+                rrM1_6LineBD.enabled = true;
+                rrM1_6LineCD.enabled = true;
+
+                //rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAB.enabled = true;
+
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = true;
+
+                //rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAC.enabled = true;
+
+                //rrM1_6StLineBD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBD.enabled = true;
+
+                //rrM1_6StLineCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineCD.enabled = true;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+                rrM1_6kakuBCD.enabled = true;
+
+                //rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuABC.enabled = true;
+
+                rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuBCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuBCD.enabled = true;
+            } else if (count == 65) {//henka65
+                reset();
+                //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
+                rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor0;
+                rrM1_6StLineAC.material = MColor6;
+                rrM1_6StLineBC.material = MColor4;
+                rrM1_6StLineBD.material = MColor6;
+
+                rrM1_6TextA.enabled = true;
+                rrM1_6TextB.enabled = true;
+                rrM1_6TextC.enabled = true;
+                rrM1_6TextD.enabled = true;
+
+                rrM1_6PointA.enabled = true;
+                rrM1_6PointB.enabled = true;
+                rrM1_6PointC.enabled = true;
+                rrM1_6PointD.enabled = true;
+
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+                rrM1_6LineBD.enabled = true;
+                rrM1_6LineCD.enabled = true;
+
+                //rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAB.enabled = true;
+
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = true;
+
+                //rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAC.enabled = true;
+
+                //rrM1_6StLineBD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBD.enabled = true;
+
+                //rrM1_6StLineCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineCD.enabled = true;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+                rrM1_6kakuBCD.enabled = true;
+
+                //rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuABC.enabled = true;
+
+                rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StkakuBCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuBCD.enabled = true;
+            } else if (count == 66) {//henka66
+                reset();
+                //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
+                rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor0;
+                rrM1_6StLineAC.material = MColor6;
+                rrM1_6StLineBC.material = MColor4;
+                rrM1_6StLineBD.material = MColor6;
+
+                rrM1_6TextA.enabled = true;
+                rrM1_6TextB.enabled = true;
+                rrM1_6TextC.enabled = true;
+                rrM1_6TextD.enabled = true;
+
+                rrM1_6PointA.enabled = true;
+                rrM1_6PointB.enabled = true;
+                rrM1_6PointC.enabled = true;
+                rrM1_6PointD.enabled = true;
+
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+                rrM1_6LineBD.enabled = true;
+                rrM1_6LineCD.enabled = true;
+
+                //rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAB.enabled = true;
+
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = true;
+
+                //rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAC.enabled = true;
+
+                //rrM1_6StLineBD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBD.enabled = true;
+
+                //rrM1_6StLineCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineCD.enabled = true;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+                rrM1_6kakuBCD.enabled = true;
+
+                //rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuABC.enabled = true;
+
+                rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StkakuBCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuBCD.enabled = true;
+            } else if (count == 67) {//henka67
+                reset();
+                //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
+                rrM1_6LineAC.material = MColor2;
+                rrM1_6LineBC.material = MColor0;
+                rrM1_6StLineAC.material = MColor6;
+                rrM1_6StLineBC.material = MColor4;
+                rrM1_6StLineBD.material = MColor6;
+
+                rrM1_6TextA.enabled = true;
+                rrM1_6TextB.enabled = true;
+                rrM1_6TextC.enabled = true;
+                rrM1_6TextD.enabled = true;
+
+                rrM1_6PointA.enabled = true;
+                rrM1_6PointB.enabled = true;
+                rrM1_6PointC.enabled = true;
+                rrM1_6PointD.enabled = true;
+
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+                rrM1_6LineBD.enabled = true;
+                rrM1_6LineCD.enabled = true;
+
+                //rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAB.enabled = true;
+
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = true;
+
+                //rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAC.enabled = true;
+
+                //rrM1_6StLineBD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBD.enabled = true;
+
+                //rrM1_6StLineCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineCD.enabled = true;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+                rrM1_6kakuBCD.enabled = true;
+
+                //rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuABC.enabled = true;
+
+                //rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuBCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuBCD.enabled = true;
+            } else if (count == 68) {//henka68
+                reset();
+                //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
+                rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor0;
+                rrM1_6StLineAC.material = MColor6;
+                rrM1_6StLineBC.material = MColor4;
+                rrM1_6StLineBD.material = MColor6;
+
+                rrM1_6TextA.enabled = true;
+                rrM1_6TextB.enabled = true;
+                rrM1_6TextC.enabled = true;
+                //rrM1_6TextD.enabled = true;
+
+                rrM1_6PointA.enabled = true;
+                rrM1_6PointB.enabled = true;
+                rrM1_6PointC.enabled = true;
+                //rrM1_6PointD.enabled = true;
+
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+                //rrM1_6LineBD.enabled = true;
+                //rrM1_6LineCD.enabled = true;
+
+                rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAB.enabled = true;
+
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = true;
+
+                //rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAC.enabled = true;
+
+                //rrM1_6StLineBD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBD.enabled = true;
+
+                //rrM1_6StLineCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineCD.enabled = true;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+                //rrM1_6kakuBCD.enabled = true;
+
+                //rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuABC.enabled = true;
+
+                //rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuBCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuBCD.enabled = true;
+            } else if (count == 69) {//henka69
+                reset();
+                //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
+                rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor0;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor4;
+                rrM1_6StLineBD.material = MColor6;
+
+                rrM1_6TextA.enabled = true;
+                rrM1_6TextB.enabled = true;
+                rrM1_6TextC.enabled = true;
+                //rrM1_6TextD.enabled = true;
+
+                rrM1_6PointA.enabled = true;
+                rrM1_6PointB.enabled = true;
+                rrM1_6PointC.enabled = true;
+                //rrM1_6PointD.enabled = true;
+
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+                //rrM1_6LineBD.enabled = true;
+                //rrM1_6LineCD.enabled = true;
+
+                //rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_6StLineAB.enabled = true;
+
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = true;
+
+                rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAC.enabled = true;
+
+                //rrM1_6StLineBD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBD.enabled = true;
+
+                //rrM1_6StLineCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineCD.enabled = true;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+                //rrM1_6kakuBCD.enabled = true;
+
+                //rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuABC.enabled = true;
+
+                //rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuBCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuBCD.enabled = true;
+            } else if (count == 70) {//henka70
+                reset();
+                //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
+                rrM1_6LineAC.material = MColor1;
+                rrM1_6LineBC.material = MColor0;
+                rrM1_6StLineAC.material = MColor3;
+                rrM1_6StLineBC.material = MColor4;
+                rrM1_6StLineBD.material = MColor6;
+
+                rrM1_6TextA.enabled = true;
+                rrM1_6TextB.enabled = true;
+                rrM1_6TextC.enabled = true;
+                //rrM1_6TextD.enabled = true;
+
+                rrM1_6PointA.enabled = true;
+                rrM1_6PointB.enabled = true;
+                rrM1_6PointC.enabled = true;
+                //rrM1_6PointD.enabled = true;
+
+                rrM1_6LineAB.enabled = true;
+                rrM1_6LineBC.enabled = true;
+                rrM1_6LineAC.enabled = true;
+                //rrM1_6LineBD.enabled = true;
+                //rrM1_6LineCD.enabled = true;
+
+                rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAB.enabled = true;
+
+                //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBC.enabled = true;
+
+                rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineAC.enabled = true;
+
+                //rrM1_6StLineBD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineBD.enabled = true;
+
+                //rrM1_6StLineCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StLineCD.enabled = true;
+
+                rrM1_6kakuABC.enabled = true;
+                rrM1_6kakuACB.enabled = true;
+                //rrM1_6kakuBCD.enabled = true;
+
+                //rrM1_6StkakuABC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuABC.enabled = true;
+
+                //rrM1_6StkakuACB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuBCD.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_6StkakuBCD.enabled = true;
             }
         }
     }

@@ -1379,7 +1379,7 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 rrM1_6LineCD.enabled = true;
 
                 //rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
-                rrM1_6StLineAB.enabled = true;
+                //rrM1_6StLineAB.enabled = true;
 
                 rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_6StLineAC.enabled = kyotuEla.tenmetuOnOff;
@@ -1431,7 +1431,7 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 rrM1_6StLineBD.enabled = true;
 
                 //rrM1_6StLineCD.enabled = kyotuEla.tenmetuOnOff;
-                rrM1_6StLineCD.enabled = true;
+                //rrM1_6StLineCD.enabled = true;
 
                 rrM1_6kakuABC.enabled = true;
                 rrM1_6kakuACB.enabled = true;
@@ -1511,7 +1511,7 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 rrM1_6LineCD.enabled = true;
 
                 //rrM1_6StLineAB.enabled = kyotuEla.tenmetuOnOff;
-                rrM1_6StLineAB.enabled = true;
+                //rrM1_6StLineAB.enabled = true;
 
                 //rrM1_6StLineBC.enabled = kyotuEla.tenmetuOnOff;
                 rrM1_6StLineBC.enabled = true;
@@ -1570,7 +1570,7 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
                 rrM1_6StLineBD.enabled = true;
 
                 //rrM1_6StLineCD.enabled = kyotuEla.tenmetuOnOff;
-                rrM1_6StLineCD.enabled = true;
+                //rrM1_6StLineCD.enabled = true;
 
                 rrM1_6kakuABC.enabled = true;
                 rrM1_6kakuACB.enabled = true;

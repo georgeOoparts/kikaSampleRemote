@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class H_99_31_M1_4RRHenka : MonoBehaviour {
+public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
     //M1_3preにアタッチ。オブジェクト全体のいどうをするプログラム
     //いちいちunityで当てはめなきゃ駄目　↓---------------
 
@@ -11,6 +11,17 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
 
     //強調表現点滅に使う変数を共通変数として使う。
     public H_99_01B_kyotuElapse kyotuEla;
+
+    public Material MColor0;
+    public Material MColor1;
+    public Material MColor2;
+    public Material MColor3;
+    public Material MColor4;
+    public Material MColor5;
+    public Material MColor6;
+    public Material MColor7;
+    public Material MColor8;
+    public Material MColor9;
 
     public GameObject M1_4LineAB;
     public GameObject M1_4LineBC;
@@ -254,7 +265,113 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {
             {
                 reset();
             }
-            
+            else if (count == 1) 
+            {
+                reset();
+                //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
+                rrM1_4LineAB.material = MColor1;
+                rrM1_4LineCA.material = MColor1;
+                rrM1_4LineDE.material = MColor1;
+                rrM1_4LineFD.material = MColor1;
+
+                rrM1_4LineAB.enabled = true;
+                rrM1_4LineBC.enabled = true;
+                rrM1_4LineCA.enabled = true;
+                rrM1_4LineDE.enabled = true;
+                rrM1_4LineEF.enabled = true;
+                rrM1_4LineFD.enabled = true;
+
+                rrM1_4LineStAB.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4LineStBC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4LineStCA.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4LineStDE.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4LineStEF.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4LineStFD.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 2) {
+                reset();
+                //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
+                rrM1_4LineAB.material = MColor2;
+                rrM1_4LineCA.material = MColor4;
+                rrM1_4LineDE.material = MColor2;
+                rrM1_4LineFD.material = MColor4;
+
+                rrM1_4LineAB.enabled = true;
+                rrM1_4LineBC.enabled = true;
+                rrM1_4LineCA.enabled = true;
+                rrM1_4LineDE.enabled = true;
+                rrM1_4LineEF.enabled = true;
+                rrM1_4LineFD.enabled = true;
+
+                rrM1_4LineStAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_4LineStBC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4LineStCA.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4LineStDE.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_4LineStEF.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4LineStFD.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 3) {
+                reset();
+                //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
+                rrM1_4LineAB.material = MColor2;
+                rrM1_4LineCA.material = MColor4;
+                rrM1_4LineDE.material = MColor2;
+                rrM1_4LineFD.material = MColor4;
+
+                rrM1_4LineAB.enabled = true;
+                rrM1_4LineBC.enabled = true;
+                rrM1_4LineCA.enabled = true;
+                rrM1_4LineDE.enabled = true;
+                rrM1_4LineEF.enabled = true;
+                rrM1_4LineFD.enabled = true;
+
+                rrM1_4LineStAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_4LineStBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_4LineStCA.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4LineStDE.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_4LineStEF.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_4LineStFD.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 4) {
+                reset();
+                //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
+                rrM1_4LineAB.material = MColor2;
+                rrM1_4LineCA.material = MColor4;
+                rrM1_4LineDE.material = MColor2;
+                rrM1_4LineFD.material = MColor4;
+
+                rrM1_4LineAB.enabled = true;
+                rrM1_4LineBC.enabled = true;
+                rrM1_4LineCA.enabled = true;
+                rrM1_4LineDE.enabled = true;
+                rrM1_4LineEF.enabled = true;
+                rrM1_4LineFD.enabled = true;
+
+                //rrM1_4LineStAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_4LineStBC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4LineStCA.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_4LineStDE.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_4LineStEF.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4LineStFD.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 5) {
+                reset();
+                //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
+                rrM1_4LineAB.material = MColor2;
+                rrM1_4LineCA.material = MColor4;
+                rrM1_4LineDE.material = MColor2;
+                rrM1_4LineFD.material = MColor4;
+
+                rrM1_4LineAB.enabled = true;
+                rrM1_4LineBC.enabled = true;
+                rrM1_4LineCA.enabled = true;
+                rrM1_4LineDE.enabled = true;
+                rrM1_4LineEF.enabled = true;
+                rrM1_4LineFD.enabled = true;
+
+                rrM1_4LineStAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_4LineStBC.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4LineStCA.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4LineStDE.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_4LineStEF.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_4LineStFD.enabled = kyotuEla.tenmetuOnOff;
+            }
         }
     }
 }

@@ -511,16 +511,16 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
             } else if (count == 9) {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
-                rrM1_4LineAB.material = MColor1;
-                rrM1_4LineCA.material = MColor1;
-                rrM1_4LineDE.material = MColor1;
-                rrM1_4LineFD.material = MColor1;
+                rrM1_4LineAB.material = MColor2;
+                rrM1_4LineCA.material = MColor4;
+                rrM1_4LineDE.material = MColor2;
+                rrM1_4LineFD.material = MColor4;
 
                 rrM1_4LineStAB.material = MColor2;
-                rrM1_4LineStBC.material = MColor5;
+                rrM1_4LineStBC.material = MColor1;
                 rrM1_4LineStCA.material = MColor4;
                 rrM1_4LineStDE.material = MColor2;
-                rrM1_4LineStEF.material = MColor5;
+                rrM1_4LineStEF.material = MColor1;
                 rrM1_4LineStFD.material = MColor4;
 
                 rrM1_4LineAB.enabled = true;
@@ -545,16 +545,16 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
             } else if (count == 10) {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
-                rrM1_4LineAB.material = MColor1;
-                rrM1_4LineCA.material = MColor1;
-                rrM1_4LineDE.material = MColor1;
-                rrM1_4LineFD.material = MColor1;
+                rrM1_4LineAB.material = MColor2;
+                rrM1_4LineCA.material = MColor4;
+                rrM1_4LineDE.material = MColor2;
+                rrM1_4LineFD.material = MColor4;
 
                 rrM1_4LineStAB.material = MColor2;
-                rrM1_4LineStBC.material = MColor5;
+                rrM1_4LineStBC.material = MColor1;
                 rrM1_4LineStCA.material = MColor4;
                 rrM1_4LineStDE.material = MColor2;
-                rrM1_4LineStEF.material = MColor5;
+                rrM1_4LineStEF.material = MColor1;
                 rrM1_4LineStFD.material = MColor4;
 
                 rrM1_4LineAB.enabled = true;
@@ -579,16 +579,16 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
             } else if (count == 11) {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
-                rrM1_4LineAB.material = MColor1;
-                rrM1_4LineCA.material = MColor1;
-                rrM1_4LineDE.material = MColor1;
-                rrM1_4LineFD.material = MColor1;
+                rrM1_4LineAB.material = MColor2;
+                rrM1_4LineCA.material = MColor4;
+                rrM1_4LineDE.material = MColor2;
+                rrM1_4LineFD.material = MColor4;
 
                 rrM1_4LineStAB.material = MColor2;
-                rrM1_4LineStBC.material = MColor5;
+                rrM1_4LineStBC.material = MColor1;
                 rrM1_4LineStCA.material = MColor4;
                 rrM1_4LineStDE.material = MColor2;
-                rrM1_4LineStEF.material = MColor5;
+                rrM1_4LineStEF.material = MColor1;
                 rrM1_4LineStFD.material = MColor4;
 
                 rrM1_4LineAB.enabled = true;
@@ -613,16 +613,16 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
             } else if (count == 12) {
                 reset();
                 //k0018_99_1_1_1://obj.GetComponent<Renderer>().material = ColorPink;
-                rrM1_4LineAB.material = MColor1;
-                rrM1_4LineCA.material = MColor1;
-                rrM1_4LineDE.material = MColor1;
-                rrM1_4LineFD.material = MColor1;
+                rrM1_4LineAB.material = MColor2;
+                rrM1_4LineCA.material = MColor4;
+                rrM1_4LineDE.material = MColor2;
+                rrM1_4LineFD.material = MColor4;
 
                 rrM1_4LineStAB.material = MColor2;
-                rrM1_4LineStBC.material = MColor5;
+                rrM1_4LineStBC.material = MColor1;
                 rrM1_4LineStCA.material = MColor4;
                 rrM1_4LineStDE.material = MColor2;
-                rrM1_4LineStEF.material = MColor5;
+                rrM1_4LineStEF.material = MColor1;
                 rrM1_4LineStFD.material = MColor4;
 
                 rrM1_4LineAB.enabled = true;

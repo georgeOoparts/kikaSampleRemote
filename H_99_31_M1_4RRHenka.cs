@@ -2685,10 +2685,10 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
                 rrM1_4PointF.enabled = true;
 
                 //rrM1_4PointStA.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4PointStA.enabled = true;
+                rrM1_4PointStA.enabled = true;
 
                 //rrM1_4PointStD.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4PointStD.enabled = true;
+                rrM1_4PointStD.enabled = true;
 
                 rrM1_4LineAB.enabled = true;
                 rrM1_4LineBC.enabled = true;
@@ -2706,7 +2706,7 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
                 //rrM1_4LineStCA.enabled = true;
 
                 //rrM1_4LineStDE.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4LineStDE.enabled = true;
+                rrM1_4LineStDE.enabled = true;
 
                 //rrM1_4LineStEF.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_4LineStFD.enabled = kyotuEla.tenmetuOnOff;
@@ -2760,10 +2760,10 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
                 rrM1_4PointF.enabled = true;
 
                 //rrM1_4PointStA.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4PointStA.enabled = true;
+                rrM1_4PointStA.enabled = true;
 
                 //rrM1_4PointStD.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4PointStD.enabled = true;
+                rrM1_4PointStD.enabled = true;
 
                 rrM1_4LineAB.enabled = true;
                 rrM1_4LineBC.enabled = true;
@@ -2835,10 +2835,10 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
                 rrM1_4PointF.enabled = true;
 
                 //rrM1_4PointStA.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4PointStA.enabled = true;
+                rrM1_4PointStA.enabled = true;
 
                 //rrM1_4PointStD.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4PointStD.enabled = true;
+                rrM1_4PointStD.enabled = true;
 
                 rrM1_4LineAB.enabled = true;
                 rrM1_4LineBC.enabled = true;
@@ -2910,10 +2910,10 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
                 rrM1_4PointF.enabled = true;
 
                 //rrM1_4PointStA.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4PointStA.enabled = true;
+                rrM1_4PointStA.enabled = true;
 
                 //rrM1_4PointStD.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4PointStD.enabled = true;
+                rrM1_4PointStD.enabled = true;
 
                 rrM1_4LineAB.enabled = true;
                 rrM1_4LineBC.enabled = true;
@@ -2985,10 +2985,10 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
                 rrM1_4PointF.enabled = true;
 
                 //rrM1_4PointStA.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4PointStA.enabled = true;
+                rrM1_4PointStA.enabled = true;
 
                 //rrM1_4PointStD.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4PointStD.enabled = true;
+                rrM1_4PointStD.enabled = true;
 
                 rrM1_4LineAB.enabled = true;
                 rrM1_4LineBC.enabled = true;
@@ -3060,13 +3060,13 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
                 rrM1_4PointF.enabled = true;
 
                 //rrM1_4PointStA.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4PointStA.enabled = true;
+                rrM1_4PointStA.enabled = true;
 
                 rrM1_4PointStB.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_4PointStB.enabled = true;
 
                 //rrM1_4PointStD.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4PointStD.enabled = true;
+                rrM1_4PointStD.enabled = true;
 
                 rrM1_4LineAB.enabled = true;
                 rrM1_4LineBC.enabled = true;
@@ -3076,7 +3076,7 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
                 rrM1_4LineFD.enabled = true;
 
                 //rrM1_4LineStAB.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4LineStAB.enabled = true;
+                rrM1_4LineStAB.enabled = true;
 
                 //rrM1_4LineStBC.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_4LineStBC.enabled = true;
@@ -3084,7 +3084,7 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
                 //rrM1_4LineStCA.enabled = true;
 
                 //rrM1_4LineStDE.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4LineStDE.enabled = true;
+                rrM1_4LineStDE.enabled = true;
 
                 //rrM1_4LineStEF.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_4LineStFD.enabled = kyotuEla.tenmetuOnOff;
@@ -3138,13 +3138,13 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
                 rrM1_4PointF.enabled = true;
 
                 //rrM1_4PointStA.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4PointStA.enabled = true;
+                rrM1_4PointStA.enabled = true;
 
                 //rrM1_4PointStB.enabled = kyotuEla.tenmetuOnOff;
                 rrM1_4PointStB.enabled = true;
 
                 //rrM1_4PointStD.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4PointStD.enabled = true;
+                rrM1_4PointStD.enabled = true;
 
                 rrM1_4PointStE.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_4PointStE.enabled = true;
@@ -3157,7 +3157,7 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
                 rrM1_4LineFD.enabled = true;
 
                 //rrM1_4LineStAB.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4LineStAB.enabled = true;
+                rrM1_4LineStAB.enabled = true;
 
                 //rrM1_4LineStBC.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_4LineStBC.enabled = true;
@@ -3165,7 +3165,7 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
                 //rrM1_4LineStCA.enabled = true;
 
                 //rrM1_4LineStDE.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4LineStDE.enabled = true;
+                rrM1_4LineStDE.enabled = true;
 
                 //rrM1_4LineStEF.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_4LineStFD.enabled = kyotuEla.tenmetuOnOff;
@@ -3219,13 +3219,13 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
                 rrM1_4PointF.enabled = true;
 
                 //rrM1_4PointStA.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4PointStA.enabled = true;
+                rrM1_4PointStA.enabled = true;
 
                 rrM1_4PointStB.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_4PointStB.enabled = true;
 
                 //rrM1_4PointStD.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4PointStD.enabled = true;
+                rrM1_4PointStD.enabled = true;
 
                 rrM1_4PointStE.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_4PointStE.enabled = true;
@@ -3238,7 +3238,7 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
                 rrM1_4LineFD.enabled = true;
 
                 //rrM1_4LineStAB.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4LineStAB.enabled = true;
+                rrM1_4LineStAB.enabled = true;
 
                 //rrM1_4LineStBC.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_4LineStBC.enabled = true;
@@ -3246,7 +3246,7 @@ public class H_99_31_M1_4RRHenka : MonoBehaviour {//atama
                 //rrM1_4LineStCA.enabled = true;
 
                 //rrM1_4LineStDE.enabled = kyotuEla.tenmetuOnOff;
-                //rrM1_4LineStDE.enabled = true;
+                rrM1_4LineStDE.enabled = true;
 
                 //rrM1_4LineStEF.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_4LineStFD.enabled = kyotuEla.tenmetuOnOff;

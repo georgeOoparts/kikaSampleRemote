@@ -291,6 +291,57 @@ public class H_99_29_M1_3RRHenka : MonoBehaviour {
 
                 rrM1_3LineSAB.enabled = kyotuEla.tenmetuOnOff;
                 //rrM1_3LineSC.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 14) {//henka14w
+                reset();
+
+                rrM1_3TextA.enabled = true;
+                rrM1_3TextB.enabled = true;
+                rrM1_3TextC.enabled = true;
+
+                rrM1_3PointA.enabled = true;
+                rrM1_3PointB.enabled = true;
+
+                rrM1_3LineAB.enabled = true;
+                rrM1_3LineC.enabled = true;
+
+                rrM1_3LineSAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_3LineSC.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 15) {//henka15w
+                reset();
+
+                rrM1_3TextA.enabled = true;
+                rrM1_3TextB.enabled = true;
+                rrM1_3TextC.enabled = true;
+
+                rrM1_3PointA.enabled = true;
+                rrM1_3PointB.enabled = true;
+
+                rrM1_3LineAB.enabled = true;
+                rrM1_3LineC.enabled = true;
+
+                //rrM1_3LineSAB.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_3LineSAB.enabled = true;
+
+                rrM1_3LineSC.enabled = kyotuEla.tenmetuOnOff;
+            } else if (count == 16) {//henka16w
+                reset();
+
+                rrM1_3TextA.enabled = true;
+                rrM1_3TextB.enabled = true;
+                rrM1_3TextC.enabled = true;
+
+                rrM1_3PointA.enabled = true;
+                rrM1_3PointB.enabled = true;
+
+                rrM1_3LineAB.enabled = true;
+                rrM1_3LineC.enabled = true;
+
+                //rrM1_3LineSAB.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_3LineSAB.enabled = true;
+
+                rrM1_3LineSAE.enabled = kyotuEla.tenmetuOnOff;
+
+                rrM1_3LineSC.enabled = kyotuEla.tenmetuOnOff;
             }
         }
     }

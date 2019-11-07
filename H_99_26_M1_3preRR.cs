@@ -20,7 +20,7 @@ public class H_99_26_M1_3preRR : MonoBehaviour
     void Update()
     {
         //meidai  m1_3 count4以下
-        if (kyotu.mojiSwitch == 3 && kyotu.MCount == 2 && kyotu.rrCount <=4 ) {
+        if (kyotu.mojiSwitch == 3 && kyotu.MCount == 2 && kyotu.rrCount <=6) {
             M1_3RRMove.position = new Vector3(8.92f, 1.82f,-1);
         } else {
             M1_3RRMove.position = new Vector3(16.35f, -3.74f,0);

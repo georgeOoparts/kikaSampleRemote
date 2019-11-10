@@ -92,7 +92,7 @@ public class H_99_19_M1_2preRRHenka : MonoBehaviour {
                 //rrM1_2preSLine.enabled = kyotuEla.tenmetuOnOff;
 
                 rrM1_2preLine2.enabled = true;
-                //rrM1_2preSLine2.enabled = kyotuEla.tenmetuOnOff;
+                rrM1_2preSLine2.enabled = kyotuEla.tenmetuOnOff;
 
                 rrM1_2prePoint.enabled = true;
             }

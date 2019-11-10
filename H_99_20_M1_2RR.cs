@@ -21,7 +21,7 @@ public class H_99_20_M1_2RR : MonoBehaviour
     void Update() 
     {
         //meidai  m1_2 count5以上
-        if (kyotu.mojiSwitch == 3 && kyotu.MCount == 1 && kyotu.rrCount >= 5 && kyotu.rrCount <= 55) {
+        if (kyotu.mojiSwitch == 3 && kyotu.MCount == 1 && kyotu.rrCount >= 5 && kyotu.rrCount <= 79) {
             M1_2RRMove.position = new Vector2(11.17f, 2.49f);
         } else {
             M1_2RRMove.position = new Vector2(16.35f, -3.74f);

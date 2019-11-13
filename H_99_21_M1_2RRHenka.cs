@@ -258,6 +258,10 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
     }
     //リセット表示を全部消すメソッド　kyotu.rrcount-----------------------------
     private void reset() {
+        rrLineBC.material= color1;
+        rrLineBG.material= color1;
+        rrLineAL.material = color1;
+
         //k7B_1_1:オブジェを存在するけど見えなくする。
         //this.gameObject.GetComponent<Renderer>().enabled = false; 
 
@@ -2170,9 +2174,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrSBigCircle.enabled = true;
             } else if (count == 47) {//henka47w
                 reset();
-                rrLineAL.material = color1;
                 rrLineBC.material = color0;
-                rrLineBG.material = color1;
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
                 rrLineAB.enabled = true;
@@ -2243,6 +2245,9 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrSBigCircle.enabled = true;
             } else if (count == 48) {//henka48w
                 reset();
+                rrLineBC.material = color0;
+                rrLineBG.material = color0;
+
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
                 rrLineAB.enabled = true;
@@ -2254,7 +2259,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrLineAL.enabled = true;
                 rrLineAE.enabled = true;
                 rrLineBF.enabled = true;
-
+                rrLineBG.enabled = true;
                 //＞point：gameobjectを見えるようにする
                 rrPointD.enabled = true;
                 rrPointA.enabled = true;
@@ -2316,6 +2321,8 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrSBigCircle.enabled = true;
             } else if (count == 49) {//henka49w
                 reset();
+                rrLineBC.material = color0;
+                rrLineBG.material = color0;
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
                 rrLineAB.enabled = true;
@@ -2327,7 +2334,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrLineAL.enabled = true;
                 rrLineAE.enabled = true;
                 rrLineBF.enabled = true;
-
+                rrLineBG.enabled = true;
                 //＞point：gameobjectを見えるようにする
                 rrPointD.enabled = true;
                 rrPointA.enabled = true;
@@ -2389,6 +2396,8 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrSBigCircle.enabled = true;
             } else if (count == 50) {//henka50w
                 reset();
+                rrLineBC.material = color0;
+                rrLineBG.material = color0;
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
                 rrLineAB.enabled = true;
@@ -2400,7 +2409,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrLineAL.enabled = true;
                 rrLineAE.enabled = true;
                 rrLineBF.enabled = true;
-
+                rrLineBG.enabled = true;
                 //＞point：gameobjectを見えるようにする
                 rrPointD.enabled = true;
                 rrPointA.enabled = true;
@@ -2462,6 +2471,8 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrSBigCircle.enabled = true;
             } else if (count == 51) {//henka51w
                 reset();
+                rrLineBC.material = color0;
+                rrLineBG.material = color0;
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
                 rrLineAB.enabled = true;
@@ -2473,7 +2484,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrLineAL.enabled = true;
                 rrLineAE.enabled = true;
                 rrLineBF.enabled = true;
-
+                rrLineBG.enabled = true;
                 //＞point：gameobjectを見えるようにする
                 rrPointD.enabled = true;
                 rrPointA.enabled = true;
@@ -2535,6 +2546,8 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrSBigCircle.enabled = true;
             } else if (count == 52) {//henka52w
                 reset();
+                rrLineBC.material = color0;
+                rrLineBG.material = color0;
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
                 rrLineAB.enabled = true;
@@ -2546,7 +2559,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrLineAL.enabled = true;
                 rrLineAE.enabled = true;
                 rrLineBF.enabled = true;
-
+                rrLineBG.enabled = true;
                 //＞point：gameobjectを見えるようにする
                 rrPointD.enabled = true;
                 rrPointA.enabled = true;
@@ -2608,6 +2621,8 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrSBigCircle.enabled = true;
             } else if (count == 53) {//henka53w
                 reset();
+                rrLineBC.material = color0;
+                rrLineBG.material = color0;
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
                 rrLineAB.enabled = true;
@@ -2619,7 +2634,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrLineAL.enabled = true;
                 rrLineAE.enabled = true;
                 rrLineBF.enabled = true;
-
+                rrLineBG.enabled = true;
                 //＞point：gameobjectを見えるようにする
                 rrPointD.enabled = true;
                 rrPointA.enabled = true;
@@ -2681,6 +2696,8 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 rrSBigCircle.enabled = true;
             } else if (count == 54) {//henka54w
                 reset();
+                rrLineBC.material = color0;
+                rrLineBG.material = color0;
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
                 rrLineAB.enabled = true;
@@ -2692,7 +2709,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrLineAL.enabled = true;
                 rrLineAE.enabled = true;
                 rrLineBF.enabled = true;
-
+                rrLineBG.enabled = true;
                 //＞point：gameobjectを見えるようにする
                 rrPointD.enabled = true;
                 rrPointA.enabled = true;
@@ -2756,6 +2773,8 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 rrSBigCircle.enabled = true;
             } else if (count == 55) {//henka55w
                 reset();
+                rrLineBC.material = color0;
+                rrLineBG.material = color0;
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
                 rrLineAB.enabled = true;
@@ -2767,7 +2786,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrLineAL.enabled = true;
                 rrLineAE.enabled = true;
                 rrLineBF.enabled = true;
-
+                rrLineBG.enabled = true;
                 //＞point：gameobjectを見えるようにする
                 rrPointD.enabled = true;
                 rrPointA.enabled = true;
@@ -2831,6 +2850,8 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 rrSBigCircle.enabled = true;
             } else if (count == 56) {//henka56w
                 reset();
+                rrLineBC.material = color0;
+                rrLineBG.material = color0;
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
                 rrLineAB.enabled = true;
@@ -2842,7 +2863,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrLineAL.enabled = true;
                 rrLineAE.enabled = true;
                 rrLineBF.enabled = true;
-
+                rrLineBG.enabled = true;
                 //＞point：gameobjectを見えるようにする
                 rrPointD.enabled = true;
                 rrPointA.enabled = true;
@@ -2906,6 +2927,9 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 rrSBigCircle.enabled = true;
             } else if (count == 57) {//henka57w
                 reset();
+                rrLineBC.material = color0;
+                rrLineBG.material = color0;
+                
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
                 rrLineAB.enabled = true;
@@ -2917,7 +2941,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrLineAL.enabled = true;
                 rrLineAE.enabled = true;
                 rrLineBF.enabled = true;
-
+                rrLineBG.enabled = true;
                 //＞point：gameobjectを見えるようにする
                 rrPointD.enabled = true;
                 rrPointA.enabled = true;

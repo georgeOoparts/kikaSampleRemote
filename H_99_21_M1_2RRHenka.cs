@@ -2098,6 +2098,7 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrSBigCircle.enabled = kyotuEla.tenmetuOnOff;
                 //rrSBigCircle.enabled = true;
             } else if (count == 46) {//henka46w
+                
                 reset();
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
@@ -2169,9 +2170,9 @@ public class H_99_21_M1_2RRHenka : MonoBehaviour {
                 //rrSBigCircle.enabled = true;
             } else if (count == 47) {//henka47w
                 reset();
-                
-                
-                
+                rrLineAL.material = color1;
+                rrLineBC.material = color0;
+                rrLineBG.material = color1;
                 //gameobjectを見えるようにする
                 //＞line：gameobjectを見えるようにする
                 rrLineAB.enabled = true;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class H_99_14_sTriangle : MonoBehaviour
+public class H_99_14_sTriangle : MonoBehaviour//m1_1pre
 {
     //オブジェsampleTriangleにアタッチ、
     //共通変数MCountによってオブジェsampleTriangleの位置を変更
@@ -23,9 +23,9 @@ public class H_99_14_sTriangle : MonoBehaviour
 
     void Update()
     {
-        if (kyotu.mojiSwitch==3 && kyotu.MCount == 0 && kyotu.rrCount<5  )
+        if (kyotu.mojiSwitch==3 && kyotu.MCount == 0 && kyotu.rrCount<=4  )
         {
-            samTriMove.position = new Vector2(9.17f, 1.11f);
+            samTriMove.position = new Vector2(9.59f, 1.11f);
 
         }
         else 

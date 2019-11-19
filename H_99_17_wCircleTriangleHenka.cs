@@ -346,12 +346,16 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
 
                 rrTextA.enabled = true;
                 rrTextB.enabled = true;
+                rrTextC.enabled = true;
+                rrTextD.enabled = true;
 
                 rrPointA.enabled = true;
-
+                rrPointB.enabled = true;
+                rrPointC.enabled = true;
+                rrPointD.enabled = true;
                 //rrM1_1StPointA.enabled = kyotuEla.tenmetuOnOff;
                 rrM1_1StPointA.enabled = true;
-
+                
                 //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
                 rrlineSAB.enabled = true;
 
@@ -368,8 +372,13 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
 
                 rrTextA.enabled = true;
                 rrTextB.enabled = true;
+                rrTextC.enabled = true;
+                rrTextD.enabled = true;
 
                 rrPointA.enabled = true;
+                rrPointB.enabled = true;
+                rrPointC.enabled = true;
+                rrPointD.enabled = true;
 
                 //rrM1_1StPointA.enabled = kyotuEla.tenmetuOnOff;
                 rrM1_1StPointA.enabled = true;
@@ -390,8 +399,13 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
 
                 rrTextA.enabled = true;
                 rrTextB.enabled = true;
+                rrTextC.enabled = true;
+                rrTextD.enabled = true;
 
                 rrPointA.enabled = true;
+                rrPointB.enabled = true;
+                rrPointC.enabled = true;
+                rrPointD.enabled = true;
 
                 rrCylinder1.enabled = true;
 

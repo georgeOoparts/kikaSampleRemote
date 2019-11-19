@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class H_99_17_wCircleTriangleHenka : MonoBehaviour
-{
+{//atama
 
     //いちいちunityで当てはめなきゃ駄目　↓---------------
 
@@ -32,27 +32,22 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
     public GameObject M1_1StPointA;
     public GameObject wcPointA;
     public GameObject wcTextA;
-    public GameObject wcStrongTextCubeA;
 
     public GameObject M1_1StPointB;
     public GameObject wcPointB;
     public GameObject wcTextB;
-    public GameObject wcStrongTextCubeB;
 
     public GameObject M1_1StPointC;
     public GameObject wcPointC;
     public GameObject wcTextC;
-    public GameObject wcStrongTextCubeC;
 
     public GameObject M1_1StPointD;
     public GameObject wcPointD;
     public GameObject wcTextD;
-    public GameObject wcStrongTextCubeD;
 
     public GameObject M1_1StPointE;
     public GameObject wcPointE;
     public GameObject wcTextE;
-    public GameObject wcStrongTextCubeE;
 
     public GameObject wcCylinder1;
     public GameObject stWcCylinder1;//強調用
@@ -76,27 +71,22 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
     private Renderer rrM1_1StPointA;
     private Renderer rrPointA;
     private Renderer rrTextA;
-    private Renderer rrStrongTextCubeA;
 
     private Renderer rrM1_1StPointB;
     private Renderer rrPointB;
     private Renderer rrTextB;
-    private Renderer rrStrongTextCubeB;
 
     private Renderer rrM1_1StPointC;
     private Renderer rrPointC;
     private Renderer rrTextC;
-    private Renderer rrStrongTextCubeC;
 
     private Renderer rrM1_1StPointD;
     private Renderer rrPointD;
     private Renderer rrTextD;
-    private Renderer rrStrongTextCubeD;
 
     private Renderer rrM1_1StPointE;
     private Renderer rrPointE;
     private Renderer rrTextE;
-    private Renderer rrStrongTextCubeE;
 
     //後ろの２つの円のrenderer
     private Renderer rrCylinder1;
@@ -120,27 +110,22 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
         rrM1_1StPointA = M1_1StPointA.GetComponent<Renderer>();
         rrPointA = wcPointA.GetComponent<Renderer>();
         rrTextA = wcTextA.GetComponent<Renderer>();
-        rrStrongTextCubeA = wcStrongTextCubeA.GetComponent<Renderer>();
 
         rrM1_1StPointB = M1_1StPointB.GetComponent<Renderer>();
         rrPointB = wcPointB.GetComponent<Renderer>();
         rrTextB = wcTextB.GetComponent<Renderer>();
-        rrStrongTextCubeB = wcStrongTextCubeB.GetComponent<Renderer>();
 
         rrM1_1StPointC = M1_1StPointC.GetComponent<Renderer>();
         rrPointC = wcPointC.GetComponent<Renderer>();
         rrTextC = wcTextC.GetComponent<Renderer>();
-        rrStrongTextCubeC = wcStrongTextCubeC.GetComponent<Renderer>();
 
         rrM1_1StPointD = M1_1StPointD.GetComponent<Renderer>();
         rrPointD = wcPointD.GetComponent<Renderer>();
         rrTextD = wcTextD.GetComponent<Renderer>();
-        rrStrongTextCubeD = wcStrongTextCubeD.GetComponent<Renderer>();
 
         rrM1_1StPointE = M1_1StPointE.GetComponent<Renderer>();
         rrPointE = wcPointE.GetComponent<Renderer>();
         rrTextE = wcTextE.GetComponent<Renderer>();
-        rrStrongTextCubeE = wcStrongTextCubeE.GetComponent<Renderer>();
 
         // 後ろの２つの円のrenderer
         rrCylinder1 =wcCylinder1.GetComponent<Renderer>();
@@ -176,27 +161,22 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
         rrM1_1StPointA.enabled = false;
         rrPointA.enabled = false;
         rrTextA.enabled = false;
-        rrStrongTextCubeA.enabled = false;
 
         rrM1_1StPointB.enabled = false;
         rrPointB.enabled = false;
         rrTextB.enabled = false;
-        rrStrongTextCubeB.enabled = false;
 
         rrM1_1StPointC.enabled = false;
         rrPointC.enabled = false;
         rrTextC.enabled = false;
-        rrStrongTextCubeC.enabled = false;
 
         rrM1_1StPointD.enabled = false;
         rrPointD.enabled = false;
         rrTextD.enabled = false;
-        rrStrongTextCubeD.enabled = false;
 
         rrM1_1StPointE.enabled = false;
         rrPointE.enabled = false;
         rrTextE.enabled = false;
-        rrStrongTextCubeE.enabled = false;
 
         // 後ろの２つの円のrenderer
         rrCylinder1.enabled = false;

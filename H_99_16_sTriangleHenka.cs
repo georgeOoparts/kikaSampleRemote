@@ -37,15 +37,12 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
 
     public GameObject pointA;
     public GameObject textA;
-    public GameObject strongTextCubeA;
 
     public GameObject pointB;
     public GameObject textB;
-    public GameObject strongTextCubeB;
 
     public GameObject pointC;
     public GameObject textC;
-    public GameObject strongTextCubeC;
     //いちいちunityで当てはめなきゃ駄目　↑---------------
 
     //線分を出したり消したりするときに使う  
@@ -60,15 +57,12 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
 
     private Renderer rrPointA;
     private Renderer rrTextA;
-    private Renderer rrStrongTextCubeA;
 
     private Renderer rrPointB;
     private Renderer rrTextB;
-    private Renderer rrStrongTextCubeB;
 
     private Renderer rrPointC;
     private Renderer rrTextC;
-    private Renderer rrStrongTextCubeC;
 
     void Start()
     {
@@ -84,15 +78,12 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
 
         rrPointA = pointA.GetComponent<Renderer>();
         rrTextA = textA.GetComponent<Renderer>();
-        rrStrongTextCubeA = strongTextCubeA.GetComponent<Renderer>();
 
         rrPointB = pointB.GetComponent<Renderer>();
         rrTextB = textB.GetComponent<Renderer>();
-        rrStrongTextCubeB = strongTextCubeB.GetComponent<Renderer>();
 
         rrPointC = pointC.GetComponent<Renderer>();
         rrTextC = textC.GetComponent<Renderer>();
-        rrStrongTextCubeC = strongTextCubeC.GetComponent<Renderer>();
     }
 
     void Update()
@@ -167,14 +158,11 @@ public class H_99_16_sTriangleHenka : MonoBehaviour
 
         rrPointA.enabled = false;
         rrTextA.enabled = false;
-        rrStrongTextCubeA.enabled = false;
 
         rrPointB.enabled = false;
         rrTextB.enabled = false;
-        rrStrongTextCubeB.enabled = false;
 
         rrPointC.enabled = false;
         rrTextC.enabled = false;
-        rrStrongTextCubeC.enabled = false;
     }
 }

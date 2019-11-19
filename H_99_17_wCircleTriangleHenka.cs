@@ -2049,6 +2049,216 @@ public class H_99_17_wCircleTriangleHenka : MonoBehaviour
 
                 //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
                 //rrStCylinder2.enabled = true;
+            } else if (kyotu.rrCount == 63) {//henka63w
+                reset();
+                rrlineAB.enabled = true;
+                rrlineBC.enabled = true;
+                rrlineCA.enabled = true;
+
+                rrTextA.enabled = true;
+                rrTextB.enabled = true;
+                rrTextC.enabled = true;
+                rrTextD.enabled = true;
+                rrTextE.enabled = true;
+
+                rrPointA.enabled = true;
+                rrPointB.enabled = true;
+                rrPointC.enabled = true;
+                rrPointD.enabled = true;
+                rrPointE.enabled = true;
+
+                rrCylinder1.enabled = true;
+                rrCylinder2.enabled = true;
+
+                //rrM1_1StPointA.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_1StPointA.enabled = true;
+                //rrM1_1StPointB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_1StPointB.enabled = true;
+                //rrM1_1StPointC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_1StPointC.enabled = true;
+
+                rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrlineSAB.enabled = true;
+
+                rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrlineSBC.enabled = true;
+
+                rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+                //rrlineSCA.enabled = true;
+
+                //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
+                //rrStCylinder1.enabled = true;
+
+                //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
+                //rrStCylinder2.enabled = true;
+            } else if (kyotu.rrCount == 64) {//henka64w
+                reset();
+                rrlineAB.enabled = true;
+                rrlineBC.enabled = true;
+                rrlineCA.enabled = true;
+
+                rrTextA.enabled = true;
+                rrTextB.enabled = true;
+                rrTextC.enabled = true;
+                rrTextD.enabled = true;
+                rrTextE.enabled = true;
+
+                rrPointA.enabled = true;
+                rrPointB.enabled = true;
+                rrPointC.enabled = true;
+                rrPointD.enabled = true;
+                rrPointE.enabled = true;
+
+                rrCylinder1.enabled = true;
+                rrCylinder2.enabled = true;
+
+                //rrM1_1StPointA.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_1StPointA.enabled = true;
+                //rrM1_1StPointB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_1StPointB.enabled = true;
+                //rrM1_1StPointC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_1StPointC.enabled = true;
+
+                rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrlineSAB.enabled = true;
+
+                rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrlineSBC.enabled = true;
+
+                rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+                //rrlineSCA.enabled = true;
+
+                //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
+                //rrStCylinder1.enabled = true;
+
+                //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
+                //rrStCylinder2.enabled = true;
+            } else if (kyotu.rrCount == 65) {//henka65w
+                reset();
+                rrlineAB.enabled = true;
+                rrlineBC.enabled = true;
+                rrlineCA.enabled = true;
+
+                rrTextA.enabled = true;
+                rrTextB.enabled = true;
+                rrTextC.enabled = true;
+                rrTextD.enabled = true;
+                rrTextE.enabled = true;
+
+                rrPointA.enabled = true;
+                rrPointB.enabled = true;
+                rrPointC.enabled = true;
+                rrPointD.enabled = true;
+                rrPointE.enabled = true;
+
+                rrCylinder1.enabled = true;
+                rrCylinder2.enabled = true;
+
+                //rrM1_1StPointA.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_1StPointA.enabled = true;
+                //rrM1_1StPointB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_1StPointB.enabled = true;
+                //rrM1_1StPointC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_1StPointC.enabled = true;
+
+                rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrlineSAB.enabled = true;
+
+                //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrlineSBC.enabled = true;
+
+                //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+                //rrlineSCA.enabled = true;
+
+                //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
+                //rrStCylinder1.enabled = true;
+
+                //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
+                //rrStCylinder2.enabled = true;
+            } else if (kyotu.rrCount == 66) {//henka66w
+                reset();
+                rrlineAB.enabled = true;
+                rrlineBC.enabled = true;
+                rrlineCA.enabled = true;
+
+                rrTextA.enabled = true;
+                rrTextB.enabled = true;
+                rrTextC.enabled = true;
+                rrTextD.enabled = true;
+                rrTextE.enabled = true;
+
+                rrPointA.enabled = true;
+                rrPointB.enabled = true;
+                rrPointC.enabled = true;
+                rrPointD.enabled = true;
+                rrPointE.enabled = true;
+
+                rrCylinder1.enabled = true;
+                rrCylinder2.enabled = true;
+
+                //rrM1_1StPointA.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_1StPointA.enabled = true;
+                //rrM1_1StPointB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_1StPointB.enabled = true;
+                //rrM1_1StPointC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_1StPointC.enabled = true;
+
+                rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrlineSAB.enabled = true;
+
+                //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrlineSBC.enabled = true;
+
+                //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+                //rrlineSCA.enabled = true;
+
+                //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
+                //rrStCylinder1.enabled = true;
+
+                //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
+                //rrStCylinder2.enabled = true;
+            } else if (kyotu.rrCount == 67) {//henka67w
+                reset();
+                rrlineAB.enabled = true;
+                rrlineBC.enabled = true;
+                rrlineCA.enabled = true;
+
+                rrTextA.enabled = true;
+                rrTextB.enabled = true;
+                rrTextC.enabled = true;
+                rrTextD.enabled = true;
+                rrTextE.enabled = true;
+
+                rrPointA.enabled = true;
+                rrPointB.enabled = true;
+                rrPointC.enabled = true;
+                rrPointD.enabled = true;
+                rrPointE.enabled = true;
+
+                rrCylinder1.enabled = true;
+                rrCylinder2.enabled = true;
+
+                //rrM1_1StPointA.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_1StPointA.enabled = true;
+                //rrM1_1StPointB.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_1StPointB.enabled = true;
+                //rrM1_1StPointC.enabled = kyotuEla.tenmetuOnOff;
+                //rrM1_1StPointC.enabled = true;
+
+                //rrlineSAB.enabled = kyotuEla.tenmetuOnOff;
+                //rrlineSAB.enabled = true;
+
+                //rrlineSBC.enabled = kyotuEla.tenmetuOnOff;
+                //rrlineSBC.enabled = true;
+
+                //rrlineSCA.enabled = kyotuEla.tenmetuOnOff;
+                //rrlineSCA.enabled = true;
+
+                //rrStCylinder1.enabled = kyotuEla.tenmetuOnOff;
+                //rrStCylinder1.enabled = true;
+
+                //rrStCylinder2.enabled = kyotuEla.tenmetuOnOff;
+                //rrStCylinder2.enabled = true;
             }
         }
         

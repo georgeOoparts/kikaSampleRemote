@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Shapes2D;//0019_99_1：shape2dで色をスクリプトから変更する
+
 
 public class H_99_51_M1_6RRHenka : MonoBehaviour {
     //M1_5RRにアタッチ。オブジェクト全体のいどうをするプログラム
@@ -11,6 +13,14 @@ public class H_99_51_M1_6RRHenka : MonoBehaviour {
 
     //強調表現点滅に使う変数を共通変数として使う。
     public H_99_01B_kyotuElapse kyotuEla;
+
+    public Material StLineNewm3red;
+    public Material Line1NewM1Yellow;
+    public Material Line2NewM10DarkBlue;
+    public Material Line3NewM7DarkPurple;
+    public Material Line4NewM8White;
+    public Material Line5NewM9Black;
+    public Material PointNewm12MidGreen;
 
     public Material MColor0;
     public Material MColor1;
